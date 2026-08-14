@@ -1,0 +1,11 @@
+{
+  "doc_id": "pubmed_42187087",
+  "title": "In Vivo Base Editing of ",
+  "text": "Persons carrying loss-of-function variants of proprotein convertase subtilisin-kexin type 9 ( In this phase 1, open-label, single-ascending-dose study, we administered one intravenous infusion of VERVE-102 at one of six doses (ranging from 0.3 to 1.0 mg of total RNA per kilogram of body weight [mg per kilogram]) to adults with heterozygous familial hypercholesterolemia or premature coronary artery disease. VERVE-102 consists of a messenger RNA encoding an adenine base-editor protein and a guide RNA targeting  A total of 35 participants across the six dose cohorts received VERVE-102 and had at least 28 days of follow-up. No dose-limiting toxic effects occurred. Mild-to-moderate infusion-related reactions and transient elevations in alanine aminotransferase levels were observed. Aspiration pneumonitis occurred in a participant with gastroesophageal reflux disease. Dose-dependent mean reductions in the PCSK9 level ranged from 51% at the 0.3-mg-per-kilogram dose to 88% at the 1.0-mg-per-kilogram dose. Corresponding reductions in the LDL cholesterol level ranged from 9% at the 0.3-mg-per-kilogram dose to 62% at the 1.0-mg-per-kilogram dose, with an absolute reduction of 78 mg per deciliter at the highest dose. Reductions appeared to be durable throughout follow-up, which was at least 1 year in 15 participants. One dose of VERVE-102 led to dose-dependent, substantial, and sustained reductions in PCSK9 and LDL cholesterol levels. (Funded by Verve Therapeutics; ClinicalTrials.gov number, NCT06164730.).",
+  "source": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42187087/",
+  "concepts": [
+    "CoronaryArteryDisease",
+    "Disease"
+  ]
+}

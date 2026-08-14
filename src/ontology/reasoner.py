@@ -46,6 +46,10 @@ class ReasoningTrace:
             lines.append(f"  Expansion ({exp['relation']}): {exp['source']} → {exp['target']} ({exp['target_label']})")
         return "\n".join(lines)
 
+    def format_for_prompt(self) -> str:
+        """Alias for :meth:`to_context_string` — matches the pipeline API."""
+        return self.to_context_string()
+
 
 class OntologyReasoner:
     """Traverses the medical ontology to expand queries with related concepts."""

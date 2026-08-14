@@ -1,0 +1,8 @@
+{
+  "doc_id": "pubmed_42343137",
+  "title": "An ECG biomarker for sudden cardiac death discovered with deep learning.",
+  "text": "Sudden cardiac death is, in theory, preventable with defibrillators. But every year, many patients die without defibrillators because doctors fail to predict their risk",
+  "source": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42343137/",
+  "concepts": ["Arrhythmia", "ECG", "MyocardialInfarction"]
+}

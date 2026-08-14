@@ -4,5 +4,5 @@
   "text": "Monocytes/macrophages orchestrate myocardial remodeling through efferocytosis, the calcium-dependent clearance of apoptotic cells. While the mechanosensitive channel Piezo1 is known to modulate calcium influx in cardiac and immune contexts, its myeloid-specific role in postinfarction healing remains elusive.",
   "source": "PubMed",
   "url": "https://pubmed.ncbi.nlm.nih.gov/42227117/",
-  "concepts": []
+  "concepts": ["HeartFailure", "MyocardialInfarction"]
 }

@@ -4,6 +4,7 @@ Generates:
   1. overall_comparison.png — Bar chart comparing Recall@5, MRR, nDCG@5 across pipelines
   2. category_breakdown.png — Grouped bar chart comparing Recall@5 per category
   3. ablation_study.png — Bar chart showing contribution of relation types
+  4. answer_quality.png — Bar chart of concept-coverage F1 + judge correctness
 """
 
 from __future__ import annotations
@@ -159,6 +160,64 @@ def plot_ablation_study(summary: dict):
     print(f"[OK] Saved {output_path}")
 
 
+def plot_answer_quality(summary: dict):
+    """Plot answer-quality metrics: concept F1 and judge correctness."""
+    pipelines = summary.get("pipelines", {})
+    if not pipelines:
+        return
+
+    keys = ["pipeline_1_baseline", "pipeline_2_dictionary", "pipeline_3_ontology_full"]
+    labels = ["Pipeline 1 (Baseline)", "Pipeline 2 (Dictionary)", "Pipeline 3 (Ontology)"]
+
+    f1_vals = [pipelines[k]["aggregate"]["concept_f1"]["mean"] for k in keys if k in pipelines]
+    judge_vals = [
+        pipelines[k]["aggregate"].get("judge_correctness", {}).get("mean", None)
+        for k in keys
+        if k in pipelines
+    ]
+
+    x = np.arange(len(labels))
+    width = 0.32
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    colors = ["#4C72B0", "#DD8452", "#55A868"]
+
+    bars1 = ax.bar(x - width / 2, f1_vals, width, label="Concept-Coverage F1", color=colors[0])
+    for bar in bars1:
+        ax.annotate(f"{bar.get_height():.3f}",
+                    xy=(bar.get_x() + bar.get_width() / 2, bar.get_height()),
+                    xytext=(0, 3), textcoords="offset points", ha="center", fontsize=8)
+
+    if all(v is not None for v in judge_vals):
+        bars2 = ax.bar(x + width / 2, judge_vals, width, label="LLM Judge Correctness", color=colors[2])
+        for bar in bars2:
+            ax.annotate(f"{bar.get_height():.3f}",
+                        xy=(bar.get_x() + bar.get_width() / 2, bar.get_height()),
+                        xytext=(0, 3), textcoords="offset points", ha="center", fontsize=8)
+
+    ax.set_ylabel("Score", fontsize=12)
+    ax.set_title("Answer Quality Across Pipelines", fontsize=14, fontweight="bold")
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels, fontsize=11)
+    ax.legend(fontsize=10)
+    ax.set_ylim(0, 1.1)
+    ax.grid(axis="y", linestyle="--", alpha=0.7)
+
+    plt.tight_layout()
+    output_path = PLOTS_DIR / "answer_quality.png"
+    plt.savefig(output_path, dpi=300)
+    plt.close()
+    print(f"[OK] Saved {output_path}")
+
+
+def load_answer_summary() -> dict:
+    answer_file = METRICS_DIR / "answer_summary.json"
+    if not answer_file.exists():
+        return {}
+    with open(answer_file, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
 def main():
     ensure_directories()
     summary = load_summary()
@@ -168,6 +227,12 @@ def main():
     plot_overall_comparison(summary)
     plot_category_breakdown(summary)
     plot_ablation_study(summary)
+
+    answer_summary = load_answer_summary()
+    if answer_summary:
+        plot_answer_quality(answer_summary)
+    else:
+        print("[SKIP] No answer_summary.json yet — run scripts/run_answer_eval.py first.")
 
     print(f"\n[OK] All plots generated in {PLOTS_DIR}")
 

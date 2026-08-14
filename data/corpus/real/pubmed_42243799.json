@@ -1,0 +1,13 @@
+{
+  "doc_id": "pubmed_42243799",
+  "title": "M2 microglia-derived migrasome-enriched extracellular vesicles restore mitochondrial homeostasis to orchestrate neurovascular unit recovery after ischemic stroke.",
+  "text": "Ischemic stroke is a major cause of disability with few treatment options available. Microglia-driven neuroinflammation contributes significantly to stroke pathology, and promoting anti-inflammatory microglial phenotypes represents a promising strategy. Migrasomes are newly discovered organelles mediating intercellular communication, yet their role in ischemic stroke remains unexplored. This study demonstrates that M2 microglia-derived migrasome-enriched extracellular vesicles (EVs) exert potent neuroprotection in both OGD/R cell models and MCAO mice. These migrasome-enriched EVs were efficiently internalized by microglia, astrocytes, neurons, and microvascular endothelial cells, promoting microglial M2 polarization, suppressing astrocytic aberrant activation, reducing neuronal apoptosis, and enhancing angiogenesis. Intracerebral administration of M2 microglia-derived migrasome-enriched EVs significantly reduced infarct volume, ameliorated cerebral edema, improved cerebral blood flow, and accelerated neurological and cognitive recovery without detectable toxicity. Mechanistically, migrasome-enriched EVs activated the cAMP/EPAC1/Rap1 signaling pathway in microglia, leading to restored mitochondrial homeostasis. Collectively, these findings identify M2 microglia-derived migrasome-enriched EVs as novel intercellular messengers that orchestrate neurovascular unit recovery after ischemic stroke, positioning migrasome-enriched EVs as promising candidates for stroke therapy.",
+  "source": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42243799/",
+  "concepts": [
+    "Edema",
+    "IschemicStroke",
+    "Stroke",
+    "Treatment"
+  ]
+}

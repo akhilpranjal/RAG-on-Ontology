@@ -16,6 +16,9 @@ from src.ontology.reasoner import OntologyReasoner
 def annotate_directory(corpus_dir: Path, reasoner: OntologyReasoner) -> int:
     """Annotate all JSON documents in a directory.
 
+    Docs that already carry a non-empty 'concepts' list are left untouched
+    (preserves manual annotations and makes the script idempotent).
+
     Args:
         corpus_dir: Directory containing document JSON files.
         reasoner: Initialized OntologyReasoner instance.
@@ -30,6 +33,10 @@ def annotate_directory(corpus_dir: Path, reasoner: OntologyReasoner) -> int:
     for filepath in sorted(corpus_dir.glob("*.json")):
         with open(filepath, "r", encoding="utf-8") as f:
             doc = json.load(f)
+
+        # Skip docs already annotated (manual or previous run).
+        if doc.get("concepts"):
+            continue
 
         full_text = f"{doc.get('title', '')} {doc.get('text', '')}"
         matches = reasoner.match_concepts(full_text)

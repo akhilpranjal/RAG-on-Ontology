@@ -1,0 +1,12 @@
+{
+  "doc_id": "pubmed_42219954",
+  "title": "Mechanistic Insights into PET-MPs-Aggravated Ischemic Stroke via Integrated Computational-Experimental Approaches.",
+  "text": "Microplastics, especially the environmentally pervasive polyethylene terephthalate microplastics (PET-MPs), are important environmental pollutants, and their potential risks to the health of the nervous system are increasingly a concern. Evidence indicates the presence of PET-MPs in human tissues, including the brain; however, their specific role in cerebrovascular diseases such as ischemic stroke remains poorly understood. This study applied an integrated multidisciplinary framework combining network toxicology, machine learning, molecular docking, as well as experimental validation to investigate how PET-MP exposure exacerbates ischemic stroke and delineates the underlying mechanisms. Computational analyses identified 15 core target genes linking PET-MP exposure to key pathological pathways involved in neuroinflammation and oxidative stress. Experimental validation using established models of cerebral ischemia, specifically, middle cerebral artery occlusion in mice and oxygen-glucose deprivation/reperfusion (OGD/R) in BV2 microglial cells, demonstrated that PET-MP exposure significantly exacerbates cerebral infarction, neurological deficits, microglia-mediated neuroinflammation, and oxidative damage. These findings establish PET-MPs as an environmental risk factor capable of worsening ischemic stroke pathology and provide crucial mechanistic evidence for the environmental health risk assessment related to microplastic pollution.",
+  "source": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42219954/",
+  "concepts": [
+    "Disease",
+    "IschemicStroke",
+    "Stroke"
+  ]
+}

@@ -38,6 +38,28 @@ DEFAULT_MESH_TERMS = [
     "Statins",
     "Metformin",
     "Peripheral Arterial Disease",
+    # Expansion terms (wider coverage for corpus growth)
+    "Acute Coronary Syndrome",
+    "Angina Pectoris",
+    "Arrhythmias, Cardiac",
+    "Cardiomyopathies",
+    "Congestive Heart Failure",
+    "Diabetic Nephropathies",
+    "Diabetic Retinopathy",
+    "Dyslipidemias",
+    "Hyperglycemia",
+    "Insulin Resistance",
+    "Ischemic Stroke",
+    "Prediabetic State",
+    "Ventricular Fibrillation",
+]
+
+# Titles / patterns that indicate unusable placeholder records.
+JUNK_TITLE_PATTERNS = [
+    "[not available]",
+    "pediatric.",
+    "retracted",
+    "erratum",
 ]
 
 
@@ -93,10 +115,17 @@ def fetch_abstracts(pmids: list[str]) -> list[dict]:
     return articles
 
 
+def _is_junk_title(title: str) -> bool:
+    """Return True if a title looks like a placeholder / unusable record."""
+    title_lower = (title or "").lower().strip()
+    return any(pat in title_lower for pat in JUNK_TITLE_PATTERNS)
+
+
 def _parse_pubmed_xml(xml_text: str) -> list[dict]:
     """Parse PubMed XML response to extract articles.
 
-    Uses xml.etree for lightweight XML parsing.
+    Uses xml.etree for lightweight XML parsing. Joins structured abstract
+    sections (Background / Methods / Results / Conclusions) into one text.
     """
     import xml.etree.ElementTree as ET
 
@@ -106,16 +135,18 @@ def _parse_pubmed_xml(xml_text: str) -> list[dict]:
     for article in root.findall(".//PubmedArticle"):
         pmid_elem = article.find(".//PMID")
         title_elem = article.find(".//ArticleTitle")
-        abstract_elem = article.find(".//Abstract/AbstractText")
+        abstract_texts = article.findall(".//Abstract/AbstractText")
 
-        if pmid_elem is None or abstract_elem is None:
+        if pmid_elem is None or not abstract_texts:
             continue
 
         pmid = pmid_elem.text or ""
         title = title_elem.text if title_elem is not None else ""
-        abstract = abstract_elem.text if abstract_elem is not None else ""
+        abstract = " ".join(
+            (t.text or "") for t in abstract_texts
+        ).strip()
 
-        if not abstract or len(abstract) < 100:
+        if not abstract or len(abstract) < 150 or _is_junk_title(title):
             continue
 
         articles.append({
@@ -124,7 +155,7 @@ def _parse_pubmed_xml(xml_text: str) -> list[dict]:
             "text": abstract,
             "source": "PubMed",
             "url": f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/",
-            "concepts": [],  # To be manually annotated
+            "concepts": [],  # Filled by annotate_corpus.py
         })
 
     return articles
@@ -154,12 +185,14 @@ def download_corpus(
 
     total_downloaded = 0
     seen_pmids = set()
+    # Skip PMIDs already saved on disk so re-runs only add genuinely new docs.
+    existing_pmids = {f.stem.replace("pubmed_", "") for f in output_dir.glob("pubmed_*.json")}
 
     for term in tqdm(mesh_terms, desc="Downloading PubMed abstracts"):
         pmids = search_pubmed(term, max_results=abstracts_per_term)
 
-        # Filter out already-downloaded PMIDs
-        new_pmids = [p for p in pmids if p not in seen_pmids]
+        # Filter out already-downloaded PMIDs (both this run and on disk)
+        new_pmids = [p for p in pmids if p not in seen_pmids and p not in existing_pmids]
         if not new_pmids:
             continue
 

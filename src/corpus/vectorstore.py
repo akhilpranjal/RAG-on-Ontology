@@ -34,14 +34,24 @@ def get_or_create_collection(client: chromadb.ClientAPI | None = None) -> chroma
     )
 
 
-def index_chunks(chunks: list[DocumentChunk], batch_size: int = 50) -> None:
+def index_chunks(chunks: list[DocumentChunk], batch_size: int = 50, reset: bool = False) -> None:
     """Embed and index document chunks into ChromaDB.
 
     Args:
         chunks: List of DocumentChunk dicts to index.
         batch_size: Number of chunks to process at a time.
+        reset: If True, delete any existing collection before indexing
+            (used when the corpus has changed and needs a fresh rebuild).
     """
-    collection = get_or_create_collection()
+    client = get_chroma_client()
+    if reset:
+        try:
+            client.delete_collection(CHROMA_COLLECTION_NAME)
+            print(f"Reset collection '{CHROMA_COLLECTION_NAME}' for fresh indexing.")
+        except Exception:  # noqa: BLE001 - collection may not exist
+            pass
+
+    collection = get_or_create_collection(client)
 
     for i in range(0, len(chunks), batch_size):
         batch = chunks[i : i + batch_size]
@@ -61,8 +71,8 @@ def index_chunks(chunks: list[DocumentChunk], batch_size: int = 50) -> None:
         # Generate embeddings
         embeddings = embed_texts(texts, task_type="retrieval_document")
 
-        # Add to ChromaDB
-        collection.add(
+        # Upsert (idempotent for re-indexing; handles duplicate IDs safely)
+        collection.upsert(
             ids=ids,
             embeddings=embeddings,
             documents=texts,

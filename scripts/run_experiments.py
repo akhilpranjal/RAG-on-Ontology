@@ -34,15 +34,21 @@ from src.pipelines.ontology_enhanced import run_ontology_enhanced
 
 
 def ensure_vectorstore():
-    """Ensure ChromaDB is populated with corpus chunks before running experiments."""
+    """Ensure ChromaDB is populated with the current corpus before running.
+
+    Re-indexes (with a fresh collection) if the chunk count no longer
+    matches the on-disk corpus — e.g. after corpus expansion or cleanup.
+    """
+    chunks = load_and_chunk_corpus()
     collection = get_or_create_collection()
-    if collection.count() == 0:
-        print("Vector store is empty. Indexing corpus chunks...")
-        chunks = load_and_chunk_corpus()
-        index_chunks(chunks)
-        print(f"Indexed {len(chunks)} chunks.")
-    else:
+
+    if collection.count() == len(chunks):
         print(f"Vector store ready: {collection.count()} chunks indexed.")
+        return
+
+    print(f"Vector store out of sync "
+          f"(indexed={collection.count()}, corpus={len(chunks)}). Rebuilding...")
+    index_chunks(chunks, reset=True)
 
 
 def run_pipeline_eval(
@@ -81,8 +87,11 @@ def run_pipeline_eval(
             "query": q_text,
             "retrieved_chunk_ids": res.retrieved_chunk_ids,
             "retrieved_doc_ids": res.retrieved_doc_ids,
+            "retrieved_texts": res.retrieved_texts,
             "relevant_doc_ids": relevant_docs,
             "metrics": metrics,
+            "reasoning_trace": res.metadata.get("reasoning_trace"),
+            "expanded_terms": res.metadata.get("expanded_terms", []),
         }
         per_query_results.append(query_record)
 

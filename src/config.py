@@ -42,8 +42,10 @@ GENERATOR_MODEL = "gemini-3.6-flash"
 GENERATOR_TEMPERATURE = 0.0
 
 # LLM Judge (cross-model evaluation)
-# Using Gemini variant since OpenAI/Anthropic keys are not available
-LLM_JUDGE_MODEL = "gemini-2.0-flash"
+# Judge uses a different Gemini family (3.1-flash-lite) than the generator
+# (gemini-3.6-flash) to avoid self-judging. Older 2.x/2.5 models are no
+# longer available to new users.
+LLM_JUDGE_MODEL = "gemini-3.1-flash-lite"
 
 # ──────────────────────────────────────────────
 # Retrieval Configuration

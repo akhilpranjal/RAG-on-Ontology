@@ -4,5 +4,5 @@
   "text": "We aimed to quantify the blood pressure-lowering efficacy of antihypertensive drugs and their combinations from the five major drug classes.",
   "source": "PubMed",
   "url": "https://pubmed.ncbi.nlm.nih.gov/40885583/",
-  "concepts": []
+  "concepts": ["ACEInhibitor", "ARB", "BetaBlocker", "CalciumChannelBlocker", "Diuretic", "Hypertension"]
 }
