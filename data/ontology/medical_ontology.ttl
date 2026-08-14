@@ -1,0 +1,433 @@
+@prefix med: <http://example.org/medical-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+med:Angina a owl:Class ;
+    rdfs:label "Angina Pectoris" ;
+    med:hasSymptom med:ChestPain,
+        med:ShortnessOfBreath ;
+    med:treatedBy med:BetaBlocker,
+        med:CalciumChannelBlocker,
+        med:Nitroglycerin ;
+    rdfs:subClassOf med:CoronaryArteryDisease .
+
+med:AtrialFibrillation a owl:Class ;
+    rdfs:label "Atrial Fibrillation" ;
+    med:diagnosedBy med:ECG ;
+    med:hasSymptom med:Dizziness,
+        med:Fatigue,
+        med:Palpitations,
+        med:ShortnessOfBreath ;
+    med:treatedBy med:Anticoagulant,
+        med:BetaBlocker,
+        med:CalciumChannelBlocker ;
+    rdfs:subClassOf med:Arrhythmia .
+
+med:BloodThinner a owl:Class ;
+    rdfs:label "Blood Thinner" ;
+    owl:equivalentClass med:Anticoagulant .
+
+med:Breathlessness a owl:Class ;
+    rdfs:label "Breathlessness" ;
+    owl:equivalentClass med:ShortnessOfBreath .
+
+med:ChestTightness a owl:Class ;
+    rdfs:label "Chest Tightness" ;
+    owl:equivalentClass med:ChestPain .
+
+med:HeartAttack a owl:Class ;
+    rdfs:label "Heart Attack" ;
+    owl:equivalentClass med:MyocardialInfarction .
+
+med:HeartDisease a owl:Class ;
+    rdfs:label "Heart Disease" ;
+    owl:equivalentClass med:CardiovascularDisease .
+
+med:HemorrhagicStroke a owl:Class ;
+    rdfs:label "Hemorrhagic Stroke" ;
+    rdfs:subClassOf med:Stroke .
+
+med:HighBloodPressure a owl:Class ;
+    rdfs:label "High Blood Pressure" ;
+    owl:equivalentClass med:Hypertension .
+
+med:HighCholesterol a owl:Class ;
+    rdfs:label "High Cholesterol" ;
+    owl:equivalentClass med:Hyperlipidemia .
+
+med:IrregularHeartbeat a owl:Class ;
+    rdfs:label "Irregular Heartbeat" ;
+    owl:equivalentClass med:Arrhythmia .
+
+med:IschemicStroke a owl:Class ;
+    rdfs:label "Ischemic Stroke" ;
+    rdfs:subClassOf med:Stroke .
+
+med:LegPain a owl:Class ;
+    rdfs:label "Leg Pain When Walking" ;
+    owl:equivalentClass med:Claudication .
+
+med:MetabolicSyndrome a owl:Class ;
+    rdfs:label "Metabolic Syndrome" ;
+    med:relatedCondition med:Hyperlipidemia,
+        med:Hypertension,
+        med:Type2Diabetes ;
+    rdfs:subClassOf med:MetabolicDisease .
+
+med:Obesity a owl:Class ;
+    rdfs:label "Obesity" ;
+    med:diagnosedBy med:BMI ;
+    med:hasSymptom med:Fatigue,
+        med:ShortnessOfBreath ;
+    med:relatedCondition med:Hypertension,
+        med:Type2Diabetes ;
+    med:treatedBy med:LifestyleModification ;
+    rdfs:subClassOf med:MetabolicDisease .
+
+med:SugarDisease a owl:Class ;
+    rdfs:label "Sugar Disease" ;
+    owl:equivalentClass med:DiabetesMellitus .
+
+med:SwollenLegs a owl:Class ;
+    rdfs:label "Swollen Legs" ;
+    owl:equivalentClass med:Edema .
+
+med:Type1Diabetes a owl:Class ;
+    rdfs:label "Type 1 Diabetes" ;
+    med:treatedBy med:Insulin ;
+    rdfs:subClassOf med:DiabetesMellitus .
+
+med:WaterPill a owl:Class ;
+    rdfs:label "Water Pill" ;
+    owl:equivalentClass med:Diuretic .
+
+med:contraindicatedWith a owl:ObjectProperty ;
+    rdfs:domain med:Treatment ;
+    rdfs:range med:Disease .
+
+med:diagnosedBy a owl:ObjectProperty ;
+    rdfs:domain med:Disease ;
+    rdfs:range med:DiagnosticTest .
+
+med:hasSymptom a owl:ObjectProperty ;
+    rdfs:domain med:Disease ;
+    rdfs:range med:Symptom .
+
+med:relatedCondition a owl:ObjectProperty ;
+    rdfs:domain med:Disease ;
+    rdfs:range med:Disease .
+
+med:treatedBy a owl:ObjectProperty ;
+    rdfs:domain med:Disease ;
+    rdfs:range med:Treatment .
+
+med:Atherosclerosis a owl:Class ;
+    rdfs:label "Atherosclerosis" ;
+    med:hasSymptom med:ChestPain,
+        med:Claudication,
+        med:Numbness ;
+    med:relatedCondition med:CoronaryArteryDisease,
+        med:PeripheralArteryDisease ;
+    med:treatedBy med:Antiplatelet,
+        med:LifestyleModification,
+        med:Statin ;
+    rdfs:subClassOf med:CardiovascularDisease .
+
+med:BMI a owl:Class ;
+    rdfs:label "Body Mass Index Assessment" ;
+    rdfs:subClassOf med:DiagnosticTest .
+
+med:BloodPressureTest a owl:Class ;
+    rdfs:label "Blood Pressure Measurement" ;
+    rdfs:subClassOf med:DiagnosticTest .
+
+med:Echocardiogram a owl:Class ;
+    rdfs:label "Echocardiogram" ;
+    rdfs:subClassOf med:DiagnosticTest .
+
+med:ExcessiveThirst a owl:Class ;
+    rdfs:label "Excessive Thirst" ;
+    rdfs:subClassOf med:Symptom .
+
+med:FastingGlucose a owl:Class ;
+    rdfs:label "Fasting Blood Glucose Test" ;
+    rdfs:subClassOf med:DiagnosticTest .
+
+med:FrequentUrination a owl:Class ;
+    rdfs:label "Frequent Urination" ;
+    rdfs:subClassOf med:Symptom .
+
+med:HbA1c a owl:Class ;
+    rdfs:label "Hemoglobin A1c Test" ;
+    rdfs:subClassOf med:DiagnosticTest .
+
+med:HeartFailure a owl:Class ;
+    rdfs:label "Heart Failure" ;
+    med:diagnosedBy med:ECG,
+        med:Echocardiogram ;
+    med:hasSymptom med:Edema,
+        med:Fatigue,
+        med:Palpitations,
+        med:ShortnessOfBreath ;
+    med:treatedBy med:ACEInhibitor,
+        med:ARB,
+        med:BetaBlocker,
+        med:Diuretic,
+        med:LifestyleModification ;
+    rdfs:subClassOf med:CardiovascularDisease .
+
+med:JawPain a owl:Class ;
+    rdfs:label "Jaw Pain" ;
+    rdfs:subClassOf med:Symptom .
+
+med:LipidPanel a owl:Class ;
+    rdfs:label "Lipid Panel" ;
+    rdfs:subClassOf med:DiagnosticTest .
+
+med:Metformin a owl:Class ;
+    rdfs:label "Metformin" ;
+    rdfs:subClassOf med:Treatment .
+
+med:MyocardialInfarction a owl:Class ;
+    rdfs:label "Myocardial Infarction" ;
+    med:diagnosedBy med:CardiacCatheterization,
+        med:ECG ;
+    med:hasSymptom med:ChestPain,
+        med:JawPain,
+        med:Nausea,
+        med:ShortnessOfBreath,
+        med:Sweating ;
+    med:treatedBy med:ACEInhibitor,
+        med:Angioplasty,
+        med:Antiplatelet,
+        med:BetaBlocker,
+        med:CABG,
+        med:Thrombolytic ;
+    rdfs:subClassOf med:CoronaryArteryDisease .
+
+med:Nausea a owl:Class ;
+    rdfs:label "Nausea" ;
+    rdfs:subClassOf med:Symptom .
+
+med:PeripheralArteryDisease a owl:Class ;
+    rdfs:label "Peripheral Artery Disease" ;
+    med:hasSymptom med:Claudication,
+        med:Numbness ;
+    rdfs:subClassOf med:CardiovascularDisease .
+
+med:StressTest a owl:Class ;
+    rdfs:label "Cardiac Stress Test" ;
+    rdfs:subClassOf med:DiagnosticTest .
+
+med:Sweating a owl:Class ;
+    rdfs:label "Sweating" ;
+    rdfs:subClassOf med:Symptom .
+
+med:UnexplainedWeightLoss a owl:Class ;
+    rdfs:label "Unexplained Weight Loss" ;
+    rdfs:subClassOf med:Symptom .
+
+med:ARB a owl:Class ;
+    rdfs:label "Angiotensin II Receptor Blocker" ;
+    rdfs:subClassOf med:Treatment .
+
+med:Angioplasty a owl:Class ;
+    rdfs:label "Angioplasty" ;
+    rdfs:subClassOf med:Treatment .
+
+med:Arrhythmia a owl:Class ;
+    rdfs:label "Arrhythmia" ;
+    rdfs:subClassOf med:CardiovascularDisease .
+
+med:CABG a owl:Class ;
+    rdfs:label "Coronary Artery Bypass Grafting" ;
+    rdfs:subClassOf med:Treatment .
+
+med:CTAngiography a owl:Class ;
+    rdfs:label "CT Angiography" ;
+    rdfs:subClassOf med:DiagnosticTest .
+
+med:CardiacCatheterization a owl:Class ;
+    rdfs:label "Cardiac Catheterization" ;
+    rdfs:subClassOf med:DiagnosticTest .
+
+med:Edema a owl:Class ;
+    rdfs:label "Edema" ;
+    rdfs:subClassOf med:Symptom .
+
+med:Headache a owl:Class ;
+    rdfs:label "Headache" ;
+    rdfs:subClassOf med:Symptom .
+
+med:Hyperlipidemia a owl:Class ;
+    rdfs:label "Hyperlipidemia" ;
+    med:diagnosedBy med:LipidPanel ;
+    med:relatedCondition med:Atherosclerosis ;
+    med:treatedBy med:LifestyleModification,
+        med:Statin ;
+    rdfs:subClassOf med:MetabolicDisease .
+
+med:Insulin a owl:Class ;
+    rdfs:label "Insulin" ;
+    rdfs:subClassOf med:Treatment .
+
+med:Nitroglycerin a owl:Class ;
+    rdfs:label "Nitroglycerin" ;
+    rdfs:subClassOf med:Treatment .
+
+med:Palpitations a owl:Class ;
+    rdfs:label "Palpitations" ;
+    rdfs:subClassOf med:Symptom .
+
+med:Thrombolytic a owl:Class ;
+    rdfs:label "Thrombolytic" ;
+    rdfs:subClassOf med:Treatment .
+
+med:Type2Diabetes a owl:Class ;
+    rdfs:label "Type 2 Diabetes" ;
+    med:treatedBy med:Insulin,
+        med:LifestyleModification,
+        med:Metformin ;
+    rdfs:subClassOf med:DiabetesMellitus .
+
+med:ACEInhibitor a owl:Class ;
+    rdfs:label "ACE Inhibitor" ;
+    rdfs:subClassOf med:Treatment .
+
+med:Anticoagulant a owl:Class ;
+    rdfs:label "Anticoagulant" ;
+    rdfs:subClassOf med:Treatment .
+
+med:BlurredVision a owl:Class ;
+    rdfs:label "Blurred Vision" ;
+    rdfs:subClassOf med:Symptom .
+
+med:CalciumChannelBlocker a owl:Class ;
+    rdfs:label "Calcium Channel Blocker" ;
+    rdfs:subClassOf med:Treatment .
+
+med:Claudication a owl:Class ;
+    rdfs:label "Claudication" ;
+    rdfs:subClassOf med:Symptom .
+
+med:DiabetesMellitus a owl:Class ;
+    rdfs:label "Diabetes Mellitus" ;
+    med:diagnosedBy med:FastingGlucose,
+        med:HbA1c ;
+    med:hasSymptom med:BlurredVision,
+        med:ExcessiveThirst,
+        med:Fatigue,
+        med:FrequentUrination,
+        med:UnexplainedWeightLoss ;
+    med:relatedCondition med:CardiovascularDisease ;
+    rdfs:subClassOf med:MetabolicDisease .
+
+med:Diuretic a owl:Class ;
+    rdfs:label "Diuretic" ;
+    rdfs:subClassOf med:Treatment .
+
+med:Dizziness a owl:Class ;
+    rdfs:label "Dizziness" ;
+    rdfs:subClassOf med:Symptom .
+
+med:ECG a owl:Class ;
+    rdfs:label "Electrocardiogram" ;
+    rdfs:subClassOf med:DiagnosticTest .
+
+med:Hypertension a owl:Class ;
+    rdfs:label "Hypertension" ;
+    med:diagnosedBy med:BloodPressureTest ;
+    med:hasSymptom med:BlurredVision,
+        med:Dizziness,
+        med:Headache ;
+    med:relatedCondition med:CoronaryArteryDisease,
+        med:HeartFailure,
+        med:Stroke ;
+    med:treatedBy med:ACEInhibitor,
+        med:ARB,
+        med:BetaBlocker,
+        med:CalciumChannelBlocker,
+        med:Diuretic,
+        med:LifestyleModification ;
+    rdfs:subClassOf med:CardiovascularDisease .
+
+med:Numbness a owl:Class ;
+    rdfs:label "Numbness" ;
+    rdfs:subClassOf med:Symptom .
+
+med:Statin a owl:Class ;
+    rdfs:label "Statin" ;
+    rdfs:subClassOf med:Treatment .
+
+med:Stroke a owl:Class ;
+    rdfs:label "Stroke" ;
+    med:diagnosedBy med:CTAngiography ;
+    med:hasSymptom med:BlurredVision,
+        med:Dizziness,
+        med:Headache,
+        med:Numbness ;
+    med:treatedBy med:Anticoagulant,
+        med:Antiplatelet,
+        med:Thrombolytic ;
+    rdfs:subClassOf med:CardiovascularDisease .
+
+med:Antiplatelet a owl:Class ;
+    rdfs:label "Antiplatelet Agent" ;
+    rdfs:subClassOf med:Treatment .
+
+med:CoronaryArteryDisease a owl:Class ;
+    rdfs:label "Coronary Artery Disease" ;
+    med:diagnosedBy med:CTAngiography,
+        med:CardiacCatheterization,
+        med:StressTest ;
+    med:hasSymptom med:ChestPain,
+        med:Fatigue,
+        med:ShortnessOfBreath ;
+    med:treatedBy med:Angioplasty,
+        med:Antiplatelet,
+        med:BetaBlocker,
+        med:CABG,
+        med:Nitroglycerin,
+        med:Statin ;
+    rdfs:subClassOf med:CardiovascularDisease .
+
+med:MetabolicDisease a owl:Class ;
+    rdfs:label "Metabolic Disease" ;
+    rdfs:subClassOf med:Disease .
+
+med:ChestPain a owl:Class ;
+    rdfs:label "Chest Pain" ;
+    rdfs:subClassOf med:Symptom .
+
+med:Fatigue a owl:Class ;
+    rdfs:label "Fatigue" ;
+    rdfs:subClassOf med:Symptom .
+
+med:BetaBlocker a owl:Class ;
+    rdfs:label "Beta Blocker" ;
+    rdfs:subClassOf med:Treatment .
+
+med:LifestyleModification a owl:Class ;
+    rdfs:label "Lifestyle Modification" ;
+    rdfs:subClassOf med:Treatment .
+
+med:ShortnessOfBreath a owl:Class ;
+    rdfs:label "Shortness of Breath" ;
+    rdfs:subClassOf med:Symptom .
+
+med:Disease a owl:Class ;
+    rdfs:label "Disease" .
+
+med:CardiovascularDisease a owl:Class ;
+    rdfs:label "Cardiovascular Disease" ;
+    rdfs:subClassOf med:Disease .
+
+med:DiagnosticTest a owl:Class ;
+    rdfs:label "DiagnosticTest" .
+
+med:Symptom a owl:Class ;
+    rdfs:label "Symptom" .
+
+med:Treatment a owl:Class ;
+    rdfs:label "Treatment" .
+

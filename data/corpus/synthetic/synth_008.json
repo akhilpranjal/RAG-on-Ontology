@@ -1,0 +1,15 @@
+{
+  "doc_id": "synth_008",
+  "title": "Hyperlipidemia, Atherosclerosis, and Statin Therapy",
+  "text": "Hyperlipidemia is characterized by elevated blood lipids, contributing to the development of atherosclerosis (hardening of the arteries). Lipid panel blood tests evaluate total cholesterol, LDL, and HDL levels. Statin therapy reduces low-density lipoprotein cholesterol, lowering the incidence of coronary artery disease and myocardial infarction.",
+  "source": "Synthetic",
+  "concepts": [
+    "Atherosclerosis",
+    "CoronaryArteryDisease",
+    "Disease",
+    "Hyperlipidemia",
+    "LipidPanel",
+    "MyocardialInfarction",
+    "Statin"
+  ]
+}

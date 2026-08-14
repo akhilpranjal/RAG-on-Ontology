@@ -1,0 +1,15 @@
+{
+  "doc_id": "synth_010",
+  "title": "Emergency Management of Angina and Myocardial Infarction with Nitroglycerin",
+  "text": "Angina pectoris presents as crushing chest pain or tightness radiating to the jaw and arm, frequently accompanied by shortness of breath and sweating. Sublingual nitroglycerin acts as a potent vasodilator to relieve acute angina symptoms. If chest pain persists, immediate evaluation for acute myocardial infarction via ECG is required.",
+  "source": "Synthetic",
+  "concepts": [
+    "Angina",
+    "ChestPain",
+    "MyocardialInfarction",
+    "Nitroglycerin",
+    "ShortnessOfBreath",
+    "Sweating",
+    "Symptom"
+  ]
+}

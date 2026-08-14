@@ -1,0 +1,16 @@
+{
+  "doc_id": "synth_005",
+  "title": "Acute Ischemic Stroke Emergency Intervention with Thrombolytics",
+  "text": "Acute Ischemic Stroke occurs when an artery supplying blood to the brain is obstructed by a clot, leading to sudden numbness, severe headache, dizziness, and blurred vision. Intravenous thrombolytic therapy (tPA) must be administered within a narrow time window to dissolve the clot and restore cerebral blood flow. CT angiography is essential for rapid diagnosis.",
+  "source": "Synthetic",
+  "concepts": [
+    "BlurredVision",
+    "CTAngiography",
+    "Dizziness",
+    "Headache",
+    "IschemicStroke",
+    "Numbness",
+    "Stroke",
+    "Thrombolytic"
+  ]
+}

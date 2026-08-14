@@ -1,0 +1,19 @@
+{
+  "doc_id": "synth_007",
+  "title": "Pharmacological Management of Hypertension with Diuretics and ACE Inhibitors",
+  "text": "Hypertension (high blood pressure) is a major risk factor for heart failure, stroke, and atherosclerosis. Initial therapy often includes ACE inhibitors, Angiotensin II Receptor Blockers (ARBs), calcium channel blockers, and diuretics (water pills). Diagnostic monitoring requires accurate blood pressure measurements.",
+  "source": "Synthetic",
+  "concepts": [
+    "ACEInhibitor",
+    "ARB",
+    "Atherosclerosis",
+    "BloodPressureTest",
+    "CalciumChannelBlocker",
+    "Diuretic",
+    "HeartFailure",
+    "HighBloodPressure",
+    "Hypertension",
+    "Stroke",
+    "WaterPill"
+  ]
+}

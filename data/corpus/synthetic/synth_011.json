@@ -1,0 +1,17 @@
+{
+  "doc_id": "synth_011",
+  "title": "Metabolic Syndrome Diagnostic Criteria and Risk Assessment",
+  "text": "Metabolic Syndrome represents a cluster of conditions including central obesity, hypertension, hyperlipidemia, and elevated fasting glucose (insulin resistance). Together, these factors exponentially increase the risk of developing Type 2 Diabetes and coronary artery disease. Management focuses on comprehensive lifestyle modification and pharmacotherapy.",
+  "source": "Synthetic",
+  "concepts": [
+    "CoronaryArteryDisease",
+    "Disease",
+    "Hyperlipidemia",
+    "Hypertension",
+    "Insulin",
+    "LifestyleModification",
+    "MetabolicSyndrome",
+    "Obesity",
+    "Type2Diabetes"
+  ]
+}

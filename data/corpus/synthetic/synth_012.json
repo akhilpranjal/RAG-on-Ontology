@@ -1,0 +1,13 @@
+{
+  "doc_id": "synth_012",
+  "title": "Diagnostic Testing Overview: Cardiac Stress Test and Catheterization",
+  "text": "Evaluation of suspected coronary artery disease includes cardiac stress testing to detect exercise-induced myocardial ischemia. When non-invasive tests are abnormal, cardiac catheterization (coronary angiography) is performed to directly visualize arterial stenoses and guide revascularization via angioplasty or CABG.",
+  "source": "Synthetic",
+  "concepts": [
+    "Angioplasty",
+    "CardiacCatheterization",
+    "CoronaryArteryDisease",
+    "Disease",
+    "StressTest"
+  ]
+}

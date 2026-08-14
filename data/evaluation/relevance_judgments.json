@@ -1,0 +1,681 @@
+{
+  "q_A01": [
+    "pubmed_41206969",
+    "pubmed_41910315",
+    "pubmed_42101490",
+    "pubmed_42179051",
+    "pubmed_42261988",
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "pubmed_42350437",
+    "pubmed_42441757",
+    "pubmed_42514366",
+    "synth_007",
+    "synth_011"
+  ],
+  "q_A02": [
+    "pubmed_42261988",
+    "pubmed_42270610",
+    "pubmed_42336497",
+    "synth_002",
+    "synth_004",
+    "synth_006",
+    "synth_008",
+    "synth_010"
+  ],
+  "q_A03": [
+    "pubmed_42496130",
+    "pubmed_42514366",
+    "synth_001",
+    "synth_003"
+  ],
+  "q_A04": [
+    "pubmed_42261667",
+    "pubmed_42336497",
+    "pubmed_42350437",
+    "pubmed_42441757",
+    "synth_006",
+    "synth_007",
+    "synth_011"
+  ],
+  "q_A05": [
+    "pubmed_41494151",
+    "pubmed_41537264",
+    "pubmed_41604641",
+    "pubmed_42179051",
+    "synth_007",
+    "synth_008",
+    "synth_009"
+  ],
+  "q_A06": [
+    "pubmed_41604641",
+    "pubmed_42419810",
+    "synth_003",
+    "synth_008",
+    "synth_009",
+    "synth_011"
+  ],
+  "q_A07": [
+    "pubmed_42156758",
+    "pubmed_42261988",
+    "pubmed_42336497",
+    "pubmed_42364542",
+    "pubmed_42377659",
+    "pubmed_42399018",
+    "synth_002",
+    "synth_005",
+    "synth_007"
+  ],
+  "q_A08": [
+    "pubmed_42156758",
+    "pubmed_42261988",
+    "pubmed_42336497",
+    "pubmed_42364542",
+    "synth_002"
+  ],
+  "q_A09": [
+    "pubmed_42261988",
+    "pubmed_42270610",
+    "pubmed_42336497",
+    "synth_002",
+    "synth_004",
+    "synth_006",
+    "synth_008",
+    "synth_010"
+  ],
+  "q_A10": [
+    "pubmed_41206969",
+    "pubmed_41910315",
+    "pubmed_42101490",
+    "pubmed_42179051",
+    "pubmed_42261667",
+    "pubmed_42261988",
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "pubmed_42336497",
+    "pubmed_42514366",
+    "synth_006",
+    "synth_007"
+  ],
+  "q_A11": [
+    "pubmed_42179051",
+    "pubmed_42350437",
+    "pubmed_42441757",
+    "synth_003",
+    "synth_007",
+    "synth_008",
+    "synth_011"
+  ],
+  "q_A12": [
+    "pubmed_42377659",
+    "pubmed_42399018",
+    "synth_002",
+    "synth_005",
+    "synth_007"
+  ],
+  "q_B01": [
+    "pubmed_41206969",
+    "pubmed_41537264",
+    "pubmed_41866072",
+    "pubmed_41910315",
+    "pubmed_42101490",
+    "pubmed_42156758",
+    "pubmed_42179051",
+    "pubmed_42261667",
+    "pubmed_42261988",
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "pubmed_42336497",
+    "pubmed_42350437",
+    "pubmed_42377659",
+    "pubmed_42399018",
+    "pubmed_42441757",
+    "pubmed_42456136",
+    "pubmed_42514366",
+    "synth_002",
+    "synth_004",
+    "synth_005",
+    "synth_006",
+    "synth_007",
+    "synth_008",
+    "synth_011",
+    "synth_012"
+  ],
+  "q_B02": [
+    "pubmed_40470996",
+    "pubmed_42184419",
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "pubmed_42413493",
+    "pubmed_42496130",
+    "pubmed_42514366",
+    "synth_001",
+    "synth_003",
+    "synth_011"
+  ],
+  "q_B03": [
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "pubmed_42336497",
+    "pubmed_42413493",
+    "pubmed_42419343",
+    "pubmed_42444236",
+    "pubmed_42444237",
+    "pubmed_42496130",
+    "pubmed_42514366",
+    "synth_001",
+    "synth_003",
+    "synth_008",
+    "synth_011"
+  ],
+  "q_B04": [
+    "pubmed_42377659",
+    "pubmed_42399018",
+    "synth_002",
+    "synth_005",
+    "synth_007"
+  ],
+  "q_B05": [
+    "pubmed_42156758",
+    "pubmed_42261988",
+    "pubmed_42336497",
+    "pubmed_42364542",
+    "synth_002"
+  ],
+  "q_B06": [
+    "pubmed_41537264",
+    "pubmed_41866072",
+    "pubmed_42101490",
+    "pubmed_42261988",
+    "pubmed_42270610",
+    "pubmed_42336497",
+    "pubmed_42456136",
+    "synth_004",
+    "synth_008",
+    "synth_010",
+    "synth_011",
+    "synth_012"
+  ],
+  "q_B07": [
+    "pubmed_40470996",
+    "pubmed_42184419",
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "pubmed_42336497",
+    "pubmed_42413493",
+    "pubmed_42419343",
+    "pubmed_42444236",
+    "pubmed_42444237",
+    "pubmed_42514366",
+    "synth_003",
+    "synth_008",
+    "synth_011"
+  ],
+  "q_B08": [
+    "pubmed_41537264",
+    "pubmed_41604641",
+    "pubmed_41866072",
+    "pubmed_42101490",
+    "pubmed_42179051",
+    "pubmed_42456136",
+    "synth_004",
+    "synth_007",
+    "synth_008",
+    "synth_009",
+    "synth_011",
+    "synth_012"
+  ],
+  "q_B09": [
+    "pubmed_40470996",
+    "pubmed_42184419",
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "pubmed_42336497",
+    "pubmed_42350437",
+    "pubmed_42413493",
+    "pubmed_42419343",
+    "pubmed_42441757",
+    "pubmed_42444236",
+    "pubmed_42444237",
+    "pubmed_42514366",
+    "synth_003",
+    "synth_007",
+    "synth_008",
+    "synth_011"
+  ],
+  "q_B10": [
+    "pubmed_41537264",
+    "pubmed_41866072",
+    "pubmed_42101490",
+    "pubmed_42456136",
+    "synth_004",
+    "synth_008",
+    "synth_010",
+    "synth_011",
+    "synth_012"
+  ],
+  "q_B11": [
+    "pubmed_42261667",
+    "pubmed_42336497",
+    "pubmed_42350437",
+    "pubmed_42377659",
+    "pubmed_42399018",
+    "pubmed_42441757",
+    "synth_002",
+    "synth_005",
+    "synth_006",
+    "synth_007",
+    "synth_011"
+  ],
+  "q_B12": [
+    "pubmed_42179051",
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "synth_003",
+    "synth_007",
+    "synth_008",
+    "synth_011"
+  ],
+  "q_C01": [
+    "pubmed_41537264",
+    "pubmed_41866072",
+    "pubmed_42101490",
+    "pubmed_42261667",
+    "pubmed_42261988",
+    "pubmed_42270610",
+    "pubmed_42336497",
+    "pubmed_42456136",
+    "synth_004",
+    "synth_006",
+    "synth_007",
+    "synth_008",
+    "synth_010",
+    "synth_011",
+    "synth_012"
+  ],
+  "q_C02": [
+    "pubmed_42496130",
+    "pubmed_42514366",
+    "synth_001",
+    "synth_003"
+  ],
+  "q_C03": [
+    "pubmed_42261667",
+    "pubmed_42336497",
+    "synth_001",
+    "synth_002",
+    "synth_006",
+    "synth_007"
+  ],
+  "q_C04": [
+    "pubmed_42377659",
+    "pubmed_42399018",
+    "synth_002",
+    "synth_005",
+    "synth_007",
+    "synth_009"
+  ],
+  "q_C05": [
+    "pubmed_42156758",
+    "pubmed_42261988",
+    "pubmed_42336497",
+    "pubmed_42364542",
+    "synth_002",
+    "synth_005"
+  ],
+  "q_C06": [
+    "pubmed_41494151",
+    "pubmed_41537264",
+    "pubmed_41604641",
+    "pubmed_42179051",
+    "synth_007",
+    "synth_008",
+    "synth_009"
+  ],
+  "q_C07": [
+    "pubmed_42261988",
+    "pubmed_42270610",
+    "pubmed_42336497",
+    "synth_002",
+    "synth_004",
+    "synth_006",
+    "synth_008",
+    "synth_010"
+  ],
+  "q_C08": [
+    "pubmed_42350437",
+    "pubmed_42441757",
+    "synth_002",
+    "synth_005",
+    "synth_007",
+    "synth_011"
+  ],
+  "q_C09": [
+    "pubmed_41537264",
+    "pubmed_41866072",
+    "pubmed_42101490",
+    "pubmed_42456136",
+    "synth_004",
+    "synth_008",
+    "synth_010",
+    "synth_011",
+    "synth_012"
+  ],
+  "q_C10": [
+    "pubmed_40470996",
+    "pubmed_42184419",
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "pubmed_42413493",
+    "pubmed_42496130",
+    "pubmed_42514366",
+    "synth_001",
+    "synth_002",
+    "synth_003",
+    "synth_005",
+    "synth_006",
+    "synth_011"
+  ],
+  "q_D01": [
+    "pubmed_42261667",
+    "pubmed_42336497",
+    "pubmed_42350437",
+    "pubmed_42441757",
+    "synth_006",
+    "synth_007",
+    "synth_011"
+  ],
+  "q_D02": [
+    "pubmed_41537264",
+    "pubmed_41604641",
+    "pubmed_41866072",
+    "pubmed_42101490",
+    "pubmed_42179051",
+    "pubmed_42456136",
+    "synth_003",
+    "synth_004",
+    "synth_007",
+    "synth_008",
+    "synth_009",
+    "synth_011",
+    "synth_012"
+  ],
+  "q_D03": [
+    "pubmed_42261988",
+    "pubmed_42270610",
+    "pubmed_42336497",
+    "pubmed_42399018",
+    "synth_004",
+    "synth_005",
+    "synth_008",
+    "synth_010"
+  ],
+  "q_D04": [
+    "pubmed_40470996",
+    "pubmed_42103929",
+    "pubmed_42184419",
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "pubmed_42413493",
+    "pubmed_42419810",
+    "pubmed_42514366",
+    "synth_001",
+    "synth_003",
+    "synth_011"
+  ],
+  "q_D05": [
+    "pubmed_42156758",
+    "pubmed_42261988",
+    "pubmed_42336497",
+    "pubmed_42364542",
+    "synth_002",
+    "synth_007"
+  ],
+  "q_D06": [
+    "pubmed_41537264",
+    "pubmed_41866072",
+    "pubmed_42101490",
+    "pubmed_42456136",
+    "synth_004",
+    "synth_008",
+    "synth_010",
+    "synth_011",
+    "synth_012"
+  ],
+  "q_D07": [
+    "pubmed_41494151",
+    "pubmed_41537264",
+    "pubmed_41866072",
+    "pubmed_42101490",
+    "pubmed_42456136",
+    "synth_004",
+    "synth_008",
+    "synth_009",
+    "synth_011",
+    "synth_012"
+  ],
+  "q_D08": [
+    "pubmed_42261667",
+    "pubmed_42336497",
+    "synth_002",
+    "synth_006",
+    "synth_007"
+  ],
+  "q_D09": [
+    "pubmed_42184419",
+    "pubmed_42413493",
+    "synth_001",
+    "synth_003",
+    "synth_011"
+  ],
+  "q_D10": [
+    "pubmed_42156758",
+    "pubmed_42261988",
+    "pubmed_42270610",
+    "pubmed_42336497",
+    "pubmed_42364542",
+    "pubmed_42377659",
+    "pubmed_42399018",
+    "synth_002",
+    "synth_004",
+    "synth_005",
+    "synth_007",
+    "synth_008",
+    "synth_010"
+  ],
+  "q_E01": [
+    "pubmed_42261667",
+    "pubmed_42336497",
+    "synth_002",
+    "synth_006",
+    "synth_007",
+    "synth_010"
+  ],
+  "q_E02": [
+    "pubmed_40470996",
+    "pubmed_42103929",
+    "pubmed_42184419",
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "pubmed_42413493",
+    "pubmed_42419810",
+    "pubmed_42514366",
+    "synth_001",
+    "synth_003",
+    "synth_011"
+  ],
+  "q_E03": [
+    "pubmed_41494151",
+    "pubmed_41537264",
+    "pubmed_41866072",
+    "pubmed_42101490",
+    "pubmed_42261988",
+    "pubmed_42270610",
+    "pubmed_42336497",
+    "pubmed_42456136",
+    "synth_004",
+    "synth_008",
+    "synth_009",
+    "synth_010",
+    "synth_011",
+    "synth_012"
+  ],
+  "q_E04": [
+    "pubmed_42377659",
+    "pubmed_42399018",
+    "synth_002",
+    "synth_005",
+    "synth_007",
+    "synth_009"
+  ],
+  "q_E05": [
+    "pubmed_41537264",
+    "pubmed_41604641",
+    "pubmed_41866072",
+    "pubmed_42101490",
+    "pubmed_42179051",
+    "pubmed_42456136",
+    "synth_003",
+    "synth_004",
+    "synth_007",
+    "synth_008",
+    "synth_009",
+    "synth_011",
+    "synth_012"
+  ],
+  "q_E06": [
+    "pubmed_40470996",
+    "pubmed_42103929",
+    "pubmed_42184419",
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "pubmed_42336497",
+    "pubmed_42413493",
+    "pubmed_42419343",
+    "pubmed_42419810",
+    "pubmed_42444236",
+    "pubmed_42444237",
+    "pubmed_42514366",
+    "synth_003",
+    "synth_011"
+  ],
+  "q_E07": [
+    "pubmed_42156758",
+    "pubmed_42261988",
+    "pubmed_42336497",
+    "pubmed_42364542",
+    "synth_002",
+    "synth_007"
+  ],
+  "q_E08": [
+    "pubmed_41494151",
+    "pubmed_41537264",
+    "pubmed_41604641",
+    "synth_004",
+    "synth_008",
+    "synth_009",
+    "synth_012"
+  ],
+  "q_E09": [
+    "pubmed_42261667",
+    "pubmed_42336497",
+    "pubmed_42350437",
+    "pubmed_42441757",
+    "synth_006",
+    "synth_007",
+    "synth_011"
+  ],
+  "q_E10": [
+    "pubmed_42496130",
+    "pubmed_42514366",
+    "synth_001",
+    "synth_003"
+  ],
+  "q_F01": [
+    "pubmed_42496130",
+    "pubmed_42514366",
+    "synth_001",
+    "synth_003"
+  ],
+  "q_F02": [
+    "pubmed_40470996",
+    "pubmed_42103929",
+    "pubmed_42184419",
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "pubmed_42413493",
+    "pubmed_42419810",
+    "pubmed_42514366",
+    "synth_003",
+    "synth_011"
+  ],
+  "q_F03": [
+    "pubmed_41537264",
+    "pubmed_41866072",
+    "pubmed_42101490",
+    "pubmed_42456136",
+    "synth_004",
+    "synth_008",
+    "synth_011",
+    "synth_012"
+  ],
+  "q_F04": [
+    "pubmed_42350437",
+    "pubmed_42441757",
+    "synth_007",
+    "synth_011"
+  ],
+  "q_F05": [
+    "pubmed_42156758",
+    "pubmed_42261988",
+    "pubmed_42336497",
+    "pubmed_42364542",
+    "synth_002"
+  ],
+  "q_F06": [
+    "pubmed_41494151",
+    "pubmed_42261988",
+    "pubmed_42270610",
+    "pubmed_42336497",
+    "synth_004",
+    "synth_008",
+    "synth_009",
+    "synth_010",
+    "synth_012"
+  ],
+  "q_F07": [
+    "pubmed_42399018",
+    "synth_005"
+  ],
+  "q_F08": [
+    "synth_003",
+    "synth_008",
+    "synth_011"
+  ],
+  "q_F09": [
+    "synth_010"
+  ],
+  "q_F10": [
+    "pubmed_42263157",
+    "pubmed_42265997",
+    "synth_003",
+    "synth_011"
+  ],
+  "q_F11": [
+    "pubmed_42261667",
+    "pubmed_42336497",
+    "synth_006",
+    "synth_007"
+  ],
+  "q_F12": [
+    "pubmed_42156758",
+    "pubmed_42261988",
+    "pubmed_42336497",
+    "pubmed_42364542",
+    "pubmed_42377659",
+    "pubmed_42399018",
+    "synth_002",
+    "synth_005",
+    "synth_007"
+  ]
+}

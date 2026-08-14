@@ -1,0 +1,14 @@
+{
+  "doc_id": "synth_004",
+  "title": "Surgical Revascularization: CABG vs Angioplasty in Coronary Artery Disease",
+  "text": "Patients with severe coronary artery disease (CAD) may require revascularization. Coronary Artery Bypass Grafting (CABG) is an open surgical procedure bypasses blocked arteries, whereas angioplasty (percutaneous coronary intervention) utilizes stenting to restore blood flow. Both procedures relieve severe chest pain (angina) and reduce the risk of myocardial infarction.",
+  "source": "Synthetic",
+  "concepts": [
+    "Angioplasty",
+    "CABG",
+    "ChestPain",
+    "CoronaryArteryDisease",
+    "Disease",
+    "MyocardialInfarction"
+  ]
+}

@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# ChromaDB persistence
+data/vectorstore/
+
+# IDE
+.vscode/
+.idea/
+
+# Results (keep structure, ignore data)
+results/metrics/*.json
+results/metrics/*.csv
+results/plots/*.png
+results/plots/*.svg
+results/reasoning_logs/*.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# UV
+.python-version
