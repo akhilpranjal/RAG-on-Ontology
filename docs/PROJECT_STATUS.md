@@ -52,8 +52,8 @@
 | **Experiments (retrieval)** | ✅ | **DONE — 6 pipelines × 66 queries, real metrics** → `experiment_summary.json` |
 | **Answer evaluation** | ✅ | **DONE — 3 pipelines × 66 queries, judged** → `answer_summary.json` |
 | Plots | ✅ | **DONE** — `overall_comparison.png`, `category_breakdown.png`, `ablation_study.png`, `answer_quality.png` |
-| README / report / viva | ❌ | not started (next) |
-| Git | ✅ | **4 commits** (baseline, corpus+metrics, quota hardening+answer eval) |
+| README / report / viva | ✅ | **DONE** — `README.md`, `docs/report/report.md`, `docs/report/viva_outline.md` |
+| Git | ✅ | **5 commits** |
 
 ---
 
@@ -152,11 +152,11 @@ Properties-only 0.3669 · Full ontology 0.3637.
 | 4 | Commit each completed step | ✅ commit `03fd169` |
 
 ### P1 — Analysis & Reporting
-| # | Task | Who | Notes |
-|---|---|---|---|
-| 5 | README | me | Setup, architecture, how-to-run. |
-| 6 | Final report (`docs/report/`) | me | Framing, methods, results, ablations, stats, limitations. |
-| 7 | Viva presentation outline + talking points | me + you rehearse | I draft. |
+| # | Task | Status |
+|---|---|---|
+| 5 | README | ✅ `README.md` |
+| 6 | Final report (`docs/report/`) | ✅ `report.md` |
+| 7 | Viva presentation outline + talking points | ✅ `viva_outline.md` (rehearse) |
 
 ### P2 — Optional strengthening
 | # | Task | Who | Notes |
@@ -185,8 +185,9 @@ Properties-only 0.3669 · Full ontology 0.3637.
 |---|---|---|
 | Session 1 | Baseline commit — corpus, ontology, pipelines, LangGraph, eval harness | ✅ `a3628ca` |
 | Session 2 | Corpus cleanup + expansion (80 docs), answer-metrics layer, quota hardening, bug fixes | ✅ `dde1228` |
-| **Session 3 (this)** | **Retrieval experiments (6×66) · answer eval (3×66) · plots · quota fixes** | ✅ `03fd169` |
-| **Next** | README → final report → viva outline · commit all | ⏳ |
+| Session 3 | Retrieval experiments (6×66) · answer eval (3×66) · plots · quota fixes | ✅ `03fd169` |
+| **Session 3 (this)** | **Status doc · README · final report · viva outline** | ✅ next commit |
+| Remaining | You: ontology review, relevance/annotation spot-checks (§5) · viva rehearsal | ⏳ you |
 
 > ⚠️ **Quota reality (verified empirically this session):** free-tier generation is **~20 req/day per model**
 > on the newest Flash models, but **`gemini-3.1-flash-lite` has a ~1000 req/day budget** — used for both
@@ -209,5 +210,6 @@ Properties-only 0.3669 · Full ontology 0.3637.
 
 ## 8. Immediate Next Action
 
-README + final report (`docs/report/`) + viva outline, then commit. All experiments, metrics,
-stats, and plots are DONE.
+All experiments, metrics, stats, plots, README, report, and viva outline are DONE.
+Your remaining tasks are manual (§5): review ontology triples, spot-check relevance
+judgments and concept annotations, then rehearse the viva with `docs/report/viva_outline.md`.
