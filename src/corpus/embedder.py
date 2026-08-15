@@ -17,6 +17,7 @@ from google.genai import types
 from tqdm import tqdm
 
 from src.config import GOOGLE_API_KEY, EMBEDDING_MODEL, EMBEDDING_CACHE_FILE
+from src.rate_limiter import acquire_embedding
 
 _CACHE_VERSION = 1
 
@@ -75,6 +76,7 @@ def _embed_one(client, model: str, text: str, task_type: str) -> list[float]:
     if cached is not None:
         return cached
 
+    acquire_embedding()
     response = client.models.embed_content(
         model=model,
         contents=text,

@@ -18,6 +18,7 @@ from google.genai import types
 
 from src.config import GOOGLE_API_KEY, LLM_JUDGE_MODEL
 from src.ontology.reasoner import OntologyReasoner
+from src.rate_limiter import acquire_generation
 
 
 class ConceptResolver:
@@ -152,6 +153,7 @@ def judge_answer(
         f"Answer: {answer}\n"
     )
 
+    acquire_generation(judge_model)
     response = client.models.generate_content(
         model=judge_model,
         contents=user_prompt,

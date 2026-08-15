@@ -22,6 +22,7 @@ from src.config import (
     METRICS_DIR,
     REASONING_LOGS_DIR,
     QUERY_CATEGORIES,
+    TOP_K_EXTENDED,
     ensure_directories,
 )
 from src.corpus.loader import load_and_chunk_corpus
@@ -73,7 +74,8 @@ def run_pipeline_eval(
         relevant_docs = relevance_judgments.get(q_id, [])
 
         # Run pipeline without hitting Gemini generation API (save quota, we only need retrieval metrics)
-        res = pipeline_fn(q_text, generate=False, **pipeline_kwargs)
+        # Retrieve top-10 so that Recall@10 is a genuine metric (top-5 metrics slice internally).
+        res = pipeline_fn(q_text, generate=False, top_k=TOP_K_EXTENDED, **pipeline_kwargs)
 
         # Compute metrics
         metrics = compute_all_retrieval_metrics(

@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import time
 
 from google.genai.errors import ClientError
@@ -71,22 +72,20 @@ def _load_retrieval_records(pipeline_key: str) -> dict | None:
     return {r["query_id"]: r for r in data.get("per_query_results", [])}
 
 
-def retry_call(fn, retries: int = 8, base_delay: float = 20.0):
-    """Call fn, retrying on rate-limit (429) with exponential backoff."""
+def retry_call(fn, retries: int = 12, base_delay: float = 20.0, max_delay: float = 90.0):
+    """Call fn, retrying on rate-limit (429) / transient server errors (503)."""
     for attempt in range(retries):
         try:
             return fn()
-        except ClientError as e:
-            if "429" in str(e):
-                delay = base_delay * (2 ** attempt)
-                print(f"    [rate-limited] retrying in {delay:.0f}s ...")
-                time.sleep(delay)
-            else:
-                raise
         except Exception as e:  # noqa: BLE001 - surface any transient API error
-            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
-                delay = base_delay * (2 ** attempt)
-                print(f"    [quota/rate] retrying in {delay:.0f}s ...")
+            msg = str(e)
+            if "429" in msg or "RESOURCE_EXHAUSTED" in msg or "503" in msg or "high demand" in msg:
+                delay = min(base_delay * (2 ** attempt), max_delay)
+                # Respect the server's suggested retry delay when present.
+                match = re.search(r"retry in (\d+(?:\.\d+)?)s", msg)
+                if match:
+                    delay = max(delay, float(match.group(1)) + 5.0)
+                print(f"    [quota/server] retrying in {delay:.0f}s ...")
                 time.sleep(delay)
             else:
                 raise
@@ -139,16 +138,20 @@ def run_pipeline_answers(
         # Prefer cached retrieved texts from the retrieval experiment.
         cached = retrieval_records.get(q["id"]) if retrieval_records else None
         if cached and cached.get("retrieved_texts"):
-            answer = generate_answer(
-                question=q["text"],
-                context_chunks=cached["retrieved_texts"],
-                ontology_context=(
-                    _format_trace(cached["reasoning_trace"])
-                    if cached.get("reasoning_trace") else None
-                ),
+            answer = retry_call(
+                lambda: generate_answer(
+                    question=q["text"],
+                    context_chunks=cached["retrieved_texts"],
+                    ontology_context=(
+                        _format_trace(cached["reasoning_trace"])
+                        if cached.get("reasoning_trace") else None
+                    ),
+                )
             )
         else:
-            answer = pipeline_fn(q["text"], generate=True).answer
+            answer = retry_call(
+                lambda: pipeline_fn(q["text"], generate=True).answer
+            )
 
         record = {
             "query_id": q["id"],

@@ -10,6 +10,7 @@ from google import genai
 from google.genai import types
 
 from src.config import GOOGLE_API_KEY, GENERATOR_MODEL, GENERATOR_TEMPERATURE
+from src.rate_limiter import acquire_generation
 
 
 def _get_client() -> genai.Client:
@@ -81,6 +82,7 @@ def generate_answer(
             question=question,
         )
 
+    acquire_generation(GENERATOR_MODEL)
     response = client.models.generate_content(
         model=GENERATOR_MODEL,
         contents=user_prompt,

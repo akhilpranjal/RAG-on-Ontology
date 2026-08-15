@@ -38,13 +38,20 @@ ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 # Model Configuration
 # ──────────────────────────────────────────────
 EMBEDDING_MODEL = "gemini-embedding-2"
-GENERATOR_MODEL = "gemini-3.6-flash"
+# Free-tier generation quota is ~20 req/day per model on the newer Flash
+# models (gemini-3.5-flash, 3.6-flash, 3.5-flash-lite), which is far too
+# small for a 66-query x 6-pipeline answer evaluation (~800 calls).
+# gemini-3.1-flash-lite has a ~1000 req/day free budget, so both generation
+# and judging use it (the judge rubric is model-independent and the concept
+# coverage metric is objective, so this preserves the controlled comparison).
+GENERATOR_MODEL = "gemini-3.1-flash-lite"
 GENERATOR_TEMPERATURE = 0.0
 
-# LLM Judge (cross-model evaluation)
-# Judge uses a different Gemini family (3.1-flash-lite) than the generator
-# (gemini-3.6-flash) to avoid self-judging. Older 2.x/2.5 models are no
-# longer available to new users.
+# LLM Judge
+# Uses the same model as the generator (gemini-3.1-flash-lite) because it is
+# the only free-tier model with a large enough daily quota; the judge applies
+# a separate rubric and is blinded to pipeline identity, and the primary
+# answer metric (concept coverage) is objective (no LLM involved).
 LLM_JUDGE_MODEL = "gemini-3.1-flash-lite"
 
 # ──────────────────────────────────────────────
