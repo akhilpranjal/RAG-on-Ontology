@@ -256,6 +256,7 @@ def main():
             "aggregate": aggregate_answers(records),
             "category_metrics": category_aggregates(records),
         }
+        summary["category_breakdown"][key] = category_aggregates(records)
 
     # Statistical comparisons on concept F1 (paired across queries)
     f1_by_pipeline = {
