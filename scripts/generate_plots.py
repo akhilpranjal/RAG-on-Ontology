@@ -5,16 +5,47 @@ Generates:
   2. category_breakdown.png — Grouped bar chart comparing Recall@5 per category
   3. ablation_study.png — Bar chart showing contribution of relation types
   4. answer_quality.png — Bar chart of concept-coverage F1 + judge correctness
+  5. trace_breakdown.png — Stacked bar of ontology relation usage per query category
 """
 
 from __future__ import annotations
 
 import json
+from collections import Counter, defaultdict
+
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
-from src.config import METRICS_DIR, PLOTS_DIR, QUERY_CATEGORIES, ensure_directories
+from src.config import METRICS_DIR, PLOTS_DIR, QUERY_CATEGORIES, REASONING_LOGS_DIR, ensure_directories
+
+# Map raw relation strings from the reasoning traces to clean families.
+_RELATION_FAMILIES = [
+    ("equivalence", "Equivalence"),
+    ("hierarchy", "Hierarchy"),
+    ("symptom", "Symptom"),
+    ("treatment", "Treatment"),
+    ("diagnosis", "Diagnosis"),
+    ("related", "Related"),
+]
+
+
+def _relation_family(relation: str) -> str:
+    rel = relation.lower()
+    for key, _ in _RELATION_FAMILIES:
+        if key in rel:
+            return key
+    return "other"
+
+
+CATEGORY_LABELS = {
+    "lay_terminology": "Lay Terms",
+    "disease_hierarchy": "Hierarchy",
+    "symptom_reasoning": "Symptom",
+    "treatment_reasoning": "Treatment",
+    "multi_hop": "Multi-hop",
+    "control_exact_clinical": "Exact Control",
+}
 
 
 def load_summary() -> dict:
@@ -218,6 +249,54 @@ def load_answer_summary() -> dict:
         return json.load(f)
 
 
+def load_ontology_reasoning_logs() -> list[dict]:
+    """Load the full-ontology reasoning traces (Pipeline 3)."""
+    log_file = REASONING_LOGS_DIR / "pipeline_3_ontology_full_reasoning_logs.json"
+    if not log_file.exists():
+        return []
+    with open(log_file, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def plot_trace_breakdown(logs: list[dict]):
+    """Stacked bar: ontology relation-family usage per query category."""
+    if not logs:
+        print("[SKIP] No reasoning logs — run scripts/run_experiments.py first.")
+        return
+
+    rel_by_cat = defaultdict(Counter)
+    for rec in logs:
+        for exp in rec.get("trace", {}).get("expansions", []):
+            rel_by_cat[rec["category"]][_relation_family(exp.get("relation", ""))] += 1
+
+    categories = [c for c in QUERY_CATEGORIES if c in rel_by_cat]
+    families = [f for _, f in _RELATION_FAMILIES]
+
+    fig, ax = plt.subplots(figsize=(12, 6))
+    x = np.arange(len(categories))
+    bottoms = np.zeros(len(categories))
+    colors = ["#4C72B0", "#DD8452", "#55A868", "#C44E52", "#8172B3", "#937860"]
+
+    for i, (key, label) in enumerate(_RELATION_FAMILIES):
+        vals = [rel_by_cat[c][key] for c in categories]
+        ax.bar(x, vals, bottom=bottoms, label=label, color=colors[i], width=0.6)
+        bottoms += np.array(vals)
+
+    ax.set_ylabel("Number of expansions", fontsize=12)
+    ax.set_title("Ontology Relation Usage per Query Category (Pipeline 3)",
+                 fontsize=14, fontweight="bold")
+    ax.set_xticks(x)
+    ax.set_xticklabels([CATEGORY_LABELS.get(c, c) for c in categories], fontsize=11)
+    ax.legend(fontsize=10, title="Relation family")
+    ax.grid(axis="y", linestyle="--", alpha=0.7)
+
+    plt.tight_layout()
+    output_path = PLOTS_DIR / "trace_breakdown.png"
+    plt.savefig(output_path, dpi=300)
+    plt.close()
+    print(f"[OK] Saved {output_path}")
+
+
 def main():
     ensure_directories()
     summary = load_summary()
@@ -227,6 +306,7 @@ def main():
     plot_overall_comparison(summary)
     plot_category_breakdown(summary)
     plot_ablation_study(summary)
+    plot_trace_breakdown(load_ontology_reasoning_logs())
 
     answer_summary = load_answer_summary()
     if answer_summary:

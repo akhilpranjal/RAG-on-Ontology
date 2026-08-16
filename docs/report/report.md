@@ -178,11 +178,16 @@ improvement — recall and the qualitative judge both favour the ontology.
    best of all pipelines). It resolves the lay↔clinical lexical gap directly, consistent
    with the lay_terminology and treatment_reasoning gains.
 2. **Hierarchy alone underperforms** (0.3473): upward/downward subclass expansion can add
-   noise in a small corpus where "the" subclass is not always relevant.
+   noise in a small corpus where "the" subclass is not always relevant. Trace analysis
+   (`results/trace_exhibits.md`, `trace_breakdown.png`) shows hierarchy is also the most
+   *prolific* mechanism: a single query such as "conditions under cardiovascular disease"
+   fires 20+ subclass expansions, most of which are irrelevant to the answer.
 3. **Properties (symptom/treatment/diagnosis/related) carry most relational value**
    (0.3669) and power the symptom- and treatment-reasoning gains.
-4. **Over-expansion hurts exact clinical queries** (−0.038 on control): when the user's
-   phrasing is already precise, adding synonyms/relatives dilutes the query embedding.
+4. **Over-expansion hurts exact clinical queries** (−0.038 on control). The traces reveal
+   *why*: even precisely-worded control queries trigger ~12 expansions on average
+   (notably `hasSymptom` ×40 and `treatedBy` ×35 across the 12 control queries) — the
+   relational graph has no "leave it alone" switch, so exact queries get diluted too.
 5. The full ontology is a middle ground between the strong equivalence effect and the
    hierarchy noise — hence overall Recall@5 (0.364) sits between equivalence-only and
    hierarchy-only.
@@ -218,6 +223,9 @@ improvement — recall and the qualitative judge both favour the ontology.
 - **Equivalence** expansion is the highest-value mechanism; **hierarchy** needs guarding.
 - A production system should apply ontology expansion **selectively** (per query category),
   not uniformly.
+
+- **Ontology relation usage per category** is visualised in `results/plots/trace_breakdown.png`
+  with worked per-category traces in `results/trace_exhibits.md` (explainability exhibit).
 
 ---
 

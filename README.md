@@ -89,12 +89,14 @@ scripts/
   create_evaluation_set.py
   run_experiments.py     retrieval experiments (resumable)
   run_answer_eval.py     answer-quality evaluation (resumable, judge backfill)
-  generate_plots.py      plots
+  generate_plots.py      plots (incl. trace_breakdown)
+  generate_trace_report.py  reasoning-trace exhibit (results/trace_exhibits.md)
   orchestrate_demo.py    LangGraph demo
 results/
   metrics/               per-pipeline + summary JSON
-  plots/                 overall_comparison, category_breakdown, ablation, answer_quality
+  plots/                 overall_comparison, category_breakdown, ablation, answer_quality, trace_breakdown
   reasoning_logs/        ontology reasoning traces
+  trace_exhibits.md      worked reasoning-trace examples per query category
 docs/
   PROJECT_STATUS.md      status & execution plan
 ```

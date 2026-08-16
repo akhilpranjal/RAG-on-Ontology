@@ -51,7 +51,8 @@
 | Quota resilience | ✅ | shared per-model rate limiter (`src/rate_limiter.py`) + embed cache + resume + retry (429/503) |
 | **Experiments (retrieval)** | ✅ | **DONE — 6 pipelines × 66 queries, real metrics** → `experiment_summary.json` |
 | **Answer evaluation** | ✅ | **DONE — 3 pipelines × 66 queries, judged** → `answer_summary.json` |
-| Plots | ✅ | **DONE** — `overall_comparison.png`, `category_breakdown.png`, `ablation_study.png`, `answer_quality.png` |
+| Plots | ✅ | **DONE** — `overall_comparison.png`, `category_breakdown.png`, `ablation_study.png`, `answer_quality.png`, `trace_breakdown.png` |
+| Reasoning-trace exhibit | ✅ | **DONE** — `results/trace_exhibits.md` + per-category worked examples |
 | README / report / viva | ✅ | **DONE** — `README.md`, `docs/report/report.md`, `docs/report/viva_outline.md` |
 | Git | ✅ | **5 commits** |
 
@@ -159,11 +160,11 @@ Properties-only 0.3669 · Full ontology 0.3637.
 | 7 | Viva presentation outline + talking points | ✅ `viva_outline.md` (rehearse) |
 
 ### P2 — Optional strengthening
-| # | Task | Who | Notes |
-|---|---|---|---|
-| 8 | Expand queries 66 → ~81 to hit plan minimums | me | Auto-judged relevance (weak supervision), clearly marked. |
-| 9 | Reasoning-trace visualisation per query category | me | Explainability exhibit for report. |
-| 10 | Protégé validation of ontology | you (optional) | Nice viva theatre; rdflib validation already passes. |
+| # | Task | Status |
+|---|---|---|
+| 8 | Expand queries 66 → ~81 | **deferred** — would require re-running all experiments (quota) and pollutes the clean manual ground truth; 66 queries already yield significant results |
+| 9 | Reasoning-trace visualisation per query category | ✅ `scripts/generate_trace_report.py` → `results/trace_exhibits.md` + `trace_breakdown.png` |
+| 10 | Protégé validation of ontology | you (optional) |
 
 ---
 
