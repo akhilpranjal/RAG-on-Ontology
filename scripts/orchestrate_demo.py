@@ -21,15 +21,25 @@ SAMPLE_QUERIES = [
     "My heart feels like it is skipping beats. What could this be?",
     "What medications are used for type 2 diabetes?",
     "What is the relationship between obesity and heart disease?",
-    "Chest pain and shortness of breath — what condition might this indicate?",
+    "Chest pain and shortness of breath - what condition might this indicate?",
 ]
+
+_ASCII_TABLE = str.maketrans({
+    "—": "-", "–": "-", "‘": "'", "’": "'",
+    "“": '"', "”": '"', "…": "...", "\u00a0": " ",
+})
+
+
+def _safe(text) -> str:
+    """ASCII-only output so the cp1252 Windows console never shows garbage."""
+    return str(text).translate(_ASCII_TABLE).encode("ascii", "replace").decode()
 
 
 def main():
     generate = "--generate" in sys.argv
 
     print("=" * 70)
-    print("UNIFIED LANGGRAPH ORCHESTRATION — ALL 3 PIPELINES")
+    print("UNIFIED LANGGRAPH ORCHESTRATION - ALL 3 PIPELINES")
     print("=" * 70)
 
     app = build_graph()
@@ -48,7 +58,7 @@ def main():
 
     for query in queries:
         print("-" * 70)
-        print(f"QUERY: {query}")
+        print(f"QUERY: {_safe(query)}")
         print("-" * 70)
 
         results = run_all_pipelines(query, top_k=5, generate=generate)
@@ -61,7 +71,7 @@ def main():
             print(f"    Retrieved docs ({len(res.retrieved_doc_ids)}): "
                   f"{res.retrieved_doc_ids[:5]}")
             if generate and res.answer:
-                print(f"    Answer: {res.answer[:180]}...")
+                print(f"    Answer: {_safe(res.answer[:180])}...")
 
     print("\n[OK] Orchestration demo complete.")
 

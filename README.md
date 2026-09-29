@@ -92,6 +92,7 @@ scripts/
   generate_plots.py      plots (incl. trace_breakdown)
   generate_trace_report.py  reasoning-trace exhibit (results/trace_exhibits.md)
   orchestrate_demo.py    LangGraph demo
+  live_demo.py           panel demo: 1 query × 3 pipelines, ground-truth verdict
 results/
   metrics/               per-pipeline + summary JSON
   plots/                 overall_comparison, category_breakdown, ablation, answer_quality, trace_breakdown
@@ -136,6 +137,11 @@ uv run python -m scripts.run_answer_eval --no-judge
 
 # Plots → results/plots/
 uv run python -m scripts.generate_plots
+
+# Live demo: 1 query through all 3 pipelines with ground-truth scoring,
+# ontology reasoning trace, and generated answers
+uv run python -m scripts.live_demo              # retrieval + generation (3 API calls)
+uv run python -m scripts.live_demo --no-generate  # offline: retrieval + verdict only
 
 # Quick demo through the unified LangGraph
 uv run python -m scripts.orchestrate_demo
