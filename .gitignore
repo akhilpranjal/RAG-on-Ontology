@@ -11,8 +11,8 @@ env/
 # Environment variables
 .env
 
-# ChromaDB persistence
-data/vectorstore/
+# NOTE: data/vectorstore/ (ChromaDB index + embedding cache) is committed
+# intentionally so collaborators can clone and run without rebuilding.
 
 # IDE
 .vscode/
