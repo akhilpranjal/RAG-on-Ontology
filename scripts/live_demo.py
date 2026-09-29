@@ -22,6 +22,7 @@ import re
 import time
 
 from src.config import GOOGLE_API_KEY, GENERATOR_MODEL, TOP_K_PRIMARY, QUERIES_FILE, RELEVANCE_JUDGMENTS_FILE
+from src.corpus.embedder import embed_query
 from src.corpus.vectorstore import get_or_create_collection
 from src.generation.generator import generate_answer
 from src.ontology.reasoner import OntologyReasoner
@@ -165,6 +166,17 @@ def main() -> None:
 
     collection = get_or_create_collection()
     print(f"  Index : {collection.count()} chunks loaded")
+
+    # Fail fast: a query outside the shipped embedding cache needs an API key
+    # (eval/demo queries are pre-cached, brand-new ones are not).
+    if not GOOGLE_API_KEY:
+        try:
+            embed_query(query)
+        except ValueError:
+            print("\n[ERROR] This query is not in the embedding cache and GOOGLE_API_KEY is not set.")
+            print("        Set GOOGLE_API_KEY in .env, or use a cached evaluation query, e.g.:")
+            print('        uv run python -m scripts.live_demo --no-generate --query "What forms of stroke exist?"')
+            return
 
     titles = _load_titles()
 
