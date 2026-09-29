@@ -70,12 +70,15 @@ class _EmbeddingCache:
 _cache = _EmbeddingCache()
 
 
-def _embed_one(client, model: str, text: str, task_type: str) -> list[float]:
+def _embed_one(model: str, text: str, task_type: str) -> list[float]:
     key = _cache_key(model, task_type, text)
     cached = _cache.get(key)
     if cached is not None:
         return cached
 
+    # Lazy client construction: a cache hit must work WITHOUT an API key so
+    # collaborators can run retrieval demos straight after cloning.
+    client = _get_client()
     acquire_embedding()
     response = client.models.embed_content(
         model=model,
@@ -98,12 +101,11 @@ def embed_texts(texts: list[str], task_type: str = "RETRIEVAL_DOCUMENT", batch_s
     Returns:
         List of embedding vectors (list of floats).
     """
-    client = _get_client()
     all_embeddings = []
 
     # google.genai SDK embeds list of strings as a single content, so we loop individually.
     for text in tqdm(texts, desc="Embedding"):
-        all_embeddings.append(_embed_one(client, EMBEDDING_MODEL, text, task_type))
+        all_embeddings.append(_embed_one(EMBEDDING_MODEL, text, task_type))
 
     _cache.save()
     return all_embeddings
@@ -111,7 +113,6 @@ def embed_texts(texts: list[str], task_type: str = "RETRIEVAL_DOCUMENT", batch_s
 
 def embed_query(query: str) -> list[float]:
     """Generate an embedding for a single query string (cached)."""
-    client = _get_client()
-    embedding = _embed_one(client, EMBEDDING_MODEL, query, "RETRIEVAL_QUERY")
+    embedding = _embed_one(EMBEDDING_MODEL, query, "RETRIEVAL_QUERY")
     _cache.save()
     return embedding

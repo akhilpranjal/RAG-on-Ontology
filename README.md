@@ -110,9 +110,20 @@ docs/
 # 1. Install with uv (or pip)
 uv sync                 # Python >= 3.11
 
-# 2. Configure API key
+# 2. Configure API key (optional for retrieval-only demos)
 cp .env.example .env    # set GOOGLE_API_KEY=<your Gemini API key>
 ```
+
+**Running without an API key:** the built vector store (263 chunks) and the embedding
+cache for all 66 evaluation queries are committed, so a fresh clone works out of the box:
+
+```bash
+uv run python -m scripts.live_demo --no-generate   # retrieval + verdict, zero API calls
+```
+
+A `GOOGLE_API_KEY` is required only for answer generation (the default `live_demo`
+mode), the answer evaluation, and embedding **new** query texts — queries are embedded
+with `gemini-embedding-2` (cache-first: `src/corpus/embedder.py`).
 
 Models (see `src/config.py`): `gemini-embedding-2` (embeddings),
 `gemini-3.1-flash-lite` (generation + judge). Free-tier quotas are per-model and
