@@ -125,6 +125,10 @@ A `GOOGLE_API_KEY` is required only for answer generation (the default `live_dem
 mode), the answer evaluation, and embedding **new** query texts — queries are embedded
 with `gemini-embedding-2` (cache-first: `src/corpus/embedder.py`).
 
+> ChromaDB rewrites `data/vectorstore/chroma.sqlite3` whenever it opens the store.
+> If `git status` shows it modified after a run you didn't rebuild from, restore it
+> with `git checkout -- data/vectorstore` before committing.
+
 Models (see `src/config.py`): `gemini-embedding-2` (embeddings),
 `gemini-3.1-flash-lite` (generation + judge). Free-tier quotas are per-model and
 **~20 req/day for the newest Flash models**; `gemini-3.1-flash-lite` has a ~1000 req/day
