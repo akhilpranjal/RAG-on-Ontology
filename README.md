@@ -22,6 +22,7 @@ dictionary expansion, on a purpose-built medical corpus (Cardiovascular + Metabo
 | 2 | **Dictionary** | Synonym-dictionary expansion (`data/synonyms/synonym_dict.json`) |
 | 3 | **Ontology** | Ontology traversal — equivalence, hierarchy (subclass), properties (symptom/treatment/diagnosis/related-condition) |
 | 4–6 | Ablations | Ontology variants: equivalence-only, hierarchy-only, properties-only |
+| 7 | **AdaOnto-RAG (novel)** | Symbolic query router → intent-conditioned selective expansion → MMR diversity rerank (`src/pipelines/adaptive.py`; pre-registered in `docs/report/architecture_design.md`) |
 
 All pipelines share one retrieval node and one generation node, unified in a single
 [LangGraph](https://langchain-ai.github.io/langgraph/) orchestration graph
@@ -59,6 +60,25 @@ All pipelines share one retrieval node and one generation node, unified in a sin
 
 Ontology expansion raises answer concept-recall (+0.074) and LLM-judge correctness (+0.121)
 while keeping F1 flat — answers become more complete at a small precision cost.
+
+### Experiment 2 — AdaOnto-RAG (novel architecture, same 66 queries)
+
+| System | Recall@5 | Judge correct |
+|---|---|---|
+| 1 Baseline | 0.352 | 0.667 |
+| 2 Dictionary | 0.342 | 0.682 |
+| 3 Ontology (full) | 0.364 | 0.788 |
+| AdaOnto selective-only | 0.366 | — |
+| AdaOnto mmr-only | 0.375 | — |
+| **AdaOnto full** | **0.392** | **0.848** |
+
+- **AdaOnto vs Baseline: p = 0.0016, d = 0.35** · **vs Dictionary: p < 0.0001, d = 0.60** ·
+  **vs Ontology: p = 0.0019, d = 0.36** (paired Wilcoxon, Recall@5) — significant against all three.
+- Neither component alone is significant (selective p = 0.11, mmr p = 0.052) — the combination is the contribution.
+- Category gains (AdaOnto − Baseline, R@5): treatment **+0.064**, hierarchy **+0.063**,
+  multi-hop +0.052, lay +0.024, control **+0.024** (control harm reversed), symptom +0.015.
+- Answers: judge correct **0.848** (McNemar vs baseline p = 0.004, vs dictionary p = 0.007);
+  concept-recall 0.893. See `docs/report/paper_draft.md`.
 
 ---
 
@@ -146,7 +166,10 @@ uv run python -m scripts.build_vectorstore
 # Retrieval experiments: 6 pipelines × 66 queries → results/metrics/experiment_summary.json
 uv run python -m scripts.run_experiments
 
-# Answer-quality evaluation: 3 pipelines × 66 queries → results/metrics/answer_summary.json
+# Experiment 2 (novel architecture): AdaOnto full/selective/mmr → results/metrics/adaptive_summary.json
+uv run python -m scripts.run_adaptive_experiment
+
+# Answer-quality evaluation: 4 pipelines × 66 queries → results/metrics/answer_summary.json
 uv run python -m scripts.run_answer_eval          # judge ON (default)
 uv run python -m scripts.run_answer_eval --no-judge
 
@@ -176,10 +199,12 @@ quota/rate-limit interruption never loses progress.
 3. **Query expansion:** each pipeline expands the query differently; retrieval uses the
    expanded query embedding; generation is identical across pipelines (temperature 0.0).
 4. **Evaluation:** 66 queries in 6 categories (lay terminology, disease hierarchy, symptom
-   reasoning, treatment reasoning, multi-hop, control-exact-clinical) with manual relevance
-   judgments. Retrieval: Recall@5/@10, Precision@5, Hit@5, MRR, nDCG@5. Answer quality:
+   reasoning, treatment reasoning, multi-hop, control-exact-clinical) with concept-derived
+   relevance judgments. Retrieval: Recall@5/@10, Precision@5, Hit@5, MRR, nDCG@5. Answer quality:
    objective concept-coverage F1 + an LLM judge (blinded rubric). Statistics: paired
-   Wilcoxon tests, Cohen's d, Cliff's delta.
+   Wilcoxon tests, Cohen's d, Cliff's delta (+ McNemar for judge correctness).
+5. **AdaOnto-RAG:** symbolic intent router (lay/hierarchy/treatment/symptom/multi-hop/precise)
+   → selective relation-family masks → dense top-20 → MMR diversity rerank (λ = 0.5, doc dedup).
 
 ---
 
