@@ -135,7 +135,9 @@ def main():
     print("-" * 60)
     for key in ("adaptive_full_vs_baseline", "adaptive_full_vs_dictionary", "adaptive_full_vs_ontology"):
         s = stats[key]
-        print(f"{key}: p={s['wilcoxon']['p_value']:.4f}, d={s['cohens_d']:.4f}, cliff={s['cliffs_delta']:.4f}")
+        cd = s["cliffs_delta"]
+        cd = cd["cliffs_delta"] if isinstance(cd, dict) else cd
+        print(f"{key}: p={s['wilcoxon']['p_value']:.4f}, d={s['cohens_d']:.4f}, cliff={cd:.4f}")
     print("=" * 60)
     print(f"\n[OK] Experiment 2 summary saved to {out}")
 

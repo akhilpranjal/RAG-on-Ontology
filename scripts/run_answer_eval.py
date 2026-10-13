@@ -35,11 +35,19 @@ from src.generation.generator import generate_answer
 from src.pipelines.baseline import run_baseline
 from src.pipelines.dictionary import run_dictionary
 from src.pipelines.ontology_enhanced import run_ontology_enhanced
+from src.pipelines.adaptive import run_adaptive
+
+
+def run_adaptive_full(query: str, generate: bool = True):
+    """Pipeline 4 wrapper (Experiment 2 novel architecture, mode=full)."""
+    return run_adaptive(query, generate=generate, mode="full")
+
 
 PIPELINES = {
     "pipeline_1_baseline": (run_baseline, "Pipeline 1 (Baseline)"),
     "pipeline_2_dictionary": (run_dictionary, "Pipeline 2 (Dictionary)"),
     "pipeline_3_ontology_full": (run_ontology_enhanced, "Pipeline 3 (Ontology)"),
+    "pipeline_4_adaptive_full": (run_adaptive_full, "Pipeline 4 (AdaOnto)"),
 }
 
 SLEEP_BETWEEN_QUERIES = 1.0  # seconds, to respect RPM limits
@@ -271,6 +279,12 @@ def main():
                                    "Pipeline 3 (Ontology)", "Pipeline 2 (Dictionary)"),
         "dictionary_vs_baseline": ("pipeline_2_dictionary", "pipeline_1_baseline",
                                    "Pipeline 2 (Dictionary)", "Pipeline 1 (Baseline)"),
+        "adaptive_vs_baseline": ("pipeline_4_adaptive_full", "pipeline_1_baseline",
+                                 "Pipeline 4 (AdaOnto)", "Pipeline 1 (Baseline)"),
+        "adaptive_vs_dictionary": ("pipeline_4_adaptive_full", "pipeline_2_dictionary",
+                                   "Pipeline 4 (AdaOnto)", "Pipeline 2 (Dictionary)"),
+        "adaptive_vs_ontology": ("pipeline_4_adaptive_full", "pipeline_3_ontology_full",
+                                 "Pipeline 4 (AdaOnto)", "Pipeline 3 (Ontology)"),
     }.items():
         summary["statistical_tests"][pair_key] = full_comparison(
             f1_by_pipeline[a], f1_by_pipeline[b], la, lb
@@ -285,7 +299,8 @@ def main():
     print("=" * 60)
     for key, label in [("pipeline_1_baseline", "Pipeline 1 (Baseline)"),
                        ("pipeline_2_dictionary", "Pipeline 2 (Dictionary)"),
-                       ("pipeline_3_ontology_full", "Pipeline 3 (Ontology)")]:
+                       ("pipeline_3_ontology_full", "Pipeline 3 (Ontology)"),
+                       ("pipeline_4_adaptive_full", "Pipeline 4 (AdaOnto)")]:
         agg = summary["pipelines"][key]["aggregate"]
         judge_line = ""
         if "judge_correctness" in agg:
