@@ -297,6 +297,80 @@ def plot_trace_breakdown(logs: list[dict]):
     print(f"[OK] Saved {output_path}")
 
 
+def plot_adaptive_comparison():
+    """Headline figure for Experiment 2: AdaOnto-RAG vs baselines + ablations.
+
+    Panel A: Recall@5 across P1/P2/P3 and the three adaptive variants.
+    Panel B: Judge-correctness across P1/P2/P3 and adaptive-full.
+    Reads results/metrics/adaptive_summary.json + answer_summary.json.
+    """
+    adapt_file = METRICS_DIR / "adaptive_summary.json"
+    if not adapt_file.exists():
+        print("[SKIP] No adaptive_summary.json yet — run scripts/run_adaptive_experiment.py first.")
+        return
+    with open(adapt_file, "r", encoding="utf-8") as f:
+        adapt = json.load(f)
+    try:
+        exp1 = load_summary()
+    except FileNotFoundError:
+        print("[SKIP] No experiment_summary.json — run scripts/run_experiments.py first.")
+        return
+
+    retr_labels = ["Baseline", "Dictionary", "Ontology", "Adapt\n(select)", "Adapt\n(mmr)", "Adapt\n(full)"]
+    retr_keys = [("exp1", "pipeline_1_baseline"), ("exp1", "pipeline_2_dictionary"),
+                 ("exp1", "pipeline_3_ontology_full"), ("adapt", "pipeline_4_adaptive_selective"),
+                 ("adapt", "pipeline_4_adaptive_mmr"), ("adapt", "pipeline_4_adaptive_full")]
+    retr_vals = []
+    for src, key in retr_keys:
+        src_data = exp1 if src == "exp1" else adapt
+        retr_vals.append(src_data["pipelines"][key]["recall@5"]["mean"])
+
+    answer_summary = load_answer_summary()
+    judge_labels, judge_vals = [], []
+    if answer_summary and "pipelines" in answer_summary:
+        for label, key in [("Baseline", "pipeline_1_baseline"),
+                           ("Dictionary", "pipeline_2_dictionary"),
+                           ("Ontology", "pipeline_3_ontology_full"),
+                           ("Adapt (full)", "pipeline_4_adaptive_full")]:
+            agg = answer_summary["pipelines"].get(key, {}).get("aggregate", {})
+            if "judge_correctness" in agg:
+                judge_labels.append(label)
+                judge_vals.append(agg["judge_correctness"]["mean"])
+
+    fig, axes = plt.subplots(1, 2, figsize=(14, 5.5))
+
+    colors_a = ["#4C72B0", "#DD8452", "#55A868", "#C4C4C4", "#999999", "#C44E52"]
+    bars = axes[0].bar(retr_labels, retr_vals, color=colors_a)
+    for rect in bars:
+        h = rect.get_height()
+        axes[0].annotate(f"{h:.3f}", xy=(rect.get_x() + rect.get_width() / 2, h),
+                         xytext=(0, 3), textcoords="offset points",
+                         ha="center", va="bottom", fontsize=9)
+    axes[0].set_ylabel("Recall@5", fontsize=12)
+    axes[0].set_title("A: Retrieval — AdaOnto-RAG vs baselines", fontsize=13, fontweight="bold")
+    axes[0].set_ylim(0, max(retr_vals) * 1.25)
+    axes[0].grid(axis="y", linestyle="--", alpha=0.7)
+
+    if judge_vals:
+        colors_b = ["#4C72B0", "#DD8452", "#55A868", "#C44E52"]
+        bars = axes[1].bar(judge_labels, judge_vals, color=colors_b)
+        for rect in bars:
+            h = rect.get_height()
+            axes[1].annotate(f"{h:.3f}", xy=(rect.get_x() + rect.get_width() / 2, h),
+                             xytext=(0, 3), textcoords="offset points",
+                             ha="center", va="bottom", fontsize=9)
+        axes[1].set_ylabel("Judge correctness", fontsize=12)
+        axes[1].set_title("B: Answer quality — judge correctness", fontsize=13, fontweight="bold")
+        axes[1].set_ylim(0, max(judge_vals) * 1.25)
+        axes[1].grid(axis="y", linestyle="--", alpha=0.7)
+
+    plt.tight_layout()
+    output_path = PLOTS_DIR / "adaptive_comparison.png"
+    plt.savefig(output_path, dpi=300)
+    plt.close()
+    print(f"[OK] Saved {output_path}")
+
+
 def main():
     ensure_directories()
     summary = load_summary()
@@ -307,6 +381,7 @@ def main():
     plot_category_breakdown(summary)
     plot_ablation_study(summary)
     plot_trace_breakdown(load_ontology_reasoning_logs())
+    plot_adaptive_comparison()
 
     answer_summary = load_answer_summary()
     if answer_summary:

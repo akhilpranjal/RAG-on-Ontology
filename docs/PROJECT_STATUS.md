@@ -1,6 +1,6 @@
 # Project Status & Execution Plan — Ontology-Enhanced RAG for Medical QA
 
-> **Last updated:** 2026-08-16 (session 3 — retrieval + answer-quality experiments COMPLETE, plots generated)
+> **Last updated:** 2026-10-13 (session 4 — Experiment 2 AdaOnto-RAG COMPLETE: novel architecture beats all baselines, paper draft written)
 > Based on live repo inspection + `implementation_plan.md`
 
 ---
@@ -139,6 +139,35 @@ Properties-only 0.3669 · Full ontology 0.3637.
 - LLM judge correctness: **Ontology 0.788 vs Baseline 0.667 (+0.121)** — a qualitative gain not
   captured by F1 (answers are more complete, less precise).
 - All pairwise Wilcoxon tests on F1 are non-significant (p>0.48).
+
+---
+
+## 3d. Experiment 2 — AdaOnto-RAG novel architecture (COMPLETE)
+
+Pre-registered design (`docs/report/architecture_design.md`, frozen before runs):
+symbolic intent router → selective relation-family masks → dense top-20 →
+MMR diversity rerank (λ=0.5, doc dedup). Same 66 queries/metrics/stats.
+
+| System | Recall@5 | Judge correct |
+|---|---|---|
+| 1 Baseline | 0.3520 | 0.667 |
+| 2 Dictionary | 0.3419 | 0.682 |
+| 3 Ontology (full) | 0.3637 | 0.788 |
+| AdaOnto selective-only | 0.3657 | — |
+| AdaOnto mmr-only | 0.3746 | — |
+| **AdaOnto full** | **0.3918** | **0.848** |
+
+- **vs Baseline: p=0.0016, d=0.35 · vs Dictionary: p<0.0001, d=0.60 · vs Ontology: p=0.0019, d=0.36**
+  (paired Wilcoxon, R@5) — significant against all three references.
+- Components alone n.s. (selective p=0.11, mmr p=0.052) — the combination is the contribution.
+- Category Δ (full−base, R@5): treatment +0.064, hierarchy +0.063, multi-hop +0.052,
+  lay +0.024, control **+0.024** (harm reversed), symptom +0.015.
+- Router intents: treatment 15, lay_complex 12, hierarchy 10, lay 8, default 6,
+  precise 6, symptom 5, multihop 4.
+- Answers: concept-recall 0.893, judge-score 8.95; McNemar vs baseline p=0.004,
+  vs dictionary p=0.007; vs ontology directional (p=0.34).
+- Artifacts: `results/metrics/adaptive_summary.json`, `results/plots/adaptive_comparison.png`,
+  `docs/report/paper_draft.md`. Headline figure verified rendering.
 
 ---
 
