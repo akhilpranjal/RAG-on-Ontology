@@ -1,0 +1,33 @@
+{
+  "built_from": [
+    {
+      "name": "MeSH 2026",
+      "url": "https://nlmpubs.nlm.nih.gov/projects/mesh/MESH_FILES/xmlmesh/desc2026.xml",
+      "publisher": "U.S. National Library of Medicine",
+      "license": "Public domain (U.S. Government work)",
+      "descriptors": 31110,
+      "hierarchy_edges": 65242
+    },
+    {
+      "name": "Hetionet v1.0",
+      "url": "https://het.io/",
+      "citation": "Himmelstein DS et al. Systematic integration of biomedical knowledge prioritizes drugs for repurposing. eLife 2017;6:e26726.",
+      "license": "CC0 1.0",
+      "relation_edges": {
+        "presents": 3357,
+        "localizes": 3602,
+        "treats": 755,
+        "resembles": 543,
+        "palliates": 390,
+        "causesSideEffect": 138944
+      }
+    }
+  ],
+  "triples": 683340,
+  "normalized_labels": 161041,
+  "graph_cache": {
+    "nodes": 36840,
+    "edge_sources": 36557
+  },
+  "output": "data\\ontogate\\ontology.ttl"
+}

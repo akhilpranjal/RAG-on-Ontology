@@ -11,19 +11,41 @@ env/
 # Environment variables
 .env
 
-# NOTE: data/vectorstore/ (ChromaDB index + embedding cache) is committed
-# intentionally so collaborators can clone and run without rebuilding.
+# Downloaded and rebuildable assets
+data/pubmedqa/
+data/index/
+data/cache/
+data/ontogate/raw/
+data/ontogate/label_index.json
+data/ontogate/graph.pkl
+data/ontogate/ontology.ttl
+data/ontogate/mesh_trees.json
+data/ontogate/passage_concepts.json
+
+# New experiment outputs
+results/runs/
+results/metrics/*.json
+!results/metrics/final_report.json
+!results/metrics/retrieval_dev_open.json
+!results/metrics/paired_baseline.json
+results/metrics/*.csv
+!results/metrics/questions.csv
+results/plots/*.png
+!results/plots/risk_coverage.png
+!results/plots/gate_auc.png
+!results/plots/coverage_saturation.png
+results/plots/*.svg
+
+# Archived Experiment 1/2 outputs
+legacy/results/metrics/*.json
+legacy/results/metrics/*.csv
+legacy/results/plots/*.png
+legacy/results/plots/*.svg
+legacy/results/reasoning_logs/*.json
 
 # IDE
 .vscode/
 .idea/
-
-# Results (keep structure, ignore data)
-results/metrics/*.json
-results/metrics/*.csv
-results/plots/*.png
-results/plots/*.svg
-results/reasoning_logs/*.json
 
 # OS
 .DS_Store

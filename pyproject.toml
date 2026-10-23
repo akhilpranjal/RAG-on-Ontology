@@ -1,43 +1,33 @@
 [project]
-name = "rag-on-ontology"
-version = "0.1.0"
-description = "Controlled experimental evaluation of ontology-enhanced retrieval-augmented generation for medical question answering"
+name = "ontogate-rag"
+version = "0.2.0"
+description = "Selective biomedical RAG: an LLM evidence judge and MeSH/Hetionet ontology coverage decide when to answer and when to abstain on PubMedQA"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    # Ontology & RDF
+    # LLM
+    "google-genai>=2.0.0",
+
+    # Ontology
     "rdflib>=7.0.0",
 
-    # Vector Store
-    "chromadb>=0.5.0",
+    # Retrieval
+    "sentence-transformers>=3.0.0",
+    "faiss-cpu>=1.8.0",
+    "torch>=2.1.0",
+    "transformers>=4.40.0",
 
-    # Google AI
-    "google-generativeai>=0.8.0",
-
-    # LangChain / LangGraph
-    "langchain>=0.3.0",
-    "langchain-google-genai>=2.0.0",
-    "langchain-community>=0.3.0",
-    "langgraph>=0.2.0",
-
-    # Data & Statistics
+    # Data & statistics
+    "datasets>=3.0.0",
     "numpy>=1.26.0",
-    "pandas>=2.1.0",
     "scipy>=1.11.0",
-
-    # Visualization
-    "matplotlib>=3.8.0",
-    "seaborn>=0.13.0",
 
     # Utilities
     "python-dotenv>=1.0.0",
-    "tqdm>=4.66.0",
-    "requests>=2.31.0",
-    "biopython>=1.83",
+    "matplotlib>=3.8.0",
 ]
 
 [dependency-groups]
 dev = [
     "pytest>=8.0.0",
-    "ipykernel>=6.29.0",
 ]
