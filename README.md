@@ -1,220 +1,141 @@
-# RAG-on-Ontology
+# OntoGate-RAG
 
-**Ontology-Enhanced Retrieval-Augmented Generation for Medical Question Answering.**
+**Selective biomedical question answering on PubMedQA.** The system retrieves
+evidence, links the question to a MeSH + Hetionet knowledge graph, and decides
+whether to answer or to say *"the evidence is insufficient"*.
 
-A controlled experimental evaluation of whether ontology-based query expansion improves
-retrieval and answer quality over (1) standard semantic retrieval and (2) a simple synonym
-dictionary expansion, on a purpose-built medical corpus (Cardiovascular + Metabolic).
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)](pyproject.toml)
 
----
+## Headline result
 
-## Research Question
+On the test split (85 judged questions, same model, same passages for every
+arm):
 
-> Under what conditions (query types and relation types) does ontology-based query expansion
-> improve retrieval and answer quality over standard semantic retrieval and simple dictionary
-> expansion?
-
-### Pipelines (differ only in query-expansion strategy)
-
-| # | Pipeline | Expansion strategy |
+| System | Coverage | Accuracy |
 |---|---|---|
-| 1 | **Baseline** | No expansion — semantic (embedding) retrieval only |
-| 2 | **Dictionary** | Synonym-dictionary expansion (`data/synonyms/synonym_dict.json`) |
-| 3 | **Ontology** | Ontology traversal — equivalence, hierarchy (subclass), properties (symptom/treatment/diagnosis/related-condition) |
-| 4–6 | Ablations | Ontology variants: equivalence-only, hierarchy-only, properties-only |
-| 7 | **AdaOnto-RAG (novel)** | Symbolic query router → intent-conditioned selective expansion → MMR diversity rerank (`src/pipelines/adaptive.py`; pre-registered in `docs/report/architecture_design.md`) |
+| Always answer | 100% | 58.8% |
+| Ontology coverage gate | 70.6% | 63.3% |
+| **Judge + self-abstention gate** | **61.2%** | **76.9%** |
 
-All pipelines share one retrieval node and one generation node, unified in a single
-[LangGraph](https://langchain-ai.github.io/langgraph/) orchestration graph
-(`src/orchestration/`).
+The gate nearly doubles accuracy by declining to answer 39% of the questions.
+Abstentions are never counted as correct.
 
----
+Three findings from the same experiment matter as much as the headline:
 
-## Key Results
+1. **The judge's own "maybe" is the best signal.** The numeric sufficiency score
+   gives AUC 0.705; adding the fact that the judge answered "maybe" gives 0.747,
+   and a zero-training rule matches the fitted gate exactly.
+2. **The ontology is a weak accuracy gate but a good cost filter.** Coverage
+   alone gives AUC 0.547 and saturates at 1.0 for 82.5% of questions. Used as a
+   free pre-screen, it removes **23.5% of judge calls** for a 1.9-point accuracy
+   loss.
+3. **Ontology reranking and query expansion do not help.** Retrieval is already
+   saturated (recall@10 = 0.970), so there is nothing to improve.
 
-### Retrieval (6 pipelines × 66 queries, Recall@5)
+Full tables, CIs and threats to validity: [docs/results.md](docs/results.md).
 
-| Pipeline | Recall@5 | Recall@10 | Precision@5 | Hit@5 | nDCG@5 |
-|---|---|---|---|---|---|
-| 1 Baseline | 0.352 | 0.470 | 0.479 | 0.985 | 0.650 |
-| 2 Dictionary | 0.342 | 0.480 | 0.476 | 1.000 | 0.639 |
-| **3 Ontology (full)** | **0.364** | **0.495** | **0.512** | 1.000 | **0.658** |
-| 4 Equivalence-only | 0.371 | — | — | — | — |
-| 5 Hierarchy-only | 0.347 | — | — | — | — |
-| 6 Properties-only | 0.367 | — | — | — | — |
-
-- **Ontology vs Dictionary: p = 0.015 (significant), Cohen's d = 0.295** — ontology expansion
-  significantly outperforms dictionary expansion on Recall@5.
-- Ontology vs Baseline: p = 0.173 (n.s.), small positive effect (d = 0.10).
-- **Category gains** (Ontology − Baseline, Recall@5): treatment_reasoning **+0.042**,
-  disease_hierarchy **+0.040**, lay_terminology +0.012, symptom_reasoning +0.010, multi_hop +0.010;
-  control_exact_clinical **−0.038** (expected harm on the control category).
-
-### Answer quality (3 pipelines × 66 queries)
-
-| Pipeline | Concept-F1 | Recall | Judge correct |
-|---|---|---|---|
-| 1 Baseline | 0.572 | 0.807 | 0.667 |
-| 2 Dictionary | 0.573 | 0.806 | 0.682 |
-| **3 Ontology** | 0.572 | **0.881** | **0.788** |
-
-Ontology expansion raises answer concept-recall (+0.074) and LLM-judge correctness (+0.121)
-while keeping F1 flat — answers become more complete at a small precision cost.
-
-### Experiment 2 — AdaOnto-RAG (novel architecture, same 66 queries)
-
-| System | Recall@5 | Judge correct |
-|---|---|---|
-| 1 Baseline | 0.352 | 0.667 |
-| 2 Dictionary | 0.342 | 0.682 |
-| 3 Ontology (full) | 0.364 | 0.788 |
-| AdaOnto selective-only | 0.366 | — |
-| AdaOnto mmr-only | 0.375 | — |
-| **AdaOnto full** | **0.392** | **0.848** |
-
-- **AdaOnto vs Baseline: p = 0.0016, d = 0.35** · **vs Dictionary: p < 0.0001, d = 0.60** ·
-  **vs Ontology: p = 0.0019, d = 0.36** (paired Wilcoxon, Recall@5) — significant against all three.
-- Neither component alone is significant (selective p = 0.11, mmr p = 0.052) — the combination is the contribution.
-- Category gains (AdaOnto − Baseline, R@5): treatment **+0.064**, hierarchy **+0.063**,
-  multi-hop +0.052, lay +0.024, control **+0.024** (control harm reversed), symptom +0.015.
-- Answers: judge correct **0.848** (McNemar vs baseline p = 0.004, vs dictionary p = 0.007);
-  concept-recall 0.893. See `docs/report/paper_draft.md`.
-
----
-
-## Repository Layout
+## How it works
 
 ```
-data/
-  corpus/real/           68 PubMed abstracts
-  corpus/synthetic/      12 gap-filling docs
-  ontology/              medical_ontology.ttl (347 triples)
-  synonyms/              synonym_dict.json (52 pairs)
-  evaluation/            queries.json (66), relevance_judgments.json
-  vectorstore/           ChromaDB persist dir + embedding cache
-src/
-  config.py              all configuration + model names
-  rate_limiter.py        shared per-model API rate limiting
-  corpus/                loading, chunking, embedding, vector store
-  ontology/              builder, reasoner (+ reasoning traces), synonym expander
-  pipelines/             baseline / dictionary / ontology-enhanced modules
-  orchestration/         LangGraph: state, nodes, graph
-  generation/            generator (Gemini)
-  evaluation/            retrieval metrics, statistical tests, answer metrics
-scripts/
-  collect_pubmed.py      download & clean PubMed abstracts
-  generate_synthetic_docs.py
-  annotate_corpus.py     concept annotations (idempotent)
-  build_vectorstore.py   chunk + embed + index
-  create_evaluation_set.py
-  run_experiments.py     retrieval experiments (resumable)
-  run_answer_eval.py     answer-quality evaluation (resumable, judge backfill)
-  generate_plots.py      plots (incl. trace_breakdown)
-  generate_trace_report.py  reasoning-trace exhibit (results/trace_exhibits.md)
-  orchestrate_demo.py    LangGraph demo
-  live_demo.py           panel demo: 1 query × 3 pipelines, ground-truth verdict
-results/
-  metrics/               per-pipeline + summary JSON
-  plots/                 overall_comparison, category_breakdown, ablation, answer_quality, trace_breakdown
-  reasoning_logs/        ontology reasoning traces
-  trace_exhibits.md      worked reasoning-trace examples per query category
-docs/
-  PROJECT_STATUS.md      status & execution plan
+question
+  -> dense retrieval (FAISS, top-10 abstracts)
+  -> ontology linking (MeSH 2026 + Hetionet, 683k triples)
+  -> concept coverage  --(very low)--> ABSTAIN, no API call
+  -> LLM evidence judge (one call: sufficient? answer? score?)
+  -> gate: judge says "maybe" -> ABSTAIN
+           fused score below dev threshold -> ABSTAIN
+           otherwise -> ANSWER
 ```
 
----
+The ontology is not decoration. It is used to link question terms to concepts,
+to measure whether the evidence covers those concepts, to test whether a single
+sentence *relates* two question concepts, and to skip paid judge calls.
 
-## Setup
+Details: [docs/architecture.md](docs/architecture.md).
 
-```bash
-# 1. Install with uv (or pip)
-uv sync                 # Python >= 3.11
+## Quickstart
 
-# 2. Configure API key (optional for retrieval-only demos)
-cp .env.example .env    # set GOOGLE_API_KEY=<your Gemini API key>
+```powershell
+uv sync
+Copy-Item .env.example .env    # add GOOGLE_API_KEY
 ```
 
-**Running without an API key:** the built vector store (263 chunks) and the embedding
-cache for all 66 evaluation queries are committed, so a fresh clone works out of the box:
+Build the assets (once):
 
-```bash
-uv run python -m scripts.live_demo --no-generate   # retrieval + verdict, zero API calls
+```powershell
+uv run python scripts/eg_prepare_data.py       # PubMedQA + splits
+uv run python scripts/eg_build_ontology.py     # MeSH + Hetionet -> TTL
+uv run python scripts/eg_build_index.py        # FAISS index
+uv run python -m evidence_gate.specialty       # MeSH specialty tags
+uv run python -c "from evidence_gate.coverage import build_passage_concepts; build_passage_concepts()"
 ```
 
-A `GOOGLE_API_KEY` is required only for answer generation (the default `live_demo`
-mode), the answer evaluation, and embedding **new** query texts — queries are embedded
-with `gemini-embedding-2` (cache-first: `src/corpus/embedder.py`).
+Run the experiment (resumable, one judge call per question):
 
-> ChromaDB rewrites `data/vectorstore/chroma.sqlite3` whenever it opens the store.
-> If `git status` shows it modified after a run you didn't rebuild from, restore it
-> with `git checkout -- data/vectorstore` before committing.
-
-Models (see `src/config.py`): `gemini-embedding-2` (embeddings),
-`gemini-3.1-flash-lite` (generation + judge). Free-tier quotas are per-model and
-**~20 req/day for the newest Flash models**; `gemini-3.1-flash-lite` has a ~1000 req/day
-budget. All runs are cached/resumable and a shared per-model rate limiter
-(`src/rate_limiter.py`) prevents 429 bursts.
-
----
-
-## Running
-
-```bash
-# Build corpus index (idempotent; caches embeddings)
-uv run python -m scripts.build_vectorstore
-
-# Retrieval experiments: 6 pipelines × 66 queries → results/metrics/experiment_summary.json
-uv run python -m scripts.run_experiments
-
-# Experiment 2 (novel architecture): AdaOnto full/selective/mmr → results/metrics/adaptive_summary.json
-uv run python -m scripts.run_adaptive_experiment
-
-# Answer-quality evaluation: 4 pipelines × 66 queries → results/metrics/answer_summary.json
-uv run python -m scripts.run_answer_eval          # judge ON (default)
-uv run python -m scripts.run_answer_eval --no-judge
-
-# Plots → results/plots/
-uv run python -m scripts.generate_plots
-
-# Live demo: 1 query through all 3 pipelines with ground-truth scoring,
-# ontology reasoning trace, and generated answers
-uv run python -m scripts.live_demo              # retrieval + generation (3 API calls)
-uv run python -m scripts.live_demo --no-generate  # offline: retrieval + verdict only
-
-# Quick demo through the unified LangGraph
-uv run python -m scripts.orchestrate_demo
+```powershell
+uv run python scripts/eg_run_sweep.py --split dev  --include-own
+uv run python scripts/eg_run_sweep.py --split test --include-own
 ```
 
-Every runner saves per-query results incrementally and **resumes automatically**, so a
-quota/rate-limit interruption never loses progress.
+Analyse (free, deterministic):
 
----
+```powershell
+uv run python scripts/eg_analyze.py
+uv run python scripts/eg_eval_retrieval.py --split dev --limit 200
+uv run python scripts/eg_paired_baseline.py
+```
 
-## Methods (short version)
+Demo one question:
 
-1. **Corpus:** 80 medical documents (68 PubMed abstracts + 12 synthetic), chunked to
-   500 chars / 100 overlap → 263 chunks, embedded with `gemini-embedding-2`.
-2. **Ontology:** purpose-built Cardiovascular + Metabolic ontology (347 triples) covering
-   equivalence, subclass hierarchy, symptoms, treatments, diagnoses, related conditions.
-3. **Query expansion:** each pipeline expands the query differently; retrieval uses the
-   expanded query embedding; generation is identical across pipelines (temperature 0.0).
-4. **Evaluation:** 66 queries in 6 categories (lay terminology, disease hierarchy, symptom
-   reasoning, treatment reasoning, multi-hop, control-exact-clinical) with concept-derived
-   relevance judgments. Retrieval: Recall@5/@10, Precision@5, Hit@5, MRR, nDCG@5. Answer quality:
-   objective concept-coverage F1 + an LLM judge (blinded rubric). Statistics: paired
-   Wilcoxon tests, Cohen's d, Cliff's delta (+ McNemar for judge correctness).
-5. **AdaOnto-RAG:** symbolic intent router (lay/hierarchy/treatment/symptom/multi-hop/precise)
-   → selective relation-family masks → dense top-20 → MMR diversity rerank (λ = 0.5, doc dedup).
+```powershell
+uv run python scripts/eg_demo.py --split test
+uv run python scripts/eg_demo.py --question "Does metformin help Alzheimer's disease?"
+```
 
----
+## Repository layout
 
-## Limitations
+```
+evidence_gate/          library code (retrieval, ontology, coverage, judge, gate)
+scripts/                one entry point per stage (eg_*.py)
+docs/                   architecture, dataset, experiments, results, viva, issues
+results/metrics/        final_report.{md,json}, questions.csv, retrieval metrics
+results/plots/          risk-coverage, gate AUC, coverage saturation
+legacy/                 earlier designs (symbolic router, NLI gate), not used
+data/                   downloaded/derived assets (git-ignored)
+```
 
-- LLM judge uses the same model family as the generator (quota constraint); the rubric is
-  blinded and the primary answer metric (concept F1) is objective.
-- Free-tier quota (~20 req/day/model on newest Flash) forced generation/judging onto
-  `gemini-3.1-flash-lite`; results are per-pipeline-comparative and not absolute.
-- Corpus and ontology are domain-scoped (Cardiovascular + Metabolic); results may not
-  generalise to other medical domains.
+## Data sources
 
-See `docs/PROJECT_STATUS.md` for the full execution plan, results tables, and status.
+* **PubMedQA** - Jin et al., EMNLP 2019. 1,000 expert-labelled questions.
+* **MeSH 2026** - U.S. National Library of Medicine, public domain. 31,110
+  descriptors, 65,242 hierarchy edges.
+* **Hetionet v1.0** - Himmelstein et al., eLife 2017, CC0. Six clinical
+  relations, 147,591 edges.
+
+No synthetic ontology content and no LLM-generated graph edges are used.
+Provenance and licences are recorded in
+`data/ontogate/ontology_provenance.json`.
+
+## Honest limitations
+
+* The test set has **85** judged questions because of free-tier API quotas. The
+  sweep is resumable; extending it changes no fitted parameter.
+* The headline compares against the *same model's* judge-prompt baseline. Against
+  an earlier plain-prompt RAG run on the shared 50 questions the gain is +3.1
+  points (p = 1.0), not +18. Both are reported.
+* The corpus contains three abstracts per question, so retrieval saturates. This
+  is the standard PubMedQA open-book setting, not a modelling achievement.
+* One judge model (`gemini-3.1-flash-lite`) and one prompt.
+
+## Documentation
+
+| | |
+|---|---|
+| [architecture.md](docs/architecture.md) | design, modules, data flow, decisions |
+| [dataset.md](docs/dataset.md) | PubMedQA, splits, specialties, the graph |
+| [experiments.md](docs/experiments.md) | research questions, protocol, reproduction |
+| [results.md](docs/results.md) | every table, interpretation, validity threats |
+| [viva.md](docs/viva.md) | likely questions and short answers |
+| [issues.md](docs/issues.md) | 16 real problems and their fixes |
+| [explainers.md](docs/explainers.md) | every concept in plain language |
+| [paper_notes.md](docs/paper_notes.md) | contributions, related work, claims map |

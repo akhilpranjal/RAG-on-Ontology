@@ -1,0 +1,16 @@
+{
+  "n_shared": 50,
+  "n_answered_by_gate": 32,
+  "coverage": 0.64,
+  "baseline_accuracy_all_shared": 0.66,
+  "baseline_accuracy_on_answered": 0.7188,
+  "gate_accuracy_on_answered": 0.75,
+  "delta_on_answered": 0.0312,
+  "mcnemar_on_answered": {
+    "n_pairs": 32,
+    "baseline_only_correct": 0,
+    "gate_only_correct": 1,
+    "p_value": 1.0
+  },
+  "caveat": "baseline used gemini-3.5-flash-lite with a plain answer prompt; the sweep used gemini-3.1-flash-lite with the judge prompt"
+}
