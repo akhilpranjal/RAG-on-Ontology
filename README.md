@@ -150,8 +150,9 @@ question
   |                             [zero API calls — free]
   v
 [3] JUDGE (LLM)   : one cheap call that looks at the abstracts and returns
-  |                 a sufficiency score (0.0–1.0), a provisional answer
-  |                 (yes / no / maybe), and a one-line justification
+  |                 a three-level evidence verdict (sufficient / partial /
+  |                 insufficient, mapped to 1.0 / 0.5 / 0.0) and a
+  |                 provisional answer (yes / no / maybe)
   |
   +--> judge answered "maybe"? --> ABSTAIN   [why: see finding 1]
   |
@@ -182,9 +183,10 @@ A few notes on each step, in slightly more detail:
    judge.
 3. **The judge is the key invention of this project.** Instead of asking the
    LLM for an answer directly, we ask one structured question:
-   *"Given these abstracts and the question — how sufficient is the evidence
-   (0–1), what is your provisional answer (yes/no/maybe), and why?"* This one
-   call produces **both** a candidate answer and a confidence score to gate
+   *"Given these abstracts and the question — is the evidence sufficient
+   (yes / partial / no), and what is your provisional answer
+   (yes / no / maybe)?"* This one
+   call produces **both** a candidate answer and a confidence label to gate
    with, so the system costs one API call per question, not two.
 4. **The gate is deliberately tiny.** It is a two-feature logistic model —
    it mixes the judge's score with the *fact* of whether the judge answered
@@ -297,9 +299,10 @@ Detailed failure analysis on all 500 test questions:
   (**18.6%**) — that is exactly the group the gate keeps silent on.
 * Questions skipped by the ontology pre-filter were (slightly) *easier* on
   average than the average question, not harder.
-* The errors it still makes are spread evenly over medical specialties, with
-  one exception: a tiny rare-disease group where the judge says "maybe" almost
-  every time — which is *correct behaviour* for that specialty.
+* The gate improves selective accuracy in every specialty group with at least
+  ten questions except one: ten methodology questions where the judge called
+  the evidence sufficient with high confidence and was wrong on eight of them.
+  That is a real failure of the judge, not a quirk of the gate.
 
 ### Finding 4: retrieval is not the bottleneck
 

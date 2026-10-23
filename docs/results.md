@@ -192,10 +192,12 @@ calls without improving accuracy and only mildly affects it.
 | C18 Nutritional and Metabolic | 10 | 0.500 | 0.400 | 1.000 |
 
 The gate improves selective accuracy over always-answer in every specialty with
-n >= 10 except one: E05 Techniques is degenerate (always-answer 0.200 because
-the judge answers `maybe` on 10 of 10, so the rule abstains and selective
-accuracy stays at 0.200). C10 Nervous System Diseases is the weakest real
-improvement (0.500 -> 0.636). Categories with n < 10 are illustrative only.
+n >= 10 except one: E05 Techniques (10 method questions) where the judge called
+the evidence sufficient on all ten questions, answered yes/no every time, and
+was wrong on eight. Coverage stays at 1.000 and selective accuracy at 0.200, so
+this is a genuine judge failure rather than an abstention pattern. C10 Nervous
+System Diseases is the weakest real improvement (0.500 -> 0.636). Categories
+with n < 10 are illustrative only.
 Oncology (C04, n = 93) behaves like the overall result: always-answer 60.2% ->
 selective 76.7% at 64.5% coverage.
 
