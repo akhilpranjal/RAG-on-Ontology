@@ -1,4 +1,4 @@
-# Experiments
+﻿# Experiments
 
 ## Research questions
 
@@ -47,7 +47,7 @@ All arms are reconstructed offline from the same sweep rows.
 | `always_answer` | Judge's answer, never abstain | No |
 
 `fused_all` was fixed before the test numbers were inspected; it is reported
-with its dev AUC so that overfitting is visible (dev 0.776, test 0.704).
+with its dev AUC so that overfitting is visible (dev 0.834, test 0.772).
 
 ## Cascade
 
@@ -121,8 +121,8 @@ existing rows.
 
 | Split | Questions judged | Notes |
 |---|---|---|
-| Dev | 200 | plus 12 from the include-own dry run, merged |
-| Test | 85 | quota exhausted; the run resumes |
+| Test | 500 | complete test half |
+| Dev | 283 | resumes on the next quota reset; fitting always refits on the full file |
 | Hard mode (dev, exclude-own) | 12 | negative result |
 
 The free tier for `gemini-3.1-flash-lite` allows roughly 200 requests per day.

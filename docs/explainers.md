@@ -63,7 +63,7 @@ a better signal than the score.
 ## Saturation
 
 A metric saturates when it is almost always at its maximum. Recall@10 = 0.970
-means retrieval cannot improve much: there is no room. Coverage = 1.0 for 82.5%
+means retrieval cannot improve much: there is no room. Coverage = 1.0 for 87.1%
 of questions means the coverage gate has little to discriminate on.
 
 ## Ontology, MeSH, Hetionet
@@ -116,8 +116,8 @@ than a classifier but costs money and can be wrong.
 ## Self-abstention signal
 
 The judge can answer "maybe". That is the model saying "I cannot tell". In this
-project that single bit of information is a better gate signal (AUC 0.747) than
-the numeric sufficiency score (AUC 0.705).
+project that single bit of information is a better gate signal (AUC 0.770) than
+the numeric sufficiency score (AUC 0.736).
 
 ## Logistic regression
 

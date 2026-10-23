@@ -238,21 +238,21 @@ class LogisticSelector:
             "feature_names": self.feature_names,
             "fitted": True,
             "l2": self.l2,
-            "bias": round(self.bias, 4),
+            "bias": round(self.bias, 12),
             "weights": {
-                name: round(float(weight), 4)
+                name: round(float(weight), 12)
                 for name, weight in zip(self.feature_names, self.weights)
             },
             "medians": {
-                name: None if math.isnan(float(value)) else round(float(value), 4)
+                name: None if math.isnan(float(value)) else round(float(value), 12)
                 for name, value in zip(self.feature_names, self.medians)
             },
             "means": {
-                name: round(float(value), 6)
+                name: round(float(value), 12)
                 for name, value in zip(self.feature_names, self.means)
             },
             "scales": {
-                name: round(float(value), 6)
+                name: round(float(value), 12)
                 for name, value in zip(self.feature_names, self.scales)
             },
             "final_loss": round(self.history[-1], 5) if self.history else None,

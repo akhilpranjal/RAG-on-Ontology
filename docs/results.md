@@ -1,36 +1,36 @@
-# Results
+﻿# Results
 
-All numbers are on the test split unless marked dev. Test n = 85.
+Test numbers are on the **complete test split (n = 500)** unless marked dev.
+Gates are fitted on dev (n = 283 judged questions).
 `results/metrics/final_report.md` is the generated source of truth; this page
-adds interpretation and the checks that the generator does not perform.
+adds interpretation and the checks the generator does not perform.
 
 ## Headline
 
 | System | Coverage | Selective accuracy |
 |---|---|---|
 | Always answer (judge prompt, same model) | 100% | 58.8% |
-| Always answer, forced (maybe -> yes) | 100% | 62.4% |
-| Ontology coverage only, dev threshold at 70% coverage | 70.6% | 63.3% |
-| **Fused gate (judge + self-abstention)** | **61.2%** | **76.9%** |
-| **Deterministic equivalent: answer only if score = 1 and answer != maybe** | **61.2%** | **76.9%** |
-| 95% bootstrap CI on the fused gate | | [65.4%, 88.5%] |
-
-The gate is a 1.8x improvement in accuracy over always answering, at the price
-of declining to answer 39% of the questions. Abstentions are never counted as
-correct.
+| Always answer, forced (maybe -> yes) | 100% | 67.4% |
+| Majority class (always yes) | 100% | 55.3% |
+| Ontology coverage only, dev threshold | 77% | 59.0% |
+| **Fused gate (judge + self-abstention)** | **65.2%** | **78.2%** |
+| 95% bootstrap CI on the fused gate | | [73.6%, 82.5%] |
 
 The dev-fitted threshold lands exactly at the top score level, so the learned
-gate and a rule with **no training at all** make identical decisions: answer
-only when the judge is fully confident (sufficiency 1) and did not answer
-"maybe". On dev this rule gives 77.8% at 67.5% coverage; on test, 76.9% at
-61.2%.
+gate makes identical decisions to a rule with **no training at all**:
+
+> Answer only when the judge is fully confident (sufficiency 1) and did not
+> answer "maybe".
+
+That deterministic rule gives 78.2% at 65.2% coverage on test (n = 326) and
+83.2% at 67.1% coverage on dev. Abstentions are never counted as correct.
 
 ## Baselines
 
 | Split | Always answer | Forced answer | Abstain = maybe | Majority class |
 |---|---|---|---|---|
-| Dev (n=200) | 0.600 | 0.675 | 0.060 | 0.560 |
-| Test (n=85) | 0.588 | 0.624 | 0.094 | 0.553 |
+| Dev (n=283) | 0.618 | 0.731 | 0.042 | 0.562 |
+| Test (n=500) | 0.588 | 0.674 | 0.060 | 0.553 |
 
 "Abstain = maybe" counts an abstention as the gold `maybe` class. It is not a
 real accuracy; it is reported only so that the earlier experiment, which used
@@ -38,36 +38,35 @@ this convention, remains comparable.
 
 ## Gate quality
 
-AUC against per-question correctness, dev and test.
+AUC against per-question correctness.
 
 | Gate | Dev AUC | Test AUC | Test AURC |
 |---|---|---|---|
-| similarity (top-1 dense score) | 0.561 | 0.552 | 0.353 |
-| ontology coverage (top-3) | 0.530 | 0.547 | 0.406 |
-| ontology coverage (all 10) | 0.519 | 0.495 | 0.421 |
-| ontology relation (sentence) | 0.506 | **0.442** | 0.469 |
-| ontology heading coverage | 0.528 | 0.514 | 0.385 |
-| **LLM judge score** | **0.700** | **0.705** | 0.328 |
-| **Judge + self-abstention (rule)** | **0.757** | **0.737** | 0.260 |
-| Judge fully confident (deterministic) | 0.750 | 0.729 | 0.265 |
-| Fused judge + is-maybe (learned) | 0.758 | 0.747 | 0.254 |
-| Fused + ontology coverage | 0.769 | 0.738 | 0.271 |
-| Fused all features | 0.776 | 0.704 | 0.349 |
+| similarity (top-1 dense score) | 0.552 | 0.527 | 0.395 |
+| ontology coverage (top-3) | 0.502 | 0.493 | 0.409 |
+| ontology coverage (all 10) | 0.497 | 0.491 | 0.413 |
+| ontology relation (sentence) | 0.461 | 0.559 | 0.383 |
+| ontology heading coverage | 0.512 | 0.534 | 0.382 |
+| **LLM judge score** | **0.768** | **0.736** | 0.291 |
+| **Judge + self-abstention** | **0.812** | **0.770** | 0.254 |
+| Judge fully confident (deterministic) | 0.803 | 0.761 | 0.256 |
+| Fused judge + is-maybe (learned) | 0.816 | **0.774** | 0.254 |
+| Fused + ontology coverage | 0.815 | 0.766 | 0.262 |
+| Fused all features | 0.834 | 0.772 | 0.247 |
 
 Reading:
 
-* Everything ontology-only is between 0.44 and 0.55. The relation gate is
-  *below chance* on test, which means the intent-conditioned relation feature is
-  noise at this sample size, not a weak signal.
-* The judge's score alone is 0.705. Adding a single binary feature, "did the
-  judge answer maybe", lifts it to 0.747. This is the most important result in
-  the project and it costs nothing.
-* Adding ontology coverage to the learned gate raises dev AUC (0.758 -> 0.769)
-  but lowers test AUC (0.747 -> 0.738). That is the signature of fitting noise.
-  The ontology does not add information beyond the judge.
-* `fused_all` looks best on dev (0.776) and drops to 0.704 on test, the worst
-  generalisation of the learned gates. It is reported to make overfitting
-  visible, not as a recommendation.
+* With 500 test questions the picture is now stable. Judge score alone is
+  0.736; adding the single binary "did the judge answer maybe" lifts it to
+  0.770, and the dev-fitted two-feature gate reaches 0.774.
+* With 283 dev rows the learned gates fared better than in the pilot, but the
+  ontology still adds nothing: `fused_judge_maybe_coverage` has the same dev
+  AUC as the two-feature gate and drops on test.
+* The ontology-only gates sit between 0.46 and 0.56. On this sample size that
+  is a solid finding, not noise: ontology concept coverage is *not* a sufficiency
+  signal on PubMedQA.
+* `fused_all` shows the largest dev-test gap (0.834 -> 0.772) and is reported to
+  make overfitting visible.
 
 ## Selective accuracy at matched coverage (test)
 
@@ -75,41 +74,39 @@ Cells are `accuracy@coverage`. Dev chooses the threshold; test applies it.
 
 | Gate | 100% | 80% | 70% | 60% | 50% | 40% | 30% |
 |---|---|---|---|---|---|---|---|
-| similarity | .583@99 | .612@79 | .623@72 | .612@58 | .579@45 | .621@34 | .667@32 |
-| ontology coverage | .613@94 | .645@73 | .633@71 | .633@71 | .633@71 | .633@71 | .633@71 |
-| ontology coverage (all) | .613@94 | .606@78 | .606@78 | .606@78 | .606@78 | .606@78 | .606@78 |
-| ontology relation | .561@48 | .561@48 | .561@48 | .561@48 | .561@48 | .561@48 | .474@22 |
-| ontology heading | .613@94 | .613@94 | .610@69 | .611@64 | .649@44 | .639@42 | .639@42 |
-| judge score | .588@100 | .653@85 | .729@69 | .729@69 | .729@69 | .729@69 | .729@69 |
-| **judge self-abstain** | .588@100 | .588@100 | .588@100 | **.769@61** | .769@61 | .769@61 | .769@61 |
-| judge fully confident | .588@100 | .588@100 | .588@100 | **.769@61** | .769@61 | .769@61 | .769@61 |
-| fused judge+maybe | .588@100 | .640@88 | .714@74 | **.769@61** | .769@61 | .769@61 | .769@61 |
-| fused + coverage | .588@100 | .662@84 | .714@74 | .766@55 | .756@48 | .756@48 | .756@48 |
-| fused all | .588@100 | .697@78 | .737@67 | .775@58 | .775@47 | .750@42 | .692@31 |
+| similarity | .587@100 | .607@85 | .605@77 | .604@67 | .599@59 | .594@48 | .610@40 |
+| ontology coverage | .597@96 | .595@79 | .590@77 | .590@77 | .590@77 | .590@77 | .590@77 |
+| ontology coverage (all) | .597@96 | .592@84 | .592@84 | .592@84 | .592@84 | .592@84 | .592@84 |
+| ontology relation | .580@52 | .580@52 | .580@52 | .580@52 | .580@52 | .580@52 | .626@21 |
+| ontology heading | .597@96 | .597@96 | .607@74 | .609@69 | .635@46 | .633@44 | .633@44 |
+| judge score | .588@100 | .647@87 | .751@69 | .751@69 | .751@69 | .751@69 | .751@69 |
+| **judge confident rule** | .588@100 | .588@100 | .588@100 | **.782@65** | .782@65 | .782@65 | .782@65 |
+| fused judge+maybe | .588@100 | .646@89 | .749@72 | **.782@65** | .782@65 | .782@65 | .782@65 |
+| fused + coverage | .588@100 | .659@86 | .751@72 | .781@62 | .771@52 | .771@52 | .771@52 |
+| fused all | .589@100 | .671@83 | .775@69 | .785@61 | .778@52 | .788@41 | .787@30 |
 
-The ontology coverage gate is flat from 71% coverage downward because its
-feature is ternary in practice: coverage is 0, 0.5 or 1 for most questions, so
-a single threshold splits the data into the same two groups at every target.
-That is the saturation problem, seen from the other side.
+The ontology coverage gate is flat from 77% coverage downward because coverage
+is ternary in practice: 0, 0.5 or 1 for most questions, so a threshold splits
+the data into the same two groups at every target. That is the saturation
+problem seen from the other side.
 
 ## Where the ontology does pay: the cascade
 
 Rule: abstain without calling the judge when `coverage_top3 <= a`; otherwise
-ask the judge; abstain if the judge says "maybe".
+abstain if the judge says "maybe"; otherwise answer.
 
 | Screen `a` | Judge calls saved | Coverage | Selective accuracy |
 |---|---|---|---|
-| 0.00 | 5.9% | 63.5% | 0.759 |
-| 0.50 | 15.3% | 58.8% | 0.760 |
-| 0.75 | **23.5%** | 51.8% | 0.750 |
-| 1.00 | 94.1% | 2.4% | 0.500 |
+| 0.00 | 5.6% | 64.2% | 0.782 |
+| 0.50 | 14.4% | 58.2% | 0.780 |
+| 0.75 | **19.4%** | 54.6% | 0.773 |
+| 0.99 | 19.6% | 54.4% | 0.772 |
 
-At `a = 0.75` the ontology removes almost one judge call in four and costs
-1.9 accuracy points (75.9% -> 75.0% at the `a = 0` setting, or 76.9% -> 75.0%
-against the no-screen headline). This is the positive, quantified role of the
-ontology in the final system: **a free cost filter**, not an accuracy signal.
-Dev and test both show the saving (dev 19.5%, test 23.5%), so it is not a
-one-split artefact.
+At `a = 0.75` the ontology removes about 1 judge call in 5 for a 0.9-point
+accuracy cost. Dev and test agree (dev: 20.5% saved, 83.2% -> 82.5%). The
+screen removes questions that are *not* the hardest (see error analysis), so it
+is a pure cost saving with a small, stable accuracy tax, not an accuracy
+mechanism.
 
 ## Retrieval
 
@@ -123,87 +120,84 @@ Dev, 200 questions, no API calls (`results/metrics/retrieval_dev_open.json`).
 The best blend changes one question's rank@1. There is no headroom: the gold
 abstract is already in the top-10 for 97% of questions. Ontology reranking
 cannot matter when retrieval is solved at this scale. Ontology query expansion
-was tested earlier and *reduced* recall, because synonyms pulled in unrelated
-abstracts that shared the same MeSH term.
+was tested earlier in the project and *reduced* recall, because synonyms pulled
+in unrelated abstracts sharing a MeSH term.
 
 ## Coverage saturation
 
-* Mean document-level coverage: 0.916.
-* Share of questions with coverage exactly 1.0: 82.5%.
-* Mean number of linked question concepts: 1.72.
+* Mean document-level coverage: 0.932.
+* Share of questions with coverage exactly 1.0: 87.1%.
+* Mean number of linked question concepts: 1.75.
 
 Most PubMedQA questions name one or two concepts, and a ten-abstract context
 almost always mentions them. A gate that asks "are the question's terms
-present?" therefore has almost no variance to work with. This explains both the
-weak AUC and the flat risk-coverage curve. Any future coverage signal needs to
-be relational or hierarchical, not lexical presence.
+present?" has almost no variance to work with. This explains both the weak
+ontology AUC and the flat risk-coverage curve. Any future coverage signal needs
+to be relational or hierarchical, not lexical presence.
 
-## Error analysis (test)
+## Error analysis (test, n = 500)
 
 Judge answers against gold labels:
 
 | Judge answer | n | Gold yes | Gold no | Gold maybe | Answer accuracy |
 |---|---|---|---|---|---|
-| yes | 40 | 33 | 2 | 5 | **0.825** |
-| no | 16 | 3 | 9 | 4 | 0.562 |
-| maybe | 29 | 11 | 10 | 8 | 0.276 |
+| yes | 215 | 171 | 19 | 25 | **0.795** |
+| no | 124 | 16 | 93 | 15 | 0.750 |
+| maybe | 161 | 73 | 58 | 30 | **0.186** |
 
 Three things follow.
 
-1. **The judge is asymmetric.** It is good at confirming a positive claim
-   (82.5%) and weak at confirming a negative one (56.2%). A `no` answer is
-   barely better than a coin flip on this sample. Any future work should
-   calibrate the two answer classes separately instead of thresholding a single
-   score.
-2. **"Maybe" really is uncertainty.** Only 27.6% of "maybe" answers are right,
-   so abstaining on them is correct about 72% of the time. The gold labels of
-   those 29 questions are balanced (11 yes, 10 no, 8 maybe), which means the
+1. **"Maybe" really is uncertainty.** Only 18.6% of "maybe" answers are right,
+   so abstaining on them is correct roughly 81% of the time. The gold labels of
+   those 161 questions are balanced (73 yes, 58 no, 30 maybe), which means the
    judge is not simply detecting the gold `maybe` class: it is flagging hard
-   questions of all three classes. That is the behaviour a selective system
-   should have.
-3. **The score adds a little on top of the answer.** Judge sufficiency
-   `yes` -> 72.9% answer accuracy (n=59), `partial` -> 30.8% (n=13), `no` ->
-   23.1% (n=13). The three-way sufficiency label is monotone with correctness,
-   which is why the thresholded self-abstention score (0.769) is slightly above
-   the plain rule "answer every non-maybe" (42/56 = 75.0% at 65.9% coverage).
+   questions of all three classes.
+2. **Earlier asymmetry was small-sample.** On the 85-question interim test the
+   `no` answer looked weak (0.562 vs 0.825 for `yes`). On 500 questions the
+   classes are 0.795 and 0.750 - close. The class-aware gates we tried for that
+   asymmetry (one-hot on the answer label) do not beat the plain gate
+   (dev 0.824 -> test 0.767) and are not adopted.
+3. **The score is monotone with correctness.** Judge sufficiency `yes` ->
+   75.1% answer accuracy (n = 346), `partial` -> 24.4% (n = 90), `no` -> 18.8%
+   (n = 64). This is why the confident-rule threshold separates so cleanly.
 
 Screened versus passed questions (`coverage_top3 <= 0.75`):
 
 | Group | n | Judge accuracy | Judge "maybe" rate |
 |---|---|---|---|
-| Screened out | 20 | 0.550 | 0.40 |
-| Passed to judge | 65 | 0.600 | 0.32 |
+| Screened out | 97 | 0.619 | 0.320 |
+| Passed to judge | 403 | 0.581 | 0.323 |
 
-The screen removes questions that are only slightly harder than average. That
-is exactly why it saves 23.5% of calls for a 1.9-point accuracy cost: it is a
-cheap, mildly informative filter, not a sharp classifier.
+The screen removes slightly *easier-than-average* questions rather than the
+hardest ones. That is consistent with the cascade's plain cost story: it saves
+calls without improving accuracy and only mildly affects it.
 
-### Class-aware gates overfit
-
-The asymmetry suggests giving the two answer classes separate weights. A
-one-hot logistic gate on {is_yes, is_no, is_maybe, score} raises dev AUC to
-0.766 but drops test AUC to 0.684. Adding ontology coverage and similarity
-raises dev further (0.778) and leaves test at 0.697. With 200 dev rows and a
-40-question `yes` class, class-specific weights are fitting noise. The
-two-feature gate is kept, and class-conditional calibration is listed as future
-work rather than claimed as a result.
-
-## Per-specialty (test)
-
-Judge gate, threshold chosen on dev for 50% coverage.
+## Per-specialty (test, judge gate at dev 50% coverage)
 
 | MeSH | n | Always | Coverage | Selective |
 |---|---|---|---|---|
-| C04 Neoplasms | 22 | 0.591 | 0.50 | 0.727 |
-| C14 Cardiovascular Diseases | 10 | 0.600 | 0.70 | 0.857 |
-| C10 Nervous System Diseases | 6 | 0.333 | 0.67 | 0.500 |
-| C01 Infections | 6 | 0.667 | 0.33 | 1.000 |
+| C04 Neoplasms | 93 | 0.602 | 0.645 | 0.767 |
+| C23 Pathological Conditions | 57 | 0.667 | 0.737 | 0.881 |
+| C14 Cardiovascular Diseases | 53 | 0.623 | 0.698 | 0.838 |
+| C10 Nervous System Diseases | 34 | 0.500 | 0.647 | 0.636 |
+| C01 Infections | 32 | 0.688 | 0.625 | 0.800 |
+| C06 Digestive System Diseases | 28 | 0.571 | 0.607 | 0.824 |
+| C12 Urogenital Diseases | 24 | 0.542 | 0.667 | 0.812 |
+| C05 Musculoskeletal Diseases | 18 | 0.389 | 0.444 | 0.625 |
+| M01 Named Groups | 15 | 0.800 | 0.733 | 0.909 |
+| C08 Respiratory Tract Diseases | 15 | 0.667 | 0.800 | 0.750 |
+| C26 Wounds and Injuries | 15 | 0.400 | 0.400 | 0.667 |
+| N05 Health Care | 13 | 0.692 | 0.538 | 0.857 |
+| E05 Techniques | 10 | 0.200 | 1.000 | 0.200 |
+| C18 Nutritional and Metabolic | 10 | 0.500 | 0.400 | 1.000 |
 
-Only four categories reach n = 6 in the 85-question test set, so these rows are
-illustrative. The oncology row is the only one with enough data to be
-moderately stable, and it behaves like the overall result (+13.6 points). The
-specialty analysis is therefore reported but not used to claim domain-specific
-behaviour.
+The gate improves selective accuracy over always-answer in every specialty with
+n >= 10 except one: E05 Techniques is degenerate (always-answer 0.200 because
+the judge answers `maybe` on 10 of 10, so the rule abstains and selective
+accuracy stays at 0.200). C10 Nervous System Diseases is the weakest real
+improvement (0.500 -> 0.636). Categories with n < 10 are illustrative only.
+Oncology (C04, n = 93) behaves like the overall result: always-answer 60.2% ->
+selective 76.7% at 64.5% coverage.
 
 ## Paired check against a stronger baseline
 
@@ -221,27 +215,28 @@ questions that also have an earlier plain-prompt run:
 | Difference | +3.1 points |
 | McNemar (discordant 0 vs 1) | p = 1.0 |
 
-Conclusion: against a *stronger* answerer, the gate's gain at matched coverage
-is small and not significant. Its reliable contribution is **selective
-abstention itself** (you get an explicit "I do not know" for 36% of questions)
-plus the cheap screen. The +18.1 headline is honest but it is measured against
-the judge prompt; both numbers are reported so the claim can be audited.
+Against a *stronger* answerer, the gate's gain at matched coverage is small and
+not significant. Its reliable contributions are **selective abstention itself**
+(explicit "I do not know" for 35% of questions) and the cheap screen. The new
+headline is measured against the same-model judge prompt; both numbers are
+reported so the claim can be audited.
 
 Caveat: the plain-prompt run used `gemini-3.5-flash-lite` and the sweep used
-`gemini-3.1-flash-lite`, so this is indicative, not a controlled ablation.
-A same-model plain-prompt arm is the single most important missing experiment.
+`gemini-3.1-flash-lite`, so this is indicative, not a controlled ablation. A
+same-model plain-prompt arm remains the most useful missing experiment.
 
 ## Judge model matters
 
 | Model | Rows | Judge AUC | Gate |
 |---|---|---|---|
 | `gemini-3.5-flash-lite` (pilot, 96 rows) | 96 | 0.823 | 0.80 @ 52% coverage |
-| `gemini-3.1-flash-lite` (final) | 285 | 0.70-0.74 | 0.769 @ 61% coverage |
+| `gemini-3.1-flash-lite` (final) | 283 + 500 | 0.74-0.77 | 0.782 @ 65% coverage |
 
-`3.5-flash-lite` was retired or quota-locked during the project, and its
-replacement is a weaker judge. The system design is unchanged; the absolute
-numbers are model-dependent. Reporting both prevents the pilot from looking
-like the final result.
+`3.5-flash-lite` was retired or quota-locked during the project; its
+replacement is a somewhat weaker judge, but with 283 dev rows for fitting the
+final numbers recovered. The system design is unchanged; absolute levels are
+model-dependent. Reporting both prevents the pilot from looking like the final
+result.
 
 ## Hard mode (exclude-own)
 
@@ -253,15 +248,17 @@ negative result: the pipeline is not a closed-book QA system.
 
 ## Threats to validity
 
-1. **Test n = 85.** The 95% CI on the headline is wide ([65.4%, 88.5%]). The
-   run is resumable; extending it to 500 is the first thing to do when quota
-   resets.
+1. **Dev has 283 judged questions, not 500.** The dev-test AUC gap of the
+   learned gates (~0.04) is consistent with moderate overfitting; the resumable
+   sweep can still add the missing 217 dev rows, and the analysis refits on the
+   full file.
 2. **One model, one prompt.** Every judge-based number is conditional on
    `gemini-3.1-flash-lite` and the judge prompt.
 3. **The corpus is small and easy.** Retrieval saturation means the
-   retrieval-side conclusions may not transfer to a full PubMed index.
-4. **The fusion is fitted on 200 rows.** Dev-test AUC gaps of 0.05-0.07 show
-   this is at the edge of what 200 rows can support. The two-parameter fused
-   gate is the only one that generalises cleanly (0.758 -> 0.747).
+   retrieval-side conclusions may not transfer to a full PubMed index. The
+   ontology's null result is equally tied to this data structure.
+4. **`maybe` is only 11% of gold labels** in the full 1,000; per-class estimates
+   remain noisier than the overall accuracy.
 5. **Selection.** The 60% coverage target was fixed before test evaluation, and
-   the report shows all targets rather than the best one.
+   the report shows all targets rather than the best one. The deterministic
+   rule was not searched: it is the exact behaviour of the dev-fitted threshold.

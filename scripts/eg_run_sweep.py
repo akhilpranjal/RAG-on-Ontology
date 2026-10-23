@@ -141,7 +141,15 @@ def main() -> int:
             judgement = judge.judge(row["question"], [p.text for p in passages])
             coverage_result = coverage.score(row["question"], passages)
         except Exception as exc:  # noqa: BLE001
-            print(f"    [skip] {pubid}: {str(exc)[:140]}", flush=True)
+            message = str(exc)
+            print(f"    [skip] {pubid}: {message[:140]}", flush=True)
+            if "RESOURCE_EXHAUSTED" in message or "429" in message:
+                print(
+                    "[sweep] daily quota exhausted; stopping. "
+                    "Re-run the same command after the quota resets.",
+                    flush=True,
+                )
+                break
             continue
 
         append_jsonl(

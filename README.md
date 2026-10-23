@@ -8,28 +8,29 @@ whether to answer or to say *"the evidence is insufficient"*.
 
 ## Headline result
 
-On the test split (85 judged questions, same model, same passages for every
-arm):
+On the test split (the full 500-question test half; every arm sees the same
+model output):
 
 | System | Coverage | Accuracy |
 |---|---|---|
 | Always answer | 100% | 58.8% |
-| Ontology coverage gate | 70.6% | 63.3% |
-| **Judge + self-abstention gate** | **61.2%** | **76.9%** |
+| Ontology coverage gate | 77% | 59.0% |
+| **Judge + self-abstention gate** | **65.2%** | **78.2%** |
 
-The gate nearly doubles accuracy by declining to answer 39% of the questions.
-Abstentions are never counted as correct.
+The test half is fixed and independent, so the gate's accuracy comes from only
+declining to answer 35% of the questions. Abstentions are never counted as
+correct.
 
 Three findings from the same experiment matter as much as the headline:
 
 1. **The judge's own uncertainty is the best signal.** The numeric sufficiency
-   score gives AUC 0.705; adding the fact that the judge answered "maybe" gives
-   0.747, and the fitted gate collapses exactly to a deterministic rule:
+   score gives AUC 0.736; adding the fact that the judge answered "maybe" gives
+   0.770, and the fitted gate collapses exactly to a deterministic rule:
    *answer only when the judge is fully confident and did not answer "maybe"*.
-   That rule, with no training, reaches the same 76.9% at 61.2% coverage.
+   That rule, with no training, reaches the same 78.2% at 65.2% coverage.
 2. **The ontology is a weak accuracy gate but a good cost filter.** Coverage
-   alone gives AUC 0.547 and saturates at 1.0 for 82.5% of questions. Used as a
-   free pre-screen, it removes **23.5% of judge calls** for a 1.9-point accuracy
+   alone gives AUC 0.493 and saturates at 1.0 for 87.1% of questions. Used as a
+   free pre-screen, it removes **19.4% of judge calls** for a 0.9-point accuracy
    loss.
 3. **Ontology reranking and query expansion do not help.** Retrieval is already
    saturated (recall@10 = 0.970), so there is nothing to improve.
@@ -120,11 +121,12 @@ Provenance and licences are recorded in
 
 ## Honest limitations
 
-* The test set has **85** judged questions because of free-tier API quotas. The
-  sweep is resumable; extending it changes no fitted parameter.
+* The test half is complete (500 questions); the **development half has 283**
+  judged questions because of free-tier API quotas. Extending it can only
+  improve the fitted thresholds, and the sweep resumes where it stopped.
 * The headline compares against the *same model's* judge-prompt baseline. Against
   an earlier plain-prompt RAG run on the shared 50 questions the gain is +3.1
-  points (p = 1.0), not +18. Both are reported.
+  points (p = 1.0), not +19. Both are reported.
 * The corpus contains three abstracts per question, so retrieval saturates. This
   is the standard PubMedQA open-book setting, not a modelling achievement.
 * One judge model (`gemini-3.1-flash-lite`) and one prompt.

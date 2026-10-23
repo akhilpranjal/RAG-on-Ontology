@@ -1,4 +1,4 @@
-# Paper / report notes
+﻿# Paper / report notes
 
 Working notes for turning this repository into the final-year report and, if
 desired, a short paper. Numbers refer to `results.md` and
@@ -12,15 +12,15 @@ Biomedical question answering systems rarely say "I do not know". We present
 OntoGate-RAG, a selective retrieval-augmented pipeline for PubMedQA that
 combines an LLM evidence judge with concept coverage computed over a curated
 MeSH + Hetionet knowledge graph. On a paired test set, the system raises
-accuracy from 58.8% (always answer) to 76.9% at 61.2% coverage. The strongest
+accuracy from 58.8% (always answer) to 78.2% at 65.2% coverage. The strongest
 signal is not the judge's numeric sufficiency score but its own uncertainty: the
 fitted gate reduces exactly to a deterministic rule - answer only when the judge
 is fully confident (sufficiency 1) and not "maybe" - which needs no training and
 gives the same result. The ontology is a weak
-standalone sufficiency signal (AUC 0.55) whose document-level coverage
+standalone sufficiency signal (AUC 0.49) whose document-level coverage
 saturates, and ontology reranking and query expansion do not improve an already
-saturated retrieval stage; however, a free ontology pre-screen removes 23.5% of
-judge calls at a cost of 1.9 accuracy points. We report these negative and
+saturated retrieval stage; however, a free ontology pre-screen removes 19.4% of
+judge calls at a cost of 0.9 accuracy points. We report these negative and
 cost-side results explicitly, because they delimit where a curated knowledge
 graph is worth its complexity in selective RAG.
 
@@ -30,15 +30,15 @@ graph is worth its complexity in selective RAG.
    LLM call per question is sufficient to evaluate every gate offline. All arms
    see identical questions, passages and model output.
 2. **The self-abstention finding**: the judge's three-way answer is a better
-   gate signal than its numeric sufficiency score (AUC 0.747 vs 0.705), and the
+   gate signal than its numeric sufficiency score (AUC 0.770 vs 0.736), and the
    dev-fitted gate collapses to a deterministic rule - answer only when the
    judge is fully confident (sufficiency 1) and not "maybe" - which gives the
-   same 76.9% accuracy at 61.2% coverage with no training.
+   same 78.2% accuracy at 65.2% coverage with no training.
 3. **A concrete negative result for ontology gating**: concept coverage
-   saturates (82.5% of questions at 1.0) and is a weak gate; relation and
+   saturates (87.1% of questions at 1.0) and is a weak gate; relation and
    heading variants are no better; fusion with the judge does not generalise.
 4. **A concrete positive result for ontology screening**: the same coverage
-   score, used as a free pre-filter, removes 23.5% of paid judge calls for 1.9
+   score, used as a free pre-filter, removes 19.4% of paid judge calls for 0.9
    accuracy points.
 5. **A reproducible artefact**: 683k-triple graph built from public sources
    (no LLM), full pipeline, all prompts, and cached model responses.
@@ -77,15 +77,15 @@ signal*, and answer with a measured yes for cost and a measured no for accuracy.
 
 | Claim | Evidence | Where |
 |---|---|---|
-| Selective accuracy improves substantially | 58.8% -> 76.9% at 61.2% coverage, CI [65.4, 88.5] | `final_report.md` headline |
-| The judge answer beats the judge score | AUC 0.705 -> 0.747 | gate table |
-| The rule matches the learned gate | 76.9% vs 76.9%, same 52 questions | gate table |
-| Ontology is a weak standalone gate | AUC 0.547, coverage-only 63.3% | gate table |
-| Ontology coverage saturates | 82.5% at 1.0; mean 0.916 | saturation section |
+| Selective accuracy improves substantially | 58.8% -> 78.2% at 65.2% coverage, CI [73.6, 82.5], n = 326 answered | `final_report.md` headline |
+| The judge answer beats the judge score | AUC 0.736 -> 0.770 | gate table |
+| The rule matches the learned gate | 78.2% vs 78.2%, same 326 questions | gate table |
+| Ontology is a weak standalone gate | AUC 0.493, coverage-only 59.0% | gate table |
+| Ontology coverage saturates | 87.1% at 1.0; mean 0.916 | saturation section |
 | Ontology fusion does not generalise | dev 0.769 -> test 0.738 | gate table |
 | Ontology reranking has no headroom | R@10 0.970; best variant R@1 0.890 vs 0.885 | retrieval table |
 | Ontology query expansion hurts | recall drop in earlier run | `docs/issues.md` #10 |
-| Ontology screening saves calls | 23.5% saved, -1.9 points | cascade table |
+| Ontology screening saves calls | 19.4% saved, -0.9 points | cascade table |
 | Gain over a stronger baseline is small | +3.1 points, p = 1.0 | paired check |
 | Hard mode collapses | 0/12 answered | hard-mode note |
 
@@ -102,10 +102,11 @@ signal*, and answer with a measured yes for cost and a measured no for accuracy.
 
 ## Threats to validity (for the limitations section)
 
-* Test n = 85; wide CIs; results are directional.
+* Test half complete (n = 500), so headline CIs are narrow; the dev half has
+  283 judged questions, which is the residual limitation.
 * One LLM (`gemini-3.1-flash-lite`) and one judge prompt.
 * Open-book corpus with three abstracts per question, so retrieval saturates.
-* Fitted gates have only 200 dev rows; dev-test gaps are reported.
+* Fitted gates have 283 dev rows (of 500); dev-test gaps are reported.
 * The paired baseline uses a different model version, so it is indicative.
 * `maybe` is 11% of gold labels; per-class estimates are noisy.
 
@@ -131,7 +132,7 @@ signal*, and answer with a measured yes for cost and a measured no for accuracy.
   open-book.
 * Do not claim the ontology improves accuracy. It does not, beyond noise.
 * Do not claim the fused model is necessary. The rule matches it.
-* Do not claim the +18-point gain over "standard RAG". It is over the same
+* Do not claim the +19-point gain over "standard RAG". It is over the same
   model's judge-prompt always-answer; the paired plain-prompt comparison is
   +3.1 points and not significant.
 * Do not compare the 96-row pilot (AUC 0.823) with the final run as if they were

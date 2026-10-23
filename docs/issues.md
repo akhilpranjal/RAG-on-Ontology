@@ -117,7 +117,8 @@ abstention systems.
 
 ## 9. Document coverage saturated, which we did not expect.
 
-**Symptom.** Coverage was 1.0 for 82.5% of questions. The gate had almost no
+**Symptom.** Coverage was 1.0 for 82.5% of questions in the interim run (87.1%
+on the full test half). The gate had almost no
 variance and its AUC was 0.547.
 
 **Cause.** PubMedQA questions name one or two concepts, and ten abstracts
@@ -184,10 +185,10 @@ Cardiovascular Diseases, ...).
 (0.704). Adding ontology coverage to the two-feature gate raised dev and lowered
 test.
 
-**Fix.** Prefer the two-feature gate (dev 0.758 -> test 0.747) and report every
+**Fix.** Prefer the two-feature gate (dev 0.816 -> test 0.774) and report every
 variant with both splits so the gap is visible.
 
-**Lesson.** With 200 dev rows, every extra feature is a lottery ticket.
+**Lesson.** With 283 dev rows, every extra feature is a lottery ticket.
 
 ---
 
@@ -206,11 +207,13 @@ reviewer finding waiting to happen.
 
 ---
 
-## 16. Only 285 of 1,000 questions were judged.
+## 16. Quota limited the dev sweep.
 
-**Symptom.** Free-tier quota allows roughly 200 requests per day.
+**Symptom.** The free-tier quota allowed enough calls to complete the entire
+test half (500 questions) in one sitting, but only 283 of the 500 dev
+questions.
 
 **Fix.** Resumable sweep, disk cache, one judge call per question, and an
 analysis that refits on whatever dev rows exist. The test CI is reported
-explicitly. Extending the run cannot invalidate the fitted parameters' protocol,
-only narrow the intervals.
+explicitly. Extending the run cannot change the protocol, only narrow the
+intervals.

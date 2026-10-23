@@ -1,4 +1,4 @@
-# Viva preparation
+﻿# Viva preparation
 
 Short, defensible answers. Where a number appears, it is the test-split number
 from `results.md`.
@@ -53,10 +53,10 @@ edges) into 683,340 triples. Node types come from a fixed table of MeSH tree
 letters. No LLM is used to build it.
 
 **Is the ontology doing the work?**
-No, and the report says so. The judge is the accurate signal (AUC 0.705, 0.747
-with self-abstention). Ontology coverage alone is AUC 0.547 and it saturates:
-82.5% of questions have coverage 1.0. The ontology's proven contribution is cost
-control: it removes 23.5% of judge calls for a 1.9-point accuracy loss.
+No, and the report says so. The judge is the accurate signal (AUC 0.736, 0.770
+with self-abstention). Ontology coverage alone is AUC 0.493 and it saturates:
+87.1% of questions have coverage 1.0. The ontology's proven contribution is cost
+control: it removes 19.4% of judge calls for a 0.9-point accuracy loss.
 
 **Then why keep the ontology?**
 Because a negative result with a measured cost/benefit is a result. The project
@@ -68,29 +68,31 @@ see which concepts were found and which were missing.
 **What is the most important single finding?**
 The judge's own uncertainty is a strong abstention signal, and the whole learned
 gate collapses to one deterministic rule: **answer only when the judge is fully
-confident (sufficiency 1) and did not answer "maybe"**. That rule gives 76.9%
-accuracy at 61.2% coverage with no training, identical to the fitted logistic
-gate. Adding more features or class-specific weights overfits (dev 0.778, test
-0.697).
+confident (sufficiency 1) and did not answer "maybe"**. That rule gives 78.2%
+accuracy at 65.2% coverage with no training, identical to the fitted logistic
+gate. Adding more features or class-specific weights overfits (dev 0.824, test
+0.767).
 
 **Why does that happen?**
 The model is not calibrated on the 0/0.5/1 score, but its three-way answer is
 an explicit self-report of uncertainty. When it says "maybe" it is usually
-wrong: on test, 29 of 85 questions got "maybe" and only 27.6% of those answers
+wrong: on test, 161 of 500 questions got "maybe" and only 18.6% of those answers
 were right. The gate is essentially a well-designed way to trust that
 self-report and the top of the confidence scale.
 
 ## The experiments
 
 **What is the difference between dev and test here?**
-Dev (200 judged questions) is used to fit every threshold, screen value and
-logistic weight. Test (85) is used once per arm. Thresholds transfer by matched
-coverage: the dev threshold that hits a coverage target is applied unchanged.
+Dev (283 judged questions) fits every threshold, screen value and
+logistic weight. The complete test half (500 questions) is used once per arm.
+Thresholds transfer by matched coverage: the dev threshold that hits a coverage
+target is applied unchanged.
 
-**Why only 85 test questions?**
-The free API tier allows about 200 judge calls per day and the quota was
-exhausted. The sweep is resumable by design, so the remaining 415 can be added
-without refitting anything. The report states the CI explicitly.
+**How does the quota boundary affect the results?**
+The test half was completed in one run (500 questions). The dev half has 283
+judged questions; the sweep is resumable by design, so the remaining 217 dev
+rows can be added without changing the protocol. The report states the CI
+explicitly.
 
 **Why not run every ablation separately?**
 Quota. One judge call per question stores the judge output, coverage features,
@@ -129,7 +131,7 @@ questions. It is reported as a negative result: the pipeline depends on having
 the right abstract, which is what PubMedQA's setting provides.
 
 **How do you know the gate is not just memorising the label distribution?**
-The majority-class baseline is 55.3% on test. The gate reaches 76.9% on the 61%
+The majority-class baseline is 55.3% on test. The gate reaches 78.2% on the 65%
 it answers. Also, the gate never sees the label; it only sees the judge output
 and local features.
 
@@ -156,7 +158,7 @@ expansion, and an NLI-scored gate). They are kept for reproducibility and for
 the "problems faced" write-up, but the final system does not use them.
 
 **What would you change with more compute?**
-Three things: finish the test sweep to 500 questions, run a same-model
+Three things: complete the dev sweep to 500 questions, run a same-model
 plain-prompt baseline, and try a relational coverage feature that compares
 *claims* (drug-disease pairs) rather than term presence.
 
@@ -171,13 +173,13 @@ specific contributions here.
 
 **Isn't "abstain on maybe" obvious in hindsight?**
 It is simple, which is a feature. The value is showing that it matches a
-learned gate (76.9% vs 76.9%) while being free and directly interpretable. The
-non-obvious part is that the sufficiency *score* alone (0.705) is much weaker
-than the three-way answer (0.747), i.e. the label is more informative than the
+learned gate (78.2% vs 78.2%) while being free and directly interpretable. The
+non-obvious part is that the sufficiency *score* alone (0.736) is much weaker
+than the three-way answer (0.770), i.e. the label is more informative than the
 number.
 
 **Your CI is wide. Is the result real?**
-The lower bound of the headline CI is 65.4%, still 6.6 points above the
+The lower bound of the headline CI is 73.6%, still 14.8 points above the
 always-answer baseline. The direction of every major effect is consistent
 across dev and test. The ontology results are consistent in the negative
 direction. The report does not over-claim: every table includes dev and test.

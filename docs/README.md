@@ -20,16 +20,16 @@ Start here:
 
 ## TL;DR
 
-* Selective accuracy on the test split rises from **58.8%** (always answer) to
-  **76.9%** at **61.2% coverage** (+18.1 points). Same model, same questions,
-  same retrieved passages: a fully paired comparison.
-* The signal that does the work is the LLM judge's **own "maybe" answer**.
-  Simply abstaining whenever the judge says "maybe" reproduces the learned
-  gate without training.
-* The ontology is a **weak standalone gate** (AUC 0.55) and its document-level
-  coverage **saturates** (82.5% of questions are at 1.0). Its real value is
-  cheaper: as a **free pre-screen** it removes 23.5% of judge calls at a cost
-  of 1.9 accuracy points.
+* Selective accuracy on the test half (500 questions) rises from **58.8%**
+  (always answer) to **78.2%** at **65.2% coverage** (+19.4 points). Same
+  model, same questions, same retrieved passages: a fully paired comparison.
+* The signal that does the work is the LLM judge's **own uncertainty**: the
+  fitted gate reduces exactly to the rule "answer only when the judge is fully
+  confident and did not answer maybe", which needs no training.
+* The ontology is a **weak standalone gate** (AUC 0.49) and its document-level
+  coverage **saturates** (87.1% of questions are at 1.0). Its real value is
+  cheaper: as a **free pre-screen** it removes 19.4% of judge calls at a cost
+  of 0.9 accuracy points.
 * Ontology-based **reranking does not help** retrieval (recall@10 is already
   0.970) and ontology-based query expansion **hurts**.
 

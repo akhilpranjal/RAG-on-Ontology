@@ -98,17 +98,17 @@ budget. That limitation is stated in the results.
 
 **LLM judge.** Asking a model "is this evidence enough to answer?" is a strong
 and cheap sufficiency signal. The sweep shows it is the best single gate
-(AUC 0.70 on test) and that its answer field carries extra information: when the
-judge answers "maybe" it is telling you it does not know, which is exactly the
-quantity the gate is trying to estimate.
+(AUC 0.736 on the full test half) and that its answer field carries extra
+information: when the judge answers "maybe" it is telling you it does not know,
+which is exactly the quantity the gate is trying to estimate.
 
 **Ontology coverage.** The judge costs money and can hallucinate. The ontology
 is free, auditable and grounded in curated vocabulary. In principle, measuring
 how much of the question's concept content the evidence covers is a model-free
-proxy for sufficiency. In practice it is a *weak* proxy (AUC 0.55) because
-document coverage saturates: the question's terms almost always appear somewhere
-in ten abstracts. It remains useful as a pre-screen, where it removes a quarter
-of the judge calls with almost no accuracy loss.
+proxy for sufficiency. In practice it is a *weak* proxy (AUC 0.493, no better
+than chance) because document coverage saturates: the question's terms almost
+always appear somewhere in ten abstracts. It remains useful as a pre-screen,
+where it removes about one judge call in five with barely any accuracy loss.
 
 ## What the ontology is used for, precisely
 

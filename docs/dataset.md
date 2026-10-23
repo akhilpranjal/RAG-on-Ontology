@@ -1,4 +1,4 @@
-# Dataset and knowledge graph
+﻿# Dataset and knowledge graph
 
 ## PubMedQA
 
@@ -119,7 +119,8 @@ TTL is only parsed when the cache is missing.
 
 * The 3,000-abstract pool is small and each question's distractors are not
   adversarially chosen, which is why retrieval is nearly saturated.
-* Only 285 of the 1,000 questions were judged (200 dev, 85 test) because of the
-  free-tier quota. The rest of the splits are untouched and the sweep resumes.
+* The test half (500 questions) was judged completely. The dev half has 283 of
+  500 judged; the run is resumable over the daily free-tier quota and the
+  sweep's skip-on-existing logic continues where it stopped.
 * `maybe` is only 11% of the gold labels, so per-class metrics for `maybe` are
   noisy.

@@ -194,7 +194,7 @@ def main() -> int:
     if result.answer == "maybe":
         print("judge answered 'maybe' -> self-abstention")
         decision = "maybe"
-    elif fused is not None and fused + 1e-9 < tau:
+    elif fused is not None and fused + 1e-6 < tau:
         print(f"fused gate score {fused:.3f} < dev threshold {tau:.3f} -> ABSTAIN")
         decision = "maybe"
     else:
