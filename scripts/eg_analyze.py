@@ -154,7 +154,7 @@ def evaluate_gate(
         dev_metrics = selective_metrics(dev_scores, dev_rows, tau)
         test_metrics = selective_metrics(test_scores, test_rows, tau)
         report["coverage_targets"][f"{target:.1f}"] = {
-            "tau": None if tau is None or math.isnan(tau) else round(float(tau), 4),
+            "tau": None if tau is None or math.isnan(tau) else round(float(tau), 6),
             "dev_coverage": dev_metrics["coverage"],
             "dev_selective_accuracy": dev_metrics["selective_accuracy"],
             "test_coverage": test_metrics["coverage"],

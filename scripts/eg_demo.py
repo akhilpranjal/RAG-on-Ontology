@@ -144,11 +144,15 @@ def main() -> int:
 
     coverage = scorer.score(question, passages)
     separator("[3] CONCEPT COVERAGE (free, no API)")
+
+    def show(value) -> str:
+        return "n/a" if value != value else f"{value:.3f}"
+
     print(f"linked concepts        : {coverage.n_concepts}")
-    print(f"coverage (all passages): {coverage.coverage:.3f}")
-    print(f"coverage (top-3)       : {coverage.coverage_top3:.3f}")
-    print(f"idf-weighted           : {coverage.coverage_weighted:.3f}")
-    print(f"relation coverage      : {coverage.relation_coverage:.3f}  "
+    print(f"coverage (all passages): {show(coverage.coverage)}")
+    print(f"coverage (top-3)       : {show(coverage.coverage_top3)}")
+    print(f"idf-weighted           : {show(coverage.coverage_weighted)}")
+    print(f"relation coverage      : {show(coverage.relation_coverage)}  "
           f"(intent: {coverage.intent})")
 
     # -- 3. gate: coverage screen ---------------------------------------
@@ -190,7 +194,7 @@ def main() -> int:
     if result.answer == "maybe":
         print("judge answered 'maybe' -> self-abstention")
         decision = "maybe"
-    elif fused is not None and fused < tau:
+    elif fused is not None and fused + 1e-9 < tau:
         print(f"fused gate score {fused:.3f} < dev threshold {tau:.3f} -> ABSTAIN")
         decision = "maybe"
     else:
