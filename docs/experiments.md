@@ -100,6 +100,10 @@ uv run python -c "from evidence_gate.coverage import build_passage_concepts; bui
 uv run python scripts/eg_run_sweep.py --split dev  --include-own
 uv run python scripts/eg_run_sweep.py --split test --include-own
 
+# 5b. plain-prompt baseline, same model and passages (one API call per question)
+uv run python scripts/eg_run_baseline.py --split test --limit 100
+uv run python scripts/eg_paired_baseline.py --baseline results/runs/test_baseline.jsonl --out results/metrics/paired_baseline_same_model.json --note "baseline: same model (gemini-3.1-flash-lite), plain answer prompt, include-own retrieval"
+
 # 6. retrieval evaluation (no API)
 uv run python scripts/eg_eval_retrieval.py --split dev --limit 200
 
@@ -125,7 +129,10 @@ existing rows.
 | Dev | 283 | resumes on the next quota reset; fitting always refits on the full file |
 | Hard mode (dev, exclude-own) | 12 | negative result |
 
-The free tier for `gemini-3.1-flash-lite` allows roughly 200 requests per day.
+The measured free-tier envelope for `gemini-3.1-flash-lite` was about 500
+requests in one day (the full 500-question test half plus the first 283 dev
+questions). The sweeps are resumable: re-run the same command after a quota
+reset and they skip completed questions.
 The model in `config.py` is the one that was actually available; earlier
 versions of this project used `gemini-3.5-flash-lite`, whose numbers are kept
 for comparison in `results.md`.

@@ -40,6 +40,7 @@ def main() -> int:
     parser.add_argument("--baseline", type=Path, default=ROOT / "results" / "runs" / "test_standard_rag.jsonl")
     parser.add_argument("--sweep", type=Path, default=ROOT / "results" / "runs" / "test_sweep.jsonl")
     parser.add_argument("--out", type=Path, default=METRICS_DIR / "paired_baseline.json")
+    parser.add_argument("--note", default=None, help="override the caveat text recorded in the output")
     args = parser.parse_args()
 
     baseline = {row["pubid"]: row for row in load_jsonl(args.baseline)}
@@ -88,7 +89,7 @@ def main() -> int:
             "gate_only_correct": c,
             "p_value": round(p_value, 4),
         },
-        "caveat": (
+        "caveat": args.note or (
             "baseline used gemini-3.5-flash-lite with a plain answer prompt; "
             "the sweep used gemini-3.1-flash-lite with the judge prompt"
         ),

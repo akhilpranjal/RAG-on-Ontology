@@ -126,7 +126,8 @@ almost always mention them. Term presence is not evidence sufficiency.
 
 **Fix.** Built sentence-level and relation-level coverage features
 (`pair_sentence_coverage`, `relation_coverage`) to test whether the *relation*
-is present. They did not help either (AUC 0.44-0.55), which became a reported
+is present. They did not help either (test AUC 0.493 for coverage /
+0.559 for the relation variant), which became a reported
 negative result rather than a hidden failure.
 
 **Lesson.** A feature can be conceptually right and empirically useless because
@@ -181,9 +182,9 @@ Cardiovascular Diseases, ...).
 
 ## 14. The learned gate overfit with too many features.
 
-**Symptom.** `fused_all` had the best dev AUC (0.776) and the worst test AUC
-(0.704). Adding ontology coverage to the two-feature gate raised dev and lowered
-test.
+**Symptom.** `fused_all` had the best dev AUC (0.834, +0.018 over the
+two-feature gate) and a worse test AUC (0.772, -0.002). Adding ontology
+coverage to the two-feature gate raised dev and lowered test.
 
 **Fix.** Prefer the two-feature gate (dev 0.816 -> test 0.774) and report every
 variant with both splits so the gap is visible.

@@ -129,7 +129,7 @@ keeps the weights small to avoid overfitting.
 ## Overfitting
 
 Learning the training set instead of the pattern. The tell is a good dev score
-and a worse test score. `fused_all` shows it: 0.776 dev, 0.704 test.
+and a worse test score. `fused_all` shows it: 0.834 dev, 0.772 test.
 
 ## Bootstrap confidence interval
 

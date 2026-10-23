@@ -112,10 +112,12 @@ signal*, and answer with a measured yes for cost and a measured no for accuracy.
 
 ## Future work
 
-1. Finish the test sweep to 500 questions (queue it after quota reset; no code
-   changes needed).
-2. Same-model plain-prompt baseline to remove the model confound from the paired
-   comparison.
+1. Finish the dev sweep to 500 questions (queue it after quota reset; re-run
+   `eg_run_sweep.py --split dev --include-own` and refit).
+2. Run the same-model plain-prompt baseline
+   (`scripts/eg_run_baseline.py --split test --limit 100`) to remove the model
+   confound from the paired comparison; the runner is ready and fails cleanly
+   on quota.
 3. Relational coverage over *claims*: extract (drug, disease) pairs from
    passages and check whether the relation asserted in the question is the one
    the passage asserts, rather than checking term co-occurrence.
