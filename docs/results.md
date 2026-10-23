@@ -129,6 +129,46 @@ present?" therefore has almost no variance to work with. This explains both the
 weak AUC and the flat risk-coverage curve. Any future coverage signal needs to
 be relational or hierarchical, not lexical presence.
 
+## Error analysis (test)
+
+Judge answers against gold labels:
+
+| Judge answer | n | Gold yes | Gold no | Gold maybe | Answer accuracy |
+|---|---|---|---|---|---|
+| yes | 40 | 33 | 2 | 5 | **0.825** |
+| no | 16 | 3 | 9 | 4 | 0.562 |
+| maybe | 29 | 11 | 10 | 8 | 0.276 |
+
+Three things follow.
+
+1. **The judge is asymmetric.** It is good at confirming a positive claim
+   (82.5%) and weak at confirming a negative one (56.2%). A `no` answer is
+   barely better than a coin flip on this sample. Any future work should
+   calibrate the two answer classes separately instead of thresholding a single
+   score.
+2. **"Maybe" really is uncertainty.** Only 27.6% of "maybe" answers are right,
+   so abstaining on them is correct about 72% of the time. The gold labels of
+   those 29 questions are balanced (11 yes, 10 no, 8 maybe), which means the
+   judge is not simply detecting the gold `maybe` class: it is flagging hard
+   questions of all three classes. That is the behaviour a selective system
+   should have.
+3. **The score adds a little on top of the answer.** Judge sufficiency
+   `yes` -> 72.9% answer accuracy (n=59), `partial` -> 30.8% (n=13), `no` ->
+   23.1% (n=13). The three-way sufficiency label is monotone with correctness,
+   which is why the thresholded self-abstention score (0.769) is slightly above
+   the plain rule "answer every non-maybe" (42/56 = 75.0% at 65.9% coverage).
+
+Screened versus passed questions (`coverage_top3 <= 0.75`):
+
+| Group | n | Judge accuracy | Judge "maybe" rate |
+|---|---|---|---|
+| Screened out | 20 | 0.550 | 0.40 |
+| Passed to judge | 65 | 0.600 | 0.32 |
+
+The screen removes questions that are only slightly harder than average. That
+is exactly why it saves 23.5% of calls for a 1.9-point accuracy cost: it is a
+cheap, mildly informative filter, not a sharp classifier.
+
 ## Per-specialty (test)
 
 Judge gate, threshold chosen on dev for 50% coverage.
