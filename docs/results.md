@@ -169,6 +169,16 @@ The screen removes questions that are only slightly harder than average. That
 is exactly why it saves 23.5% of calls for a 1.9-point accuracy cost: it is a
 cheap, mildly informative filter, not a sharp classifier.
 
+### Class-aware gates overfit
+
+The asymmetry suggests giving the two answer classes separate weights. A
+one-hot logistic gate on {is_yes, is_no, is_maybe, score} raises dev AUC to
+0.766 but drops test AUC to 0.684. Adding ontology coverage and similarity
+raises dev further (0.778) and leaves test at 0.697. With 200 dev rows and a
+40-question `yes` class, class-specific weights are fitting noise. The
+two-feature gate is kept, and class-conditional calibration is listed as future
+work rather than claimed as a result.
+
 ## Per-specialty (test)
 
 Judge gate, threshold chosen on dev for 50% coverage.
