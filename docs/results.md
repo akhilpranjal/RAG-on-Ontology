@@ -12,11 +12,18 @@ adds interpretation and the checks that the generator does not perform.
 | Always answer, forced (maybe -> yes) | 100% | 62.4% |
 | Ontology coverage only, dev threshold at 70% coverage | 70.6% | 63.3% |
 | **Fused gate (judge + self-abstention)** | **61.2%** | **76.9%** |
+| **Deterministic equivalent: answer only if score = 1 and answer != maybe** | **61.2%** | **76.9%** |
 | 95% bootstrap CI on the fused gate | | [65.4%, 88.5%] |
 
 The gate is a 1.8x improvement in accuracy over always answering, at the price
 of declining to answer 39% of the questions. Abstentions are never counted as
 correct.
+
+The dev-fitted threshold lands exactly at the top score level, so the learned
+gate and a rule with **no training at all** make identical decisions: answer
+only when the judge is fully confident (sufficiency 1) and did not answer
+"maybe". On dev this rule gives 77.8% at 67.5% coverage; on test, 76.9% at
+61.2%.
 
 ## Baselines
 
@@ -42,6 +49,7 @@ AUC against per-question correctness, dev and test.
 | ontology heading coverage | 0.528 | 0.514 | 0.385 |
 | **LLM judge score** | **0.700** | **0.705** | 0.328 |
 | **Judge + self-abstention (rule)** | **0.757** | **0.737** | 0.260 |
+| Judge fully confident (deterministic) | 0.750 | 0.729 | 0.265 |
 | Fused judge + is-maybe (learned) | 0.758 | 0.747 | 0.254 |
 | Fused + ontology coverage | 0.769 | 0.738 | 0.271 |
 | Fused all features | 0.776 | 0.704 | 0.349 |
@@ -74,6 +82,7 @@ Cells are `accuracy@coverage`. Dev chooses the threshold; test applies it.
 | ontology heading | .613@94 | .613@94 | .610@69 | .611@64 | .649@44 | .639@42 | .639@42 |
 | judge score | .588@100 | .653@85 | .729@69 | .729@69 | .729@69 | .729@69 | .729@69 |
 | **judge self-abstain** | .588@100 | .588@100 | .588@100 | **.769@61** | .769@61 | .769@61 | .769@61 |
+| judge fully confident | .588@100 | .588@100 | .588@100 | **.769@61** | .769@61 | .769@61 | .769@61 |
 | fused judge+maybe | .588@100 | .640@88 | .714@74 | **.769@61** | .769@61 | .769@61 | .769@61 |
 | fused + coverage | .588@100 | .662@84 | .714@74 | .766@55 | .756@48 | .756@48 | .756@48 |
 | fused all | .588@100 | .697@78 | .737@67 | .775@58 | .775@47 | .750@42 | .692@31 |

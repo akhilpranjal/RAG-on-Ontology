@@ -13,9 +13,10 @@ OntoGate-RAG, a selective retrieval-augmented pipeline for PubMedQA that
 combines an LLM evidence judge with concept coverage computed over a curated
 MeSH + Hetionet knowledge graph. On a paired test set, the system raises
 accuracy from 58.8% (always answer) to 76.9% at 61.2% coverage. The strongest
-signal is not the judge's numeric sufficiency score but its own abstention: when
-the judge answers "maybe", abstaining is almost always correct, and this
-zero-training rule matches a fitted two-feature gate. The ontology is a weak
+signal is not the judge's numeric sufficiency score but its own uncertainty: the
+fitted gate reduces exactly to a deterministic rule - answer only when the judge
+is fully confident (sufficiency 1) and not "maybe" - which needs no training and
+gives the same result. The ontology is a weak
 standalone sufficiency signal (AUC 0.55) whose document-level coverage
 saturates, and ontology reranking and query expansion do not improve an already
 saturated retrieval stage; however, a free ontology pre-screen removes 23.5% of
@@ -30,8 +31,9 @@ graph is worth its complexity in selective RAG.
    see identical questions, passages and model output.
 2. **The self-abstention finding**: the judge's three-way answer is a better
    gate signal than its numeric sufficiency score (AUC 0.747 vs 0.705), and the
-   deterministic rule "abstain on maybe" matches a fitted gate at 76.9%
-   accuracy and 61.2% coverage.
+   dev-fitted gate collapses to a deterministic rule - answer only when the
+   judge is fully confident (sufficiency 1) and not "maybe" - which gives the
+   same 76.9% accuracy at 61.2% coverage with no training.
 3. **A concrete negative result for ontology gating**: concept coverage
    saturates (82.5% of questions at 1.0) and is a weak gate; relation and
    heading variants are no better; fusion with the judge does not generalise.
@@ -77,7 +79,7 @@ signal*, and answer with a measured yes for cost and a measured no for accuracy.
 |---|---|---|
 | Selective accuracy improves substantially | 58.8% -> 76.9% at 61.2% coverage, CI [65.4, 88.5] | `final_report.md` headline |
 | The judge answer beats the judge score | AUC 0.705 -> 0.747 | gate table |
-| The rule matches the learned gate | 76.9% vs 76.9% | gate table |
+| The rule matches the learned gate | 76.9% vs 76.9%, same 52 questions | gate table |
 | Ontology is a weak standalone gate | AUC 0.547, coverage-only 63.3% | gate table |
 | Ontology coverage saturates | 82.5% at 1.0; mean 0.916 | saturation section |
 | Ontology fusion does not generalise | dev 0.769 -> test 0.738 | gate table |

@@ -40,6 +40,7 @@ All arms are reconstructed offline from the same sweep rows.
 | `ontology_heading` | Coverage of curated MeSH headings | No |
 | `llm_judge` | Judge sufficiency score (0 / 0.5 / 1) | No |
 | `judge_self_abstain` | 0 if the judge answered "maybe", else 0.5 + 0.5 x score | No |
+| `judge_confident` | 1 only if score = 1 and answer != maybe; the learned gate's exact simplification | No |
 | `fused_judge_maybe` | Logistic regression on {judge score, is-maybe} | Dev |
 | `fused_judge_maybe_coverage` | Above plus ontology coverage | Dev |
 | `fused_all` | Above plus inconsistency flag, similarity, concept count | Dev |

@@ -66,16 +66,19 @@ expansion). It also keeps the system's evidence check inspectable: a human can
 see which concepts were found and which were missing.
 
 **What is the most important single finding?**
-The judge's own "maybe" answer is a strong abstention signal. Abstaining
-whenever the judge answers "maybe" gives 76.9% accuracy at 61.2% coverage with
-zero training. A logistic gate on the same signal does not beat it.
+The judge's own uncertainty is a strong abstention signal, and the whole learned
+gate collapses to one deterministic rule: **answer only when the judge is fully
+confident (sufficiency 1) and did not answer "maybe"**. That rule gives 76.9%
+accuracy at 61.2% coverage with no training, identical to the fitted logistic
+gate. Adding more features or class-specific weights overfits (dev 0.778, test
+0.697).
 
 **Why does that happen?**
 The model is not calibrated on the 0/0.5/1 score, but its three-way answer is
 an explicit self-report of uncertainty. When it says "maybe" it is usually
-wrong: on test, 29 of 85 questions got "maybe", and keeping them would have
-destroyed accuracy. The gate is essentially a well-designed way to trust that
-self-report.
+wrong: on test, 29 of 85 questions got "maybe" and only 27.6% of those answers
+were right. The gate is essentially a well-designed way to trust that
+self-report and the top of the confidence scale.
 
 ## The experiments
 

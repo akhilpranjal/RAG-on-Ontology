@@ -9,7 +9,7 @@
 
 ## Headline
 
-Always-answer accuracy is **58.8%** on the test split. The pre-specified gate (fused judge + self-abstention, threshold fitted on dev for 60% coverage) reaches **76.9%** selective accuracy at **61.2%** coverage (+18.1% absolute). The zero-training rule 'abstain when the judge answers maybe' reaches 76.9% at 61.2% coverage.
+Always-answer accuracy is **58.8%** on the test split. The dev-fitted fused gate (threshold fitted for 60% coverage) reaches **76.9%** selective accuracy at **61.2%** coverage (+18.1% absolute). That gate simplifies exactly to a deterministic rule - answer only when the judge is fully confident (sufficiency 1) and did not answer 'maybe' - which reaches 76.9% at 61.2% coverage with no training.
 
 ## Always-answer baselines
 
@@ -29,6 +29,7 @@ Always-answer accuracy is **58.8%** on the test split. The pre-specified gate (f
 | ontology_heading | 0.528 | 0.514 | 0.3464 | 0.3853 |
 | llm_judge | 0.700 | 0.705 | 0.2564 | 0.3277 |
 | judge_self_abstain | 0.757 | 0.737 | 0.2261 | 0.2602 |
+| judge_confident | 0.750 | 0.729 | 0.2284 | 0.2652 |
 | fused_judge_maybe | 0.758 | 0.747 | 0.2265 | 0.2542 |
 | fused_judge_maybe_coverage | 0.769 | 0.738 | 0.2124 | 0.2709 |
 | fused_all | 0.776 | 0.704 | 0.2237 | 0.3488 |
@@ -44,6 +45,7 @@ Always-answer accuracy is **58.8%** on the test split. The pre-specified gate (f
 | ontology_heading | 0.613@94% | 0.613@94% | 0.610@69% | 0.611@64% | 0.649@44% | 0.639@42% | 0.639@42% |
 | llm_judge | 0.588@100% | 0.653@85% | 0.729@69% | 0.729@69% | 0.729@69% | 0.729@69% | 0.729@69% |
 | judge_self_abstain | 0.588@100% | 0.588@100% | 0.588@100% | 0.769@61% | 0.769@61% | 0.769@61% | 0.769@61% |
+| judge_confident | 0.588@100% | 0.588@100% | 0.588@100% | 0.769@61% | 0.769@61% | 0.769@61% | 0.769@61% |
 | fused_judge_maybe | 0.588@100% | 0.640@88% | 0.714@74% | 0.769@61% | 0.769@61% | 0.769@61% | 0.769@61% |
 | fused_judge_maybe_coverage | 0.588@100% | 0.662@84% | 0.714@74% | 0.766@55% | 0.756@48% | 0.756@48% | 0.756@48% |
 | fused_all | 0.588@100% | 0.697@78% | 0.737@67% | 0.775@58% | 0.775@47% | 0.750@42% | 0.692@31% |

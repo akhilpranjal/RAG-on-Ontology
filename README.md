@@ -22,9 +22,11 @@ Abstentions are never counted as correct.
 
 Three findings from the same experiment matter as much as the headline:
 
-1. **The judge's own "maybe" is the best signal.** The numeric sufficiency score
-   gives AUC 0.705; adding the fact that the judge answered "maybe" gives 0.747,
-   and a zero-training rule matches the fitted gate exactly.
+1. **The judge's own uncertainty is the best signal.** The numeric sufficiency
+   score gives AUC 0.705; adding the fact that the judge answered "maybe" gives
+   0.747, and the fitted gate collapses exactly to a deterministic rule:
+   *answer only when the judge is fully confident and did not answer "maybe"*.
+   That rule, with no training, reaches the same 76.9% at 61.2% coverage.
 2. **The ontology is a weak accuracy gate but a good cost filter.** Coverage
    alone gives AUC 0.547 and saturates at 1.0 for 82.5% of questions. Used as a
    free pre-screen, it removes **23.5% of judge calls** for a 1.9-point accuracy

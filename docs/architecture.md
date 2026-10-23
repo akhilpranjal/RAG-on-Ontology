@@ -39,7 +39,7 @@ question
    |
    |-- GATE STAGE 2: decision
    |        judge answer == "maybe"          -> ABSTAIN (self-abstention)
-   |        fused score < dev threshold      -> ABSTAIN
+   |        judge score < 1                  -> ABSTAIN (not fully confident)
    |        otherwise                        -> ANSWER
    |
    `-- answer or explicit abstention

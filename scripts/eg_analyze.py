@@ -72,6 +72,11 @@ def raw_scores(row: dict) -> dict:
     return {
         "llm_judge": score,
         "judge_self_abstain": self_abstain,
+        # Deterministic simplification of the dev-fitted fused gate: the
+        # threshold lands exactly at "score == 1 and answer != maybe".
+        "judge_confident": 1.0
+        if answer not in (None, "maybe") and score is not None and float(score) >= 1.0
+        else 0.0,
         "judge_answer_maybe": 1.0 if answer == "maybe" else 0.0,
         "judge_inconsistent": 1.0
         if sufficient == "yes" and answer == "maybe"
@@ -119,6 +124,7 @@ def build_scores(rows: list[dict], selectors: dict[str, LogisticSelector]) -> di
         for name in (
             "llm_judge",
             "judge_self_abstain",
+            "judge_confident",
             "similarity",
             "ontology_coverage",
             "ontology_coverage_doc",
@@ -375,19 +381,20 @@ def headline(report: dict) -> str:
     """
     test = report["splits"]["test"]["always_answer"]
     primary = report["gates"]["fused_judge_maybe"]["coverage_targets"]["0.6"]
-    deterministic = report["gates"]["judge_self_abstain"]["coverage_targets"]["0.6"]
+    deterministic = report["gates"]["judge_confident"]["coverage_targets"]["0.6"]
     parts = [
         f"Always-answer accuracy is **{test['accuracy']:.1%}** on the test split.",
-        f"The pre-specified gate (fused judge + self-abstention, threshold fitted on dev "
-        f"for 60% coverage) reaches **{primary['test_selective_accuracy']:.1%}** selective "
-        f"accuracy at **{primary['test_coverage']:.1%}** coverage "
+        f"The dev-fitted fused gate (threshold fitted for 60% coverage) reaches "
+        f"**{primary['test_selective_accuracy']:.1%}** selective accuracy at "
+        f"**{primary['test_coverage']:.1%}** coverage "
         f"(+{primary['test_selective_accuracy'] - test['accuracy']:.1%} absolute).",
     ]
     if deterministic.get("test_selective_accuracy") is not None:
         parts.append(
-            f"The zero-training rule 'abstain when the judge answers maybe' reaches "
-            f"{deterministic['test_selective_accuracy']:.1%} at "
-            f"{deterministic['test_coverage']:.1%} coverage."
+            f"That gate simplifies exactly to a deterministic rule - answer only when "
+            f"the judge is fully confident (sufficiency 1) and did not answer 'maybe' - "
+            f"which reaches {deterministic['test_selective_accuracy']:.1%} at "
+            f"{deterministic['test_coverage']:.1%} coverage with no training."
         )
     return " ".join(parts)
 
@@ -421,6 +428,7 @@ def main() -> int:
         "ontology_heading",
         "llm_judge",
         "judge_self_abstain",
+        "judge_confident",
         *selectors.keys(),
     ]
     gates = {
@@ -524,6 +532,7 @@ def make_plots(test, test_scores, plots_dir: Path) -> None:
         "ontology_coverage",
         "llm_judge",
         "judge_self_abstain",
+        "judge_confident",
         "fused_judge_maybe",
     ):
         curve = risk_coverage_curve(test_scores[name], test)
@@ -547,6 +556,7 @@ def make_plots(test, test_scores, plots_dir: Path) -> None:
         "ontology_relation",
         "llm_judge",
         "judge_self_abstain",
+        "judge_confident",
         "fused_judge_maybe",
     ]
     values = [gate_auc(test_scores[name], test) or 0.0 for name in names]
