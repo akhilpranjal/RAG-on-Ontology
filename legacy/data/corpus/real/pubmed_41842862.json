@@ -1,0 +1,18 @@
+{
+  "doc_id": "pubmed_41842862",
+  "title": "American Association of Clinical Endocrinology Consensus Statement: Algorithm for Management of Adults With Type 2 Diabetes - 2026 Update.",
+  "text": "This consensus statement provides evidence-based visual guidance in graphic algorithms and a summary of evidence and considerations to assist health care professionals with the diagnosis and management of adults with prediabetes and diabetes mellitus in shared decision making to improve care. The American Association of Clinical Endocrinology (AACE) selected a task force of medical experts to update the 2023 AACE Comprehensive Type 2 Diabetes Management Algorithm and align this algorithm update with related AACE clinical guidance. This algorithm for management of adults with type 2 diabetes (T2D) includes 11 sections: (1) Principles for the Management of Adults With T2D; (2) Prediabetes Algorithm (3) Diabetes Classification Algorithm (new); (4) Atherosclerotic Cardiovascular Disease Risk Reduction Algorithm: Dyslipidemia; (5) Atherosclerotic Cardiovascular Disease Risk Reduction Algorithm: Hypertension; (6) Comorbidities- and Complications-Centric Glycemic Control Algorithm; (7) Glucose-Centric Glycemic Control Algorithm; (8) Initiating and Titrating Insulin Algorithm; (9) Profiles of Pharmacotherapy for T2D; (10) Profiles of Pharmacotherapy for Obesity; and (11) Vaccine Recommendations for Adults With T2D. This 2026 update emphasizes lifestyle modification and treatment of overweight/obesity as key pillars in the management of prediabetes and T2D. It also provides guidance on the management of atherosclerotic risk factors of dyslipidemia and hypertension. A new algorithm was added to ensure that other causes and classes of diabetes are considered beyond T2D. There continues to be an emphasis on a complications- and comorbidities-centric approach, beyond glucose levels, to frame decisions regarding first-line and subsequent pharmacological choices for treating adults with T2D.",
+  "source": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41842862/",
+  "concepts": [
+    "CardiovascularDisease",
+    "DiabetesMellitus",
+    "Disease",
+    "Hypertension",
+    "Insulin",
+    "LifestyleModification",
+    "Obesity",
+    "Treatment",
+    "Type2Diabetes"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "doc_id": "synth_002",
+  "title": "Diagnosis and Treatment Options for Atrial Fibrillation",
+  "text": "Atrial Fibrillation is a common cardiac arrhythmia characterized by rapid and irregular atrial activation. Key symptoms include palpitations, dizziness, fatigue, and shortness of breath. Diagnosis is confirmed using an electrocardiogram (ECG). Treatment strategies involve anticoagulants to prevent stroke, as well as rate control agents such as beta blockers and calcium channel blockers.",
+  "source": "Synthetic",
+  "concepts": [
+    "Anticoagulant",
+    "Arrhythmia",
+    "AtrialFibrillation",
+    "BetaBlocker",
+    "CalciumChannelBlocker",
+    "Dizziness",
+    "ECG",
+    "Fatigue",
+    "Palpitations",
+    "ShortnessOfBreath",
+    "Stroke",
+    "Symptom",
+    "Treatment"
+  ]
+}

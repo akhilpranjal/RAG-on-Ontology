@@ -1,0 +1,6198 @@
+[
+  {
+    "query_id": "q_A01",
+    "category": "lay_terminology",
+    "trace": {
+      "original_query": "What causes high blood pressure?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#HighBloodPressure",
+          "concept_id": "HighBloodPressure",
+          "label": "High Blood Pressure",
+          "term": "high blood pressure"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "HighBloodPressure",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        }
+      ],
+      "expanded_terms": [
+        "Hypertension"
+      ]
+    }
+  },
+  {
+    "query_id": "q_A02",
+    "category": "lay_terminology",
+    "trace": {
+      "original_query": "What are the emergency signs of a heart attack?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#HeartAttack",
+          "concept_id": "HeartAttack",
+          "label": "Heart Attack",
+          "term": "heart attack"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "HeartAttack",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        }
+      ],
+      "expanded_terms": [
+        "Myocardial Infarction"
+      ]
+    }
+  },
+  {
+    "query_id": "q_A03",
+    "category": "lay_terminology",
+    "trace": {
+      "original_query": "How is sugar disease diagnosed?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#SugarDisease",
+          "concept_id": "SugarDisease",
+          "label": "Sugar Disease",
+          "term": "sugar disease"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Disease",
+          "concept_id": "Disease",
+          "label": "Disease",
+          "term": "disease"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "SugarDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Arrhythmia",
+        "Atherosclerosis",
+        "Cardiovascular Disease",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Obesity",
+        "Peripheral Artery Disease",
+        "Stroke"
+      ]
+    }
+  },
+  {
+    "query_id": "q_A04",
+    "category": "lay_terminology",
+    "trace": {
+      "original_query": "What do water pills do for heart problems?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#WaterPill",
+          "concept_id": "WaterPill",
+          "label": "Water Pill",
+          "term": "water pill"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "WaterPill",
+          "target": "Diuretic",
+          "target_label": "Diuretic"
+        }
+      ],
+      "expanded_terms": [
+        "Diuretic"
+      ]
+    }
+  },
+  {
+    "query_id": "q_A05",
+    "category": "lay_terminology",
+    "trace": {
+      "original_query": "What causes leg pain when walking?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#LegPain",
+          "concept_id": "LegPain",
+          "label": "Leg Pain When Walking",
+          "term": "leg pain when walking"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "LegPain",
+          "target": "Claudication",
+          "target_label": "Claudication"
+        }
+      ],
+      "expanded_terms": [
+        "Claudication"
+      ]
+    }
+  },
+  {
+    "query_id": "q_A06",
+    "category": "lay_terminology",
+    "trace": {
+      "original_query": "What is the treatment for high cholesterol?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#HighCholesterol",
+          "concept_id": "HighCholesterol",
+          "label": "High Cholesterol",
+          "term": "high cholesterol"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Treatment",
+          "concept_id": "Treatment",
+          "label": "Treatment",
+          "term": "treatment"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "HighCholesterol",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Metformin",
+          "target_label": "Metformin"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "ARB",
+          "target_label": "Angiotensin II Receptor Blocker"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Angioplasty",
+          "target_label": "Angioplasty"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "CABG",
+          "target_label": "Coronary Artery Bypass Grafting"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Insulin",
+          "target_label": "Insulin"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Nitroglycerin",
+          "target_label": "Nitroglycerin"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Thrombolytic",
+          "target_label": "Thrombolytic"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "ACEInhibitor",
+          "target_label": "ACE Inhibitor"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Anticoagulant",
+          "target_label": "Anticoagulant"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "CalciumChannelBlocker",
+          "target_label": "Calcium Channel Blocker"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Diuretic",
+          "target_label": "Diuretic"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Statin",
+          "target_label": "Statin"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Antiplatelet",
+          "target_label": "Antiplatelet Agent"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "LifestyleModification",
+          "target_label": "Lifestyle Modification"
+        }
+      ],
+      "expanded_terms": [
+        "ACE Inhibitor",
+        "Angioplasty",
+        "Angiotensin II Receptor Blocker",
+        "Anticoagulant",
+        "Antiplatelet Agent",
+        "Beta Blocker",
+        "Calcium Channel Blocker",
+        "Coronary Artery Bypass Grafting",
+        "Diuretic",
+        "Hyperlipidemia",
+        "Insulin",
+        "Lifestyle Modification",
+        "Metformin",
+        "Nitroglycerin",
+        "Statin",
+        "Thrombolytic"
+      ]
+    }
+  },
+  {
+    "query_id": "q_A07",
+    "category": "lay_terminology",
+    "trace": {
+      "original_query": "Why do blood thinners prevent stroke?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#BloodThinner",
+          "concept_id": "BloodThinner",
+          "label": "Blood Thinner",
+          "term": "blood thinner"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Stroke",
+          "concept_id": "Stroke",
+          "label": "Stroke",
+          "term": "stroke"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "BloodThinner",
+          "target": "Anticoagulant",
+          "target_label": "Anticoagulant"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Stroke",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Stroke",
+          "target": "HemorrhagicStroke",
+          "target_label": "Hemorrhagic Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Stroke",
+          "target": "IschemicStroke",
+          "target_label": "Ischemic Stroke"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "BlurredVision",
+          "target_label": "Blurred Vision"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Dizziness",
+          "target_label": "Dizziness"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Headache",
+          "target_label": "Headache"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Numbness",
+          "target_label": "Numbness"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Anticoagulant",
+          "target_label": "Anticoagulant"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Antiplatelet",
+          "target_label": "Antiplatelet Agent"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Thrombolytic",
+          "target_label": "Thrombolytic"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "Stroke",
+          "target": "CTAngiography",
+          "target_label": "CT Angiography"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "Stroke",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        }
+      ],
+      "expanded_terms": [
+        "Anticoagulant",
+        "Antiplatelet Agent",
+        "Blurred Vision",
+        "CT Angiography",
+        "Cardiovascular Disease",
+        "Dizziness",
+        "Headache",
+        "Hemorrhagic Stroke",
+        "Hypertension",
+        "Ischemic Stroke",
+        "Numbness",
+        "Thrombolytic"
+      ]
+    }
+  },
+  {
+    "query_id": "q_A08",
+    "category": "lay_terminology",
+    "trace": {
+      "original_query": "What causes an irregular heartbeat?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#IrregularHeartbeat",
+          "concept_id": "IrregularHeartbeat",
+          "label": "Irregular Heartbeat",
+          "term": "irregular heartbeat"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "IrregularHeartbeat",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        }
+      ],
+      "expanded_terms": [
+        "Arrhythmia"
+      ]
+    }
+  },
+  {
+    "query_id": "q_A09",
+    "category": "lay_terminology",
+    "trace": {
+      "original_query": "What causes chest tightness and breathlessness?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#ChestTightness",
+          "concept_id": "ChestTightness",
+          "label": "Chest Tightness",
+          "term": "chest tightness"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Breathlessness",
+          "concept_id": "Breathlessness",
+          "label": "Breathlessness",
+          "term": "breathlessness"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "ChestTightness",
+          "target": "ChestPain",
+          "target_label": "Chest Pain"
+        },
+        {
+          "relation": "equivalentClass",
+          "source": "Breathlessness",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        }
+      ],
+      "expanded_terms": [
+        "Chest Pain",
+        "Shortness of Breath"
+      ]
+    }
+  },
+  {
+    "query_id": "q_A10",
+    "category": "lay_terminology",
+    "trace": {
+      "original_query": "What causes swollen legs in heart disease?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#HeartDisease",
+          "concept_id": "HeartDisease",
+          "label": "Heart Disease",
+          "term": "heart disease"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#SwollenLegs",
+          "concept_id": "SwollenLegs",
+          "label": "Swollen Legs",
+          "term": "swollen legs"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Disease",
+          "concept_id": "Disease",
+          "label": "Disease",
+          "term": "disease"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "HeartDisease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "equivalentClass",
+          "source": "SwollenLegs",
+          "target": "Edema",
+          "target_label": "Edema"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Arrhythmia",
+        "Atherosclerosis",
+        "Cardiovascular Disease",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Edema",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Obesity",
+        "Peripheral Artery Disease",
+        "Stroke"
+      ]
+    }
+  },
+  {
+    "query_id": "q_A11",
+    "category": "lay_terminology",
+    "trace": {
+      "original_query": "What causes hardening of the arteries?",
+      "matched_concepts": [],
+      "expansions": [],
+      "expanded_terms": []
+    }
+  },
+  {
+    "query_id": "q_A12",
+    "category": "lay_terminology",
+    "trace": {
+      "original_query": "What is the difference between a mini stroke and a stroke?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Stroke",
+          "concept_id": "Stroke",
+          "label": "Stroke",
+          "term": "stroke"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Stroke",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Stroke",
+          "target": "HemorrhagicStroke",
+          "target_label": "Hemorrhagic Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Stroke",
+          "target": "IschemicStroke",
+          "target_label": "Ischemic Stroke"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "BlurredVision",
+          "target_label": "Blurred Vision"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Dizziness",
+          "target_label": "Dizziness"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Headache",
+          "target_label": "Headache"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Numbness",
+          "target_label": "Numbness"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Anticoagulant",
+          "target_label": "Anticoagulant"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Antiplatelet",
+          "target_label": "Antiplatelet Agent"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Thrombolytic",
+          "target_label": "Thrombolytic"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "Stroke",
+          "target": "CTAngiography",
+          "target_label": "CT Angiography"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "Stroke",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        }
+      ],
+      "expanded_terms": [
+        "Anticoagulant",
+        "Antiplatelet Agent",
+        "Blurred Vision",
+        "CT Angiography",
+        "Cardiovascular Disease",
+        "Dizziness",
+        "Headache",
+        "Hemorrhagic Stroke",
+        "Hypertension",
+        "Ischemic Stroke",
+        "Numbness",
+        "Thrombolytic"
+      ]
+    }
+  },
+  {
+    "query_id": "q_B01",
+    "category": "disease_hierarchy",
+    "trace": {
+      "original_query": "What specific conditions fall under cardiovascular disease?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#CardiovascularDisease",
+          "concept_id": "CardiovascularDisease",
+          "label": "Cardiovascular Disease",
+          "term": "cardiovascular disease"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Disease",
+          "concept_id": "Disease",
+          "label": "Disease",
+          "term": "disease"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "CardiovascularDisease",
+          "target": "HeartDisease",
+          "target_label": "Heart Disease"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "CardiovascularDisease",
+          "target": "Disease",
+          "target_label": "Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "Arrhythmia",
+          "target": "AtrialFibrillation",
+          "target_label": "Atrial Fibrillation"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "Stroke",
+          "target": "HemorrhagicStroke",
+          "target_label": "Hemorrhagic Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "Stroke",
+          "target": "IschemicStroke",
+          "target_label": "Ischemic Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CoronaryArteryDisease",
+          "target": "Angina",
+          "target_label": "Angina Pectoris"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CoronaryArteryDisease",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "CardiovascularDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Angina Pectoris",
+        "Arrhythmia",
+        "Atherosclerosis",
+        "Atrial Fibrillation",
+        "Cardiovascular Disease",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Disease",
+        "Heart Disease",
+        "Heart Failure",
+        "Hemorrhagic Stroke",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Ischemic Stroke",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Myocardial Infarction",
+        "Obesity",
+        "Peripheral Artery Disease",
+        "Stroke"
+      ]
+    }
+  },
+  {
+    "query_id": "q_B02",
+    "category": "disease_hierarchy",
+    "trace": {
+      "original_query": "What are the types of diabetes mellitus?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#DiabetesMellitus",
+          "concept_id": "DiabetesMellitus",
+          "label": "Diabetes Mellitus",
+          "term": "diabetes mellitus"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "DiabetesMellitus",
+          "target": "SugarDisease",
+          "target_label": "Sugar Disease"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "DiabetesMellitus",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "DiabetesMellitus",
+          "target": "Type1Diabetes",
+          "target_label": "Type 1 Diabetes"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "DiabetesMellitus",
+          "target": "Type2Diabetes",
+          "target_label": "Type 2 Diabetes"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "BlurredVision",
+          "target_label": "Blurred Vision"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "ExcessiveThirst",
+          "target_label": "Excessive Thirst"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "Fatigue",
+          "target_label": "Fatigue"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "FrequentUrination",
+          "target_label": "Frequent Urination"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "UnexplainedWeightLoss",
+          "target_label": "Unexplained Weight Loss"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "DiabetesMellitus",
+          "target": "FastingGlucose",
+          "target_label": "Fasting Blood Glucose Test"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "DiabetesMellitus",
+          "target": "HbA1c",
+          "target_label": "Hemoglobin A1c Test"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "DiabetesMellitus",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Blurred Vision",
+        "Cardiovascular Disease",
+        "Excessive Thirst",
+        "Fasting Blood Glucose Test",
+        "Fatigue",
+        "Frequent Urination",
+        "Hemoglobin A1c Test",
+        "Metabolic Disease",
+        "Sugar Disease",
+        "Type 1 Diabetes",
+        "Type 2 Diabetes",
+        "Unexplained Weight Loss"
+      ]
+    }
+  },
+  {
+    "query_id": "q_B03",
+    "category": "disease_hierarchy",
+    "trace": {
+      "original_query": "What diseases are classified as metabolic disorders?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Disease",
+          "concept_id": "Disease",
+          "label": "Disease",
+          "term": "disease"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Arrhythmia",
+        "Atherosclerosis",
+        "Cardiovascular Disease",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Obesity",
+        "Peripheral Artery Disease",
+        "Stroke"
+      ]
+    }
+  },
+  {
+    "query_id": "q_B04",
+    "category": "disease_hierarchy",
+    "trace": {
+      "original_query": "What forms of stroke exist?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Stroke",
+          "concept_id": "Stroke",
+          "label": "Stroke",
+          "term": "stroke"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Stroke",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Stroke",
+          "target": "HemorrhagicStroke",
+          "target_label": "Hemorrhagic Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Stroke",
+          "target": "IschemicStroke",
+          "target_label": "Ischemic Stroke"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "BlurredVision",
+          "target_label": "Blurred Vision"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Dizziness",
+          "target_label": "Dizziness"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Headache",
+          "target_label": "Headache"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Numbness",
+          "target_label": "Numbness"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Anticoagulant",
+          "target_label": "Anticoagulant"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Antiplatelet",
+          "target_label": "Antiplatelet Agent"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Thrombolytic",
+          "target_label": "Thrombolytic"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "Stroke",
+          "target": "CTAngiography",
+          "target_label": "CT Angiography"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "Stroke",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        }
+      ],
+      "expanded_terms": [
+        "Anticoagulant",
+        "Antiplatelet Agent",
+        "Blurred Vision",
+        "CT Angiography",
+        "Cardiovascular Disease",
+        "Dizziness",
+        "Headache",
+        "Hemorrhagic Stroke",
+        "Hypertension",
+        "Ischemic Stroke",
+        "Numbness",
+        "Thrombolytic"
+      ]
+    }
+  },
+  {
+    "query_id": "q_B05",
+    "category": "disease_hierarchy",
+    "trace": {
+      "original_query": "What cardiac arrhythmias affect the heart rhythm?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Arrhythmia",
+          "concept_id": "Arrhythmia",
+          "label": "Arrhythmia",
+          "term": "arrhythmia"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "Arrhythmia",
+          "target": "IrregularHeartbeat",
+          "target_label": "Irregular Heartbeat"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Arrhythmia",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Arrhythmia",
+          "target": "AtrialFibrillation",
+          "target_label": "Atrial Fibrillation"
+        }
+      ],
+      "expanded_terms": [
+        "Atrial Fibrillation",
+        "Cardiovascular Disease",
+        "Irregular Heartbeat"
+      ]
+    }
+  },
+  {
+    "query_id": "q_B06",
+    "category": "disease_hierarchy",
+    "trace": {
+      "original_query": "What clinical manifestations are related to coronary artery disease?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#CoronaryArteryDisease",
+          "concept_id": "CoronaryArteryDisease",
+          "label": "Coronary Artery Disease",
+          "term": "coronary artery disease"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Disease",
+          "concept_id": "Disease",
+          "label": "Disease",
+          "term": "disease"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "CoronaryArteryDisease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "CoronaryArteryDisease",
+          "target": "Angina",
+          "target_label": "Angina Pectoris"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "CoronaryArteryDisease",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "CoronaryArteryDisease",
+          "target": "ChestPain",
+          "target_label": "Chest Pain"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "CoronaryArteryDisease",
+          "target": "Fatigue",
+          "target_label": "Fatigue"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "CoronaryArteryDisease",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "CoronaryArteryDisease",
+          "target": "Angioplasty",
+          "target_label": "Angioplasty"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "CoronaryArteryDisease",
+          "target": "Antiplatelet",
+          "target_label": "Antiplatelet Agent"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "CoronaryArteryDisease",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "CoronaryArteryDisease",
+          "target": "CABG",
+          "target_label": "Coronary Artery Bypass Grafting"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "CoronaryArteryDisease",
+          "target": "Nitroglycerin",
+          "target_label": "Nitroglycerin"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "CoronaryArteryDisease",
+          "target": "Statin",
+          "target_label": "Statin"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "CoronaryArteryDisease",
+          "target": "CTAngiography",
+          "target_label": "CT Angiography"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "CoronaryArteryDisease",
+          "target": "CardiacCatheterization",
+          "target_label": "Cardiac Catheterization"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "CoronaryArteryDisease",
+          "target": "StressTest",
+          "target_label": "Cardiac Stress Test"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "CoronaryArteryDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "CoronaryArteryDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Angina Pectoris",
+        "Angioplasty",
+        "Antiplatelet Agent",
+        "Arrhythmia",
+        "Atherosclerosis",
+        "Beta Blocker",
+        "CT Angiography",
+        "Cardiac Catheterization",
+        "Cardiac Stress Test",
+        "Cardiovascular Disease",
+        "Chest Pain",
+        "Coronary Artery Bypass Grafting",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Fatigue",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Myocardial Infarction",
+        "Nitroglycerin",
+        "Obesity",
+        "Peripheral Artery Disease",
+        "Shortness of Breath",
+        "Statin",
+        "Stroke"
+      ]
+    }
+  },
+  {
+    "query_id": "q_B07",
+    "category": "disease_hierarchy",
+    "trace": {
+      "original_query": "What metabolic conditions are associated with obesity?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Obesity",
+          "concept_id": "Obesity",
+          "label": "Obesity",
+          "term": "obesity"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Obesity",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Obesity",
+          "target": "Fatigue",
+          "target_label": "Fatigue"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Obesity",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Obesity",
+          "target": "LifestyleModification",
+          "target_label": "Lifestyle Modification"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "Obesity",
+          "target": "BMI",
+          "target_label": "Body Mass Index Assessment"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "Obesity",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "Obesity",
+          "target": "Type2Diabetes",
+          "target_label": "Type 2 Diabetes"
+        }
+      ],
+      "expanded_terms": [
+        "Body Mass Index Assessment",
+        "Fatigue",
+        "Hypertension",
+        "Lifestyle Modification",
+        "Metabolic Disease",
+        "Shortness of Breath",
+        "Type 2 Diabetes"
+      ]
+    }
+  },
+  {
+    "query_id": "q_B08",
+    "category": "disease_hierarchy",
+    "trace": {
+      "original_query": "What vascular diseases involve arterial occlusion?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Disease",
+          "concept_id": "Disease",
+          "label": "Disease",
+          "term": "disease"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Arrhythmia",
+        "Atherosclerosis",
+        "Cardiovascular Disease",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Obesity",
+        "Peripheral Artery Disease",
+        "Stroke"
+      ]
+    }
+  },
+  {
+    "query_id": "q_B09",
+    "category": "disease_hierarchy",
+    "trace": {
+      "original_query": "What disorders are categorized under metabolic syndrome?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#MetabolicSyndrome",
+          "concept_id": "MetabolicSyndrome",
+          "label": "Metabolic Syndrome",
+          "term": "metabolic syndrome"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "MetabolicSyndrome",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "MetabolicSyndrome",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "MetabolicSyndrome",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "MetabolicSyndrome",
+          "target": "Type2Diabetes",
+          "target_label": "Type 2 Diabetes"
+        }
+      ],
+      "expanded_terms": [
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Type 2 Diabetes"
+      ]
+    }
+  },
+  {
+    "query_id": "q_B10",
+    "category": "disease_hierarchy",
+    "trace": {
+      "original_query": "What types of angina pectoris occur in heart disease?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Angina",
+          "concept_id": "Angina",
+          "label": "Angina Pectoris",
+          "term": "angina pectoris"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#HeartDisease",
+          "concept_id": "HeartDisease",
+          "label": "Heart Disease",
+          "term": "heart disease"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Disease",
+          "concept_id": "Disease",
+          "label": "Disease",
+          "term": "disease"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Angina",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Angina",
+          "target": "ChestPain",
+          "target_label": "Chest Pain"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Angina",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Angina",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Angina",
+          "target": "CalciumChannelBlocker",
+          "target_label": "Calcium Channel Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Angina",
+          "target": "Nitroglycerin",
+          "target_label": "Nitroglycerin"
+        },
+        {
+          "relation": "equivalentClass",
+          "source": "HeartDisease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Arrhythmia",
+        "Atherosclerosis",
+        "Beta Blocker",
+        "Calcium Channel Blocker",
+        "Cardiovascular Disease",
+        "Chest Pain",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Nitroglycerin",
+        "Obesity",
+        "Peripheral Artery Disease",
+        "Shortness of Breath",
+        "Stroke"
+      ]
+    }
+  },
+  {
+    "query_id": "q_B11",
+    "category": "disease_hierarchy",
+    "trace": {
+      "original_query": "What high blood pressure sub-conditions or complications exist?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#HighBloodPressure",
+          "concept_id": "HighBloodPressure",
+          "label": "High Blood Pressure",
+          "term": "high blood pressure"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "HighBloodPressure",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        }
+      ],
+      "expanded_terms": [
+        "Hypertension"
+      ]
+    }
+  },
+  {
+    "query_id": "q_B12",
+    "category": "disease_hierarchy",
+    "trace": {
+      "original_query": "What disorders involve lipid metabolism impairment?",
+      "matched_concepts": [],
+      "expansions": [],
+      "expanded_terms": []
+    }
+  },
+  {
+    "query_id": "q_C01",
+    "category": "symptom_reasoning",
+    "trace": {
+      "original_query": "What diseases present with chest pain and shortness of breath?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#ShortnessOfBreath",
+          "concept_id": "ShortnessOfBreath",
+          "label": "Shortness of Breath",
+          "term": "shortness of breath"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#ChestPain",
+          "concept_id": "ChestPain",
+          "label": "Chest Pain",
+          "term": "chest pain"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Disease",
+          "concept_id": "Disease",
+          "label": "Disease",
+          "term": "disease"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "ShortnessOfBreath",
+          "target": "Breathlessness",
+          "target_label": "Breathlessness"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "ShortnessOfBreath",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ShortnessOfBreath",
+          "target": "Angina",
+          "target_label": "Angina Pectoris"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ShortnessOfBreath",
+          "target": "AtrialFibrillation",
+          "target_label": "Atrial Fibrillation"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ShortnessOfBreath",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ShortnessOfBreath",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ShortnessOfBreath",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ShortnessOfBreath",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "equivalentClass",
+          "source": "ChestPain",
+          "target": "ChestTightness",
+          "target_label": "Chest Tightness"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "ChestPain",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ChestPain",
+          "target": "Angina",
+          "target_label": "Angina Pectoris"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ChestPain",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ChestPain",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ChestPain",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Angina Pectoris",
+        "Arrhythmia",
+        "Atherosclerosis",
+        "Atrial Fibrillation",
+        "Breathlessness",
+        "Cardiovascular Disease",
+        "Chest Tightness",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Myocardial Infarction",
+        "Obesity",
+        "Peripheral Artery Disease",
+        "Stroke",
+        "Symptom"
+      ]
+    }
+  },
+  {
+    "query_id": "q_C02",
+    "category": "symptom_reasoning",
+    "trace": {
+      "original_query": "What condition causes polyuria, polydipsia, and unexplained weight loss?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#UnexplainedWeightLoss",
+          "concept_id": "UnexplainedWeightLoss",
+          "label": "Unexplained Weight Loss",
+          "term": "unexplained weight loss"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "UnexplainedWeightLoss",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "UnexplainedWeightLoss",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        }
+      ],
+      "expanded_terms": [
+        "Diabetes Mellitus",
+        "Symptom"
+      ]
+    }
+  },
+  {
+    "query_id": "q_C03",
+    "category": "symptom_reasoning",
+    "trace": {
+      "original_query": "What cardiovascular disorders produce peripheral edema and fatigue?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Fatigue",
+          "concept_id": "Fatigue",
+          "label": "Fatigue",
+          "term": "fatigue"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Edema",
+          "concept_id": "Edema",
+          "label": "Edema",
+          "term": "edema"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Fatigue",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Fatigue",
+          "target": "AtrialFibrillation",
+          "target_label": "Atrial Fibrillation"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Fatigue",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Fatigue",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Fatigue",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Fatigue",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "equivalentClass",
+          "source": "Edema",
+          "target": "SwollenLegs",
+          "target_label": "Swollen Legs"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Edema",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Edema",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        }
+      ],
+      "expanded_terms": [
+        "Atrial Fibrillation",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Obesity",
+        "Swollen Legs",
+        "Symptom"
+      ]
+    }
+  },
+  {
+    "query_id": "q_C04",
+    "category": "symptom_reasoning",
+    "trace": {
+      "original_query": "What condition causes sudden facial numbness, dizziness, and vision disturbance?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Dizziness",
+          "concept_id": "Dizziness",
+          "label": "Dizziness",
+          "term": "dizziness"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Numbness",
+          "concept_id": "Numbness",
+          "label": "Numbness",
+          "term": "numbness"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Dizziness",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Dizziness",
+          "target": "AtrialFibrillation",
+          "target_label": "Atrial Fibrillation"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Dizziness",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Dizziness",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Numbness",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Numbness",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Numbness",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Numbness",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        }
+      ],
+      "expanded_terms": [
+        "Atherosclerosis",
+        "Atrial Fibrillation",
+        "Hypertension",
+        "Peripheral Artery Disease",
+        "Stroke",
+        "Symptom"
+      ]
+    }
+  },
+  {
+    "query_id": "q_C05",
+    "category": "symptom_reasoning",
+    "trace": {
+      "original_query": "What arrhythmia presents with palpitations and lightheadedness?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Palpitations",
+          "concept_id": "Palpitations",
+          "label": "Palpitations",
+          "term": "palpitations"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Arrhythmia",
+          "concept_id": "Arrhythmia",
+          "label": "Arrhythmia",
+          "term": "arrhythmia"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Palpitations",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Palpitations",
+          "target": "AtrialFibrillation",
+          "target_label": "Atrial Fibrillation"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Palpitations",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "equivalentClass",
+          "source": "Arrhythmia",
+          "target": "IrregularHeartbeat",
+          "target_label": "Irregular Heartbeat"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Arrhythmia",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Arrhythmia",
+          "target": "AtrialFibrillation",
+          "target_label": "Atrial Fibrillation"
+        }
+      ],
+      "expanded_terms": [
+        "Atrial Fibrillation",
+        "Cardiovascular Disease",
+        "Heart Failure",
+        "Irregular Heartbeat",
+        "Symptom"
+      ]
+    }
+  },
+  {
+    "query_id": "q_C06",
+    "category": "symptom_reasoning",
+    "trace": {
+      "original_query": "What vascular disorder produces leg pain specifically triggered by walking?",
+      "matched_concepts": [],
+      "expansions": [],
+      "expanded_terms": []
+    }
+  },
+  {
+    "query_id": "q_C07",
+    "category": "symptom_reasoning",
+    "trace": {
+      "original_query": "What symptoms accompany acute myocardial infarction besides chest pain?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#MyocardialInfarction",
+          "concept_id": "MyocardialInfarction",
+          "label": "Myocardial Infarction",
+          "term": "myocardial infarction"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#ChestPain",
+          "concept_id": "ChestPain",
+          "label": "Chest Pain",
+          "term": "chest pain"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Symptom",
+          "concept_id": "Symptom",
+          "label": "Symptom",
+          "term": "symptom"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "MyocardialInfarction",
+          "target": "HeartAttack",
+          "target_label": "Heart Attack"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "MyocardialInfarction",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "MyocardialInfarction",
+          "target": "ChestPain",
+          "target_label": "Chest Pain"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "MyocardialInfarction",
+          "target": "JawPain",
+          "target_label": "Jaw Pain"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "MyocardialInfarction",
+          "target": "Nausea",
+          "target_label": "Nausea"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "MyocardialInfarction",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "MyocardialInfarction",
+          "target": "Sweating",
+          "target_label": "Sweating"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "MyocardialInfarction",
+          "target": "ACEInhibitor",
+          "target_label": "ACE Inhibitor"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "MyocardialInfarction",
+          "target": "Angioplasty",
+          "target_label": "Angioplasty"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "MyocardialInfarction",
+          "target": "Antiplatelet",
+          "target_label": "Antiplatelet Agent"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "MyocardialInfarction",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "MyocardialInfarction",
+          "target": "CABG",
+          "target_label": "Coronary Artery Bypass Grafting"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "MyocardialInfarction",
+          "target": "Thrombolytic",
+          "target_label": "Thrombolytic"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "MyocardialInfarction",
+          "target": "CardiacCatheterization",
+          "target_label": "Cardiac Catheterization"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "MyocardialInfarction",
+          "target": "ECG",
+          "target_label": "Electrocardiogram"
+        },
+        {
+          "relation": "equivalentClass",
+          "source": "ChestPain",
+          "target": "ChestTightness",
+          "target_label": "Chest Tightness"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "ChestPain",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ChestPain",
+          "target": "Angina",
+          "target_label": "Angina Pectoris"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ChestPain",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ChestPain",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ChestPain",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "ExcessiveThirst",
+          "target_label": "Excessive Thirst"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "FrequentUrination",
+          "target_label": "Frequent Urination"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "JawPain",
+          "target_label": "Jaw Pain"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Nausea",
+          "target_label": "Nausea"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Sweating",
+          "target_label": "Sweating"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "UnexplainedWeightLoss",
+          "target_label": "Unexplained Weight Loss"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Edema",
+          "target_label": "Edema"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Headache",
+          "target_label": "Headache"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Palpitations",
+          "target_label": "Palpitations"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "BlurredVision",
+          "target_label": "Blurred Vision"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Claudication",
+          "target_label": "Claudication"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Dizziness",
+          "target_label": "Dizziness"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Numbness",
+          "target_label": "Numbness"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "ChestPain",
+          "target_label": "Chest Pain"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Fatigue",
+          "target_label": "Fatigue"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        }
+      ],
+      "expanded_terms": [
+        "ACE Inhibitor",
+        "Angina Pectoris",
+        "Angioplasty",
+        "Antiplatelet Agent",
+        "Atherosclerosis",
+        "Beta Blocker",
+        "Blurred Vision",
+        "Cardiac Catheterization",
+        "Chest Pain",
+        "Chest Tightness",
+        "Claudication",
+        "Coronary Artery Bypass Grafting",
+        "Coronary Artery Disease",
+        "Dizziness",
+        "Edema",
+        "Electrocardiogram",
+        "Excessive Thirst",
+        "Fatigue",
+        "Frequent Urination",
+        "Headache",
+        "Heart Attack",
+        "Jaw Pain",
+        "Myocardial Infarction",
+        "Nausea",
+        "Numbness",
+        "Palpitations",
+        "Shortness of Breath",
+        "Sweating",
+        "Symptom",
+        "Thrombolytic",
+        "Unexplained Weight Loss"
+      ]
+    }
+  },
+  {
+    "query_id": "q_C08",
+    "category": "symptom_reasoning",
+    "trace": {
+      "original_query": "What symptoms indicate severe uncontrolled hypertension?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Hypertension",
+          "concept_id": "Hypertension",
+          "label": "Hypertension",
+          "term": "hypertension"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Symptom",
+          "concept_id": "Symptom",
+          "label": "Symptom",
+          "term": "symptom"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "Hypertension",
+          "target": "HighBloodPressure",
+          "target_label": "High Blood Pressure"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Hypertension",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Hypertension",
+          "target": "BlurredVision",
+          "target_label": "Blurred Vision"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Hypertension",
+          "target": "Dizziness",
+          "target_label": "Dizziness"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Hypertension",
+          "target": "Headache",
+          "target_label": "Headache"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Hypertension",
+          "target": "ACEInhibitor",
+          "target_label": "ACE Inhibitor"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Hypertension",
+          "target": "ARB",
+          "target_label": "Angiotensin II Receptor Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Hypertension",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Hypertension",
+          "target": "CalciumChannelBlocker",
+          "target_label": "Calcium Channel Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Hypertension",
+          "target": "Diuretic",
+          "target_label": "Diuretic"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Hypertension",
+          "target": "LifestyleModification",
+          "target_label": "Lifestyle Modification"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "Hypertension",
+          "target": "BloodPressureTest",
+          "target_label": "Blood Pressure Measurement"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "Hypertension",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "Hypertension",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "Hypertension",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "Hypertension",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "Hypertension",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "ExcessiveThirst",
+          "target_label": "Excessive Thirst"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "FrequentUrination",
+          "target_label": "Frequent Urination"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "JawPain",
+          "target_label": "Jaw Pain"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Nausea",
+          "target_label": "Nausea"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Sweating",
+          "target_label": "Sweating"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "UnexplainedWeightLoss",
+          "target_label": "Unexplained Weight Loss"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Edema",
+          "target_label": "Edema"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Headache",
+          "target_label": "Headache"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Palpitations",
+          "target_label": "Palpitations"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "BlurredVision",
+          "target_label": "Blurred Vision"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Claudication",
+          "target_label": "Claudication"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Dizziness",
+          "target_label": "Dizziness"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Numbness",
+          "target_label": "Numbness"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "ChestPain",
+          "target_label": "Chest Pain"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "Fatigue",
+          "target_label": "Fatigue"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Symptom",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        }
+      ],
+      "expanded_terms": [
+        "ACE Inhibitor",
+        "Angiotensin II Receptor Blocker",
+        "Beta Blocker",
+        "Blood Pressure Measurement",
+        "Blurred Vision",
+        "Calcium Channel Blocker",
+        "Cardiovascular Disease",
+        "Chest Pain",
+        "Claudication",
+        "Coronary Artery Disease",
+        "Diuretic",
+        "Dizziness",
+        "Edema",
+        "Excessive Thirst",
+        "Fatigue",
+        "Frequent Urination",
+        "Headache",
+        "Heart Failure",
+        "High Blood Pressure",
+        "Jaw Pain",
+        "Lifestyle Modification",
+        "Metabolic Syndrome",
+        "Nausea",
+        "Numbness",
+        "Obesity",
+        "Palpitations",
+        "Shortness of Breath",
+        "Stroke",
+        "Sweating",
+        "Unexplained Weight Loss"
+      ]
+    }
+  },
+  {
+    "query_id": "q_C09",
+    "category": "symptom_reasoning",
+    "trace": {
+      "original_query": "What cardiac condition causes exertional angina radiating to the jaw?",
+      "matched_concepts": [],
+      "expansions": [],
+      "expanded_terms": []
+    }
+  },
+  {
+    "query_id": "q_C10",
+    "category": "symptom_reasoning",
+    "trace": {
+      "original_query": "What metabolic disease causes constant fatigue and blurred vision?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#MetabolicDisease",
+          "concept_id": "MetabolicDisease",
+          "label": "Metabolic Disease",
+          "term": "metabolic disease"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#BlurredVision",
+          "concept_id": "BlurredVision",
+          "label": "Blurred Vision",
+          "term": "blurred vision"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Fatigue",
+          "concept_id": "Fatigue",
+          "label": "Fatigue",
+          "term": "fatigue"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Disease",
+          "concept_id": "Disease",
+          "label": "Disease",
+          "term": "disease"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "MetabolicDisease",
+          "target": "Disease",
+          "target_label": "Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "DiabetesMellitus",
+          "target": "Type1Diabetes",
+          "target_label": "Type 1 Diabetes"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "DiabetesMellitus",
+          "target": "Type2Diabetes",
+          "target_label": "Type 2 Diabetes"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "BlurredVision",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "BlurredVision",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "BlurredVision",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "BlurredVision",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Fatigue",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Fatigue",
+          "target": "AtrialFibrillation",
+          "target_label": "Atrial Fibrillation"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Fatigue",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Fatigue",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Fatigue",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Fatigue",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Arrhythmia",
+        "Atherosclerosis",
+        "Atrial Fibrillation",
+        "Cardiovascular Disease",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Disease",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Obesity",
+        "Peripheral Artery Disease",
+        "Stroke",
+        "Symptom",
+        "Type 1 Diabetes",
+        "Type 2 Diabetes"
+      ]
+    }
+  },
+  {
+    "query_id": "q_D01",
+    "category": "treatment_reasoning",
+    "trace": {
+      "original_query": "What conditions are treated using ACE inhibitors and ARBs?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#ACEInhibitor",
+          "concept_id": "ACEInhibitor",
+          "label": "ACE Inhibitor",
+          "term": "ace inhibitor"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "ACEInhibitor",
+          "target": "Treatment",
+          "target_label": "Treatment"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "ACEInhibitor",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "ACEInhibitor",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "ACEInhibitor",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        }
+      ],
+      "expanded_terms": [
+        "Heart Failure",
+        "Hypertension",
+        "Myocardial Infarction",
+        "Treatment"
+      ]
+    }
+  },
+  {
+    "query_id": "q_D02",
+    "category": "treatment_reasoning",
+    "trace": {
+      "original_query": "What diseases require statin therapy for cholesterol reduction?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Disease",
+          "concept_id": "Disease",
+          "label": "Disease",
+          "term": "disease"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Statin",
+          "concept_id": "Statin",
+          "label": "Statin",
+          "term": "statin"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Statin",
+          "target": "Treatment",
+          "target_label": "Treatment"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Statin",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Statin",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Statin",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Arrhythmia",
+        "Atherosclerosis",
+        "Cardiovascular Disease",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Obesity",
+        "Peripheral Artery Disease",
+        "Stroke",
+        "Treatment"
+      ]
+    }
+  },
+  {
+    "query_id": "q_D03",
+    "category": "treatment_reasoning",
+    "trace": {
+      "original_query": "What conditions are treated with intravenous thrombolytic agents?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Thrombolytic",
+          "concept_id": "Thrombolytic",
+          "label": "Thrombolytic",
+          "term": "thrombolytic"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Thrombolytic",
+          "target": "Treatment",
+          "target_label": "Treatment"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Thrombolytic",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Thrombolytic",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        }
+      ],
+      "expanded_terms": [
+        "Myocardial Infarction",
+        "Stroke",
+        "Treatment"
+      ]
+    }
+  },
+  {
+    "query_id": "q_D04",
+    "category": "treatment_reasoning",
+    "trace": {
+      "original_query": "What medications are prescribed for Type 2 Diabetes management?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Type2Diabetes",
+          "concept_id": "Type2Diabetes",
+          "label": "Type 2 Diabetes",
+          "term": "type 2 diabetes"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Type2Diabetes",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Type2Diabetes",
+          "target": "Insulin",
+          "target_label": "Insulin"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Type2Diabetes",
+          "target": "LifestyleModification",
+          "target_label": "Lifestyle Modification"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Type2Diabetes",
+          "target": "Metformin",
+          "target_label": "Metformin"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "Type2Diabetes",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "Type2Diabetes",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        }
+      ],
+      "expanded_terms": [
+        "Diabetes Mellitus",
+        "Insulin",
+        "Lifestyle Modification",
+        "Metabolic Syndrome",
+        "Metformin",
+        "Obesity"
+      ]
+    }
+  },
+  {
+    "query_id": "q_D05",
+    "category": "treatment_reasoning",
+    "trace": {
+      "original_query": "What drug classes control heart rate in atrial fibrillation?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#AtrialFibrillation",
+          "concept_id": "AtrialFibrillation",
+          "label": "Atrial Fibrillation",
+          "term": "atrial fibrillation"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "AtrialFibrillation",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "AtrialFibrillation",
+          "target": "Dizziness",
+          "target_label": "Dizziness"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "AtrialFibrillation",
+          "target": "Fatigue",
+          "target_label": "Fatigue"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "AtrialFibrillation",
+          "target": "Palpitations",
+          "target_label": "Palpitations"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "AtrialFibrillation",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "AtrialFibrillation",
+          "target": "Anticoagulant",
+          "target_label": "Anticoagulant"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "AtrialFibrillation",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "AtrialFibrillation",
+          "target": "CalciumChannelBlocker",
+          "target_label": "Calcium Channel Blocker"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "AtrialFibrillation",
+          "target": "ECG",
+          "target_label": "Electrocardiogram"
+        }
+      ],
+      "expanded_terms": [
+        "Anticoagulant",
+        "Arrhythmia",
+        "Beta Blocker",
+        "Calcium Channel Blocker",
+        "Dizziness",
+        "Electrocardiogram",
+        "Fatigue",
+        "Palpitations",
+        "Shortness of Breath"
+      ]
+    }
+  },
+  {
+    "query_id": "q_D06",
+    "category": "treatment_reasoning",
+    "trace": {
+      "original_query": "What medication provides rapid relief for acute angina pectoris?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Angina",
+          "concept_id": "Angina",
+          "label": "Angina Pectoris",
+          "term": "angina pectoris"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Angina",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Angina",
+          "target": "ChestPain",
+          "target_label": "Chest Pain"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Angina",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Angina",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Angina",
+          "target": "CalciumChannelBlocker",
+          "target_label": "Calcium Channel Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Angina",
+          "target": "Nitroglycerin",
+          "target_label": "Nitroglycerin"
+        }
+      ],
+      "expanded_terms": [
+        "Beta Blocker",
+        "Calcium Channel Blocker",
+        "Chest Pain",
+        "Coronary Artery Disease",
+        "Nitroglycerin",
+        "Shortness of Breath"
+      ]
+    }
+  },
+  {
+    "query_id": "q_D07",
+    "category": "treatment_reasoning",
+    "trace": {
+      "original_query": "What surgical revascularization procedures treat severe coronary artery stenosis?",
+      "matched_concepts": [],
+      "expansions": [],
+      "expanded_terms": []
+    }
+  },
+  {
+    "query_id": "q_D08",
+    "category": "treatment_reasoning",
+    "trace": {
+      "original_query": "What therapeutic options treat fluid overload in heart failure?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#HeartFailure",
+          "concept_id": "HeartFailure",
+          "label": "Heart Failure",
+          "term": "heart failure"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "HeartFailure",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "HeartFailure",
+          "target": "Edema",
+          "target_label": "Edema"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "HeartFailure",
+          "target": "Fatigue",
+          "target_label": "Fatigue"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "HeartFailure",
+          "target": "Palpitations",
+          "target_label": "Palpitations"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "HeartFailure",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "HeartFailure",
+          "target": "ACEInhibitor",
+          "target_label": "ACE Inhibitor"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "HeartFailure",
+          "target": "ARB",
+          "target_label": "Angiotensin II Receptor Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "HeartFailure",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "HeartFailure",
+          "target": "Diuretic",
+          "target_label": "Diuretic"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "HeartFailure",
+          "target": "LifestyleModification",
+          "target_label": "Lifestyle Modification"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "HeartFailure",
+          "target": "ECG",
+          "target_label": "Electrocardiogram"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "HeartFailure",
+          "target": "Echocardiogram",
+          "target_label": "Echocardiogram"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "HeartFailure",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        }
+      ],
+      "expanded_terms": [
+        "ACE Inhibitor",
+        "Angiotensin II Receptor Blocker",
+        "Beta Blocker",
+        "Cardiovascular Disease",
+        "Diuretic",
+        "Echocardiogram",
+        "Edema",
+        "Electrocardiogram",
+        "Fatigue",
+        "Hypertension",
+        "Lifestyle Modification",
+        "Palpitations",
+        "Shortness of Breath"
+      ]
+    }
+  },
+  {
+    "query_id": "q_D09",
+    "category": "treatment_reasoning",
+    "trace": {
+      "original_query": "What first-line pharmacological treatment is given for Type 1 Diabetes?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Type1Diabetes",
+          "concept_id": "Type1Diabetes",
+          "label": "Type 1 Diabetes",
+          "term": "type 1 diabetes"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Treatment",
+          "concept_id": "Treatment",
+          "label": "Treatment",
+          "term": "treatment"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Type1Diabetes",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Type1Diabetes",
+          "target": "Insulin",
+          "target_label": "Insulin"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Metformin",
+          "target_label": "Metformin"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "ARB",
+          "target_label": "Angiotensin II Receptor Blocker"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Angioplasty",
+          "target_label": "Angioplasty"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "CABG",
+          "target_label": "Coronary Artery Bypass Grafting"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Insulin",
+          "target_label": "Insulin"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Nitroglycerin",
+          "target_label": "Nitroglycerin"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Thrombolytic",
+          "target_label": "Thrombolytic"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "ACEInhibitor",
+          "target_label": "ACE Inhibitor"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Anticoagulant",
+          "target_label": "Anticoagulant"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "CalciumChannelBlocker",
+          "target_label": "Calcium Channel Blocker"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Diuretic",
+          "target_label": "Diuretic"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Statin",
+          "target_label": "Statin"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Antiplatelet",
+          "target_label": "Antiplatelet Agent"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "LifestyleModification",
+          "target_label": "Lifestyle Modification"
+        }
+      ],
+      "expanded_terms": [
+        "ACE Inhibitor",
+        "Angioplasty",
+        "Angiotensin II Receptor Blocker",
+        "Anticoagulant",
+        "Antiplatelet Agent",
+        "Beta Blocker",
+        "Calcium Channel Blocker",
+        "Coronary Artery Bypass Grafting",
+        "Diabetes Mellitus",
+        "Diuretic",
+        "Insulin",
+        "Lifestyle Modification",
+        "Metformin",
+        "Nitroglycerin",
+        "Statin",
+        "Thrombolytic"
+      ]
+    }
+  },
+  {
+    "query_id": "q_D10",
+    "category": "treatment_reasoning",
+    "trace": {
+      "original_query": "What antiplatelet and anticoagulant medications reduce thrombosis risk?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Anticoagulant",
+          "concept_id": "Anticoagulant",
+          "label": "Anticoagulant",
+          "term": "anticoagulant"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "Anticoagulant",
+          "target": "BloodThinner",
+          "target_label": "Blood Thinner"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Anticoagulant",
+          "target": "Treatment",
+          "target_label": "Treatment"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Anticoagulant",
+          "target": "AtrialFibrillation",
+          "target_label": "Atrial Fibrillation"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Anticoagulant",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        }
+      ],
+      "expanded_terms": [
+        "Atrial Fibrillation",
+        "Blood Thinner",
+        "Stroke",
+        "Treatment"
+      ]
+    }
+  },
+  {
+    "query_id": "q_E01",
+    "category": "multi_hop",
+    "trace": {
+      "original_query": "What medications treat diseases that cause leg swelling and shortness of breath?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#ShortnessOfBreath",
+          "concept_id": "ShortnessOfBreath",
+          "label": "Shortness of Breath",
+          "term": "shortness of breath"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Disease",
+          "concept_id": "Disease",
+          "label": "Disease",
+          "term": "disease"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "ShortnessOfBreath",
+          "target": "Breathlessness",
+          "target_label": "Breathlessness"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "ShortnessOfBreath",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ShortnessOfBreath",
+          "target": "Angina",
+          "target_label": "Angina Pectoris"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ShortnessOfBreath",
+          "target": "AtrialFibrillation",
+          "target_label": "Atrial Fibrillation"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ShortnessOfBreath",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ShortnessOfBreath",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ShortnessOfBreath",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ShortnessOfBreath",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Angina Pectoris",
+        "Arrhythmia",
+        "Atherosclerosis",
+        "Atrial Fibrillation",
+        "Breathlessness",
+        "Cardiovascular Disease",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Myocardial Infarction",
+        "Obesity",
+        "Peripheral Artery Disease",
+        "Stroke",
+        "Symptom"
+      ]
+    }
+  },
+  {
+    "query_id": "q_E02",
+    "category": "multi_hop",
+    "trace": {
+      "original_query": "What diagnostic tests evaluate conditions treated with metformin?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Metformin",
+          "concept_id": "Metformin",
+          "label": "Metformin",
+          "term": "metformin"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Metformin",
+          "target": "Treatment",
+          "target_label": "Treatment"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Metformin",
+          "target": "Type2Diabetes",
+          "target_label": "Type 2 Diabetes"
+        }
+      ],
+      "expanded_terms": [
+        "Treatment",
+        "Type 2 Diabetes"
+      ]
+    }
+  },
+  {
+    "query_id": "q_E03",
+    "category": "multi_hop",
+    "trace": {
+      "original_query": "What surgical procedures treat conditions that present with crushing chest pain?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#ChestPain",
+          "concept_id": "ChestPain",
+          "label": "Chest Pain",
+          "term": "chest pain"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "ChestPain",
+          "target": "ChestTightness",
+          "target_label": "Chest Tightness"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "ChestPain",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ChestPain",
+          "target": "Angina",
+          "target_label": "Angina Pectoris"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ChestPain",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ChestPain",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ChestPain",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Angina Pectoris",
+        "Atherosclerosis",
+        "Chest Tightness",
+        "Coronary Artery Disease",
+        "Myocardial Infarction",
+        "Symptom"
+      ]
+    }
+  },
+  {
+    "query_id": "q_E04",
+    "category": "multi_hop",
+    "trace": {
+      "original_query": "What diagnostic tests assess diseases that cause facial numbness and vision loss?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Numbness",
+          "concept_id": "Numbness",
+          "label": "Numbness",
+          "term": "numbness"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Disease",
+          "concept_id": "Disease",
+          "label": "Disease",
+          "term": "disease"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Numbness",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Numbness",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Numbness",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "Numbness",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Arrhythmia",
+        "Atherosclerosis",
+        "Cardiovascular Disease",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Obesity",
+        "Peripheral Artery Disease",
+        "Stroke",
+        "Symptom"
+      ]
+    }
+  },
+  {
+    "query_id": "q_E05",
+    "category": "multi_hop",
+    "trace": {
+      "original_query": "What medications treat heart diseases caused by lipid accumulation in arteries?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#HeartDisease",
+          "concept_id": "HeartDisease",
+          "label": "Heart Disease",
+          "term": "heart disease"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Disease",
+          "concept_id": "Disease",
+          "label": "Disease",
+          "term": "disease"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "HeartDisease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "MetabolicDisease",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Disease",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Atherosclerosis",
+          "target_label": "Atherosclerosis"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "PeripheralArteryDisease",
+          "target_label": "Peripheral Artery Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=2)",
+          "source": "CardiovascularDisease",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Arrhythmia",
+        "Atherosclerosis",
+        "Cardiovascular Disease",
+        "Coronary Artery Disease",
+        "Diabetes Mellitus",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Obesity",
+        "Peripheral Artery Disease",
+        "Stroke"
+      ]
+    }
+  },
+  {
+    "query_id": "q_E06",
+    "category": "multi_hop",
+    "trace": {
+      "original_query": "What treatments address metabolic conditions characterized by central obesity and high fasting glucose?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Treatment",
+          "concept_id": "Treatment",
+          "label": "Treatment",
+          "term": "treatment"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Obesity",
+          "concept_id": "Obesity",
+          "label": "Obesity",
+          "term": "obesity"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Metformin",
+          "target_label": "Metformin"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "ARB",
+          "target_label": "Angiotensin II Receptor Blocker"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Angioplasty",
+          "target_label": "Angioplasty"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "CABG",
+          "target_label": "Coronary Artery Bypass Grafting"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Insulin",
+          "target_label": "Insulin"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Nitroglycerin",
+          "target_label": "Nitroglycerin"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Thrombolytic",
+          "target_label": "Thrombolytic"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "ACEInhibitor",
+          "target_label": "ACE Inhibitor"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Anticoagulant",
+          "target_label": "Anticoagulant"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "CalciumChannelBlocker",
+          "target_label": "Calcium Channel Blocker"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Diuretic",
+          "target_label": "Diuretic"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Statin",
+          "target_label": "Statin"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "Antiplatelet",
+          "target_label": "Antiplatelet Agent"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Treatment",
+          "target": "LifestyleModification",
+          "target_label": "Lifestyle Modification"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Obesity",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Obesity",
+          "target": "Fatigue",
+          "target_label": "Fatigue"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Obesity",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Obesity",
+          "target": "LifestyleModification",
+          "target_label": "Lifestyle Modification"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "Obesity",
+          "target": "BMI",
+          "target_label": "Body Mass Index Assessment"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "Obesity",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "Obesity",
+          "target": "Type2Diabetes",
+          "target_label": "Type 2 Diabetes"
+        }
+      ],
+      "expanded_terms": [
+        "ACE Inhibitor",
+        "Angioplasty",
+        "Angiotensin II Receptor Blocker",
+        "Anticoagulant",
+        "Antiplatelet Agent",
+        "Beta Blocker",
+        "Body Mass Index Assessment",
+        "Calcium Channel Blocker",
+        "Coronary Artery Bypass Grafting",
+        "Diuretic",
+        "Fatigue",
+        "Hypertension",
+        "Insulin",
+        "Lifestyle Modification",
+        "Metabolic Disease",
+        "Metformin",
+        "Nitroglycerin",
+        "Shortness of Breath",
+        "Statin",
+        "Thrombolytic",
+        "Type 2 Diabetes"
+      ]
+    }
+  },
+  {
+    "query_id": "q_E07",
+    "category": "multi_hop",
+    "trace": {
+      "original_query": "What drugs treat heart rhythm disorders diagnosed by electrocardiogram?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#ECG",
+          "concept_id": "ECG",
+          "label": "Electrocardiogram",
+          "term": "electrocardiogram"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "ECG",
+          "target": "DiagnosticTest",
+          "target_label": "DiagnosticTest"
+        },
+        {
+          "relation": "diagnosedBy (inverse)",
+          "source": "ECG",
+          "target": "AtrialFibrillation",
+          "target_label": "Atrial Fibrillation"
+        },
+        {
+          "relation": "diagnosedBy (inverse)",
+          "source": "ECG",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "diagnosedBy (inverse)",
+          "source": "ECG",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        }
+      ],
+      "expanded_terms": [
+        "Atrial Fibrillation",
+        "DiagnosticTest",
+        "Heart Failure",
+        "Myocardial Infarction"
+      ]
+    }
+  },
+  {
+    "query_id": "q_E08",
+    "category": "multi_hop",
+    "trace": {
+      "original_query": "What procedures treat arterial occlusions causing leg pain during exercise?",
+      "matched_concepts": [],
+      "expansions": [],
+      "expanded_terms": []
+    }
+  },
+  {
+    "query_id": "q_E09",
+    "category": "multi_hop",
+    "trace": {
+      "original_query": "What medications treat high blood pressure complications that lead to swollen legs?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#HighBloodPressure",
+          "concept_id": "HighBloodPressure",
+          "label": "High Blood Pressure",
+          "term": "high blood pressure"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#SwollenLegs",
+          "concept_id": "SwollenLegs",
+          "label": "Swollen Legs",
+          "term": "swollen legs"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "HighBloodPressure",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "equivalentClass",
+          "source": "SwollenLegs",
+          "target": "Edema",
+          "target_label": "Edema"
+        }
+      ],
+      "expanded_terms": [
+        "Edema",
+        "Hypertension"
+      ]
+    }
+  },
+  {
+    "query_id": "q_E10",
+    "category": "multi_hop",
+    "trace": {
+      "original_query": "What diagnostic tests confirm conditions presenting with excessive thirst and frequent urination?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#FrequentUrination",
+          "concept_id": "FrequentUrination",
+          "label": "Frequent Urination",
+          "term": "frequent urination"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#ExcessiveThirst",
+          "concept_id": "ExcessiveThirst",
+          "label": "Excessive Thirst",
+          "term": "excessive thirst"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "FrequentUrination",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "FrequentUrination",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "ExcessiveThirst",
+          "target": "Symptom",
+          "target_label": "Symptom"
+        },
+        {
+          "relation": "hasSymptom (inverse)",
+          "source": "ExcessiveThirst",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        }
+      ],
+      "expanded_terms": [
+        "Diabetes Mellitus",
+        "Symptom"
+      ]
+    }
+  },
+  {
+    "query_id": "q_F01",
+    "category": "control_exact_clinical",
+    "trace": {
+      "original_query": "What is the diagnostic role of Hemoglobin A1c in Diabetes Mellitus?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#DiabetesMellitus",
+          "concept_id": "DiabetesMellitus",
+          "label": "Diabetes Mellitus",
+          "term": "diabetes mellitus"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "DiabetesMellitus",
+          "target": "SugarDisease",
+          "target_label": "Sugar Disease"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "DiabetesMellitus",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "DiabetesMellitus",
+          "target": "Type1Diabetes",
+          "target_label": "Type 1 Diabetes"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "DiabetesMellitus",
+          "target": "Type2Diabetes",
+          "target_label": "Type 2 Diabetes"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "BlurredVision",
+          "target_label": "Blurred Vision"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "ExcessiveThirst",
+          "target_label": "Excessive Thirst"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "Fatigue",
+          "target_label": "Fatigue"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "FrequentUrination",
+          "target_label": "Frequent Urination"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "UnexplainedWeightLoss",
+          "target_label": "Unexplained Weight Loss"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "DiabetesMellitus",
+          "target": "FastingGlucose",
+          "target_label": "Fasting Blood Glucose Test"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "DiabetesMellitus",
+          "target": "HbA1c",
+          "target_label": "Hemoglobin A1c Test"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "DiabetesMellitus",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Blurred Vision",
+        "Cardiovascular Disease",
+        "Excessive Thirst",
+        "Fasting Blood Glucose Test",
+        "Fatigue",
+        "Frequent Urination",
+        "Hemoglobin A1c Test",
+        "Metabolic Disease",
+        "Sugar Disease",
+        "Type 1 Diabetes",
+        "Type 2 Diabetes",
+        "Unexplained Weight Loss"
+      ]
+    }
+  },
+  {
+    "query_id": "q_F02",
+    "category": "control_exact_clinical",
+    "trace": {
+      "original_query": "How does Metformin improve glycemic control in Type 2 Diabetes Mellitus?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#DiabetesMellitus",
+          "concept_id": "DiabetesMellitus",
+          "label": "Diabetes Mellitus",
+          "term": "diabetes mellitus"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Type2Diabetes",
+          "concept_id": "Type2Diabetes",
+          "label": "Type 2 Diabetes",
+          "term": "type 2 diabetes"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Metformin",
+          "concept_id": "Metformin",
+          "label": "Metformin",
+          "term": "metformin"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "DiabetesMellitus",
+          "target": "SugarDisease",
+          "target_label": "Sugar Disease"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "DiabetesMellitus",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "DiabetesMellitus",
+          "target": "Type1Diabetes",
+          "target_label": "Type 1 Diabetes"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "DiabetesMellitus",
+          "target": "Type2Diabetes",
+          "target_label": "Type 2 Diabetes"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "BlurredVision",
+          "target_label": "Blurred Vision"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "ExcessiveThirst",
+          "target_label": "Excessive Thirst"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "Fatigue",
+          "target_label": "Fatigue"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "FrequentUrination",
+          "target_label": "Frequent Urination"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "DiabetesMellitus",
+          "target": "UnexplainedWeightLoss",
+          "target_label": "Unexplained Weight Loss"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "DiabetesMellitus",
+          "target": "FastingGlucose",
+          "target_label": "Fasting Blood Glucose Test"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "DiabetesMellitus",
+          "target": "HbA1c",
+          "target_label": "Hemoglobin A1c Test"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "DiabetesMellitus",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Type2Diabetes",
+          "target": "DiabetesMellitus",
+          "target_label": "Diabetes Mellitus"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Type2Diabetes",
+          "target": "Insulin",
+          "target_label": "Insulin"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Type2Diabetes",
+          "target": "LifestyleModification",
+          "target_label": "Lifestyle Modification"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Type2Diabetes",
+          "target": "Metformin",
+          "target_label": "Metformin"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "Type2Diabetes",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "Type2Diabetes",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Metformin",
+          "target": "Treatment",
+          "target_label": "Treatment"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Metformin",
+          "target": "Type2Diabetes",
+          "target_label": "Type 2 Diabetes"
+        }
+      ],
+      "expanded_terms": [
+        "Blurred Vision",
+        "Cardiovascular Disease",
+        "Diabetes Mellitus",
+        "Excessive Thirst",
+        "Fasting Blood Glucose Test",
+        "Fatigue",
+        "Frequent Urination",
+        "Hemoglobin A1c Test",
+        "Insulin",
+        "Lifestyle Modification",
+        "Metabolic Disease",
+        "Metabolic Syndrome",
+        "Metformin",
+        "Obesity",
+        "Sugar Disease",
+        "Treatment",
+        "Type 1 Diabetes",
+        "Type 2 Diabetes",
+        "Unexplained Weight Loss"
+      ]
+    }
+  },
+  {
+    "query_id": "q_F03",
+    "category": "control_exact_clinical",
+    "trace": {
+      "original_query": "What are the indication criteria for Coronary Artery Bypass Grafting?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#CABG",
+          "concept_id": "CABG",
+          "label": "Coronary Artery Bypass Grafting",
+          "term": "coronary artery bypass grafting"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "CABG",
+          "target": "Treatment",
+          "target_label": "Treatment"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "CABG",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "CABG",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Coronary Artery Disease",
+        "Myocardial Infarction",
+        "Treatment"
+      ]
+    }
+  },
+  {
+    "query_id": "q_F04",
+    "category": "control_exact_clinical",
+    "trace": {
+      "original_query": "What is the mechanism of action of ACE Inhibitors in Hypertension?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#ACEInhibitor",
+          "concept_id": "ACEInhibitor",
+          "label": "ACE Inhibitor",
+          "term": "ace inhibitor"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Hypertension",
+          "concept_id": "Hypertension",
+          "label": "Hypertension",
+          "term": "hypertension"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "ACEInhibitor",
+          "target": "Treatment",
+          "target_label": "Treatment"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "ACEInhibitor",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "ACEInhibitor",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "ACEInhibitor",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "equivalentClass",
+          "source": "Hypertension",
+          "target": "HighBloodPressure",
+          "target_label": "High Blood Pressure"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Hypertension",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Hypertension",
+          "target": "BlurredVision",
+          "target_label": "Blurred Vision"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Hypertension",
+          "target": "Dizziness",
+          "target_label": "Dizziness"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Hypertension",
+          "target": "Headache",
+          "target_label": "Headache"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Hypertension",
+          "target": "ACEInhibitor",
+          "target_label": "ACE Inhibitor"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Hypertension",
+          "target": "ARB",
+          "target_label": "Angiotensin II Receptor Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Hypertension",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Hypertension",
+          "target": "CalciumChannelBlocker",
+          "target_label": "Calcium Channel Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Hypertension",
+          "target": "Diuretic",
+          "target_label": "Diuretic"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Hypertension",
+          "target": "LifestyleModification",
+          "target_label": "Lifestyle Modification"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "Hypertension",
+          "target": "BloodPressureTest",
+          "target_label": "Blood Pressure Measurement"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "Hypertension",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "Hypertension",
+          "target": "HeartFailure",
+          "target_label": "Heart Failure"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "Hypertension",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "Hypertension",
+          "target": "MetabolicSyndrome",
+          "target_label": "Metabolic Syndrome"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "Hypertension",
+          "target": "Obesity",
+          "target_label": "Obesity"
+        }
+      ],
+      "expanded_terms": [
+        "ACE Inhibitor",
+        "Angiotensin II Receptor Blocker",
+        "Beta Blocker",
+        "Blood Pressure Measurement",
+        "Blurred Vision",
+        "Calcium Channel Blocker",
+        "Cardiovascular Disease",
+        "Coronary Artery Disease",
+        "Diuretic",
+        "Dizziness",
+        "Headache",
+        "Heart Failure",
+        "High Blood Pressure",
+        "Hypertension",
+        "Lifestyle Modification",
+        "Metabolic Syndrome",
+        "Myocardial Infarction",
+        "Obesity",
+        "Stroke",
+        "Treatment"
+      ]
+    }
+  },
+  {
+    "query_id": "q_F05",
+    "category": "control_exact_clinical",
+    "trace": {
+      "original_query": "What ECG findings characterize Atrial Fibrillation?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#AtrialFibrillation",
+          "concept_id": "AtrialFibrillation",
+          "label": "Atrial Fibrillation",
+          "term": "atrial fibrillation"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "AtrialFibrillation",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "AtrialFibrillation",
+          "target": "Dizziness",
+          "target_label": "Dizziness"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "AtrialFibrillation",
+          "target": "Fatigue",
+          "target_label": "Fatigue"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "AtrialFibrillation",
+          "target": "Palpitations",
+          "target_label": "Palpitations"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "AtrialFibrillation",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "AtrialFibrillation",
+          "target": "Anticoagulant",
+          "target_label": "Anticoagulant"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "AtrialFibrillation",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "AtrialFibrillation",
+          "target": "CalciumChannelBlocker",
+          "target_label": "Calcium Channel Blocker"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "AtrialFibrillation",
+          "target": "ECG",
+          "target_label": "Electrocardiogram"
+        }
+      ],
+      "expanded_terms": [
+        "Anticoagulant",
+        "Arrhythmia",
+        "Beta Blocker",
+        "Calcium Channel Blocker",
+        "Dizziness",
+        "Electrocardiogram",
+        "Fatigue",
+        "Palpitations",
+        "Shortness of Breath"
+      ]
+    }
+  },
+  {
+    "query_id": "q_F06",
+    "category": "control_exact_clinical",
+    "trace": {
+      "original_query": "How is Percutaneous Coronary Intervention performed in Myocardial Infarction?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#MyocardialInfarction",
+          "concept_id": "MyocardialInfarction",
+          "label": "Myocardial Infarction",
+          "term": "myocardial infarction"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "equivalentClass",
+          "source": "MyocardialInfarction",
+          "target": "HeartAttack",
+          "target_label": "Heart Attack"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "MyocardialInfarction",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "MyocardialInfarction",
+          "target": "ChestPain",
+          "target_label": "Chest Pain"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "MyocardialInfarction",
+          "target": "JawPain",
+          "target_label": "Jaw Pain"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "MyocardialInfarction",
+          "target": "Nausea",
+          "target_label": "Nausea"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "MyocardialInfarction",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "MyocardialInfarction",
+          "target": "Sweating",
+          "target_label": "Sweating"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "MyocardialInfarction",
+          "target": "ACEInhibitor",
+          "target_label": "ACE Inhibitor"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "MyocardialInfarction",
+          "target": "Angioplasty",
+          "target_label": "Angioplasty"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "MyocardialInfarction",
+          "target": "Antiplatelet",
+          "target_label": "Antiplatelet Agent"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "MyocardialInfarction",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "MyocardialInfarction",
+          "target": "CABG",
+          "target_label": "Coronary Artery Bypass Grafting"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "MyocardialInfarction",
+          "target": "Thrombolytic",
+          "target_label": "Thrombolytic"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "MyocardialInfarction",
+          "target": "CardiacCatheterization",
+          "target_label": "Cardiac Catheterization"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "MyocardialInfarction",
+          "target": "ECG",
+          "target_label": "Electrocardiogram"
+        }
+      ],
+      "expanded_terms": [
+        "ACE Inhibitor",
+        "Angioplasty",
+        "Antiplatelet Agent",
+        "Beta Blocker",
+        "Cardiac Catheterization",
+        "Chest Pain",
+        "Coronary Artery Bypass Grafting",
+        "Coronary Artery Disease",
+        "Electrocardiogram",
+        "Heart Attack",
+        "Jaw Pain",
+        "Nausea",
+        "Shortness of Breath",
+        "Sweating",
+        "Thrombolytic"
+      ]
+    }
+  },
+  {
+    "query_id": "q_F07",
+    "category": "control_exact_clinical",
+    "trace": {
+      "original_query": "What is the therapeutic window for Thrombolytic therapy in Acute Ischemic Stroke?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#IschemicStroke",
+          "concept_id": "IschemicStroke",
+          "label": "Ischemic Stroke",
+          "term": "ischemic stroke"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Thrombolytic",
+          "concept_id": "Thrombolytic",
+          "label": "Thrombolytic",
+          "term": "thrombolytic"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Stroke",
+          "concept_id": "Stroke",
+          "label": "Stroke",
+          "term": "stroke"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "IschemicStroke",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Thrombolytic",
+          "target": "Treatment",
+          "target_label": "Treatment"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Thrombolytic",
+          "target": "MyocardialInfarction",
+          "target_label": "Myocardial Infarction"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Thrombolytic",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Stroke",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Stroke",
+          "target": "HemorrhagicStroke",
+          "target_label": "Hemorrhagic Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Stroke",
+          "target": "IschemicStroke",
+          "target_label": "Ischemic Stroke"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "BlurredVision",
+          "target_label": "Blurred Vision"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Dizziness",
+          "target_label": "Dizziness"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Headache",
+          "target_label": "Headache"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Numbness",
+          "target_label": "Numbness"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Anticoagulant",
+          "target_label": "Anticoagulant"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Antiplatelet",
+          "target_label": "Antiplatelet Agent"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Thrombolytic",
+          "target_label": "Thrombolytic"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "Stroke",
+          "target": "CTAngiography",
+          "target_label": "CT Angiography"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "Stroke",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        }
+      ],
+      "expanded_terms": [
+        "Anticoagulant",
+        "Antiplatelet Agent",
+        "Blurred Vision",
+        "CT Angiography",
+        "Cardiovascular Disease",
+        "Dizziness",
+        "Headache",
+        "Hemorrhagic Stroke",
+        "Hypertension",
+        "Ischemic Stroke",
+        "Myocardial Infarction",
+        "Numbness",
+        "Stroke",
+        "Thrombolytic",
+        "Treatment"
+      ]
+    }
+  },
+  {
+    "query_id": "q_F08",
+    "category": "control_exact_clinical",
+    "trace": {
+      "original_query": "What components constitute a comprehensive Lipid Panel assessment?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#LipidPanel",
+          "concept_id": "LipidPanel",
+          "label": "Lipid Panel",
+          "term": "lipid panel"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "LipidPanel",
+          "target": "DiagnosticTest",
+          "target_label": "DiagnosticTest"
+        },
+        {
+          "relation": "diagnosedBy (inverse)",
+          "source": "LipidPanel",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        }
+      ],
+      "expanded_terms": [
+        "DiagnosticTest",
+        "Hyperlipidemia"
+      ]
+    }
+  },
+  {
+    "query_id": "q_F09",
+    "category": "control_exact_clinical",
+    "trace": {
+      "original_query": "How does Sublingual Nitroglycerin relieve Angina Pectoris?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#Angina",
+          "concept_id": "Angina",
+          "label": "Angina Pectoris",
+          "term": "angina pectoris"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Nitroglycerin",
+          "concept_id": "Nitroglycerin",
+          "label": "Nitroglycerin",
+          "term": "nitroglycerin"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Angina",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Angina",
+          "target": "ChestPain",
+          "target_label": "Chest Pain"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Angina",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Angina",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Angina",
+          "target": "CalciumChannelBlocker",
+          "target_label": "Calcium Channel Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Angina",
+          "target": "Nitroglycerin",
+          "target_label": "Nitroglycerin"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Nitroglycerin",
+          "target": "Treatment",
+          "target_label": "Treatment"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Nitroglycerin",
+          "target": "Angina",
+          "target_label": "Angina Pectoris"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Nitroglycerin",
+          "target": "CoronaryArteryDisease",
+          "target_label": "Coronary Artery Disease"
+        }
+      ],
+      "expanded_terms": [
+        "Angina Pectoris",
+        "Beta Blocker",
+        "Calcium Channel Blocker",
+        "Chest Pain",
+        "Coronary Artery Disease",
+        "Nitroglycerin",
+        "Shortness of Breath",
+        "Treatment"
+      ]
+    }
+  },
+  {
+    "query_id": "q_F10",
+    "category": "control_exact_clinical",
+    "trace": {
+      "original_query": "What are the clinical diagnostic criteria for Metabolic Syndrome?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#MetabolicSyndrome",
+          "concept_id": "MetabolicSyndrome",
+          "label": "Metabolic Syndrome",
+          "term": "metabolic syndrome"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "MetabolicSyndrome",
+          "target": "MetabolicDisease",
+          "target_label": "Metabolic Disease"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "MetabolicSyndrome",
+          "target": "Hyperlipidemia",
+          "target_label": "Hyperlipidemia"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "MetabolicSyndrome",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        },
+        {
+          "relation": "relatedCondition",
+          "source": "MetabolicSyndrome",
+          "target": "Type2Diabetes",
+          "target_label": "Type 2 Diabetes"
+        }
+      ],
+      "expanded_terms": [
+        "Hyperlipidemia",
+        "Hypertension",
+        "Metabolic Disease",
+        "Type 2 Diabetes"
+      ]
+    }
+  },
+  {
+    "query_id": "q_F11",
+    "category": "control_exact_clinical",
+    "trace": {
+      "original_query": "How is Echocardiography utilized to measure ejection fraction in Heart Failure?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#HeartFailure",
+          "concept_id": "HeartFailure",
+          "label": "Heart Failure",
+          "term": "heart failure"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "HeartFailure",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "HeartFailure",
+          "target": "Edema",
+          "target_label": "Edema"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "HeartFailure",
+          "target": "Fatigue",
+          "target_label": "Fatigue"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "HeartFailure",
+          "target": "Palpitations",
+          "target_label": "Palpitations"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "HeartFailure",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "HeartFailure",
+          "target": "ACEInhibitor",
+          "target_label": "ACE Inhibitor"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "HeartFailure",
+          "target": "ARB",
+          "target_label": "Angiotensin II Receptor Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "HeartFailure",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "HeartFailure",
+          "target": "Diuretic",
+          "target_label": "Diuretic"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "HeartFailure",
+          "target": "LifestyleModification",
+          "target_label": "Lifestyle Modification"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "HeartFailure",
+          "target": "ECG",
+          "target_label": "Electrocardiogram"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "HeartFailure",
+          "target": "Echocardiogram",
+          "target_label": "Echocardiogram"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "HeartFailure",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        }
+      ],
+      "expanded_terms": [
+        "ACE Inhibitor",
+        "Angiotensin II Receptor Blocker",
+        "Beta Blocker",
+        "Cardiovascular Disease",
+        "Diuretic",
+        "Echocardiogram",
+        "Edema",
+        "Electrocardiogram",
+        "Fatigue",
+        "Hypertension",
+        "Lifestyle Modification",
+        "Palpitations",
+        "Shortness of Breath"
+      ]
+    }
+  },
+  {
+    "query_id": "q_F12",
+    "category": "control_exact_clinical",
+    "trace": {
+      "original_query": "What is the role of Anticoagulant therapy in Atrial Fibrillation stroke prevention?",
+      "matched_concepts": [
+        {
+          "uri": "http://example.org/medical-ontology#AtrialFibrillation",
+          "concept_id": "AtrialFibrillation",
+          "label": "Atrial Fibrillation",
+          "term": "atrial fibrillation"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Anticoagulant",
+          "concept_id": "Anticoagulant",
+          "label": "Anticoagulant",
+          "term": "anticoagulant"
+        },
+        {
+          "uri": "http://example.org/medical-ontology#Stroke",
+          "concept_id": "Stroke",
+          "label": "Stroke",
+          "term": "stroke"
+        }
+      ],
+      "expansions": [
+        {
+          "relation": "subClassOf (parent)",
+          "source": "AtrialFibrillation",
+          "target": "Arrhythmia",
+          "target_label": "Arrhythmia"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "AtrialFibrillation",
+          "target": "Dizziness",
+          "target_label": "Dizziness"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "AtrialFibrillation",
+          "target": "Fatigue",
+          "target_label": "Fatigue"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "AtrialFibrillation",
+          "target": "Palpitations",
+          "target_label": "Palpitations"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "AtrialFibrillation",
+          "target": "ShortnessOfBreath",
+          "target_label": "Shortness of Breath"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "AtrialFibrillation",
+          "target": "Anticoagulant",
+          "target_label": "Anticoagulant"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "AtrialFibrillation",
+          "target": "BetaBlocker",
+          "target_label": "Beta Blocker"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "AtrialFibrillation",
+          "target": "CalciumChannelBlocker",
+          "target_label": "Calcium Channel Blocker"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "AtrialFibrillation",
+          "target": "ECG",
+          "target_label": "Electrocardiogram"
+        },
+        {
+          "relation": "equivalentClass",
+          "source": "Anticoagulant",
+          "target": "BloodThinner",
+          "target_label": "Blood Thinner"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Anticoagulant",
+          "target": "Treatment",
+          "target_label": "Treatment"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Anticoagulant",
+          "target": "AtrialFibrillation",
+          "target_label": "Atrial Fibrillation"
+        },
+        {
+          "relation": "treatedBy (inverse)",
+          "source": "Anticoagulant",
+          "target": "Stroke",
+          "target_label": "Stroke"
+        },
+        {
+          "relation": "subClassOf (parent)",
+          "source": "Stroke",
+          "target": "CardiovascularDisease",
+          "target_label": "Cardiovascular Disease"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Stroke",
+          "target": "HemorrhagicStroke",
+          "target_label": "Hemorrhagic Stroke"
+        },
+        {
+          "relation": "subClassOf (child, depth=1)",
+          "source": "Stroke",
+          "target": "IschemicStroke",
+          "target_label": "Ischemic Stroke"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "BlurredVision",
+          "target_label": "Blurred Vision"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Dizziness",
+          "target_label": "Dizziness"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Headache",
+          "target_label": "Headache"
+        },
+        {
+          "relation": "hasSymptom",
+          "source": "Stroke",
+          "target": "Numbness",
+          "target_label": "Numbness"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Anticoagulant",
+          "target_label": "Anticoagulant"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Antiplatelet",
+          "target_label": "Antiplatelet Agent"
+        },
+        {
+          "relation": "treatedBy",
+          "source": "Stroke",
+          "target": "Thrombolytic",
+          "target_label": "Thrombolytic"
+        },
+        {
+          "relation": "diagnosedBy",
+          "source": "Stroke",
+          "target": "CTAngiography",
+          "target_label": "CT Angiography"
+        },
+        {
+          "relation": "relatedCondition (inverse)",
+          "source": "Stroke",
+          "target": "Hypertension",
+          "target_label": "Hypertension"
+        }
+      ],
+      "expanded_terms": [
+        "Anticoagulant",
+        "Antiplatelet Agent",
+        "Arrhythmia",
+        "Atrial Fibrillation",
+        "Beta Blocker",
+        "Blood Thinner",
+        "Blurred Vision",
+        "CT Angiography",
+        "Calcium Channel Blocker",
+        "Cardiovascular Disease",
+        "Dizziness",
+        "Electrocardiogram",
+        "Fatigue",
+        "Headache",
+        "Hemorrhagic Stroke",
+        "Hypertension",
+        "Ischemic Stroke",
+        "Numbness",
+        "Palpitations",
+        "Shortness of Breath",
+        "Stroke",
+        "Thrombolytic",
+        "Treatment"
+      ]
+    }
+  }
+]

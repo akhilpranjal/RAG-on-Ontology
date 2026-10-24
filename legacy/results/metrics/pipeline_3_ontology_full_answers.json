@@ -1,0 +1,2069 @@
+[
+  {
+    "query_id": "q_A01",
+    "category": "lay_terminology",
+    "query": "What causes high blood pressure?",
+    "answer": "Based on the provided documents, hypertension (high blood pressure) can be caused by the following:\n\n*   **Primary Aldosteronism (PA):** This condition results from excessive aldosterone production by one or both adrenal glands due to somatic or germline mutations in aldosterone-driver genes and aberrant adrenal expression of G-protein-coupled receptors. It is identified as an important cause of hypertension.\n*   **Metabolic Syndrome:** Hypertension is a component of metabolic syndrome, a cluster of conditions that also includes central obesity, hyperlipidemia, and elevated fasting glucose (insulin resistance).\n\nThe provided context does not contain enough information to provide an exhaustive list of all possible causes of high blood pressure.",
+    "concept_metrics": {
+      "precision": 0.16666666666666666,
+      "recall": 0.5,
+      "f1": 0.25,
+      "predicted_concepts": [
+        "HighBloodPressure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Insulin",
+        "MetabolicSyndrome",
+        "Obesity"
+      ],
+      "expected_concepts": [
+        "CardiovascularDisease",
+        "Hypertension"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 9,
+      "reason": "The answer correctly identifies hypertension and links it to metabolic syndrome, which is a major risk factor for cardiovascular disease."
+    }
+  },
+  {
+    "query_id": "q_A02",
+    "category": "lay_terminology",
+    "query": "What are the emergency signs of a heart attack?",
+    "answer": "Based on the provided documents, a myocardial infarction (heart attack) typically presents with the following emergency signs and symptoms:\n\n*   **Chest Pain:** Crushing chest pain or tightness that may radiate to the jaw and arm.\n*   **Respiratory Distress:** Shortness of breath.\n*   **Autonomic Symptoms:** Sweating.\n\nIf these symptoms persist, immediate evaluation via an electrocardiogram (ECG) is required to assess for a myocardial infarction.",
+    "concept_metrics": {
+      "precision": 0.42857142857142855,
+      "recall": 1.0,
+      "f1": 0.6,
+      "predicted_concepts": [
+        "ChestPain",
+        "ECG",
+        "HeartAttack",
+        "MyocardialInfarction",
+        "ShortnessOfBreath",
+        "Sweating",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "ChestPain",
+        "MyocardialInfarction",
+        "ShortnessOfBreath"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies the emergency signs of a myocardial infarction and includes all expected concepts."
+    }
+  },
+  {
+    "query_id": "q_A03",
+    "category": "lay_terminology",
+    "query": "How is sugar disease diagnosed?",
+    "answer": "Based on the provided documents, \"sugar disease\" is identified as Diabetes Mellitus. The diagnostic methods depend on the type of diabetes:\n\n*   **Type 1 Diabetes Mellitus:** Diagnosis is confirmed using a fasting blood glucose test and a hemoglobin A1c (HbA1c) test.\n*   **Type 2 Diabetes Mellitus:** Diagnostic monitoring relies on regular HbA1c testing. Additionally, the American Association of Clinical Endocrinology (AACE) provides specific algorithms for the diagnosis and management of adults with prediabetes and diabetes mellitus.\n\nMetabolic syndrome, which includes elevated fasting glucose (insulin resistance) as a diagnostic criterion, is also closely associated with the management of diabetes.",
+    "concept_metrics": {
+      "precision": 0.25,
+      "recall": 0.6666666666666666,
+      "f1": 0.36363636363636365,
+      "predicted_concepts": [
+        "DiabetesMellitus",
+        "Disease",
+        "FastingGlucose",
+        "Insulin",
+        "MetabolicSyndrome",
+        "SugarDisease",
+        "Type1Diabetes",
+        "Type2Diabetes"
+      ],
+      "expected_concepts": [
+        "DiabetesMellitus",
+        "FastingGlucose",
+        "HbA1c"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies Diabetes Mellitus and includes both the fasting glucose and HbA1c diagnostic criteria."
+    }
+  },
+  {
+    "query_id": "q_A04",
+    "category": "lay_terminology",
+    "query": "What do water pills do for heart problems?",
+    "answer": "Based on the provided documents, water pills (diuretics) are used in the pharmacological management of hypertension (high blood pressure). Hypertension is identified as a major risk factor for heart failure, stroke, and atherosclerosis. \n\nWhile the documents note that diuretics are a component of initial therapy for hypertension, they do not provide specific details on the physiological mechanism of how water pills treat heart problems beyond their role in managing high blood pressure.",
+    "concept_metrics": {
+      "precision": 0.42857142857142855,
+      "recall": 1.0,
+      "f1": 0.6,
+      "predicted_concepts": [
+        "Atherosclerosis",
+        "Diuretic",
+        "HeartFailure",
+        "HighBloodPressure",
+        "Hypertension",
+        "Stroke",
+        "WaterPill"
+      ],
+      "expected_concepts": [
+        "Diuretic",
+        "HeartFailure",
+        "Hypertension"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 5,
+      "reason": "The answer mentions hypertension but fails to explain that diuretics are used to treat heart failure itself, which was a required concept."
+    }
+  },
+  {
+    "query_id": "q_A05",
+    "category": "lay_terminology",
+    "query": "What causes leg pain when walking?",
+    "answer": "Leg pain when walking, clinically referred to as intermittent claudication, is caused by Peripheral Artery Disease (PAD). PAD is characterized by the atherosclerotic narrowing of the arteries that supply the legs, which restricts blood flow to the lower extremities.",
+    "concept_metrics": {
+      "precision": 0.5,
+      "recall": 0.6666666666666666,
+      "f1": 0.5714285714285715,
+      "predicted_concepts": [
+        "Claudication",
+        "Disease",
+        "LegPain",
+        "PeripheralArteryDisease"
+      ],
+      "expected_concepts": [
+        "Atherosclerosis",
+        "Claudication",
+        "PeripheralArteryDisease"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer accurately identifies intermittent claudication, Peripheral Artery Disease, and atherosclerosis as the cause of leg pain when walking."
+    }
+  },
+  {
+    "query_id": "q_A06",
+    "category": "lay_terminology",
+    "query": "What is the treatment for high cholesterol?",
+    "answer": "Based on the provided documents, the treatment for hyperlipidemia (high cholesterol) includes the following approaches:\n\n*   **Statin Therapy:** Statins are used to reduce low-density lipoprotein (LDL) cholesterol, which helps lower the incidence of coronary artery disease and myocardial infarction (Document 1). Statins are also indicated as part of the treatment for Peripheral Artery Disease (Document 6).\n*   **Lifestyle Modifications:** Comprehensive lifestyle modifications, specifically diet and exercise, are recommended to help manage hyperlipidemia and metabolic syndrome (Documents 5 and 8).\n*   **Metformin:** While primarily used for Type 2 Diabetes, metformin is noted to assist in the management of hyperlipidemia when combined with lifestyle modifications (Document 5).\n\nThe provided context does not contain information regarding the use of other medications listed in the ontology reasoning (such as ACE inhibitors, beta-blockers, or anticoagulants) specifically for the treatment of high cholesterol; those agents are indicated for other conditions like hypertension, atrial fibrillation, or coronary artery disease.",
+    "concept_metrics": {
+      "precision": 0.1875,
+      "recall": 1.0,
+      "f1": 0.3157894736842105,
+      "predicted_concepts": [
+        "ACEInhibitor",
+        "Anticoagulant",
+        "AtrialFibrillation",
+        "CoronaryArteryDisease",
+        "Disease",
+        "HighCholesterol",
+        "Hyperlipidemia",
+        "Hypertension",
+        "LifestyleModification",
+        "MetabolicSyndrome",
+        "Metformin",
+        "MyocardialInfarction",
+        "PeripheralArteryDisease",
+        "Statin",
+        "Treatment",
+        "Type2Diabetes"
+      ],
+      "expected_concepts": [
+        "Hyperlipidemia",
+        "LifestyleModification",
+        "Statin"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies hyperlipidemia, statins, and lifestyle modifications as the primary treatments."
+    }
+  },
+  {
+    "query_id": "q_A07",
+    "category": "lay_terminology",
+    "query": "Why do blood thinners prevent stroke?",
+    "answer": "Based on the provided documents, blood thinners (specifically anticoagulants) are used to prevent stroke by managing conditions that lead to clot formation. \n\nAccording to Document 5, Atrial Fibrillation is a cardiac arrhythmia characterized by rapid and irregular atrial activation, which necessitates the use of anticoagulants to prevent stroke. \n\nWhile the provided documents do not explicitly detail the physiological mechanism of how all \"blood thinners\" function, they establish the following:\n*   **Ischemic Stroke** occurs when an artery supplying the brain is obstructed by a clot (Document 1).\n*   **Anticoagulants** are identified as a treatment strategy to prevent stroke in patients with conditions like Atrial Fibrillation (Document 5).\n*   **Thrombolytics** (tPA) are used as an emergency intervention to dissolve existing clots and restore cerebral blood flow in cases of acute ischemic stroke (Document 1). \n\nIn summary, anticoagulants are utilized to prevent stroke by addressing the underlying cardiac arrhythmias that predispose patients to clot formation, thereby reducing the risk of an ischemic event.",
+    "concept_metrics": {
+      "precision": 0.375,
+      "recall": 1.0,
+      "f1": 0.5454545454545454,
+      "predicted_concepts": [
+        "Anticoagulant",
+        "Arrhythmia",
+        "AtrialFibrillation",
+        "BloodThinner",
+        "IschemicStroke",
+        "Stroke",
+        "Thrombolytic",
+        "Treatment"
+      ],
+      "expected_concepts": [
+        "Anticoagulant",
+        "AtrialFibrillation",
+        "Stroke"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies anticoagulants, stroke, and atrial fibrillation while explaining their relationship in preventing clot formation."
+    }
+  },
+  {
+    "query_id": "q_A08",
+    "category": "lay_terminology",
+    "query": "What causes an irregular heartbeat?",
+    "answer": "Based on the provided documents, an irregular heartbeat (arrhythmia) can be caused by several conditions:\n\n*   **Atrial Fibrillation:** This is a common cardiac arrhythmia characterized by rapid and irregular atrial activation. Its development is linked to atrial myocardial inflammation and fibrosis, which may occur in response to pressure or volume overload, myocardial infarction, or metabolic alterations. Additionally, impaired atrial lymphangiogenesis (the formation of lymphatic vessels) has been identified as a critical determinant in its pathogenesis.\n*   **Premature Ventricular Complexes (PVCs):** These are early ventricular contractions triggered by an ectopic focus (an abnormal site of electrical activity) within the ventricle.\n*   **Short-Coupled Ventricular Fibrillation (SCVF):** This is a phenotype of idiopathic ventricular fibrillation (IVF) typically initiated by a trigger premature ventricular contraction with a short-coupling interval of less than 350 milliseconds.\n*   **Purkinje-Related Ventricular Tachycardias:** These include specific tachycardias related to the Purkinje system, such as idiopathic verapamil-sensitive fascicular ventricular tachycardia (FVT), non-re-entrant FVT, bundle branch re-entry, interfascicular re-entry, and Purkinje-mediated ventricular tachycardia (VT) in the context of structural heart disease.",
+    "concept_metrics": {
+      "precision": 0.3333333333333333,
+      "recall": 0.6666666666666666,
+      "f1": 0.4444444444444444,
+      "predicted_concepts": [
+        "Arrhythmia",
+        "AtrialFibrillation",
+        "Disease",
+        "HeartDisease",
+        "IrregularHeartbeat",
+        "MyocardialInfarction"
+      ],
+      "expected_concepts": [
+        "Arrhythmia",
+        "AtrialFibrillation",
+        "Palpitations"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies arrhythmia and atrial fibrillation, and while it does not explicitly use the word 'palpitations', it provides a comprehensive and accurate medical explanation of the causes of irregular heartbeats."
+    }
+  },
+  {
+    "query_id": "q_A09",
+    "category": "lay_terminology",
+    "query": "What causes chest tightness and breathlessness?",
+    "answer": "Based on the provided documents, chest tightness (chest pain) and breathlessness (shortness of breath) are clinical manifestations associated with the following conditions:\n\n*   **Angina Pectoris:** This condition presents as crushing chest pain or tightness that may radiate to the jaw and arm, frequently accompanied by shortness of breath and sweating (Document 1).\n*   **Atrial Fibrillation:** This cardiac arrhythmia is characterized by rapid and irregular atrial activation, with symptoms including shortness of breath, palpitations, dizziness, and fatigue (Document 2).\n*   **Heart Failure:** In this condition, the cardiac muscle is unable to pump sufficient blood, commonly manifesting as shortness of breath, fatigue, and edema (swollen legs) (Document 5).\n\nAdditionally, severe coronary artery disease (CAD) is noted as a condition that causes severe chest pain (angina), which may require revascularization procedures such as Coronary Artery Bypass Grafting (CABG) or angioplasty to relieve symptoms (Document 3).",
+    "concept_metrics": {
+      "precision": 0.15789473684210525,
+      "recall": 0.75,
+      "f1": 0.2608695652173913,
+      "predicted_concepts": [
+        "Angina",
+        "Angioplasty",
+        "Arrhythmia",
+        "AtrialFibrillation",
+        "Breathlessness",
+        "CABG",
+        "ChestPain",
+        "ChestTightness",
+        "CoronaryArteryDisease",
+        "Disease",
+        "Dizziness",
+        "Edema",
+        "Fatigue",
+        "HeartFailure",
+        "Palpitations",
+        "ShortnessOfBreath",
+        "Sweating",
+        "SwollenLegs",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "Angina",
+        "ChestPain",
+        "MyocardialInfarction",
+        "ShortnessOfBreath"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 6,
+      "reason": "The answer fails to include Myocardial Infarction, which was one of the required expected concepts."
+    }
+  },
+  {
+    "query_id": "q_A10",
+    "category": "lay_terminology",
+    "query": "What causes swollen legs in heart disease?",
+    "answer": "Based on the provided documents, swollen legs (edema) in the context of heart disease are a common manifestation of **heart failure**. Heart failure is a progressive cardiovascular condition in which the cardiac muscle is unable to pump a sufficient amount of blood, leading to symptoms such as edema, shortness of breath, and fatigue.",
+    "concept_metrics": {
+      "precision": 0.25,
+      "recall": 0.6666666666666666,
+      "f1": 0.36363636363636365,
+      "predicted_concepts": [
+        "Disease",
+        "Edema",
+        "Fatigue",
+        "HeartDisease",
+        "HeartFailure",
+        "ShortnessOfBreath",
+        "SwollenLegs",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "CardiovascularDisease",
+        "Edema",
+        "HeartFailure"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies edema, heart failure, and cardiovascular disease as the key components of the explanation."
+    }
+  },
+  {
+    "query_id": "q_A11",
+    "category": "lay_terminology",
+    "query": "What causes hardening of the arteries?",
+    "answer": "Hardening of the arteries is referred to as atherosclerosis. According to the provided documents, this condition is caused by the following:\n\n*   **Hyperlipidemia:** Elevated blood lipids contribute to the development of atherosclerosis (Document 1).\n*   **Atherothrombotic disease:** Peripheral artery disease (PAD) is described as a diffuse atherothrombotic disease of the arteries (Document 3).\n*   **Plaque formation:** The narrowing of arteries is associated with atheroma (Document 9), and acute coronary syndromes can be caused by coronary plaque rupture or coronary plaque erosion (Document 10).",
+    "concept_metrics": {
+      "precision": 0.5,
+      "recall": 0.6666666666666666,
+      "f1": 0.5714285714285715,
+      "predicted_concepts": [
+        "Atherosclerosis",
+        "Disease",
+        "Hyperlipidemia",
+        "PeripheralArteryDisease"
+      ],
+      "expected_concepts": [
+        "Atherosclerosis",
+        "Hyperlipidemia",
+        "Hypertension"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 6,
+      "reason": "The answer fails to mention hypertension, which was one of the required concepts."
+    }
+  },
+  {
+    "query_id": "q_A12",
+    "category": "lay_terminology",
+    "query": "What is the difference between a mini stroke and a stroke?",
+    "answer": "The provided context does not contain enough information to define or explain the difference between a \"mini stroke\" and a stroke.",
+    "concept_metrics": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "predicted_concepts": [
+        "Stroke"
+      ],
+      "expected_concepts": [
+        "IschemicStroke",
+        "Stroke"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 0,
+      "reason": "The model failed to answer the question despite it being common medical knowledge."
+    }
+  },
+  {
+    "query_id": "q_B01",
+    "category": "disease_hierarchy",
+    "query": "What specific conditions fall under cardiovascular disease?",
+    "answer": "Based on the provided documents, cardiovascular disease encompasses several specific conditions, including:\n\n*   **Coronary Artery Disease:** A condition associated with the hardening of the arteries (atherosclerosis) and the development of angina pectoris (a primary manifestation of ischemic heart disease) and myocardial infarction.\n*   **Peripheral Artery Disease (PAD):** A condition caused by the atherosclerotic narrowing of leg arteries, which can lead to intermittent claudication (leg pain when walking), chronic limb-threatening ischemia, or acute limb ischemia.\n*   **Arrhythmias:** Specifically Atrial Fibrillation, which is characterized by rapid and irregular atrial activation.\n*   **Hypertension:** Identified as a condition within the cluster of metabolic syndrome that increases the risk of coronary artery disease.\n*   **Atherosclerosis:** The hardening of the arteries, which is a contributing factor to cardiovascular disease.\n\nAdditionally, the provided documents note that metabolic syndrome—a cluster of conditions including central obesity, hypertension, hyperlipidemia, and elevated fasting glucose—exponentially increases the risk of developing coronary artery disease.",
+    "concept_metrics": {
+      "precision": 0.25,
+      "recall": 0.6666666666666666,
+      "f1": 0.36363636363636365,
+      "predicted_concepts": [
+        "Angina",
+        "Arrhythmia",
+        "Atherosclerosis",
+        "AtrialFibrillation",
+        "CardiovascularDisease",
+        "Claudication",
+        "CoronaryArteryDisease",
+        "Disease",
+        "HeartDisease",
+        "Hyperlipidemia",
+        "Hypertension",
+        "LegPain",
+        "MetabolicSyndrome",
+        "MyocardialInfarction",
+        "Obesity",
+        "PeripheralArteryDisease"
+      ],
+      "expected_concepts": [
+        "Arrhythmia",
+        "CardiovascularDisease",
+        "CoronaryArteryDisease",
+        "HeartFailure",
+        "Hypertension",
+        "Stroke"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 6,
+      "reason": "The answer failed to include 'Heart Failure' and 'Stroke', which were explicitly listed as expected concepts."
+    }
+  },
+  {
+    "query_id": "q_B02",
+    "category": "disease_hierarchy",
+    "query": "What are the types of diabetes mellitus?",
+    "answer": "Based on the provided documents, the types of diabetes mellitus mentioned are:\n\n*   **Type 1 Diabetes Mellitus:** An autoimmune metabolic disease characterized by the destruction of insulin-producing beta cells in the pancreas.\n*   **Type 2 Diabetes Mellitus:** A condition associated with insulin resistance and impaired insulin secretion, often linked to obesity and chronic nutrient excess.\n\nAdditionally, the provided context notes that new algorithms have been implemented to ensure that other causes and classes of diabetes are identified.",
+    "concept_metrics": {
+      "precision": 0.42857142857142855,
+      "recall": 1.0,
+      "f1": 0.6,
+      "predicted_concepts": [
+        "DiabetesMellitus",
+        "Disease",
+        "Insulin",
+        "MetabolicDisease",
+        "Obesity",
+        "Type1Diabetes",
+        "Type2Diabetes"
+      ],
+      "expected_concepts": [
+        "DiabetesMellitus",
+        "Type1Diabetes",
+        "Type2Diabetes"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies the main types of diabetes mellitus and acknowledges the existence of other classifications."
+    }
+  },
+  {
+    "query_id": "q_B03",
+    "category": "disease_hierarchy",
+    "query": "What diseases are classified as metabolic disorders?",
+    "answer": "Based on the provided context documents and the ontology reasoning provided, the following conditions are classified as metabolic disorders:\n\n*   **Metabolic Syndrome:** A cluster of conditions including central obesity, hypertension, hyperlipidemia, and elevated fasting glucose (insulin resistance).\n*   **Obesity:** Identified as a disease of affluence and a component of metabolic syndrome.\n*   **Hyperlipidemia:** Characterized by elevated blood lipids; it includes various genetic dyslipidemias such as familial hypercholesterolemia, familial dysbetalipoproteinemia, abetalipoproteinemia, familial hypobetalipoproteinemia, familial combined hypolipidemia, sitosterolemia, and hypoalphalipoproteinemias.\n*   **Diabetes Mellitus (specifically Type 2):** A condition involving insulin resistance and elevated glucose levels, managed through lifestyle modifications and pharmacotherapy like metformin.\n\nAdditionally, the ontology reasoning context categorizes these conditions under the broader classification of \"Metabolic Disease.\"",
+    "concept_metrics": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "predicted_concepts": [
+        "DiabetesMellitus",
+        "Disease",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Insulin",
+        "LifestyleModification",
+        "MetabolicDisease",
+        "MetabolicSyndrome",
+        "Metformin",
+        "Obesity"
+      ],
+      "expected_concepts": [
+        "DiabetesMellitus",
+        "Hyperlipidemia",
+        "MetabolicDisease",
+        "MetabolicSyndrome",
+        "Obesity"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies all required concepts and provides accurate descriptions for each."
+    }
+  },
+  {
+    "query_id": "q_B04",
+    "category": "disease_hierarchy",
+    "query": "What forms of stroke exist?",
+    "answer": "Based on the provided documents and the ontology reasoning context, there are two primary forms of stroke identified:\n\n*   **Ischemic Stroke:** This occurs when an artery supplying blood to the brain is obstructed by a clot. It is characterized by symptoms such as sudden numbness, severe headache, dizziness, and blurred vision. Diagnosis is typically supported by CT angiography, and emergency intervention may involve the use of thrombolytic therapy (tPA) to dissolve the clot and restore blood flow.\n*   **Hemorrhagic Stroke:** While the provided text documents focus primarily on the management and diagnosis of ischemic stroke and stroke mimics, the ontology reasoning context identifies hemorrhagic stroke as a form of stroke.\n\nAdditionally, the documents note that \"stroke mimics\"—conditions that resemble acute ischemic stroke—must be accurately differentiated from actual strokes to ensure appropriate care. These mimics include seizures, migraine, metabolic disorders, demyelinating diseases, and tumors.",
+    "concept_metrics": {
+      "precision": 0.2727272727272727,
+      "recall": 1.0,
+      "f1": 0.42857142857142855,
+      "predicted_concepts": [
+        "BlurredVision",
+        "CTAngiography",
+        "Disease",
+        "Dizziness",
+        "Headache",
+        "HemorrhagicStroke",
+        "IschemicStroke",
+        "Numbness",
+        "Stroke",
+        "Symptom",
+        "Thrombolytic"
+      ],
+      "expected_concepts": [
+        "HemorrhagicStroke",
+        "IschemicStroke",
+        "Stroke"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies both ischemic and hemorrhagic stroke as the primary forms of stroke."
+    }
+  },
+  {
+    "query_id": "q_B05",
+    "category": "disease_hierarchy",
+    "query": "What cardiac arrhythmias affect the heart rhythm?",
+    "answer": "Based on the provided documents, the following cardiac arrhythmias are identified as affecting heart rhythm:\n\n*   **Atrial Fibrillation:** A common, sustained cardiac arrhythmia characterized by rapid and irregular atrial activation. It is associated with structural and electrical remodeling of the atria, often involving inflammation, fibrosis, and metabolic alterations.\n*   **Premature Ventricular Complexes (PVCs):** Early ventricular contractions triggered by an ectopic focus within the ventricle. While common, they become clinically relevant when they cause symptoms or complications such as PVC-induced cardiomyopathy or malignant ventricular arrhythmias.\n*   **Ventricular Fibrillation (VF):** A life-threatening arrhythmia. A specific phenotype known as **Short-Coupled Ventricular Fibrillation (SCVF)** is identified as a cause of idiopathic ventricular fibrillation, typically triggered by a premature ventricular contraction with a short-coupling interval of less than 350 milliseconds.\n*   **Ventricular Tachycardia (VT):** Specifically, monomorphic ventricular tachycardias related to the Purkinje system. These include:\n    *   Idiopathic verapamil-sensitive fascicular ventricular tachycardia (FVT).\n    *   Non-re-entrant FVT.\n    *   Bundle branch re-entry and interfascicular re-entry.\n    *   Purkinje-mediated VT in the context of structural heart disease.",
+    "concept_metrics": {
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1": 0.5714285714285715,
+      "predicted_concepts": [
+        "Arrhythmia",
+        "AtrialFibrillation",
+        "Disease",
+        "HeartDisease",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "Arrhythmia",
+        "AtrialFibrillation"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies cardiac arrhythmias and includes the required concepts of arrhythmia and atrial fibrillation."
+    }
+  },
+  {
+    "query_id": "q_B06",
+    "category": "disease_hierarchy",
+    "query": "What clinical manifestations are related to coronary artery disease?",
+    "answer": "Based on the provided documents, the clinical manifestations and related conditions associated with coronary artery disease (CAD) include:\n\n*   **Angina Pectoris:** A primary manifestation of ischemic heart disease, characterized by crushing chest pain or tightness that may radiate to the jaw and arm. It is often accompanied by shortness of breath and sweating.\n*   **Myocardial Infarction:** A serious cardiovascular event that can result from CAD.\n*   **Ischemia:** CAD involves exercise-induced myocardial ischemia, which can be detected via cardiac stress testing.\n*   **Atherosclerosis:** CAD is related to atherosclerosis, which is the hardening of the arteries caused by the buildup of lipids.\n*   **Metabolic Syndrome:** This cluster of conditions—including central obesity, hypertension, hyperlipidemia, and insulin resistance—is a significant risk factor that increases the likelihood of developing CAD.\n\nAdditionally, the ontology reasoning context identifies **fatigue** as a symptom associated with coronary artery disease.",
+    "concept_metrics": {
+      "precision": 0.17647058823529413,
+      "recall": 1.0,
+      "f1": 0.3,
+      "predicted_concepts": [
+        "Angina",
+        "Atherosclerosis",
+        "ChestPain",
+        "CoronaryArteryDisease",
+        "Disease",
+        "Fatigue",
+        "HeartDisease",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Insulin",
+        "MetabolicSyndrome",
+        "MyocardialInfarction",
+        "Obesity",
+        "ShortnessOfBreath",
+        "StressTest",
+        "Sweating",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "Angina",
+        "CoronaryArteryDisease",
+        "MyocardialInfarction"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer directly addresses the question and includes all expected concepts while providing accurate clinical context."
+    }
+  },
+  {
+    "query_id": "q_B07",
+    "category": "disease_hierarchy",
+    "query": "What metabolic conditions are associated with obesity?",
+    "answer": "Based on the provided documents and the associated ontology reasoning, obesity is associated with the following metabolic conditions:\n\n*   **Metabolic Syndrome:** This is a cluster of conditions that includes central obesity, hypertension, hyperlipidemia, and elevated fasting glucose (insulin resistance).\n*   **Type 2 Diabetes Mellitus (T2D):** Obesity is a significant risk factor for the development of Type 2 Diabetes.\n*   **Hypertension:** Often present as part of the metabolic syndrome cluster associated with obesity.\n*   **Hyperlipidemia:** Elevated lipid levels are a component of metabolic syndrome.\n*   **Metabolic dysfunction-associated steatohepatitis (MASH) or metabolic dysfunction-associated steatotic liver disease (MASLD):** These are identified as exploratory efficacy outcomes related to obesity management.\n\nAdditionally, the provided context notes that obesity management often involves addressing comorbidities such as cardiovascular-kidney-metabolic syndrome and obstructive sleep apnea.",
+    "concept_metrics": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "predicted_concepts": [
+        "DiabetesMellitus",
+        "Disease",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Insulin",
+        "MetabolicSyndrome",
+        "Obesity",
+        "Type2Diabetes"
+      ],
+      "expected_concepts": [
+        "Hyperlipidemia",
+        "MetabolicSyndrome",
+        "Obesity",
+        "Type2Diabetes"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies all required concepts and provides additional relevant medical context."
+    }
+  },
+  {
+    "query_id": "q_B08",
+    "category": "disease_hierarchy",
+    "query": "What vascular diseases involve arterial occlusion?",
+    "answer": "Based on the provided documents, the following vascular diseases involve arterial occlusion:\n\n*   **Peripheral Artery Disease (PAD):** This condition is caused by atherosclerotic narrowing of the arteries supplying the legs. It is characterized by diffuse atherothrombotic disease, which can lead to intermittent claudication (leg pain when walking), chronic limb-threatening ischemia, or acute limb ischemia.\n*   **Coronary Artery Disease (CAD):** This condition involves the narrowing or blockage of coronary arteries, which can lead to severe chest pain (angina) and myocardial infarction.\n*   **Atherosclerosis:** Described as the \"hardening of the arteries,\" this is the underlying process of atherosclerotic narrowing that contributes to both Peripheral Artery Disease and Coronary Artery Disease.\n\nThe provided context notes that the diagnosis of Peripheral Artery Disease can be further complicated by the presence of arterial calcification.",
+    "concept_metrics": {
+      "precision": 0.375,
+      "recall": 1.0,
+      "f1": 0.5454545454545454,
+      "predicted_concepts": [
+        "Atherosclerosis",
+        "ChestPain",
+        "Claudication",
+        "CoronaryArteryDisease",
+        "Disease",
+        "LegPain",
+        "MyocardialInfarction",
+        "PeripheralArteryDisease"
+      ],
+      "expected_concepts": [
+        "Atherosclerosis",
+        "CoronaryArteryDisease",
+        "PeripheralArteryDisease"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies all expected concepts and explains their relationship to arterial occlusion."
+    }
+  },
+  {
+    "query_id": "q_B09",
+    "category": "disease_hierarchy",
+    "query": "What disorders are categorized under metabolic syndrome?",
+    "answer": "Based on the provided documents, metabolic syndrome is described as a cluster of conditions that includes the following:\n\n*   **Central obesity**\n*   **Hypertension** (high blood pressure)\n*   **Hyperlipidemia** (elevated blood lipids)\n*   **Elevated fasting glucose** (insulin resistance)\n\nThe presence of these conditions together significantly increases the risk of developing Type 2 Diabetes and coronary artery disease. Additionally, the provided ontology reasoning context identifies Type 2 Diabetes, hyperlipidemia, and hypertension as conditions related to metabolic syndrome.",
+    "concept_metrics": {
+      "precision": 0.5555555555555556,
+      "recall": 1.0,
+      "f1": 0.7142857142857143,
+      "predicted_concepts": [
+        "CoronaryArteryDisease",
+        "Disease",
+        "HighBloodPressure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Insulin",
+        "MetabolicSyndrome",
+        "Obesity",
+        "Type2Diabetes"
+      ],
+      "expected_concepts": [
+        "Hyperlipidemia",
+        "Hypertension",
+        "MetabolicSyndrome",
+        "Obesity",
+        "Type2Diabetes"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies all required concepts and accurately describes the components of metabolic syndrome."
+    }
+  },
+  {
+    "query_id": "q_B10",
+    "category": "disease_hierarchy",
+    "query": "What types of angina pectoris occur in heart disease?",
+    "answer": "Based on the provided documents, angina pectoris can be categorized based on the presence or absence of obstructive coronary artery disease (CAD) and the persistence of symptoms despite treatment:\n\n*   **Angina with Obstructive Coronary Artery Disease:** This occurs when there is significant blockage in the epicardial coronary arteries.\n*   **Ischemia with Non-Obstructed Coronary Arteries (INOCA/ANOCA):** Angina can occur in the absence of significant obstructive CAD. This category includes several specific endotypes:\n    *   **Microvascular angina:** Caused by coronary microcirculatory disorders.\n    *   **Vasospastic angina:** Caused by coronary vasospasm.\n    *   **Mixed type.**\n    *   **Non-coronary chest pain.**\n*   **Refractory Angina:** This is defined as persistent angina and ischemia that continues despite optimal pharmacological and revascularization therapies. It is now recognized that this can occur in patients with obstructive atherosclerotic disease as well as those with non-obstructive conditions (such as microcirculatory disorders or vasospasm) that were previously excluded from the conventional definition.\n\nAdditionally, angina is often described as \"stable\" when managed through a patient-centered approach integrating medical therapy, lifestyle interventions, and revascularization.",
+    "concept_metrics": {
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "predicted_concepts": [
+        "Angina",
+        "ChestPain",
+        "CoronaryArteryDisease",
+        "Disease",
+        "Symptom",
+        "Treatment"
+      ],
+      "expected_concepts": [
+        "Angina",
+        "CoronaryArteryDisease"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer accurately categorizes angina pectoris in the context of coronary artery disease and includes all expected concepts."
+    }
+  },
+  {
+    "query_id": "q_B11",
+    "category": "disease_hierarchy",
+    "query": "What high blood pressure sub-conditions or complications exist?",
+    "answer": "Based on the provided documents, hypertension (high blood pressure) is associated with the following sub-conditions, causes, and complications:\n\n**Complications:**\n*   **Cardiovascular and Renal Issues:** Hypertension is a major risk factor for heart failure, stroke, atherosclerosis (hardening of the arteries), and coronary artery disease. It is also linked to chronic kidney disease and increased renal morbidity.\n*   **Metabolic Impact:** Hypertension is a component of Metabolic Syndrome, a cluster of conditions that includes central obesity, hyperlipidemia, and elevated fasting glucose (insulin resistance). This syndrome exponentially increases the risk of developing Type 2 Diabetes and coronary artery disease.\n\n**Underlying Causes/Sub-conditions:**\n*   **Primary Aldosteronism (PA):** This is a specific cause of hypertension resulting from excessive aldosterone production by the adrenal glands. It is driven by somatic or germline mutations in aldosterone-driver genes and the aberrant expression of G-protein-coupled receptors, leading to increased cardiovascular and renal morbidities.",
+    "concept_metrics": {
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4,
+      "predicted_concepts": [
+        "Atherosclerosis",
+        "CoronaryArteryDisease",
+        "Disease",
+        "HeartFailure",
+        "HighBloodPressure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Insulin",
+        "MetabolicSyndrome",
+        "Obesity",
+        "Stroke",
+        "Type2Diabetes"
+      ],
+      "expected_concepts": [
+        "HeartFailure",
+        "Hypertension",
+        "Stroke"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer directly addresses the question and includes all expected concepts (hypertension, heart failure, and stroke)."
+    }
+  },
+  {
+    "query_id": "q_B12",
+    "category": "disease_hierarchy",
+    "query": "What disorders involve lipid metabolism impairment?",
+    "answer": "Based on the provided documents, several disorders involve lipid metabolism impairment, categorized primarily as genetic dyslipidemias or metabolic conditions:\n\n**Genetic Dyslipidemias**\nThese are monogenic defects that significantly alter the function of proteins involved in lipid metabolism:\n*   **Familial Hypercholesterolemia (FH):** Characterized by lifelong elevated LDL cholesterol. It exists in two forms:\n    *   **Heterozygous FH (HeFH):** Affects approximately 1 in 300 people and is associated with a very high risk of premature coronary artery disease.\n    *   **Homozygous FH (HoFH):** A rare, severe form affecting approximately 1 in 300,000 people, characterized by early extravascular lipid deposits and extreme risk of atherosclerotic cardiovascular disease (ASCVD) in childhood. It is caused by mutations in genes coding for the LDL-receptor, apoB100, PCSK9, or LDLRAP1.\n*   **Familial Chylomicronemia Syndrome (FCS):** A major form of genetic hypertriglyceridemia caused by mutations in genes encoding lipoprotein lipase or its cofactors (apoC-II, apoA-V, GPIHBP1, or LMF1). Patients exhibit markedly elevated plasma triglycerides (>10 mmol/L) and are at high risk for acute pancreatitis.\n*   **Other Rare Genetic Dyslipidemias:** These include familial dysbetalipoproteinemia, abetalipoproteinemia, familial hypobetalipoproteinemia, familial combined hypolipidemia, sitosterolemia, and hypoalphalipoproteinemias.\n*   **Other Forms of Genetic Hypertriglyceridemia:** Congenital familial partial lipodystrophy and glycogen storage diseases.\n\n**Metabolic Conditions**\n*   **Hyperlipidemia:** Characterized by elevated blood lipids, which contributes to the development of atherosclerosis (hardening of the arteries).\n*   **Metabolic Syndrome:** A cluster of conditions that includes hyperlipidemia, central obesity, hypertension, and elevated fasting glucose (insulin resistance). This syndrome increases the risk of Type 2 Diabetes and coronary artery disease.\n*   **Polycystic Ovary Syndrome (PCOS/PMOS):** Identified as an endocrinologic disorder, though the provided context notes that its specific pathophysiology remains not entirely known.",
+    "concept_metrics": {
+      "precision": 0.3,
+      "recall": 1.0,
+      "f1": 0.4615384615384615,
+      "predicted_concepts": [
+        "Atherosclerosis",
+        "CardiovascularDisease",
+        "CoronaryArteryDisease",
+        "Disease",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Insulin",
+        "MetabolicSyndrome",
+        "Obesity",
+        "Type2Diabetes"
+      ],
+      "expected_concepts": [
+        "Atherosclerosis",
+        "Hyperlipidemia",
+        "MetabolicSyndrome"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer directly addresses the question and includes all expected concepts: hyperlipidemia, metabolic syndrome, and atherosclerosis."
+    }
+  },
+  {
+    "query_id": "q_C01",
+    "category": "symptom_reasoning",
+    "query": "What diseases present with chest pain and shortness of breath?",
+    "answer": "Based on the provided documents, the following diseases or conditions present with both chest pain (or chest tightness) and shortness of breath:\n\n*   **Angina Pectoris:** This condition presents as crushing chest pain or tightness that may radiate to the jaw and arm, frequently accompanied by shortness of breath and sweating (Document 1).\n*   **Myocardial Infarction:** This condition is associated with the symptoms of angina pectoris, including chest pain and shortness of breath (Document 1).\n*   **Atrial Fibrillation:** While primarily an arrhythmia, this condition is characterized by symptoms including palpitations, dizziness, fatigue, and shortness of breath (Document 4). Note: While the ontology reasoning links this to the symptoms, the provided text specifically lists shortness of breath but does not explicitly list chest pain as a primary symptom for Atrial Fibrillation.\n\nAdditionally, while **Coronary Artery Disease (CAD)** is a broader condition that causes these symptoms (often manifesting as angina), the documents note that procedures to treat severe CAD, such as Coronary Artery Bypass Grafting (CABG) and angioplasty, are performed specifically to relieve severe chest pain (angina) (Document 9).",
+    "concept_metrics": {
+      "precision": 0.1875,
+      "recall": 0.75,
+      "f1": 0.3,
+      "predicted_concepts": [
+        "Angina",
+        "Angioplasty",
+        "Arrhythmia",
+        "AtrialFibrillation",
+        "CABG",
+        "ChestPain",
+        "ChestTightness",
+        "CoronaryArteryDisease",
+        "Disease",
+        "Dizziness",
+        "Fatigue",
+        "MyocardialInfarction",
+        "Palpitations",
+        "ShortnessOfBreath",
+        "Sweating",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "Angina",
+        "CoronaryArteryDisease",
+        "HeartFailure",
+        "MyocardialInfarction"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies all expected concepts and provides accurate clinical context for each."
+    }
+  },
+  {
+    "query_id": "q_C02",
+    "category": "symptom_reasoning",
+    "query": "What condition causes polyuria, polydipsia, and unexplained weight loss?",
+    "answer": "Based on the provided documents, Type 1 Diabetes Mellitus is the condition characterized by frequent urination (polyuria), excessive thirst (polydipsia), fatigue, and unexplained weight loss. It is an autoimmune metabolic disease resulting from the destruction of insulin-producing beta cells in the pancreas.",
+    "concept_metrics": {
+      "precision": 0.4444444444444444,
+      "recall": 1.0,
+      "f1": 0.6153846153846153,
+      "predicted_concepts": [
+        "DiabetesMellitus",
+        "Disease",
+        "ExcessiveThirst",
+        "Fatigue",
+        "FrequentUrination",
+        "Insulin",
+        "MetabolicDisease",
+        "Type1Diabetes",
+        "UnexplainedWeightLoss"
+      ],
+      "expected_concepts": [
+        "DiabetesMellitus",
+        "ExcessiveThirst",
+        "FrequentUrination",
+        "Type1Diabetes"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies Type 1 Diabetes Mellitus and includes all expected concepts."
+    }
+  },
+  {
+    "query_id": "q_C03",
+    "category": "symptom_reasoning",
+    "query": "What cardiovascular disorders produce peripheral edema and fatigue?",
+    "answer": "Based on the provided documents, the cardiovascular disorder identified as producing both peripheral edema (swollen legs) and fatigue is **heart failure**.\n\nAccording to Document 1, heart failure is a progressive condition where the cardiac muscle cannot pump sufficient blood, and its common manifestations include edema (swollen legs), shortness of breath, and fatigue. \n\nWhile other conditions mentioned in the documents, such as Atrial Fibrillation (Document 2), may cause fatigue, the provided context does not list peripheral edema as a symptom for those conditions.",
+    "concept_metrics": {
+      "precision": 0.42857142857142855,
+      "recall": 1.0,
+      "f1": 0.6,
+      "predicted_concepts": [
+        "AtrialFibrillation",
+        "Edema",
+        "Fatigue",
+        "HeartFailure",
+        "ShortnessOfBreath",
+        "SwollenLegs",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "Edema",
+        "Fatigue",
+        "HeartFailure"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies heart failure as the cardiovascular disorder and includes all expected concepts."
+    }
+  },
+  {
+    "query_id": "q_C04",
+    "category": "symptom_reasoning",
+    "query": "What condition causes sudden facial numbness, dizziness, and vision disturbance?",
+    "answer": "Based on the provided documents, the condition characterized by sudden numbness, dizziness, and blurred vision is **Acute Ischemic Stroke**.\n\nAccording to Document 1, an acute ischemic stroke occurs when an artery supplying blood to the brain is obstructed by a clot, leading to these specific symptoms. The document emphasizes that this is a time-sensitive medical emergency requiring rapid diagnosis via CT angiography and intervention with intravenous thrombolytic therapy (tPA) to dissolve the clot and restore cerebral blood flow.",
+    "concept_metrics": {
+      "precision": 0.625,
+      "recall": 1.0,
+      "f1": 0.7692307692307693,
+      "predicted_concepts": [
+        "BlurredVision",
+        "CTAngiography",
+        "Dizziness",
+        "IschemicStroke",
+        "Numbness",
+        "Stroke",
+        "Symptom",
+        "Thrombolytic"
+      ],
+      "expected_concepts": [
+        "BlurredVision",
+        "Dizziness",
+        "IschemicStroke",
+        "Numbness",
+        "Stroke"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies the condition and includes all expected concepts while providing accurate clinical context."
+    }
+  },
+  {
+    "query_id": "q_C05",
+    "category": "symptom_reasoning",
+    "query": "What arrhythmia presents with palpitations and lightheadedness?",
+    "answer": "Based on the provided documents, **Atrial Fibrillation** is the arrhythmia identified as presenting with palpitations. While the documents note that atrial fibrillation is characterized by rapid and irregular atrial activation and list \"dizziness\" (a term synonymous with lightheadedness) as a key symptom, the provided context does not explicitly link \"lightheadedness\" to other specific arrhythmias.\n\nThe provided context does not contain enough information to fully answer this question regarding other arrhythmias that may present with this specific combination of symptoms.",
+    "concept_metrics": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.888888888888889,
+      "predicted_concepts": [
+        "Arrhythmia",
+        "AtrialFibrillation",
+        "Dizziness",
+        "Palpitations",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "Arrhythmia",
+        "AtrialFibrillation",
+        "Dizziness",
+        "Palpitations"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies atrial fibrillation and addresses all expected concepts while acknowledging the limitations of the provided context."
+    }
+  },
+  {
+    "query_id": "q_C06",
+    "category": "symptom_reasoning",
+    "query": "What vascular disorder produces leg pain specifically triggered by walking?",
+    "answer": "The vascular disorder that produces leg pain specifically triggered by walking is **Peripheral Artery Disease (PAD)**.\n\nAccording to the provided documents, PAD is caused by atherosclerotic narrowing of the arteries in the legs. The hallmark symptom of this condition is **intermittent claudication**, which is defined as leg pain that occurs during walking. This symptom is often accompanied by lower extremity numbness and can significantly impact a patient's ability to complete walking tests without resting.",
+    "concept_metrics": {
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "f1": 0.5,
+      "predicted_concepts": [
+        "Claudication",
+        "Disease",
+        "Numbness",
+        "PeripheralArteryDisease",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "Atherosclerosis",
+        "Claudication",
+        "PeripheralArteryDisease"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies Peripheral Artery Disease, explains the mechanism of atherosclerosis, and defines the symptom as intermittent claudication."
+    }
+  },
+  {
+    "query_id": "q_C07",
+    "category": "symptom_reasoning",
+    "query": "What symptoms accompany acute myocardial infarction besides chest pain?",
+    "answer": "Based on the provided documents, acute myocardial infarction (often presenting as angina pectoris) is characterized by crushing chest pain or tightness that may radiate to the jaw and arm. Accompanying symptoms frequently include:\n\n*   **Shortness of breath**\n*   **Sweating**\n\nAdditionally, the ontology reasoning context identifies **jaw pain** and **nausea** as symptoms associated with myocardial infarction.",
+    "concept_metrics": {
+      "precision": 0.625,
+      "recall": 1.0,
+      "f1": 0.7692307692307693,
+      "predicted_concepts": [
+        "Angina",
+        "ChestPain",
+        "JawPain",
+        "MyocardialInfarction",
+        "Nausea",
+        "ShortnessOfBreath",
+        "Sweating",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "JawPain",
+        "MyocardialInfarction",
+        "Nausea",
+        "ShortnessOfBreath",
+        "Sweating"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies all expected symptoms associated with acute myocardial infarction."
+    }
+  },
+  {
+    "query_id": "q_C08",
+    "category": "symptom_reasoning",
+    "query": "What symptoms indicate severe uncontrolled hypertension?",
+    "answer": "The provided context does not contain enough information to explicitly define the symptoms of \"severe uncontrolled hypertension.\" \n\nWhile the provided documents and ontology reasoning identify hypertension as a condition and list various symptoms associated with cardiovascular issues (such as headache, dizziness, and blurred vision), the documents do not specifically categorize these or any other symptoms as indicators of \"severe uncontrolled\" hypertension.",
+    "concept_metrics": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.888888888888889,
+      "predicted_concepts": [
+        "BlurredVision",
+        "Dizziness",
+        "Headache",
+        "Hypertension",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "BlurredVision",
+        "Dizziness",
+        "Headache",
+        "Hypertension"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 2,
+      "reason": "The model failed to answer the question based on general medical knowledge, instead incorrectly claiming it lacked sufficient information."
+    }
+  },
+  {
+    "query_id": "q_C09",
+    "category": "symptom_reasoning",
+    "query": "What cardiac condition causes exertional angina radiating to the jaw?",
+    "answer": "Based on the provided documents, angina pectoris is the condition characterized by crushing chest pain or tightness that may radiate to the jaw and arm. This condition is a primary manifestation of ischemic heart disease and can arise from:\n\n*   **Obstructive coronary artery disease (CAD):** Where arterial stenoses (blockages) restrict blood flow.\n*   **Ischemia with nonobstructed coronary arteries (INOCA):** Where angina occurs in the absence of significant obstructive CAD.\n\nThe documents note that cardiac stress testing is used to detect exercise-induced (exertional) myocardial ischemia, which is a key component in the evaluation of suspected coronary artery disease.",
+    "concept_metrics": {
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "predicted_concepts": [
+        "Angina",
+        "ChestPain",
+        "CoronaryArteryDisease",
+        "Disease",
+        "HeartDisease",
+        "StressTest"
+      ],
+      "expected_concepts": [
+        "Angina",
+        "ChestPain",
+        "CoronaryArteryDisease",
+        "JawPain"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies angina as a symptom of coronary artery disease and addresses all expected concepts including exertional chest pain and jaw radiation."
+    }
+  },
+  {
+    "query_id": "q_C10",
+    "category": "symptom_reasoning",
+    "query": "What metabolic disease causes constant fatigue and blurred vision?",
+    "answer": "The provided context does not contain enough information to fully answer this question. \n\nWhile Document 2 identifies fatigue as a symptom of Type 1 Diabetes Mellitus, and the ontology reasoning context associates both fatigue and blurred vision with Diabetes Mellitus, the provided documents do not explicitly state that any specific metabolic disease causes \"constant fatigue and blurred vision.\"",
+    "concept_metrics": {
+      "precision": 0.42857142857142855,
+      "recall": 0.75,
+      "f1": 0.5454545454545454,
+      "predicted_concepts": [
+        "BlurredVision",
+        "DiabetesMellitus",
+        "Disease",
+        "Fatigue",
+        "MetabolicDisease",
+        "Symptom",
+        "Type1Diabetes"
+      ],
+      "expected_concepts": [
+        "BlurredVision",
+        "DiabetesMellitus",
+        "Fatigue",
+        "Type2Diabetes"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 0,
+      "reason": "The model failed to answer the question based on general medical knowledge, instead relying on a restrictive context that was not provided."
+    }
+  },
+  {
+    "query_id": "q_D01",
+    "category": "treatment_reasoning",
+    "query": "What conditions are treated using ACE inhibitors and ARBs?",
+    "answer": "Based on the provided documents, ACE inhibitors and Angiotensin II Receptor Blockers (ARBs) are used in the initial therapy for **hypertension** (high blood pressure). \n\nAdditionally, the ontology reasoning context indicates that ACE inhibitors are used in the treatment of **heart failure** and **myocardial infarction**.",
+    "concept_metrics": {
+      "precision": 0.5714285714285714,
+      "recall": 1.0,
+      "f1": 0.7272727272727273,
+      "predicted_concepts": [
+        "ACEInhibitor",
+        "ARB",
+        "HeartFailure",
+        "HighBloodPressure",
+        "Hypertension",
+        "MyocardialInfarction",
+        "Treatment"
+      ],
+      "expected_concepts": [
+        "ACEInhibitor",
+        "ARB",
+        "HeartFailure",
+        "Hypertension"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies both drug classes and their primary indications of hypertension and heart failure."
+    }
+  },
+  {
+    "query_id": "q_D02",
+    "category": "treatment_reasoning",
+    "query": "What diseases require statin therapy for cholesterol reduction?",
+    "answer": "Based on the provided documents, statin therapy is indicated for cholesterol reduction in the following conditions:\n\n*   **Hyperlipidemia:** Characterized by elevated blood lipids, statins are used to reduce low-density lipoprotein (LDL) cholesterol.\n*   **Coronary Artery Disease (CAD):** Statin therapy is used to lower the incidence of coronary artery disease and myocardial infarction.\n*   **Peripheral Artery Disease (PAD):** Intensive cholesterol-lowering medications (statins) are recommended to prevent cardiovascular events in persons with PAD, which is caused by atherosclerotic narrowing of the leg arteries.\n*   **Metabolic Syndrome:** As part of the management for this cluster of conditions (which includes hyperlipidemia), pharmacotherapy, including statins, is utilized.\n\nAdditionally, the documents note that statins are part of the broader management strategies for atherosclerotic cardiovascular diseases.",
+    "concept_metrics": {
+      "precision": 0.375,
+      "recall": 0.75,
+      "f1": 0.5,
+      "predicted_concepts": [
+        "CardiovascularDisease",
+        "CoronaryArteryDisease",
+        "Disease",
+        "Hyperlipidemia",
+        "MetabolicSyndrome",
+        "MyocardialInfarction",
+        "PeripheralArteryDisease",
+        "Statin"
+      ],
+      "expected_concepts": [
+        "Atherosclerosis",
+        "CoronaryArteryDisease",
+        "Hyperlipidemia",
+        "Statin"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies the required medical concepts and provides accurate clinical context for statin therapy."
+    }
+  },
+  {
+    "query_id": "q_D03",
+    "category": "treatment_reasoning",
+    "query": "What conditions are treated with intravenous thrombolytic agents?",
+    "answer": "Based on the provided documents and the ontology reasoning context, intravenous thrombolytic therapy (tPA) is used to treat **acute ischemic stroke**. \n\nAccording to Document 1, this therapy is administered to dissolve the clot obstructing an artery in the brain to restore cerebral blood flow. The ontology reasoning context further indicates that thrombolytic agents are also associated with the treatment of myocardial infarction.",
+    "concept_metrics": {
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.7499999999999999,
+      "predicted_concepts": [
+        "IschemicStroke",
+        "MyocardialInfarction",
+        "Stroke",
+        "Thrombolytic",
+        "Treatment"
+      ],
+      "expected_concepts": [
+        "IschemicStroke",
+        "MyocardialInfarction",
+        "Thrombolytic"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies both acute ischemic stroke and myocardial infarction as conditions treated with intravenous thrombolytic agents."
+    }
+  },
+  {
+    "query_id": "q_D04",
+    "category": "treatment_reasoning",
+    "query": "What medications are prescribed for Type 2 Diabetes management?",
+    "answer": "Based on the provided documents, the following medications are prescribed for the management of Type 2 Diabetes (T2D):\n\n*   **Metformin:** This is the first-line oral antihyperglycemic treatment for T2D. It functions by improving insulin sensitivity, reducing hepatic (liver) glucose production, and inhibiting mitochondrial complex I in the intestinal epithelium to promote glycemic control.\n*   **Tirzepatide:** This is a once-weekly glucose-dependent insulinotropic polypeptide and glucagon-like peptide-1 receptor agonist (GLP-1RA). Clinical trials suggest that initiating treatment with tirzepatide early after a T2D diagnosis may establish better and more durable glycemic control compared to conventional treatment approaches.\n*   **Insulin:** While primarily the treatment for Type 1 Diabetes, the provided context includes algorithms for \"Initiating and Titrating Insulin\" in the management of adults with T2D.\n\nAdditionally, the management of T2D involves a complications- and comorbidities-centric approach, which includes the pharmacological treatment of associated atherosclerotic risk factors such as **dyslipidemia** and **hypertension**.",
+    "concept_metrics": {
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "predicted_concepts": [
+        "Hypertension",
+        "Insulin",
+        "Metformin",
+        "Treatment",
+        "Type1Diabetes",
+        "Type2Diabetes"
+      ],
+      "expected_concepts": [
+        "Insulin",
+        "LifestyleModification",
+        "Metformin",
+        "Type2Diabetes"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies Metformin and Insulin, addresses Type 2 Diabetes, and acknowledges the role of lifestyle/comprehensive management."
+    }
+  },
+  {
+    "query_id": "q_D05",
+    "category": "treatment_reasoning",
+    "query": "What drug classes control heart rate in atrial fibrillation?",
+    "answer": "Based on the provided documents, the drug classes used for rate control in atrial fibrillation are beta blockers and calcium channel blockers.",
+    "concept_metrics": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "predicted_concepts": [
+        "AtrialFibrillation",
+        "BetaBlocker",
+        "CalciumChannelBlocker"
+      ],
+      "expected_concepts": [
+        "Anticoagulant",
+        "AtrialFibrillation",
+        "BetaBlocker",
+        "CalciumChannelBlocker"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 6,
+      "reason": "The answer correctly identifies rate control medications but fails to include anticoagulants, which are a standard component of atrial fibrillation management."
+    }
+  },
+  {
+    "query_id": "q_D06",
+    "category": "treatment_reasoning",
+    "query": "What medication provides rapid relief for acute angina pectoris?",
+    "answer": "Sublingual nitroglycerin is the medication used to provide rapid relief for acute angina pectoris symptoms. It functions as a potent vasodilator to alleviate the crushing chest pain or tightness associated with the condition.",
+    "concept_metrics": {
+      "precision": 0.5,
+      "recall": 0.6666666666666666,
+      "f1": 0.5714285714285715,
+      "predicted_concepts": [
+        "Angina",
+        "ChestPain",
+        "Nitroglycerin",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "Angina",
+        "CoronaryArteryDisease",
+        "Nitroglycerin"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies nitroglycerin as the treatment for acute angina and implies the context of coronary artery disease."
+    }
+  },
+  {
+    "query_id": "q_D07",
+    "category": "treatment_reasoning",
+    "query": "What surgical revascularization procedures treat severe coronary artery stenosis?",
+    "answer": "Based on the provided documents, the surgical revascularization procedures used to treat severe coronary artery disease (CAD) and arterial stenosis are:\n\n*   **Coronary Artery Bypass Grafting (CABG):** An open surgical procedure that bypasses blocked arteries to restore blood flow.\n*   **Angioplasty (Percutaneous Coronary Intervention):** A procedure that utilizes stenting to restore blood flow through the artery.\n\nThese procedures are typically performed after cardiac catheterization (coronary angiography) is used to directly visualize arterial stenoses. While revascularization is used to alleviate symptoms (such as angina) or improve prognosis, it is generally reserved for select cases, with optimal medical therapy serving as the cornerstone of treatment for obstructive coronary artery disease.",
+    "concept_metrics": {
+      "precision": 0.42857142857142855,
+      "recall": 1.0,
+      "f1": 0.6,
+      "predicted_concepts": [
+        "Angioplasty",
+        "CABG",
+        "CardiacCatheterization",
+        "CoronaryArteryDisease",
+        "Disease",
+        "Symptom",
+        "Treatment"
+      ],
+      "expected_concepts": [
+        "Angioplasty",
+        "CABG",
+        "CoronaryArteryDisease"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies CABG and angioplasty as treatments for coronary artery disease and stenosis."
+    }
+  },
+  {
+    "query_id": "q_D08",
+    "category": "treatment_reasoning",
+    "query": "What therapeutic options treat fluid overload in heart failure?",
+    "answer": "Based on the provided documents, the management of heart failure involves several therapeutic strategies. While the documents identify **diuretics** (water pills) as a pharmacological option for hypertension and note that heart failure is characterized by edema (swollen legs), the provided text does not explicitly link diuretics as the specific treatment for fluid overload in heart failure.\n\nHowever, according to the provided **Ontology Reasoning Context**, diuretics are listed as a therapeutic option for heart failure. Other therapeutic options for heart failure mentioned in the ontology include:\n\n*   **ACE Inhibitors**\n*   **Angiotensin II Receptor Blockers (ARBs)**\n*   **Beta Blockers**\n*   **Lifestyle Modification**\n\nThe provided documents do not contain further specific details regarding the management of fluid overload beyond these general therapeutic categories.",
+    "concept_metrics": {
+      "precision": 0.36363636363636365,
+      "recall": 1.0,
+      "f1": 0.5333333333333333,
+      "predicted_concepts": [
+        "ACEInhibitor",
+        "ARB",
+        "BetaBlocker",
+        "Diuretic",
+        "Edema",
+        "HeartFailure",
+        "Hypertension",
+        "LifestyleModification",
+        "SwollenLegs",
+        "Treatment",
+        "WaterPill"
+      ],
+      "expected_concepts": [
+        "ACEInhibitor",
+        "BetaBlocker",
+        "Diuretic",
+        "HeartFailure"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 9,
+      "reason": "The answer correctly identifies the required therapeutic concepts for heart failure, though it expresses unnecessary hesitation regarding the role of diuretics in fluid overload."
+    }
+  },
+  {
+    "query_id": "q_D09",
+    "category": "treatment_reasoning",
+    "query": "What first-line pharmacological treatment is given for Type 1 Diabetes?",
+    "answer": "According to Document 1, the primary treatment for Type 1 Diabetes Mellitus is the administration of exogenous insulin.",
+    "concept_metrics": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "predicted_concepts": [
+        "DiabetesMellitus",
+        "Insulin",
+        "Treatment",
+        "Type1Diabetes"
+      ],
+      "expected_concepts": [
+        "Insulin",
+        "Type1Diabetes"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies exogenous insulin as the first-line treatment for Type 1 Diabetes."
+    }
+  },
+  {
+    "query_id": "q_D10",
+    "category": "treatment_reasoning",
+    "query": "What antiplatelet and anticoagulant medications reduce thrombosis risk?",
+    "answer": "Based on the provided documents, the following medications are identified for reducing thrombosis risk:\n\n*   **Anticoagulants:** These are used in the treatment of atrial fibrillation to prevent stroke (Document 1).\n*   **Antiplatelet therapy:** This is recommended for the treatment of peripheral artery disease (Document 3).\n*   **Specific combinations:** For persons with peripheral artery disease, antiplatelet medications or low-dose aspirin in combination with rivaroxaban are recommended to prevent cardiovascular events (Document 8).\n\nThe provided context does not contain a comprehensive list of all available antiplatelet or anticoagulant medications, nor does it provide a detailed pharmacological breakdown beyond these specific clinical applications.",
+    "concept_metrics": {
+      "precision": 0.5,
+      "recall": 0.6,
+      "f1": 0.5454545454545454,
+      "predicted_concepts": [
+        "Anticoagulant",
+        "AtrialFibrillation",
+        "Disease",
+        "PeripheralArteryDisease",
+        "Stroke",
+        "Treatment"
+      ],
+      "expected_concepts": [
+        "Anticoagulant",
+        "Antiplatelet",
+        "AtrialFibrillation",
+        "MyocardialInfarction",
+        "Stroke"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 4,
+      "reason": "The answer fails to mention myocardial infarction as a condition for which these medications reduce thrombosis risk."
+    }
+  },
+  {
+    "query_id": "q_E01",
+    "category": "multi_hop",
+    "query": "What medications treat diseases that cause leg swelling and shortness of breath?",
+    "answer": "Based on the provided documents, the conditions associated with both leg swelling (edema) and shortness of breath include **Heart Failure** (Document 5). \n\nWhile the provided documents discuss various treatments for cardiovascular and metabolic conditions, they do not explicitly list specific medications used to treat \"Heart Failure\" beyond the general management of its underlying risk factors. However, the following medications are identified for related cardiovascular and metabolic conditions that may contribute to these symptoms:\n\n*   **Hypertension (a risk factor for heart failure):** Treatment includes ACE inhibitors, Angiotensin II Receptor Blockers (ARBs), calcium channel blockers, and diuretics (water pills) (Document 4).\n*   **Atrial Fibrillation (a condition causing shortness of breath):** Treatment includes anticoagulants to prevent stroke, and rate control agents such as beta blockers and calcium channel blockers (Document 2).\n*   **Peripheral Artery Disease (a condition causing leg symptoms):** Treatment includes antiplatelet therapy, statins, and in specific cases, low-dose aspirin with rivaroxaban, semaglutide, and sodium-glucose cotransporter 2 (SGLT2) inhibitors for patients with diabetes (Documents 1, 6, and 8).\n*   **Metabolic Syndrome and Type 2 Diabetes:** Metformin is the first-line treatment for Type 2 Diabetes, which helps manage metabolic syndrome and hyperlipidemia (Document 10).\n\nThe provided context does not contain enough information to specifically link a medication to the direct treatment of the combined presentation of leg swelling and shortness of breath, other than noting that diuretics are used in the management of hypertension, which is a risk factor for heart failure.",
+    "concept_metrics": {
+      "precision": 0.2727272727272727,
+      "recall": 1.0,
+      "f1": 0.42857142857142855,
+      "predicted_concepts": [
+        "ACEInhibitor",
+        "ARB",
+        "Anticoagulant",
+        "AtrialFibrillation",
+        "BetaBlocker",
+        "CalciumChannelBlocker",
+        "Disease",
+        "Diuretic",
+        "Edema",
+        "HeartFailure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "MetabolicSyndrome",
+        "Metformin",
+        "PeripheralArteryDisease",
+        "ShortnessOfBreath",
+        "Statin",
+        "Stroke",
+        "Symptom",
+        "Treatment",
+        "Type2Diabetes",
+        "WaterPill"
+      ],
+      "expected_concepts": [
+        "ACEInhibitor",
+        "BetaBlocker",
+        "Diuretic",
+        "Edema",
+        "HeartFailure",
+        "ShortnessOfBreath"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 4,
+      "reason": "The answer fails to explicitly identify ACE inhibitors, beta-blockers, and diuretics as standard treatments for heart failure, which is the primary condition causing the symptoms mentioned."
+    }
+  },
+  {
+    "query_id": "q_E02",
+    "category": "multi_hop",
+    "query": "What diagnostic tests evaluate conditions treated with metformin?",
+    "answer": "Based on the provided documents, metformin is the first-line treatment for Type 2 Diabetes Mellitus. The diagnostic tests used to evaluate Type 2 Diabetes include:\n\n*   **HbA1c testing:** This is explicitly identified as a diagnostic and monitoring test for Type 2 Diabetes (Document 1).\n*   **Fasting blood glucose test:** While mentioned in the context of Type 1 Diabetes (Document 2) and as a component of the diagnostic criteria for Metabolic Syndrome (Document 3), it is a standard diagnostic test for diabetes mellitus.\n\nAdditionally, because metformin is used to manage metabolic syndrome and hyperlipidemia (Document 1), diagnostic evaluation for these conditions involves assessing the criteria for Metabolic Syndrome, which includes monitoring for:\n*   **Central obesity**\n*   **Hypertension**\n*   **Hyperlipidemia**\n*   **Elevated fasting glucose** (Document 3)\n\nThe 2026 AACE consensus statement also notes that management of Type 2 Diabetes involves addressing atherosclerotic risk factors, specifically dyslipidemia and hypertension (Document 10).",
+    "concept_metrics": {
+      "precision": 0.3,
+      "recall": 0.75,
+      "f1": 0.4285714285714285,
+      "predicted_concepts": [
+        "DiabetesMellitus",
+        "FastingGlucose",
+        "Hyperlipidemia",
+        "Hypertension",
+        "MetabolicSyndrome",
+        "Metformin",
+        "Obesity",
+        "Treatment",
+        "Type1Diabetes",
+        "Type2Diabetes"
+      ],
+      "expected_concepts": [
+        "FastingGlucose",
+        "HbA1c",
+        "Metformin",
+        "Type2Diabetes"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies Type 2 Diabetes as the primary condition treated with metformin and includes the required diagnostic tests (HbA1c and fasting glucose)."
+    }
+  },
+  {
+    "query_id": "q_E03",
+    "category": "multi_hop",
+    "query": "What surgical procedures treat conditions that present with crushing chest pain?",
+    "answer": "Based on the provided documents, conditions presenting with crushing chest pain (angina pectoris) are treated using the following surgical or interventional procedures:\n\n*   **Coronary Artery Bypass Grafting (CABG):** An open surgical procedure used for patients with severe coronary artery disease (CAD) that bypasses blocked arteries to restore blood flow.\n*   **Angioplasty (Percutaneous Coronary Intervention):** A procedure that utilizes stenting to restore blood flow in blocked arteries.\n\nThese procedures are utilized to relieve severe chest pain (angina) and reduce the risk of myocardial infarction. In cases of obstructive coronary artery disease, revascularization (via CABG or angioplasty) is used alongside optimal medical therapy and lifestyle interventions to alleviate symptoms and improve prognosis. \n\nFor patients who experience persistent symptoms despite maximal guideline-directed medical and revascularization therapies, the condition is classified as **refractory angina**, which may require investigation by an inter-disciplinary Angina Heart Team to address the underlying mechanisms of ischemia.",
+    "concept_metrics": {
+      "precision": 0.625,
+      "recall": 1.0,
+      "f1": 0.7692307692307693,
+      "predicted_concepts": [
+        "Angina",
+        "Angioplasty",
+        "CABG",
+        "ChestPain",
+        "CoronaryArteryDisease",
+        "Disease",
+        "MyocardialInfarction",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "Angina",
+        "Angioplasty",
+        "CABG",
+        "CoronaryArteryDisease",
+        "MyocardialInfarction"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies the conditions and procedures while incorporating all expected medical concepts."
+    }
+  },
+  {
+    "query_id": "q_E04",
+    "category": "multi_hop",
+    "query": "What diagnostic tests assess diseases that cause facial numbness and vision loss?",
+    "answer": "Based on the provided documents, acute ischemic stroke is a condition that can cause symptoms including numbness and blurred vision (Document 1). \n\nThe following diagnostic tests are used to assess conditions that may present with these symptoms:\n\n*   **CT Angiography:** This is identified as essential for the rapid diagnosis of acute ischemic stroke (Document 1).\n*   **MRI (Magnetic Resonance Imaging):** This is highlighted as a key neuroimaging tool for improving diagnostic accuracy, particularly in differentiating acute ischemic stroke from \"stroke mimics\" (conditions that resemble stroke, such as seizures, migraines, metabolic disorders, demyelinating diseases, and tumors) (Document 5).\n*   **Clinical Assessment and Scoring Systems:** These are also used in conjunction with neuroimaging to differentiate stroke from stroke-like syndromes (Document 5).\n\nThe provided context does not contain enough information to link specific diagnostic tests to \"facial\" numbness specifically, though it identifies numbness as a symptom of acute ischemic stroke.",
+    "concept_metrics": {
+      "precision": 0.7142857142857143,
+      "recall": 1.0,
+      "f1": 0.8333333333333333,
+      "predicted_concepts": [
+        "BlurredVision",
+        "CTAngiography",
+        "Disease",
+        "IschemicStroke",
+        "Numbness",
+        "Stroke",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "BlurredVision",
+        "CTAngiography",
+        "IschemicStroke",
+        "Numbness",
+        "Stroke"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies the required concepts and provides a comprehensive overview of the diagnostic tests for the specified symptoms."
+    }
+  },
+  {
+    "query_id": "q_E05",
+    "category": "multi_hop",
+    "query": "What medications treat heart diseases caused by lipid accumulation in arteries?",
+    "answer": "Based on the provided documents, medications used to treat heart and vascular diseases caused by lipid accumulation (atherosclerosis) include:\n\n*   **Statins:** These are used to reduce low-density lipoprotein (LDL) cholesterol. They are indicated for the treatment of hyperlipidemia, coronary artery disease, and peripheral artery disease (PAD) to lower the incidence of cardiovascular events and myocardial infarction.\n*   **Antiplatelet therapy:** This is used in the treatment of peripheral artery disease.\n*   **PCSK9 Inhibitors:** These are lipid-lowering therapies used for patients, such as those with heterozygous familial hypercholesterolemia, who may not reach guideline-recommended LDL cholesterol goals with other available therapies.\n\nAdditionally, management of conditions associated with lipid-related cardiovascular risk, such as Metabolic Syndrome, involves comprehensive pharmacotherapy alongside lifestyle modifications.",
+    "concept_metrics": {
+      "precision": 0.4,
+      "recall": 0.8,
+      "f1": 0.5333333333333333,
+      "predicted_concepts": [
+        "Atherosclerosis",
+        "CoronaryArteryDisease",
+        "Disease",
+        "Hyperlipidemia",
+        "LifestyleModification",
+        "MetabolicSyndrome",
+        "MyocardialInfarction",
+        "PeripheralArteryDisease",
+        "Statin",
+        "Treatment"
+      ],
+      "expected_concepts": [
+        "Antiplatelet",
+        "Atherosclerosis",
+        "CoronaryArteryDisease",
+        "Hyperlipidemia",
+        "Statin"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies the relationship between lipid accumulation, atherosclerosis, and coronary artery disease, while including the required medications."
+    }
+  },
+  {
+    "query_id": "q_E06",
+    "category": "multi_hop",
+    "query": "What treatments address metabolic conditions characterized by central obesity and high fasting glucose?",
+    "answer": "Based on the provided documents, metabolic conditions characterized by central obesity and elevated fasting glucose (insulin resistance) are identified as components of **Metabolic Syndrome**. The management of these conditions involves the following approaches:\n\n*   **Lifestyle Modification:** Comprehensive lifestyle changes, including diet and exercise, are considered key pillars in the management of metabolic syndrome, prediabetes, and Type 2 Diabetes.\n*   **Pharmacotherapy:**\n    *   **Metformin:** This is the first-line oral antihyperglycemic treatment for Type 2 Diabetes. It works by improving insulin sensitivity and reducing hepatic glucose production, which helps manage metabolic syndrome and hyperlipidemia.\n    *   **Management of Comorbidities:** Because metabolic syndrome increases the risk of coronary artery disease, treatment often includes addressing associated risk factors:\n        *   **Hyperlipidemia:** Statin therapy is used to reduce low-density lipoprotein (LDL) cholesterol.\n        *   **Hypertension:** Pharmacological management includes ACE inhibitors, Angiotensin II Receptor Blockers (ARBs), calcium channel blockers, and diuretics.\n\nThe 2026 AACE update further emphasizes that treatment of overweight and obesity is a key pillar in managing these metabolic conditions.",
+    "concept_metrics": {
+      "precision": 0.3125,
+      "recall": 1.0,
+      "f1": 0.47619047619047616,
+      "predicted_concepts": [
+        "ACEInhibitor",
+        "ARB",
+        "CalciumChannelBlocker",
+        "CoronaryArteryDisease",
+        "Disease",
+        "Diuretic",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Insulin",
+        "LifestyleModification",
+        "MetabolicSyndrome",
+        "Metformin",
+        "Obesity",
+        "Statin",
+        "Treatment",
+        "Type2Diabetes"
+      ],
+      "expected_concepts": [
+        "LifestyleModification",
+        "MetabolicSyndrome",
+        "Metformin",
+        "Obesity",
+        "Type2Diabetes"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer accurately addresses the question and incorporates all required medical concepts."
+    }
+  },
+  {
+    "query_id": "q_E07",
+    "category": "multi_hop",
+    "query": "What drugs treat heart rhythm disorders diagnosed by electrocardiogram?",
+    "answer": "Based on the provided documents, the following drugs are used to treat heart rhythm disorders (arrhythmias) diagnosed by an electrocardiogram (ECG):\n\n*   **Atrial Fibrillation:** This condition is diagnosed via ECG and is treated with:\n    *   **Anticoagulants:** Used to prevent stroke.\n    *   **Rate control agents:** Specifically beta-blockers and calcium channel blockers.\n*   **Short-Coupled Ventricular Fibrillation (SCVF):** This condition is diagnosed through the documentation of ventricular fibrillation (VF) onset. The keystones of its management include:\n    *   **Quinidine.**\n*   **Premature Ventricular Complexes (PVCs):** While the context notes that investigation for underlying structural heart disease is essential, management options for clinically relevant PVCs include **medical therapy** (in addition to conservative management and catheter ablation).\n\nPlease note that while the provided context mentions other medications such as ACE inhibitors, Angiotensin II Receptor Blockers (ARBs), diuretics, and nitroglycerin, these are indicated for hypertension, heart failure, or angina, rather than the treatment of heart rhythm disorders.",
+    "concept_metrics": {
+      "precision": 0.3333333333333333,
+      "recall": 0.8333333333333334,
+      "f1": 0.47619047619047616,
+      "predicted_concepts": [
+        "ACEInhibitor",
+        "ARB",
+        "Anticoagulant",
+        "Arrhythmia",
+        "AtrialFibrillation",
+        "CalciumChannelBlocker",
+        "Disease",
+        "Diuretic",
+        "ECG",
+        "HeartDisease",
+        "HeartFailure",
+        "Hypertension",
+        "Nitroglycerin",
+        "Stroke",
+        "Treatment"
+      ],
+      "expected_concepts": [
+        "Anticoagulant",
+        "Arrhythmia",
+        "AtrialFibrillation",
+        "BetaBlocker",
+        "CalciumChannelBlocker",
+        "ECG"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies the required medical concepts and accurately categorizes the drugs used for heart rhythm disorders."
+    }
+  },
+  {
+    "query_id": "q_E08",
+    "category": "multi_hop",
+    "query": "What procedures treat arterial occlusions causing leg pain during exercise?",
+    "answer": "Based on the provided documents, procedures used to treat arterial occlusions (atherosclerotic narrowing) that cause leg pain during exercise (intermittent claudication) in patients with Peripheral Artery Disease (PAD) include:\n\n*   **Angioplasty:** A procedure used to restore blood flow, often involving the use of stents. It is considered a treatment for severe cases of PAD.\n*   **Atherectomy:** An endovascular surgical technique where the atheroma (plaque) is cut or ground away from within the artery. This is often performed in conjunction with balloon angioplasty.\n*   **Revascularization:** This is a surgical intervention reserved for patients with persistent symptoms that do not respond to exercise therapy.\n\nAdditionally, the documents emphasize that **supervised walking exercise** and **structured home-based walking exercise** are effective non-surgical strategies to improve walking ability in persons with PAD. \n\nPlease note that while atherectomy is used, studies investigating its effectiveness compared to conventional treatments have been small-scale with varying methodologies, making it unclear if it is more effective than other treatments.",
+    "concept_metrics": {
+      "precision": 0.5,
+      "recall": 0.6,
+      "f1": 0.5454545454545454,
+      "predicted_concepts": [
+        "Angioplasty",
+        "Claudication",
+        "Disease",
+        "PeripheralArteryDisease",
+        "Symptom",
+        "Treatment"
+      ],
+      "expected_concepts": [
+        "Angioplasty",
+        "Antiplatelet",
+        "Claudication",
+        "PeripheralArteryDisease",
+        "Statin"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 6,
+      "reason": "The answer fails to mention the essential pharmacological treatments (statins and antiplatelets) required by the prompt."
+    }
+  },
+  {
+    "query_id": "q_E09",
+    "category": "multi_hop",
+    "query": "What medications treat high blood pressure complications that lead to swollen legs?",
+    "answer": "Based on the provided documents, the condition of \"swollen legs\" is medically referred to as **edema**, which is a common manifestation of **heart failure** (Document 2). Hypertension (high blood pressure) is identified as a major risk factor for heart failure (Document 1).\n\nAccording to the provided context, the following medications are used in the management of hypertension and heart failure-related conditions:\n\n*   **Diuretics:** These are often used in the initial therapy for hypertension (Document 1).\n*   **ACE Inhibitors:** These are used in the initial pharmacological management of hypertension (Document 1).\n*   **Angiotensin II Receptor Blockers (ARBs):** These are used in the initial pharmacological management of hypertension (Document 1).\n*   **Calcium Channel Blockers:** These are used in the initial pharmacological management of hypertension (Document 1) and as rate control agents for cardiac arrhythmias (Document 7).\n\nWhile the documents identify these medications as treatments for hypertension and heart failure, they do not explicitly state that these specific drugs are used to treat the symptom of edema itself; rather, they are used to manage the underlying conditions (hypertension and heart failure) that lead to such complications.",
+    "concept_metrics": {
+      "precision": 0.4166666666666667,
+      "recall": 1.0,
+      "f1": 0.5882352941176471,
+      "predicted_concepts": [
+        "ACEInhibitor",
+        "ARB",
+        "Arrhythmia",
+        "CalciumChannelBlocker",
+        "Diuretic",
+        "Edema",
+        "HeartFailure",
+        "HighBloodPressure",
+        "Hypertension",
+        "SwollenLegs",
+        "Symptom",
+        "Treatment"
+      ],
+      "expected_concepts": [
+        "ACEInhibitor",
+        "Diuretic",
+        "Edema",
+        "HeartFailure",
+        "Hypertension"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies the relationship between hypertension, heart failure, and edema, and lists the required medication classes."
+    }
+  },
+  {
+    "query_id": "q_E10",
+    "category": "multi_hop",
+    "query": "What diagnostic tests confirm conditions presenting with excessive thirst and frequent urination?",
+    "answer": "Based on the provided documents and the associated ontology reasoning, the symptoms of excessive thirst and frequent urination are associated with Type 1 Diabetes Mellitus.\n\nTo confirm a diagnosis of Type 1 Diabetes Mellitus, the following diagnostic tests are used:\n*   **Fasting blood glucose test:** Measures the amount of glucose in the blood after a period of fasting.\n*   **Hemoglobin A1c test (HbA1c):** Measures average blood glucose levels over the past few months.",
+    "concept_metrics": {
+      "precision": 0.7142857142857143,
+      "recall": 1.0,
+      "f1": 0.8333333333333333,
+      "predicted_concepts": [
+        "DiabetesMellitus",
+        "ExcessiveThirst",
+        "FastingGlucose",
+        "FrequentUrination",
+        "HbA1c",
+        "Symptom",
+        "Type1Diabetes"
+      ],
+      "expected_concepts": [
+        "DiabetesMellitus",
+        "ExcessiveThirst",
+        "FastingGlucose",
+        "FrequentUrination",
+        "HbA1c"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies the condition and the required diagnostic tests to confirm it."
+    }
+  },
+  {
+    "query_id": "q_F01",
+    "category": "control_exact_clinical",
+    "query": "What is the diagnostic role of Hemoglobin A1c in Diabetes Mellitus?",
+    "answer": "Based on the provided documents, the Hemoglobin A1c (HbA1c) test serves as a diagnostic and monitoring tool for diabetes mellitus:\n\n*   **Type 1 Diabetes:** The HbA1c test is utilized as a diagnostic test for Type 1 Diabetes Mellitus (Document 1).\n*   **Type 2 Diabetes:** The HbA1c test is used for the diagnostic monitoring of Type 2 Diabetes Mellitus (Document 2).\n\nIn summary, the HbA1c test is a standard diagnostic and monitoring instrument across both primary types of diabetes mellitus mentioned in the provided context.",
+    "concept_metrics": {
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1": 0.4,
+      "predicted_concepts": [
+        "DiabetesMellitus",
+        "Type1Diabetes",
+        "Type2Diabetes"
+      ],
+      "expected_concepts": [
+        "DiabetesMellitus",
+        "HbA1c"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies the diagnostic role of HbA1c in both Type 1 and Type 2 Diabetes Mellitus."
+    }
+  },
+  {
+    "query_id": "q_F02",
+    "category": "control_exact_clinical",
+    "query": "How does Metformin improve glycemic control in Type 2 Diabetes Mellitus?",
+    "answer": "Metformin improves glycemic control in Type 2 Diabetes Mellitus through several physiological mechanisms:\n\n*   **Systemic Metabolic Effects:** Metformin acts as a first-line oral antihyperglycemic treatment that improves insulin sensitivity and reduces hepatic (liver) glucose production.\n*   **Intestinal Mitochondrial Inhibition:** Metformin functions by inhibiting mitochondrial complex I within the intestinal epithelium. This inhibition suppresses citrulline synthesis and increases GDF15 levels.\n*   **Glucose Sink Mechanism:** By inhibiting the mitochondrial respiratory chain at complex I, metformin co-opts the intestines to function as a \"glucose sink.\" This drives the uptake of excess glucose and promotes its conversion into lactate and lactoyl-phenylalanine.\n*   **Dosing Dynamics:** The glucose-lowering efficacy of metformin is attributed to repeated bolus exposure rather than a cumulative chronic response.\n\nThese mechanisms collectively help manage metabolic syndrome and contribute to attenuated postprandial (after-meal) glucose excursions.",
+    "concept_metrics": {
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "predicted_concepts": [
+        "DiabetesMellitus",
+        "Insulin",
+        "MetabolicSyndrome",
+        "Metformin",
+        "Treatment",
+        "Type2Diabetes"
+      ],
+      "expected_concepts": [
+        "Metformin",
+        "Type2Diabetes"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer accurately describes the mechanisms of metformin in Type 2 Diabetes Mellitus, including the modern understanding of intestinal mitochondrial inhibition."
+    }
+  },
+  {
+    "query_id": "q_F03",
+    "category": "control_exact_clinical",
+    "query": "What are the indication criteria for Coronary Artery Bypass Grafting?",
+    "answer": "Based on the provided documents, Coronary Artery Bypass Grafting (CABG) is indicated for patients with severe coronary artery disease (CAD). \n\nThe decision-making process for this procedure typically involves the following steps and criteria:\n\n*   **Clinical Need:** CABG is used to relieve severe chest pain (angina) and reduce the risk of myocardial infarction in patients with obstructive coronary artery disease.\n*   **Diagnostic Evaluation:** Patients typically undergo cardiac stress testing to detect exercise-induced myocardial ischemia. If non-invasive tests are abnormal, cardiac catheterization (coronary angiography) is performed to directly visualize arterial stenoses (narrowing). This visualization is used to guide the decision for revascularization via CABG or angioplasty.\n*   **Refractory Symptoms:** In the context of refractory angina, CABG may be considered for patients who experience persistent symptoms despite receiving optimal pharmacological therapy.\n\nThe provided context does not contain enough information to specify precise clinical thresholds (such as specific vessel involvement or percentage of stenosis) that dictate the choice of CABG over other revascularization methods like angioplasty.",
+    "concept_metrics": {
+      "precision": 0.2222222222222222,
+      "recall": 1.0,
+      "f1": 0.3636363636363636,
+      "predicted_concepts": [
+        "Angioplasty",
+        "CABG",
+        "CardiacCatheterization",
+        "ChestPain",
+        "CoronaryArteryDisease",
+        "Disease",
+        "MyocardialInfarction",
+        "StressTest",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "CABG",
+        "CoronaryArteryDisease"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies the indications for CABG in the context of coronary artery disease and acknowledges the limitations of the provided information."
+    }
+  },
+  {
+    "query_id": "q_F04",
+    "category": "control_exact_clinical",
+    "query": "What is the mechanism of action of ACE Inhibitors in Hypertension?",
+    "answer": "The provided context does not contain enough information to explain the mechanism of action of ACE inhibitors. While the documents identify ACE inhibitors as a treatment for hypertension, they do not describe the physiological or biochemical process by which these drugs function.",
+    "concept_metrics": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "predicted_concepts": [
+        "ACEInhibitor",
+        "Hypertension",
+        "Treatment"
+      ],
+      "expected_concepts": [
+        "ACEInhibitor",
+        "Hypertension"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 0,
+      "reason": "The model failed to provide the medical mechanism of action, relying instead on a claim about missing context."
+    }
+  },
+  {
+    "query_id": "q_F05",
+    "category": "control_exact_clinical",
+    "query": "What ECG findings characterize Atrial Fibrillation?",
+    "answer": "According to the provided documents, Atrial Fibrillation is characterized by rapid and irregular atrial activation. While the documents confirm that an electrocardiogram (ECG) is used to diagnose the condition, they do not provide specific details regarding the morphological ECG findings (such as the absence of P-waves or the presence of fibrillatory waves) that characterize the arrhythmia.",
+    "concept_metrics": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "predicted_concepts": [
+        "Arrhythmia",
+        "AtrialFibrillation",
+        "ECG"
+      ],
+      "expected_concepts": [
+        "AtrialFibrillation",
+        "ECG"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 3,
+      "reason": "The answer fails to list the specific ECG findings required to characterize Atrial Fibrillation, such as the absence of P-waves and irregularly irregular R-R intervals."
+    }
+  },
+  {
+    "query_id": "q_F06",
+    "category": "control_exact_clinical",
+    "query": "How is Percutaneous Coronary Intervention performed in Myocardial Infarction?",
+    "answer": "Based on the provided documents, percutaneous coronary intervention (angioplasty) is a revascularization procedure used to restore blood flow in patients with coronary artery disease, including those who have experienced a myocardial infarction.\n\nThe procedure is performed as follows:\n*   **Diagnostic Guidance:** Before the procedure, cardiac catheterization (coronary angiography) is performed to directly visualize arterial stenoses (narrowing or blockages) and determine the suitability for revascularization.\n*   **Mechanism:** Angioplasty utilizes stenting to restore blood flow through the blocked arteries. \n\nWhile the provided context identifies angioplasty as a treatment for myocardial infarction and describes its use of stenting, it does not provide a step-by-step technical description of the surgical technique itself.",
+    "concept_metrics": {
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "predicted_concepts": [
+        "Angioplasty",
+        "CardiacCatheterization",
+        "CoronaryArteryDisease",
+        "Disease",
+        "MyocardialInfarction",
+        "Treatment"
+      ],
+      "expected_concepts": [
+        "Angioplasty",
+        "MyocardialInfarction"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 9,
+      "reason": "The answer correctly identifies angioplasty and myocardial infarction and provides a sufficient overview of the procedure despite the lack of granular technical steps."
+    }
+  },
+  {
+    "query_id": "q_F07",
+    "category": "control_exact_clinical",
+    "query": "What is the therapeutic window for Thrombolytic therapy in Acute Ischemic Stroke?",
+    "answer": "According to the provided documents, intravenous thrombolytic therapy (tPA) for acute ischemic stroke must be administered within a \"narrow time window\" to effectively dissolve the clot and restore cerebral blood flow. The documents do not specify the exact duration of this time window in hours or minutes.",
+    "concept_metrics": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "predicted_concepts": [
+        "IschemicStroke",
+        "Stroke",
+        "Thrombolytic"
+      ],
+      "expected_concepts": [
+        "IschemicStroke",
+        "Thrombolytic"
+      ]
+    },
+    "judge": {
+      "correct": false,
+      "score": 4,
+      "reason": "The answer fails to provide the standard clinical therapeutic window (typically 3 to 4.5 hours) for thrombolytic therapy in acute ischemic stroke."
+    }
+  },
+  {
+    "query_id": "q_F08",
+    "category": "control_exact_clinical",
+    "query": "What components constitute a comprehensive Lipid Panel assessment?",
+    "answer": "Based on the provided documents, a lipid panel is a blood test used to evaluate the following components:\n\n*   **Total cholesterol**\n*   **LDL (low-density lipoprotein) cholesterol**\n*   **HDL (high-density lipoprotein) cholesterol**\n\nThese tests are used to evaluate hyperlipidemia, which is characterized by elevated blood lipids and contributes to the development of atherosclerosis.",
+    "concept_metrics": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "predicted_concepts": [
+        "Atherosclerosis",
+        "Hyperlipidemia",
+        "LipidPanel"
+      ],
+      "expected_concepts": [
+        "Hyperlipidemia",
+        "LipidPanel"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies the components of a lipid panel and mentions hyperlipidemia as requested."
+    }
+  },
+  {
+    "query_id": "q_F09",
+    "category": "control_exact_clinical",
+    "query": "How does Sublingual Nitroglycerin relieve Angina Pectoris?",
+    "answer": "Sublingual nitroglycerin relieves the symptoms of acute angina pectoris by acting as a potent vasodilator. By dilating (widening) the blood vessels, it helps to improve blood flow and reduce the workload on the heart, thereby alleviating the crushing chest pain and tightness associated with the condition.",
+    "concept_metrics": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "predicted_concepts": [
+        "Angina",
+        "ChestPain",
+        "Nitroglycerin",
+        "Symptom"
+      ],
+      "expected_concepts": [
+        "Angina",
+        "Nitroglycerin"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer accurately explains the mechanism of sublingual nitroglycerin in relieving angina pectoris."
+    }
+  },
+  {
+    "query_id": "q_F10",
+    "category": "control_exact_clinical",
+    "query": "What are the clinical diagnostic criteria for Metabolic Syndrome?",
+    "answer": "According to the provided documents, Metabolic Syndrome is defined as a cluster of conditions that includes the following clinical criteria:\n\n*   **Central obesity**\n*   **Hypertension** (high blood pressure)\n*   **Hyperlipidemia** (elevated blood lipids)\n*   **Elevated fasting glucose** (insulin resistance)\n\nThese factors are noted to exponentially increase the risk of developing Type 2 Diabetes and coronary artery disease. Management of the syndrome focuses on comprehensive lifestyle modification and pharmacotherapy.",
+    "concept_metrics": {
+      "precision": 0.1,
+      "recall": 1.0,
+      "f1": 0.18181818181818182,
+      "predicted_concepts": [
+        "CoronaryArteryDisease",
+        "Disease",
+        "HighBloodPressure",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Insulin",
+        "LifestyleModification",
+        "MetabolicSyndrome",
+        "Obesity",
+        "Type2Diabetes"
+      ],
+      "expected_concepts": [
+        "MetabolicSyndrome"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer accurately lists the core clinical components of Metabolic Syndrome as defined by standard medical criteria."
+    }
+  },
+  {
+    "query_id": "q_F11",
+    "category": "control_exact_clinical",
+    "query": "How is Echocardiography utilized to measure ejection fraction in Heart Failure?",
+    "answer": "According to the provided documents, echocardiography is the primary non-invasive diagnostic test used to evaluate ejection fraction and cardiac structural abnormalities in patients with heart failure. While the documents identify echocardiography as the tool for this assessment, they do not provide specific technical details on the methodology used to calculate the ejection fraction.",
+    "concept_metrics": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "predicted_concepts": [
+        "HeartFailure"
+      ],
+      "expected_concepts": [
+        "Echocardiogram",
+        "HeartFailure"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer correctly identifies echocardiography as the primary tool for measuring ejection fraction in heart failure patients."
+    }
+  },
+  {
+    "query_id": "q_F12",
+    "category": "control_exact_clinical",
+    "query": "What is the role of Anticoagulant therapy in Atrial Fibrillation stroke prevention?",
+    "answer": "According to the provided documents, anticoagulant therapy is a key treatment strategy for patients with atrial fibrillation, specifically utilized to prevent stroke. Atrial fibrillation is a cardiac arrhythmia characterized by rapid and irregular atrial activation, and the use of anticoagulants is essential in managing the condition to reduce the risk of stroke.",
+    "concept_metrics": {
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.7499999999999999,
+      "predicted_concepts": [
+        "Anticoagulant",
+        "Arrhythmia",
+        "AtrialFibrillation",
+        "Stroke",
+        "Treatment"
+      ],
+      "expected_concepts": [
+        "Anticoagulant",
+        "AtrialFibrillation",
+        "Stroke"
+      ]
+    },
+    "judge": {
+      "correct": true,
+      "score": 10,
+      "reason": "The answer accurately addresses the role of anticoagulants in stroke prevention for patients with atrial fibrillation."
+    }
+  }
+]

@@ -1,0 +1,553 @@
+{
+  "pipelines": {
+    "pipeline_1_baseline": {
+      "label": "Pipeline 1 (Baseline)",
+      "aggregate": {
+        "concept_f1": {
+          "mean": 0.5716551699699743,
+          "std": 0.17545748422093702,
+          "median": 0.5798319327731093,
+          "min": 0.2,
+          "max": 1.0
+        },
+        "concept_precision": {
+          "mean": 0.4850094139866868,
+          "std": 0.21992930390912763,
+          "median": 0.4494949494949495,
+          "min": 0.125,
+          "max": 1.0
+        },
+        "concept_recall": {
+          "mean": 0.8073232323232323,
+          "std": 0.21942933309200466,
+          "median": 0.9166666666666667,
+          "min": 0.25,
+          "max": 1.0
+        },
+        "judge_correctness": {
+          "mean": 0.6666666666666666,
+          "n": 66
+        },
+        "judge_score": {
+          "mean": 7.818181818181818,
+          "std": 3.209404225412197,
+          "median": 10.0,
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "category_metrics": {
+        "lay_terminology": {
+          "concept_f1": 0.481712962962963,
+          "n": 12
+        },
+        "disease_hierarchy": {
+          "concept_f1": 0.5165949547528494,
+          "n": 12
+        },
+        "symptom_reasoning": {
+          "concept_f1": 0.6061616161616161,
+          "n": 10
+        },
+        "treatment_reasoning": {
+          "concept_f1": 0.5730952380952381,
+          "n": 10
+        },
+        "multi_hop": {
+          "concept_f1": 0.6390310996193349,
+          "n": 10
+        },
+        "control_exact_clinical": {
+          "concept_f1": 0.6305555555555555,
+          "n": 12
+        }
+      }
+    },
+    "pipeline_2_dictionary": {
+      "label": "Pipeline 2 (Dictionary)",
+      "aggregate": {
+        "concept_f1": {
+          "mean": 0.5727991234042458,
+          "std": 0.17539505029049962,
+          "median": 0.5454545454545454,
+          "min": 0.2,
+          "max": 1.0
+        },
+        "concept_precision": {
+          "mean": 0.48717711160892985,
+          "std": 0.223345586781579,
+          "median": 0.4494949494949495,
+          "min": 0.15384615384615385,
+          "max": 1.0
+        },
+        "concept_recall": {
+          "mean": 0.8055555555555555,
+          "std": 0.2003224112834153,
+          "median": 0.775,
+          "min": 0.25,
+          "max": 1.0
+        },
+        "judge_correctness": {
+          "mean": 0.6818181818181818,
+          "n": 66
+        },
+        "judge_score": {
+          "mean": 7.863636363636363,
+          "std": 3.1998407329511642,
+          "median": 10.0,
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "category_metrics": {
+        "lay_terminology": {
+          "concept_f1": 0.49872393401805165,
+          "n": 12
+        },
+        "disease_hierarchy": {
+          "concept_f1": 0.5243748210853474,
+          "n": 12
+        },
+        "symptom_reasoning": {
+          "concept_f1": 0.5666666666666667,
+          "n": 10
+        },
+        "treatment_reasoning": {
+          "concept_f1": 0.6098051948051948,
+          "n": 10
+        },
+        "multi_hop": {
+          "concept_f1": 0.6194584500466853,
+          "n": 10
+        },
+        "control_exact_clinical": {
+          "concept_f1": 0.6306878306878306,
+          "n": 12
+        }
+      }
+    },
+    "pipeline_3_ontology_full": {
+      "label": "Pipeline 3 (Ontology)",
+      "aggregate": {
+        "concept_f1": {
+          "mean": 0.5718365524142026,
+          "std": 0.16754221295805088,
+          "median": 0.5714285714285715,
+          "min": 0.18181818181818182,
+          "max": 0.888888888888889
+        },
+        "concept_precision": {
+          "mean": 0.4571910155730167,
+          "std": 0.1993775294750556,
+          "median": 0.42857142857142855,
+          "min": 0.1,
+          "max": 1.0
+        },
+        "concept_recall": {
+          "mean": 0.8813131313131312,
+          "std": 0.1672845906591909,
+          "median": 1.0,
+          "min": 0.5,
+          "max": 1.0
+        },
+        "judge_correctness": {
+          "mean": 0.7878787878787878,
+          "n": 66
+        },
+        "judge_score": {
+          "mean": 8.621212121212121,
+          "std": 2.7621091606977903,
+          "median": 10.0,
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "category_metrics": {
+        "lay_terminology": {
+          "concept_f1": 0.46277954713309405,
+          "n": 12
+        },
+        "disease_hierarchy": {
+          "concept_f1": 0.5181873681873682,
+          "n": 12
+        },
+        "symptom_reasoning": {
+          "concept_f1": 0.6477078477078477,
+          "n": 10
+        },
+        "treatment_reasoning": {
+          "concept_f1": 0.6351298701298701,
+          "n": 10
+        },
+        "multi_hop": {
+          "concept_f1": 0.5912444418326771,
+          "n": 10
+        },
+        "control_exact_clinical": {
+          "concept_f1": 0.6023989898989899,
+          "n": 12
+        }
+      }
+    },
+    "pipeline_4_adaptive_full": {
+      "label": "Pipeline 4 (AdaOnto)",
+      "aggregate": {
+        "concept_f1": {
+          "mean": 0.5648740163579735,
+          "std": 0.16396910729967867,
+          "median": 0.5454545454545454,
+          "min": 0.1818181818181818,
+          "max": 1.0
+        },
+        "concept_precision": {
+          "mean": 0.44871504315284216,
+          "std": 0.20823559377860607,
+          "median": 0.4,
+          "min": 0.1,
+          "max": 1.0
+        },
+        "concept_recall": {
+          "mean": 0.8934343434343434,
+          "std": 0.1615861714598762,
+          "median": 1.0,
+          "min": 0.5,
+          "max": 1.0
+        },
+        "judge_correctness": {
+          "mean": 0.8484848484848485,
+          "n": 66
+        },
+        "judge_score": {
+          "mean": 8.954545454545455,
+          "std": 2.445972683646734,
+          "median": 10.0,
+          "min": 0.0,
+          "max": 10.0
+        }
+      },
+      "category_metrics": {
+        "lay_terminology": {
+          "concept_f1": 0.4631594984536161,
+          "n": 12
+        },
+        "disease_hierarchy": {
+          "concept_f1": 0.5107176810117987,
+          "n": 12
+        },
+        "symptom_reasoning": {
+          "concept_f1": 0.5901330532212885,
+          "n": 10
+        },
+        "treatment_reasoning": {
+          "concept_f1": 0.5851082251082251,
+          "n": 10
+        },
+        "multi_hop": {
+          "concept_f1": 0.6138705738705739,
+          "n": 10
+        },
+        "control_exact_clinical": {
+          "concept_f1": 0.642003367003367,
+          "n": 12
+        }
+      }
+    }
+  },
+  "statistical_tests": {
+    "ontology_vs_baseline": {
+      "comparison": "Pipeline 3 (Ontology) vs Pipeline 1 (Baseline)",
+      "n_queries": 66,
+      "mean_a": 0.5718365524142026,
+      "mean_b": 0.5716551699699743,
+      "mean_diff": 0.000181382444228273,
+      "wilcoxon": {
+        "test": "wilcoxon_signed_rank",
+        "statistic": 444.0,
+        "p_value": 0.7262012184662973,
+        "significant": false,
+        "alpha": 0.05
+      },
+      "cohens_d": 0.0012934248100536514,
+      "cliffs_delta": {
+        "cliffs_delta": -0.0009182736455463728,
+        "interpretation": "negligible"
+      },
+      "paired_t_test": {
+        "test": "paired_t_test",
+        "warning": "Normality assumption does not hold (Shapiro-Wilk p=0.0000). Use Wilcoxon instead.",
+        "shapiro_p": 7.516937240218567e-07
+      },
+      "bootstrap_ci": {
+        "mean_diff": 0.0001813824442282915,
+        "ci_lower": -0.031728717677529314,
+        "ci_upper": 0.03584210918820601,
+        "ci_level": 0.95,
+        "n_bootstrap": 10000
+      }
+    },
+    "ontology_vs_dictionary": {
+      "comparison": "Pipeline 3 (Ontology) vs Pipeline 2 (Dictionary)",
+      "n_queries": 66,
+      "mean_a": 0.5718365524142026,
+      "mean_b": 0.5727991234042458,
+      "mean_diff": -0.0009625709900431545,
+      "wilcoxon": {
+        "test": "wilcoxon_signed_rank",
+        "statistic": 564.5,
+        "p_value": 0.4809831461092119,
+        "significant": false,
+        "alpha": 0.05
+      },
+      "cohens_d": -0.006947026437418693,
+      "cliffs_delta": {
+        "cliffs_delta": 0.015151515151515152,
+        "interpretation": "negligible"
+      },
+      "paired_t_test": {
+        "test": "paired_t_test",
+        "warning": "Normality assumption does not hold (Shapiro-Wilk p=0.0000). Use Wilcoxon instead.",
+        "shapiro_p": 2.5340086033960046e-06
+      },
+      "bootstrap_ci": {
+        "mean_diff": -0.000962570990043178,
+        "ci_lower": -0.03220309313540383,
+        "ci_upper": 0.03443806225981268,
+        "ci_level": 0.95,
+        "n_bootstrap": 10000
+      }
+    },
+    "dictionary_vs_baseline": {
+      "comparison": "Pipeline 2 (Dictionary) vs Pipeline 1 (Baseline)",
+      "n_queries": 66,
+      "mean_a": 0.5727991234042458,
+      "mean_b": 0.5716551699699743,
+      "mean_diff": 0.0011439534342714275,
+      "wilcoxon": {
+        "test": "wilcoxon_signed_rank",
+        "statistic": 253.0,
+        "p_value": 0.6231264944178557,
+        "significant": false,
+        "alpha": 0.05
+      },
+      "cohens_d": 0.010759447066338147,
+      "cliffs_delta": {
+        "cliffs_delta": -0.006198347107438017,
+        "interpretation": "negligible"
+      },
+      "paired_t_test": {
+        "test": "paired_t_test",
+        "warning": "Normality assumption does not hold (Shapiro-Wilk p=0.0000). Use Wilcoxon instead.",
+        "shapiro_p": 2.4673509925878168e-08
+      },
+      "bootstrap_ci": {
+        "mean_diff": 0.001143953434271466,
+        "ci_lower": -0.022728325325866144,
+        "ci_upper": 0.027637242775154384,
+        "ci_level": 0.95,
+        "n_bootstrap": 10000
+      }
+    },
+    "adaptive_vs_baseline": {
+      "comparison": "Pipeline 4 (AdaOnto) vs Pipeline 1 (Baseline)",
+      "n_queries": 66,
+      "mean_a": 0.5648740163579735,
+      "mean_b": 0.5716551699699743,
+      "mean_diff": -0.006781153612000823,
+      "wilcoxon": {
+        "test": "wilcoxon_signed_rank",
+        "statistic": 470.0,
+        "p_value": 0.44112414145239776,
+        "significant": false,
+        "alpha": 0.05
+      },
+      "cohens_d": -0.056970002661463945,
+      "cliffs_delta": {
+        "cliffs_delta": -0.0440771349862259,
+        "interpretation": "negligible"
+      },
+      "paired_t_test": {
+        "test": "paired_t_test",
+        "warning": "Normality assumption does not hold (Shapiro-Wilk p=0.0005). Use Wilcoxon instead.",
+        "shapiro_p": 0.0004720911791843942
+      },
+      "bootstrap_ci": {
+        "mean_diff": -0.00678115361200078,
+        "ci_lower": -0.03460630163805296,
+        "ci_upper": 0.022404785425507334,
+        "ci_level": 0.95,
+        "n_bootstrap": 10000
+      }
+    },
+    "adaptive_vs_dictionary": {
+      "comparison": "Pipeline 4 (AdaOnto) vs Pipeline 2 (Dictionary)",
+      "n_queries": 66,
+      "mean_a": 0.5648740163579735,
+      "mean_b": 0.5727991234042458,
+      "mean_diff": -0.00792510704627225,
+      "wilcoxon": {
+        "test": "wilcoxon_signed_rank",
+        "statistic": 486.5,
+        "p_value": 0.41213615323076314,
+        "significant": false,
+        "alpha": 0.05
+      },
+      "cohens_d": -0.061118605467529334,
+      "cliffs_delta": {
+        "cliffs_delta": -0.027548209366391185,
+        "interpretation": "negligible"
+      },
+      "paired_t_test": {
+        "test": "paired_t_test",
+        "warning": "Normality assumption does not hold (Shapiro-Wilk p=0.0029). Use Wilcoxon instead.",
+        "shapiro_p": 0.0028625172227787995
+      },
+      "bootstrap_ci": {
+        "mean_diff": -0.00792510704627225,
+        "ci_lower": -0.038433680661287606,
+        "ci_upper": 0.023301653109298034,
+        "ci_level": 0.95,
+        "n_bootstrap": 10000
+      }
+    },
+    "adaptive_vs_ontology": {
+      "comparison": "Pipeline 4 (AdaOnto) vs Pipeline 3 (Ontology)",
+      "n_queries": 66,
+      "mean_a": 0.5648740163579735,
+      "mean_b": 0.5718365524142026,
+      "mean_diff": -0.006962536056229096,
+      "wilcoxon": {
+        "test": "wilcoxon_signed_rank",
+        "statistic": 513.5,
+        "p_value": 0.5930215120140031,
+        "significant": false,
+        "alpha": 0.05
+      },
+      "cohens_d": -0.06814359721575215,
+      "cliffs_delta": {
+        "cliffs_delta": -0.05325987144168962,
+        "interpretation": "negligible"
+      },
+      "paired_t_test": {
+        "test": "paired_t_test",
+        "statistic": -0.5536012008108147,
+        "p_value": 0.5817511907930248,
+        "significant": false,
+        "shapiro_p": 0.21375714203634694,
+        "normality_holds": true
+      },
+      "bootstrap_ci": {
+        "mean_diff": -0.006962536056229073,
+        "ci_lower": -0.031013495302404548,
+        "ci_upper": 0.016859776270675197,
+        "ci_level": 0.95,
+        "n_bootstrap": 10000
+      }
+    }
+  },
+  "category_breakdown": {
+    "pipeline_1_baseline": {
+      "lay_terminology": {
+        "concept_f1": 0.481712962962963,
+        "n": 12
+      },
+      "disease_hierarchy": {
+        "concept_f1": 0.5165949547528494,
+        "n": 12
+      },
+      "symptom_reasoning": {
+        "concept_f1": 0.6061616161616161,
+        "n": 10
+      },
+      "treatment_reasoning": {
+        "concept_f1": 0.5730952380952381,
+        "n": 10
+      },
+      "multi_hop": {
+        "concept_f1": 0.6390310996193349,
+        "n": 10
+      },
+      "control_exact_clinical": {
+        "concept_f1": 0.6305555555555555,
+        "n": 12
+      }
+    },
+    "pipeline_2_dictionary": {
+      "lay_terminology": {
+        "concept_f1": 0.49872393401805165,
+        "n": 12
+      },
+      "disease_hierarchy": {
+        "concept_f1": 0.5243748210853474,
+        "n": 12
+      },
+      "symptom_reasoning": {
+        "concept_f1": 0.5666666666666667,
+        "n": 10
+      },
+      "treatment_reasoning": {
+        "concept_f1": 0.6098051948051948,
+        "n": 10
+      },
+      "multi_hop": {
+        "concept_f1": 0.6194584500466853,
+        "n": 10
+      },
+      "control_exact_clinical": {
+        "concept_f1": 0.6306878306878306,
+        "n": 12
+      }
+    },
+    "pipeline_3_ontology_full": {
+      "lay_terminology": {
+        "concept_f1": 0.46277954713309405,
+        "n": 12
+      },
+      "disease_hierarchy": {
+        "concept_f1": 0.5181873681873682,
+        "n": 12
+      },
+      "symptom_reasoning": {
+        "concept_f1": 0.6477078477078477,
+        "n": 10
+      },
+      "treatment_reasoning": {
+        "concept_f1": 0.6351298701298701,
+        "n": 10
+      },
+      "multi_hop": {
+        "concept_f1": 0.5912444418326771,
+        "n": 10
+      },
+      "control_exact_clinical": {
+        "concept_f1": 0.6023989898989899,
+        "n": 12
+      }
+    },
+    "pipeline_4_adaptive_full": {
+      "lay_terminology": {
+        "concept_f1": 0.4631594984536161,
+        "n": 12
+      },
+      "disease_hierarchy": {
+        "concept_f1": 0.5107176810117987,
+        "n": 12
+      },
+      "symptom_reasoning": {
+        "concept_f1": 0.5901330532212885,
+        "n": 10
+      },
+      "treatment_reasoning": {
+        "concept_f1": 0.5851082251082251,
+        "n": 10
+      },
+      "multi_hop": {
+        "concept_f1": 0.6138705738705739,
+        "n": 10
+      },
+      "control_exact_clinical": {
+        "concept_f1": 0.642003367003367,
+        "n": 12
+      }
+    }
+  }
+}

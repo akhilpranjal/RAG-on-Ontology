@@ -1,0 +1,12 @@
+{
+  "doc_id": "pubmed_42169529",
+  "title": "[Chagas cardiomyopathy].",
+  "text": "Chagas disease is a chronic parasitic infection caused by Trypanosoma cruzi. Its most severe complication is chronic Chagas cardiomyopathy, which may lead to heart failure, malignant ventricular arrhythmias, and sudden cardiac death. Because the disease often evolves silently for decades, early detection of myocardial involvement remains challenging. Cardiovascular imaging plays a key role in diagnosis and risk stratification. Echocardiography provides a functional assessment and detects structural abnormalities, whereas cardiac magnetic resonance allows for tissue characterization and identification of myocardial fibrosis. Nuclear imaging techniques, including metaiodobenzylguanidine scintigraphy and PET-CT, provide additional insights into sympathetic denervation and myocardial inflammation.",
+  "source": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42169529/",
+  "concepts": [
+    "Arrhythmia",
+    "Disease",
+    "HeartFailure"
+  ]
+}

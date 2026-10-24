@@ -1,0 +1,13 @@
+{
+  "doc_id": "pubmed_42308333",
+  "title": "The translational potential of drug-induced hypothermia in acute ischemic stroke.",
+  "text": "Hypothermia and hypometabolism are important for hibernating animals to survive harsh environmental conditions. Induction of a hypothermic and hypometabolic state is considered an avenue to treat severe diseases, such as ischemic stroke. However, noninvasive and safe methods to achieve a long-lasting hypothermic and hypometabolic state remain limited. Here, we present data from preclinical and clinical studies to explore the feasibility and safety of drug-induced hypothermia by administration of chlorpromazine and promethazine (C+P). In mice, C+P treatment induced hypothermia and suppressed glucose metabolism in the brain. C+P treatment reduced infarct volumes and improved neurological deficit in a mouse middle cerebral artery occlusion model induced by suture insertion. Furthermore, C+P treatment reduced body temperature, suppressed metabolism, and exerted cerebroprotective effects in a rhesus monkey model of stroke. In a double-blind, phase 1 clinical trial (NCT06663631), a total of 32 patients diagnosed with acute ischemic stroke were enrolled, receiving either placebo or increasing doses of C+P treatment: 10, 20, 50, or 100 milligrams. All doses were safe and well tolerated. Only 100 milligrams of C+P resulted in a modest and transient reduction in body temperature. Plasma proteomic profiling revealed a down-regulation of markers associated with aerobic respiration and glucose metabolism. These findings highlight the translational potential of C+P treatment and warrant a larger trial to further investigate safety and efficacy of C+P.",
+  "source": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42308333/",
+  "concepts": [
+    "Disease",
+    "IschemicStroke",
+    "Stroke",
+    "Treatment"
+  ]
+}

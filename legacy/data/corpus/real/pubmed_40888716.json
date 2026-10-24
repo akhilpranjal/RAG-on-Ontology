@@ -1,0 +1,14 @@
+{
+  "doc_id": "pubmed_40888716",
+  "title": "Beta-Blockers after Myocardial Infarction in Patients without Heart Failure.",
+  "text": "The evidence supporting beta-blocker therapy after myocardial infarction was established before the introduction of modern coronary reperfusion therapy and secondary prevention strategies. In an open-label, randomized trial with blinded end-point evaluation, conducted in Denmark and Norway, we assigned patients who had had a myocardial infarction and who had a left ventricular ejection fraction of at least 40%, in a 1:1 ratio, to receive long-term beta-blocker therapy within 14 days after the event or no beta-blocker therapy. The primary end point was a composite of death from any cause or major adverse cardiovascular events (new myocardial infarction, unplanned coronary revascularization, ischemic stroke, heart failure, or malignant ventricular arrhythmias). A total of 5574 patients underwent randomization and were included in the main analyses - 2783 in the beta-blocker group and 2791 in the no-beta-blocker group. After a median follow-up of 3.5 years (interquartile range, 2.2 to 4.6), a primary end-point event had occurred in 394 patients (14.2%) in the beta-blocker group and in 454 patients (16.3%) in the no-beta-blocker group (hazard ratio, 0.85; 95% confidence interval [CI], 0.75 to 0.98; P = 0.03). Death from any cause occurred in 4.2% of the patients in the beta-blocker group and in 4.4% of those in the no-beta-blocker group; myocardial infarction occurred in 5.0% and 6.7%, respectively (hazard ratio, 0.73; 95% CI, 0.59 to 0.92), unplanned coronary revascularization in 3.9% and 3.9%, ischemic stroke in 1.6% and 1.3%, heart failure in 1.5% and 1.9%, and malignant ventricular arrhythmias in 0.5% and 0.6%. No apparent differences in safety outcomes were observed between the groups. Among patients with a myocardial infarction and a left ventricular ejection fraction of at least 40%, beta-blocker therapy led to a lower risk of death or major adverse cardiovascular events than no beta-blocker therapy. (Funded by the Health South-East research program in Norway and others; BETAMI-DANBLOCK ClinicalTrials.gov numbers, NCT03646357 and NCT03778554.).",
+  "source": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40888716/",
+  "concepts": [
+    "Arrhythmia",
+    "HeartFailure",
+    "IschemicStroke",
+    "MyocardialInfarction",
+    "Stroke"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "doc_id": "pubmed_40086653",
+  "title": "Management of angina pectoris.",
+  "text": "Angina pectoris, a primary manifestation of ischemic heart disease, imposes a significant clinical and economic burden globally. This review highlights recent advancements in the management of angina, emphasizing a patient-centred approach that integrates pharmacological, interventional, and lifestyle strategies to reduce cardiovascular risk and improve patient outcomes. For obstructive coronary artery disease, optimal medical therapy represents the cornerstone of treatment. Individualized regimens should be tailored to clinical factors such as blood pressure, heart rate, left ventricular function, comorbidities like heart failure and diabetes, concomitant medications, patient preferences, and drug availability. Myocardial revascularization is reserved for select cases to alleviate symptoms or improve prognosis. For angina or ischemia with non-obstructive coronary arteries (ANOCA/INOCA), precise endotype classification, differentiating microvascular angina, vasospastic angina, mixed type and non-coronary chest pain, enables personalized treatment strategies. Lifestyle interventions, including smoking cessation, weight management, adherence to Mediterranean diet, and exercise therapy, are essential components of care, promoting improved cardiovascular outcomes and quality of life. Structured exercise programs, particularly within cardiac rehabilitation settings, have demonstrated efficacy in enhancing functional capacity and reducing adverse events. Emerging therapies, including pharmacological agents and novel interventional approaches such as the coronary sinus reducer, hold promise for addressing unmet needs in refractory angina and challenging ANOCA/INOCA cases. Future directions should prioritize the integration of precision medicine, digital health technologies, and multidisciplinary care to optimize outcomes and advance personalized angina management.",
+  "source": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40086653/",
+  "concepts": [
+    "Angina",
+    "ChestPain",
+    "CoronaryArteryDisease",
+    "Disease",
+    "HeartDisease",
+    "HeartFailure",
+    "Symptom",
+    "Treatment"
+  ]
+}

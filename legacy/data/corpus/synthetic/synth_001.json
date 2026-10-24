@@ -1,0 +1,21 @@
+{
+  "doc_id": "synth_001",
+  "title": "Clinical Management of Type 1 Diabetes Mellitus",
+  "text": "Type 1 Diabetes Mellitus is an autoimmune metabolic disease characterized by the destruction of insulin-producing beta cells in the pancreas. Symptoms include frequent urination, excessive thirst, fatigue, and unexplained weight loss. Exogenous insulin administration is the primary treatment. Diagnostic tests include fasting blood glucose test and hemoglobin A1c test (HbA1c).",
+  "source": "Synthetic",
+  "concepts": [
+    "DiabetesMellitus",
+    "Disease",
+    "ExcessiveThirst",
+    "FastingGlucose",
+    "Fatigue",
+    "FrequentUrination",
+    "HbA1c",
+    "Insulin",
+    "MetabolicDisease",
+    "Symptom",
+    "Treatment",
+    "Type1Diabetes",
+    "UnexplainedWeightLoss"
+  ]
+}

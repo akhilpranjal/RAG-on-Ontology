@@ -1,0 +1,14 @@
+{
+  "labeled": 1000,
+  "dev": 500,
+  "test": 500,
+  "label_distribution": {
+    "yes": 552,
+    "no": 338,
+    "maybe": 110
+  },
+  "unique_abstracts": 212269,
+  "corpus_size": 3000,
+  "corpus_chars_mean": 1390.3,
+  "split_seed": 42
+}

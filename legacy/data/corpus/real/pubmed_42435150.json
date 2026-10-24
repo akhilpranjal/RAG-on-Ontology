@@ -1,0 +1,13 @@
+{
+  "doc_id": "pubmed_42435150",
+  "title": "Post-viral myocarditis.",
+  "text": "Myocarditis is an inflammatory disease of the myocardium characterized by complex histological, immunological and molecular changes occur that may ultimately lead to post-viral cardiomyopathy, a specific phenotype of dilated cardiomyopathy and heart failure (HF) after a viral infection. Viral infections remain a major cause, with pathogens like parvovirus B19, human herpesvirus 6, and enteroviruses frequently associated with both acute myocarditis and its progression to chronic myocardial dysfunction. This review aims to provide an overview of the mechanisms linking viral myocarditis to the development of dilated cardiomyopathy and HF, with emphasis on factors contributing to disease persistence, progression, and current diagnostic approaches. Progression of myocarditis reflects overlapping phases of viral entry, immune activation, and remodeling. While direct cytotoxic effects contribute to early myocardial injury, ongoing damage is primarily driven by persistent immune activation, often despite limited viral replication. Viral persistence, dysregulated interferon signaling, inflammasome activation, and autoimmune responses sustain myocardial inflammation, promoting fibrosis and ventricular dysfunction. These processes are further reinforced by neurohormonal and metabolic changes, leading to adverse remodeling. Clinically, myocarditis presents with a broad spectrum ranging from mild symptoms to fulminant HF and malignant arrhythmias. Diagnosis relies on biomarkers, cardiac magnetic resonance, and endomyocardial biopsy to assess myocardial injury and detect viral presence. Management remains mainly supportive, with limited and inconsistent evidence for targeted immunomodulatory or antiviral therapies. In conclusion, improved understanding of the interplay between viral persistence and immune-mediated injury is essential for identifying patients at risk of progression and for developing mechanism-based therapeutic strategies.",
+  "source": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42435150/",
+  "concepts": [
+    "Arrhythmia",
+    "Disease",
+    "HeartFailure",
+    "Symptom"
+  ]
+}

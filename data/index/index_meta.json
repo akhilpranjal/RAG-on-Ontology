@@ -1,0 +1,10 @@
+{
+  "backend": "st",
+  "model": "multi-qa-MiniLM-L6-cos-v1",
+  "dim": 384,
+  "n_passages": 3000,
+  "build_seconds": 564.3,
+  "passages_per_second": 5.3,
+  "corpus_file": "D:\\Programming\\Github\\RAG-on-Ontology\\data\\pubmedqa\\corpus.jsonl",
+  "medcpt_passage_model": "ncbi/MedCPT-Article-Encoder"
+}

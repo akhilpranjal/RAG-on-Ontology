@@ -1,0 +1,11 @@
+{
+  "doc_id": "pubmed_42156758",
+  "title": "Kynurenic acid mediates epicardial fat-induced lymphatic metabolic dysfunction in atrial fibrillation.",
+  "text": "Atrial fibrillation represents a prevalent cardiac arrhythmia whose pathogenic mechanisms remain incompletely understood. Here, we identify impaired atrial lymphangiogenesis as a critical determinant in atrial fibrillation pathogenesis. Analysis of human left atrial appendage specimens reveals decreased lymphatic vessel density in atrial fibrillation patients compared to those in sinus rhythm. Mechanistically, we demonstrate that epicardial adipose tissues from atrial fibrillation patients secrete kynurenic acid, which acts via GPR35 to disrupt lymphatic endothelial cell metabolism and mitochondrial homeostasis, ultimately promoting endothelial-to-mesenchymal transition. Using an organotypic culture system, we show that epicardial adipose tissue -derived factors directly impair lymphatic vessel formation. In vivo studies utilizing angiotensin II-induced and high-fat diet male mouse models confirm the critical role of lymphatic dysfunction in atrial fibrillation susceptibility. Therapeutic interventions promoting lymphangiogenesis, either through VEGFC administration or weight loss intervention by LY3437943 (the novel triple GIP, GLP-1, and glucagon receptor agonist), significantly attenuate atrial fibrillation inducibility. These findings establish lymphatic dysfunction as a novel pathogenic mechanism in atrial fibrillation and highlight lymphatic vessel formation as a promising therapeutic target.",
+  "source": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/42156758/",
+  "concepts": [
+    "Arrhythmia",
+    "AtrialFibrillation"
+  ]
+}

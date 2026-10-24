@@ -1,0 +1,12 @@
+{
+  "doc_id": "pubmed_41846099",
+  "title": "Yigan mingmu decoction treats diabetic retinopathy via Müller cell autophagy: A network pharmacology study.",
+  "text": "To investigate the mechanism by which Yigan Mingmu (YGMM) Decoction regulates Müller cell autophagy in diabetic retinopathy (DR). The constituents of YGMM Decoction absorbed into the bloodstream were characterized utilizing UHPLC-HRMS analysis. Active compounds were screened via the TCMSP database to predict potential targets, while disease-associated targets were retrieved from the GeneCards and OMIM repositories. Overlapping targets were identified using Venny software, followed by network construction in Cytoscape. Subsequent analyses included PPI evaluation, GO/KEGG pathway enrichment, and molecular docking simulations. To validate the findings experimentally, a diabetic retinal edema model was established in SD rats, alongside in vitro studies using Müller cells. These experiments assessed the expression levels of specific proteins-namely Caspase-3, TXNIP, LC3-II/I, Beclin-1, p62, and mTOR-across the various treatment groups. A total of 426 active components were extracted from YGMM Decoction, and 181 active components were isolated from the serum containing YGMM Decoction. Network pharmacology analysis revealed that YGMM contains 166 active compounds targeting 240 genes, with 174 overlapping DR-related targets. Key targets included TXNIP and LC3-II. Enrichment analysis implicated oxidative stress responses and AGE-RAGE signaling. Molecular docking simulations verified a high binding affinity between the primary active ingredients (such as quercetin and kaempferol) and their respective targets. Both in vivo and in vitro studies revealed that YGMM treatment significantly downregulated the expression of Caspase-3, TXNIP, and the LC3-II/I ratio in a dose-dependent manner (p<0.05). Notably, the medium-dosage group exhibited the most optimal therapeutic efficacy. UHPLC-QE-MS analysis of the main active components of YGMM and its serum-containing components demonstrated that YGMM alleviates DR by modulating autophagy via the TXNIP and LC3-II/I pathways, offering a multi-target therapeutic strategy.",
+  "source": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41846099/",
+  "concepts": [
+    "Disease",
+    "Edema",
+    "Treatment"
+  ]
+}

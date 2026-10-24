@@ -1,0 +1,16 @@
+{
+  "doc_id": "synth_003",
+  "title": "Metformin Therapy in Type 2 Diabetes Management",
+  "text": "Metformin is the first-line oral antihyperglycemic treatment for Type 2 Diabetes Mellitus. It improves insulin sensitivity and reduces hepatic glucose production. Combined with lifestyle modifications such as diet and exercise, metformin helps manage metabolic syndrome and hyperlipidemia. Diagnostic monitoring relies on regular HbA1c testing.",
+  "source": "Synthetic",
+  "concepts": [
+    "DiabetesMellitus",
+    "Hyperlipidemia",
+    "Insulin",
+    "LifestyleModification",
+    "MetabolicSyndrome",
+    "Metformin",
+    "Treatment",
+    "Type2Diabetes"
+  ]
+}

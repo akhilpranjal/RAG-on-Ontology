@@ -1,0 +1,10 @@
+{
+  "doc_id": "pubmed_41935525",
+  "title": "Amygdala astrocyte senescence drives stress-induced anxiety and hyperglycemia.",
+  "text": "Chronic stress (CS) exacerbates anxiety and hyperglycemia, emerging as a key risk factor for type 2 diabetes, yet the mechanism remains unclear. Here, we found that CS induces hyperglycemia and enhanced amygdaloid astrocytic senescence in mice. The amygdaloid astrocytic senescence was mediated by the reduction of hexokinase 2 (HK2) driven by pre-B cell leukemia homeobox transcription factor 1 (PBX1). The astrocytic Hk2 deletion mice and amygdala-specific astrocytic Hk2 knockdown mice both display anxiety-like behaviors and hyperglycemia. The reduction of HK2 in astrocytes reduces L-serine synthesis and decreases the supply to neurons for the generation of D-serine by disrupting the astrocyte-neuron serine shuttle. Reduced neuronal D-serine level in the amygdala impaired the balance of sympathetic and parasympathetic amygdala-pancreas projections, leading to hyperglycemia. L-serine supplementation or dasatinib/quercetin administration to eliminate senescent cells alleviates both CS-induced neurobehaviors and peripheral hyperglycemia. Together, these findings reveal that HK2 in amygdaloid astrocytes mediates CS-induced neurobehaviors and hyperglycemia.",
+  "source": "PubMed",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/41935525/",
+  "concepts": [
+    "Type2Diabetes"
+  ]
+}
